@@ -46,7 +46,7 @@ We use [baler](https://github.com/paypal/baler) (included in `pip_requirements.t
 
 ```
     # Create a .baler_env
-    echo 'export PATH=$PATH:'`which bale` > .baler_env
+    echo 'export PATH=$PATH:'`dirname \`which bale\`` > .baler_env
 ```
 
 Normal development
