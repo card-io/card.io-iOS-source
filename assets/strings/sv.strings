@@ -1,0 +1,49 @@
+"activate_flash" = "Sätt på blixten.";
+"app_not_authorized_message" = "Appen är inte godkänd för skanning av kort.";
+"app_not_authorized_title" = "Appen är inte godkänd";
+"camera" = "Kamera";
+"cancel" = "Avbryt";
+"card_info" = "Kortinfo";
+"card_io_logo" = "card.io";
+"deactivate_flash" = "Stäng av blixten.";
+"done" = "Klart";
+"entry_card_number" = "Kortnummer";
+"entry_cvv" = "CVV";
+"entry_expires" = "Går ut";
+"entry_number" = "Nummer";
+"entry_title" = "Kort";
+"entry_postal_code" = "Postnummer";
+"expires_placeholder" = "MM/ÅÅ";
+"manual_entry" = "Ange manuellt";
+"ok" = "OK";
+"paypal_logo" = "PayPal";
+"scan_guide" = "Håll kortet här.\nDet skannas automatiskt.";
+
+"cardtype_americanexpress" = "American Express";
+"cardtype_cartaaura" = "Carta Aura";
+"cardtype_carteaurore" = "Carte Aurore";
+"cardtype_cartaprepagatapaypal" = "Carta Prepagata PayPal";
+"cardtype_cartebleue" = "Carte Bancaire";
+"cardtype_cofinoga" = "Cofinoga";
+"cardtype_delta" = "Delta";
+"cardtype_discover" = "Discover";
+"cardtype_electron" = "Electron";
+"cardtype_jcb" = "JCB";
+"cardtype_maestro" = "Maestro";
+"cardtype_mastercard" = "MasterCard";
+"cardtype_postepay" = "Postepay";
+"cardtype_4etoiles" = "4 étoiles";
+"cardtype_tarjetaaurora" = "Tarjeta Aurora";
+"cardtype_visa" = "Visa";
+
+/* PayPal-only */
+"paypal_success" = "Klart! Skanningen fungerade.";
+"paypal_scan_instructions" = "Det är väldigt enkelt att koppla sitt kort.";
+
+/* Android-only */
+"keyboard" = "Tangentbord …";
+"manual_entry_title" = "Kortinformation";
+"whoops" = "Hoppsan!";
+"error_no_device_support" = "Den här enheten kan inte använda kameran till att läsa kortnummer.";
+"error_camera_connect_fail" = "Enhetens kamera är inte tillgänglig.";
+"error_camera_unexpected_fail" = "Ett oväntat fel uppstod när enheten skulle öppna kameran.";

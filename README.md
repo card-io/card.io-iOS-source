@@ -1,4 +1,79 @@
-card.io-iOS-source
-==================
+[![card.io logo](Resources/cardio_logo_220.png "card.io")](https://www.card.io)
 
-card.io provides fast, easy credit card scanning in mobile apps
+Credit card scanning for mobile apps
+====================================
+
+### Yes, that's right: the [card.io](https://www.card.io) library for iOS is now open-source!
+
+This repository contains everything needed to build the **card.io** library for iOS.
+
+What it does not yet contain is much in the way of documentation. :crying_cat_face: So please feel free to ask any questions by creating github issues -- we'll gradually build our documentation based on the discussions there.
+
+Note that this is actual production code, which has been iterated upon by multiple developers over several years. If you see something that could benefit from being tidied up, rewritten, or otherwise improved, your Pull Requests will be welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for details.
+
+Brought to you by  
+[![PayPal logo](Resources/pp_h_rgb.png)](https://paypal.com/ "PayPal")
+
+
+Using **card.io**
+-----------------
+
+If you merely wish to incorporate **card.io** within your iOS app, simply download the latest official release from https://github.com/card-io/card.io-iOS-SDK. That repository includes complete integration instructions and sample code.
+
+
+Dev setup
+---------
+
+* clone this repo, including its `dmz` submodule: `git submodule update --init --recursive`
+* requires Xcode 5+ (toolchain for iOS 7)
+* requires Python 2.6+
+* for building releases, requires [`pip`](http://www.pip-installer.org/) and [`fabric`]()
+
+### Python
+
+We use python-based build scripts.
+
+```
+    # If you are using virtualenv and virtualenvwrapper, create a virtualenv
+    # (optional but recommended)
+    mkvirtualenv cardio
+
+    # Install dependencies
+    pip install -r pip_requirements.txt
+```
+
+We use [baler](https://github.com/paypal/baler) (included in `pip_requirements.txt`) to encode assets (strings and images) within our library. Create a `.baler_env` file in the top project directory, and set the $PATH environment variable to include where you installed baler. Example:
+
+```
+    # Create a .baler_env
+    echo 'export PATH=$PATH:'`which bale` > .baler_env
+```
+
+Normal development
+------------------
+
+Use Xcode in a normal fashion to build the library. The project's `icc` target builds a demo app which will allow you exercise the library in various ways.
+
+
+Unofficial card.io-iOS-SDK release
+----------------------------------
+
+How to make a Release build of the library for your own use:
+
+* Run `fab build:outdir=~` (or specify some other output directory).
+
+
+Official card.io-iOS-SDK release
+--------------------------------
+
+[How to make an official card.io-iOS-SDK release](official_release.md)
+
+
+Contributors
+------------
+
+**card.io** was created by [Josh Bleecher Snyder](https://github.com/josharian/).
+
+Subsequent help has come from [Brent Fitzgerald](https://github.com/burnto/), [Tom Whipple](https://github.com/tomwhipple), and [Dave Goldman](https://github.com/dgoldman-ebay).
+
+And from **you**! Pull requests and new issues are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for details.

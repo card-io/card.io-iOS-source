@@ -1,0 +1,14 @@
+//
+// Prefix header for all source files of the 'icc' target in the 'icc' project
+//
+
+#import <tgmath.h>
+
+#ifdef __OBJC__
+  #import <Foundation/Foundation.h>
+  #import <UIKit/UIKit.h>
+  #import <QuartzCore/QuartzCore.h>
+  #import <MessageUI/MessageUI.h>
+#endif
+
+#import "CardIOMacros.h"

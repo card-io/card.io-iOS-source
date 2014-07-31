@@ -1,0 +1,49 @@
+"activate_flash" = "Включить вспышку.";
+"app_not_authorized_message" = "Это приложение не авторизовано для сканирования карт.";
+"app_not_authorized_title" = "Приложение не авторизовано";
+"camera" = "Камера";
+"cancel" = "Отмена";
+"card_info" = "Информация о карте";
+"card_io_logo" = "card.io";
+"deactivate_flash" = "Выключить вспышку.";
+"done" = "Готово";
+"entry_card_number" = "Номер карты";
+"entry_cvv" = "Код безопасности";
+"entry_expires" = "Действительна до";
+"entry_number" = "Номер";
+"entry_title" = "Карта";
+"entry_postal_code" = "Индекс";
+"expires_placeholder" = "ММ/ГГ";
+"manual_entry" = "Ввести вручную";
+"ok" = "ОК";
+"paypal_logo" = "PayPal";
+"scan_guide" = "Держите карту внутри рамки.\nОна будет считана\nавтоматически.";
+
+"cardtype_americanexpress" = "American Express";
+"cardtype_cartaaura" = "Carta Aura";
+"cardtype_carteaurore" = "Carte Aurore";
+"cardtype_cartaprepagatapaypal" = "Carta Prepagata PayPal";
+"cardtype_cartebleue" = "Carte Bancaire";
+"cardtype_cofinoga" = "Cofinoga";
+"cardtype_delta" = "Delta";
+"cardtype_discover" = "Discover";
+"cardtype_electron" = "Electron";
+"cardtype_jcb" = "JCB";
+"cardtype_maestro" = "Maestro";
+"cardtype_mastercard" = "MasterCard";
+"cardtype_postepay" = "Postepay";
+"cardtype_4etoiles" = "4 étoiles";
+"cardtype_tarjetaaurora" = "Tarjeta Aurora";
+"cardtype_visa" = "Visa";
+
+/* PayPal-only */
+"paypal_success" = "Успешно! Считывание завершено.";
+"paypal_scan_instructions" = "Привязать карту к вашему счету теперь проще, чем сделать фото.";
+
+/* Android-only */
+"keyboard" = "Клавиатура…";
+"manual_entry_title" = "Информация о карте";
+"whoops" = "Ой…";
+"error_no_device_support" = "В данном устройстве нет опции считывания номера карты с помощью фотокамеры.";
+"error_camera_connect_fail" = "Фотокамера устройства недоступна.";
+"error_camera_unexpected_fail" = "Возникла незапланированная ошибка при открытии фотокамеры устройства.";

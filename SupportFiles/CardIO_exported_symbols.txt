@@ -1,0 +1,19 @@
+# CardIO_exported_symbols.txt
+
+# CardIO_exported_symbols.txt is used when building via fabfile.py,
+# or when building a Release version of CardIO within the Xcode IDE.
+#
+# It is irrelevant to Debug builds.
+
+_OBJC_CLASS_$_CardIOCreditCardInfo
+_OBJC_METACLASS_$_CardIOCreditCardInfo
+_OBJC_CLASS_$_CardIOPaymentViewController
+_OBJC_METACLASS_$_CardIOPaymentViewController
+_OBJC_CLASS_$_CardIOView
+_OBJC_METACLASS_$_CardIOView
+_OBJC_CLASS_$_CardIOUtilities
+_OBJC_METACLASS_$_CardIOUtilities
+
+_CardIOScanningOrientationDidChangeNotification
+_CardIOCurrentScanningOrientation
+_CardIOScanningOrientationAnimationDuration

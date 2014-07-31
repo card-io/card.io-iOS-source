@@ -1,0 +1,4 @@
+baler==1.0.4
+Fabric==1.4.0
+pycrypto==2.6
+ssh==1.7.14

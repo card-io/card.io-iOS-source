@@ -1,0 +1,49 @@
+"activate_flash" = "Toorn flesh oon.";
+"app_not_authorized_message" = "Thees eppleeceshun is nut oothureezed fur cerd scunneeng.";
+"app_not_authorized_title" = "Eppleeceshun Nut Oothureezed";
+"camera" = "Cemera";
+"cancel" = "Cuncel";
+"card_info" = "Cerd Inffu";
+"card_io_logo" = "cerd.iu";
+"deactivate_flash" = "Toorn flesh ooffff.";
+"done" = "Börk Börk Börk!";
+"entry_card_number" = "Cerd Noomber";
+"entry_cvv" = "CFF";
+"entry_expires" = "Expures";
+"entry_number" = "Noomber";
+"entry_title" = "Cerd";
+"entry_postal_code" = "Pustel Cude";
+"expires_placeholder" = "MM/YY";
+"manual_entry" = "Enter Munooelly";
+"ok" = "OK";
+"paypal_logo" = "PeyPel";
+"scan_guide" = "Huld cerd here-a.\nIt veell scun ootumeteecelly.";
+
+"cardtype_americanexpress" = "Emereecun Ixpress";
+"cardtype_cartaaura" = "Certa Oora";
+"cardtype_carteaurore" = "Certe-a Oorure";
+"cardtype_cartaprepagatapaypal" = "Certa Prepegeta PeyPel";
+"cardtype_cartebleue" = "Certe-a Bunceure";
+"cardtype_cofinoga" = "Cuffeenuga";
+"cardtype_delta" = "Delta";
+"cardtype_discover" = "Deescufer";
+"cardtype_electron" = "Electrun";
+"cardtype_jcb" = "JCB";
+"cardtype_maestro" = "Meestru";
+"cardtype_mastercard" = "MesterCerd";
+"cardtype_postepay" = "Pustepey";
+"cardtype_4etoiles" = "4 étueeles";
+"cardtype_tarjetaaurora" = "Terjeta Oorura";
+"cardtype_visa" = "Feesa";
+
+/* PayPal-only */
+"paypal_success" = "Sooccess! Yuoor scun vurked.";
+"paypal_scan_instructions" = "Leenking yuoor cerd is es iesy es tekeeng a peectoore-a.";
+
+/* Android-only */
+"keyboard" = "Keybuerd…";
+"manual_entry_title" = "Cerd Deteeels";
+"whoops" = "Vhuups!";
+"error_no_device_support" = "Thees defeece-a cunnut use-a zee cemera tu reed cerd noombers.";
+"error_camera_connect_fail" =  "Device camera is unavailable.";
+"error_camera_unexpected_fail" = "Zee defeece-a hed un unexpected irrur oopeneeng zee cemera.";

@@ -1,0 +1,64 @@
+//
+// Prefix header for all source files of the 'CardIO' target in the 'CardIO' project
+//  See the file "LICENSE.md" for the full license governing this code.
+//
+
+#include <tgmath.h>
+
+#if !DEBUG
+#define NDEBUG 1
+#define NS_BLOCK_ASSERTIONS 1
+#endif
+
+// Debug settings
+
+// Disable requests to the analytics server
+#ifndef DISABLE_ANALYTICS
+#define DISABLE_ANALYTICS CARDIO_DEBUG
+#endif
+
+// Enable debugging for the DMZ code
+#ifndef DMZ_DEBUG
+#define DMZ_DEBUG CARDIO_DEBUG
+#endif
+
+// Enable debugging for Baler
+#ifndef BALER_DEBUG
+#define BALER_DEBUG CARDIO_DEBUG
+#endif
+
+// Use the camera if not simulator or in release mode
+#ifndef USE_CAMERA
+#define USE_CAMERA 1
+#endif
+
+// Simulate the camera if it isn't being used and if debug
+#ifndef SIMULATE_CAMERA
+#define SIMULATE_CAMERA (!USE_CAMERA && CARDIO_DEBUG)
+#endif
+
+
+// Feature-build settings
+
+// Allow client code the option of skipping the manual entry interface
+#ifndef EARLY_EXIT_ENABLED
+#define EARLY_EXIT_ENABLED CARDIO_DEBUG
+#endif
+
+// Allow UI modifications like removal of PayPal/card.io logo
+#ifndef WHITELABEL
+#define WHITELABEL 0
+#endif
+
+
+#if USE_CAMERA
+  #include "opencv2/core/core_c.h"
+  #include "opencv2/core/core.hpp"
+#endif
+
+#ifdef __OBJC__
+  #import <Foundation/Foundation.h>
+  #import <UIKit/UIKit.h>
+  #import <QuartzCore/QuartzCore.h>
+  #import <MessageUI/MessageUI.h>
+#endif

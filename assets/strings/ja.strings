@@ -1,0 +1,49 @@
+"activate_flash" = "フラッシュをオンにしてください。";
+"app_not_authorized_message" = "このアプリではカードスキャンの使用が許可されていません。";
+"app_not_authorized_title" = "アプリでの使用が許可されていません";
+"camera" = "カメラ";
+"cancel" = "キャンセル";
+"card_info" = "カード情報";
+"card_io_logo" = "card.io";
+"deactivate_flash" = "フラッシュをオフにしてください。";
+"done" = "完了";
+"entry_card_number" = "カード番号";
+"entry_cvv" = "CVV";
+"entry_expires" = "有効期限";
+"entry_number" = "番号";
+"entry_title" = "カード";
+"entry_postal_code" = "郵便番号";
+"expires_placeholder" = "MM/YY";
+"manual_entry" = "手動で入力";
+"ok" = "OK";
+"paypal_logo" = "PayPal";
+"scan_guide" = "ここでカードをお持ちください。\n自動的にスキャンされます。";
+
+"cardtype_americanexpress" = "American Express";
+"cardtype_cartaaura" = "Carta Aura";
+"cardtype_carteaurore" = "Carte Aurore";
+"cardtype_cartaprepagatapaypal" = "Carta Prepagata PayPal";
+"cardtype_cartebleue" = "Carte Bancaire";
+"cardtype_cofinoga" = "Cofinoga";
+"cardtype_delta" = "Delta";
+"cardtype_discover" = "Discover";
+"cardtype_electron" = "Electron";
+"cardtype_jcb" = "JCB";
+"cardtype_maestro" = "Maestro";
+"cardtype_mastercard" = "MasterCard";
+"cardtype_postepay" = "Postepay";
+"cardtype_4etoiles" = "4 étoiles";
+"cardtype_tarjetaaurora" = "Tarjeta Aurora";
+"cardtype_visa" = "Visa";
+
+/* PayPal-only */
+"paypal_success" = "成功しました!スキャンできました。";
+"paypal_scan_instructions" = "写真を撮るように簡単にカードを登録できます。";
+
+/* Android-only */
+"keyboard" = "キーボード…";
+"manual_entry_title" = "カードの詳細";
+"whoops" = "申し訳ありません。";
+"error_no_device_support" = "この端末ではカード番号の読込にカメラを使えません。";
+"error_camera_connect_fail" = "端末のカメラを使用できません。";
+"error_camera_unexpected_fail" = "カメラを起動中に予期しないエラーが発生しました。";

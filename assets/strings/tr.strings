@@ -1,0 +1,49 @@
+"activate_flash" = "Flaşı açın.";
+"app_not_authorized_message" = "Bu uygulama, kart tarama için yetkilendirilmedi.";
+"app_not_authorized_title" = "Uygulama yetkilendirilmedi";
+"camera" = "Kamera";
+"cancel" = "İptal";
+"card_info" = "Kart Bilgileri";
+"card_io_logo" = "card.io";
+"deactivate_flash" = "Flaşı kapatın.";
+"done" = "Bitti";
+"entry_card_number" = "Kart Numarası";
+"entry_cvv" = "CVV";
+"entry_expires" = "Son kullanma tarihi";
+"entry_number" = "Numara";
+"entry_title" = "Kart";
+"entry_postal_code" = "Posta Kodu";
+"expires_placeholder" = "AA/YY";
+"manual_entry" = "Manuel Girin";
+"ok" = "Tamam";
+"paypal_logo" = "PayPal";
+"scan_guide" = "Kartınızı buraya tutun.\nOtomatik olarak taranacaktır.";
+
+"cardtype_americanexpress" = "American Express";
+"cardtype_cartaaura" = "Carta Aura";
+"cardtype_carteaurore" = "Carte Aurore";
+"cardtype_cartaprepagatapaypal" = "Carta Prepagata PayPal";
+"cardtype_cartebleue" = "Carte Bancaire";
+"cardtype_cofinoga" = "Cofinoga";
+"cardtype_delta" = "Delta";
+"cardtype_discover" = "Discover";
+"cardtype_electron" = "Electron";
+"cardtype_jcb" = "JCB";
+"cardtype_maestro" = "Maestro";
+"cardtype_mastercard" = "MasterCard";
+"cardtype_postepay" = "Postepay";
+"cardtype_4etoiles" = "4 étoiles";
+"cardtype_tarjetaaurora" = "Tarjeta Aurora";
+"cardtype_visa" = "Visa";
+
+/* PayPal-only */
+"paypal_success" = "Başarılı! Tarama işlemi başarılı oldu.";
+"paypal_scan_instructions" = "Kartınızı eklemek fotoğraf çekmek kadar kolaydır.";
+
+/* Android-only */
+"keyboard" = "Klavye…";
+"manual_entry_title" = "Kart Ayrıntıları";
+"whoops" = "Pardon!";
+"error_no_device_support" = "Bu cihazın kamerası kart rakamlarını okuyamaz.";
+"error_camera_connect_fail" = "Cihaz kamerası kullanılamıyor.";
+"error_camera_unexpected_fail" = "Cihaz kamerayı açarken beklenmedik bir hata verdi.";

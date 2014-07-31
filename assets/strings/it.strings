@@ -1,0 +1,49 @@
+"activate_flash" = "Attiva il flash.";
+"app_not_authorized_message" = "Scansione carta non disponibile.";
+"app_not_authorized_title" = "Richiesta non autorizzata";
+"camera" = "Fotocamera";
+"cancel" = "Annulla";
+"card_info" = "Dati carta";
+"card_io_logo" = "card.io";
+"deactivate_flash" = "Disattiva il flash.";
+"done" = "Fine";
+"entry_card_number" = "Numero di carta";
+"entry_cvv" = "CVV";
+"entry_expires" = "Scadenza";
+"entry_number" = "Numero";
+"entry_title" = "Carta";
+"entry_postal_code" = "Codice postale";
+"expires_placeholder" = "MM/AA";
+"manual_entry" = "Digita i dati";
+"ok" = "OK";
+"paypal_logo" = "PayPal";
+"scan_guide" = "Inquadra la carta.\nLa scansione è automatica.";
+
+"cardtype_americanexpress" = "American Express";
+"cardtype_cartaaura" = "Carta Aura";
+"cardtype_carteaurore" = "Carta Aurore";
+"cardtype_cartaprepagatapaypal" = "Carta Prepagata PayPal";
+"cardtype_cartebleue" = "Carte Bancaire";
+"cardtype_cofinoga" = "Cofinoga";
+"cardtype_delta" = "Delta";
+"cardtype_discover" = "Discover";
+"cardtype_electron" = "Electron";
+"cardtype_jcb" = "JCB";
+"cardtype_maestro" = "Maestro";
+"cardtype_mastercard" = "MasterCard";
+"cardtype_postepay" = "Postepay";
+"cardtype_4etoiles" = "4 étoiles";
+"cardtype_tarjetaaurora" = "Tarjeta Aurora";
+"cardtype_visa" = "Visa";
+
+/* PayPal-only */
+"paypal_success" = "Fatto! Scansione completata.";
+"paypal_scan_instructions" = "Per collegare la tua carta,\nscatta una foto.";
+
+/* Android-only */
+"keyboard" = "Tastiera…";
+"manual_entry_title" = "Dati carta";
+"whoops" = "Oops!";
+"error_no_device_support" = "La fotocamera non legge il numero di carta.";
+"error_camera_connect_fail" = "Fotocamera non disponibile.";
+"error_camera_unexpected_fail" = "Errore inatteso nell’apertura della fotocamera.";

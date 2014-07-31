@@ -1,0 +1,49 @@
+"activate_flash" = "เปิดแฟลช";
+"app_not_authorized_message" = "แอปพลิเคชันนี้ไม่ได้รับอนุญาตให้สแกนบัตร";
+"app_not_authorized_title" = "แอปพลิเคชันไม่ได้รับอนุญาต";
+"camera" = "กล้อง";
+"cancel" = "ยกเลิก";
+"card_info" = "ข้อมูลบัตร";
+"card_io_logo" = "card.io";
+"deactivate_flash" = "ปิดแฟลช";
+"done" = "เสร็จแล้ว";
+"entry_card_number" = "หมายเลขบัตร";
+"entry_cvv" = "CVV";
+"entry_expires" = "หมดอายุ";
+"entry_number" = "หมายเลข";
+"entry_title" = "บัตร";
+"entry_postal_code" = "รหัสไปรษณีย์";
+"expires_placeholder" = "ดด/ปป";
+"manual_entry" = "ป้อนข้อมูลเอง";
+"ok" = "ตกลง";
+"paypal_logo" = "PayPal";
+"scan_guide" = "ถือบัตรไว้ตรงนี้\nเครื่องจะสแกนโดยอัตโนมัติ";
+
+"cardtype_americanexpress" = "American Express";
+"cardtype_cartaaura" = "Carta Aura";
+"cardtype_carteaurore" = "Carte Aurore";
+"cardtype_cartaprepagatapaypal" = "Carta Prepagata PayPal";
+"cardtype_cartebleue" = "Carte Bancaire";
+"cardtype_cofinoga" = "Cofinoga";
+"cardtype_delta" = "Delta";
+"cardtype_discover" = "Discover";
+"cardtype_electron" = "Electron";
+"cardtype_jcb" = "JCB";
+"cardtype_maestro" = "Maestro";
+"cardtype_mastercard" = "MasterCard";
+"cardtype_postepay" = "Postepay";
+"cardtype_4etoiles" = "4 étoiles";
+"cardtype_tarjetaaurora" = "Tarjeta Aurora";
+"cardtype_visa" = "Visa";
+
+/* PayPal-only */
+"paypal_success" = "สำเร็จ สแกนผ่านแล้ว";
+"paypal_scan_instructions" = "การเชื่อมโยงบัตรนั้นง่ายมากพอๆ กับการถ่ายภาพ";
+
+/* Android-only */
+"keyboard" = "คีย์บอร์ด…";
+"manual_entry_title" = "รายละเอียดบัตร";
+"whoops" = "ขออภัยค่ะ";
+"error_no_device_support" = "อุปกรณ์ไม่สามารถใช้กล้องเพื่ออ่านหมายเลขบัตรได้";
+"error_camera_connect_fail" = "กล้องของอุปกรณ์ไม่พร้อมใช้งาน";
+"error_camera_unexpected_fail" = "อุปกรณ์พบข้อผิดพลาดขณะเปิดกล้อง";

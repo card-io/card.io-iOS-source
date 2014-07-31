@@ -1,0 +1,14 @@
+build/
+icc.xcodeproj/xcuserdata/*
+icc.xcodeproj/project.xcworkspace/xcuserdata/*
+.DS_Store
+**/*.pbxuser
+*.pyc
+.baler_env
+/icc.xcodeproj/project.xcworkspace/xcshareddata/
+/icc.xcodeproj/project.xcworkspace/xcshareddata/icc.xccheckout
+/Classes/CardIOIccVersion.h
+/Release/SampleApp/ScanExample.xcodeproj/project.xcworkspace/
+/Release/SampleApp/ScanExample.xcodeproj/xcuserdata/
+/Classes/CardIOBundle.h
+/Classes/CardIOBundle.m

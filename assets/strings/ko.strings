@@ -1,0 +1,49 @@
+"activate_flash" = "플래시를 켜세요.";
+"app_not_authorized_message" = "카드를 스캔할 수 있는 애플리케이션이 아닙니다.";
+"app_not_authorized_title" = "허용된 애플리케이션이 아님";
+"camera" = "카메라";
+"cancel" = "취소";
+"card_info" = "카드 정보";
+"card_io_logo" = "card.io";
+"deactivate_flash" = "플래시를 끄세요.";
+"done" = "완료";
+"entry_card_number" = "카드 번호";
+"entry_cvv" = "CVV";
+"entry_expires" = "유효기간";
+"entry_number" = "번호";
+"entry_title" = "카드";
+"entry_postal_code" = "우편번호";
+"expires_placeholder" = "MM / YY";
+"manual_entry" = "직접 입력";
+"ok" = "확인";
+"paypal_logo" = "PayPal";
+"scan_guide" = "카드를 여기에 갖다 대세요.\n자동으로 스캔됩니다.";
+
+"cardtype_americanexpress" = "American Express";
+"cardtype_cartaaura" = "Carta Aura";
+"cardtype_carteaurore" = "Carte Aurore";
+"cardtype_cartaprepagatapaypal" = "Carta Prepagata PayPal";
+"cardtype_cartebleue" = "Carte Bancaire";
+"cardtype_cofinoga" = "Cofinoga";
+"cardtype_delta" = "Delta";
+"cardtype_discover" = "Discover";
+"cardtype_electron" = "Electron";
+"cardtype_jcb" = "JCB";
+"cardtype_maestro" = "Maestro";
+"cardtype_mastercard" = "MasterCard";
+"cardtype_postepay" = "Postepay";
+"cardtype_4etoiles" = "4 étoiles";
+"cardtype_tarjetaaurora" = "Tarjeta Aurora";
+"cardtype_visa" = "Visa";
+
+/* PayPal-only */
+"paypal_success" = "스캔이 완료되었습니다.";
+"paypal_scan_instructions" = "카드 연결은 사진 찍는 것 만큼 쉽습니다.";
+
+/* Android-only */
+"keyboard" = "키보드…";
+"manual_entry_title" = "카드 세부정보";
+"whoops" = "이런!";
+"error_no_device_support" = "기기가 카메라를 이용한 카드 숫자 판독을 지원하지 않습니다.";
+"error_camera_connect_fail" = "기기에서 카메라를 사용할 수 없습니다.";
+"error_camera_unexpected_fail" = "기기에서 카메라를 여는 동안 예상치 못한 오류가 발생했습니다.";

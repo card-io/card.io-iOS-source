@@ -1,0 +1,49 @@
+"activate_flash" = "開啟閃光燈。";
+"app_not_authorized_message" = "此應用程式未經授權，無法掃描信用卡。";
+"app_not_authorized_title" = "應用程式未授權";
+"camera" = "相機";
+"cancel" = "取消";
+"card_info" = "信用卡資料";
+"card_io_logo" = "card.io";
+"deactivate_flash" = "關閉閃光燈。";
+"done" = "完成";
+"entry_card_number" = "卡號";
+"entry_cvv" = "信用卡驗證碼";
+"entry_expires" = "到期日";
+"entry_number" = "號碼";
+"entry_title" = "信用卡";
+"entry_postal_code" = "郵遞區號";
+"expires_placeholder" = "月 / 年";
+"manual_entry" = "手動輸入";
+"ok" = "確定";
+"paypal_logo" = "PayPal";
+"scan_guide" = "將信用卡放在此處。\n系統將自動掃描。";
+
+"cardtype_americanexpress" = "美國運通";
+"cardtype_cartaaura" = "Carta Aura";
+"cardtype_carteaurore" = "Carte Aurore";
+"cardtype_cartaprepagatapaypal" = "Carta Prepagata PayPal";
+"cardtype_cartebleue" = "Carte Bancaire";
+"cardtype_cofinoga" = "Cofinoga";
+"cardtype_delta" = "Delta";
+"cardtype_discover" = "Discover";
+"cardtype_electron" = "Electron";
+"cardtype_jcb" = "JCB";
+"cardtype_maestro" = "Maestro";
+"cardtype_mastercard" = "MasterCard";
+"cardtype_postepay" = "Postepay";
+"cardtype_4etoiles" = "4 étoiles";
+"cardtype_tarjetaaurora" = "Tarjeta Aurora";
+"cardtype_visa" = "Visa";
+
+/* PayPal-only */
+"paypal_success" = "成功！掃描完成。";
+"paypal_scan_instructions" = "連結信用卡就像拍照一樣簡單。";
+
+/* Android-only */
+"keyboard" = "鍵盤…";
+"manual_entry_title" = "信用卡詳細資料";
+"whoops" = "糟糕！";
+"error_no_device_support" = "此裝置無法使用相機讀取卡號。";
+"error_camera_connect_fail" = "無法使用相機。";
+"error_camera_unexpected_fail" = "啟動相機時發生意外的錯誤。";

@@ -1,0 +1,3 @@
+[submodule "dmz"]
+	path = dmz
+	url = git@github.paypal.com:card-io/card.io-dmz.git

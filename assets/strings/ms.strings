@@ -1,0 +1,49 @@
+"activate_flash" = "Hidupkan denyar.";
+"app_not_authorized_message" = "Aplikasi ini tidak dibenarkan untuk pengimbasan kad.";
+"app_not_authorized_title" = "Aplikasi Tidak Dibenarkan";
+"camera" = "Kamera";
+"cancel" = "Batal";
+"card_info" = "Maklumat Kad";
+"card_io_logo" = "card.io";
+"deactivate_flash" = "Matikan denyar.";
+"done" = "Selesai";
+"entry_card_number" = "Nombor Kad";
+"entry_cvv" = "CVV";
+"entry_expires" = "Luput";
+"entry_number" = "Nombor";
+"entry_title" = "Kad";
+"entry_postal_code" = "Poskod";
+"expires_placeholder" = "BB/TT";
+"manual_entry" = "Masukkan Secara Manual";
+"ok" = "OK";
+"paypal_logo" = "PayPal";
+"scan_guide" = "Pegang kad di sini.\nIa akan mengimbas secara automatik.";
+
+"cardtype_americanexpress" = "American Express";
+"cardtype_cartaaura" = "Carta Aura";
+"cardtype_carteaurore" = "Carte Aurore";
+"cardtype_cartaprepagatapaypal" = "Carta Prepagata PayPal";
+"cardtype_cartebleue" = "Carte Bancaire";
+"cardtype_cofinoga" = "Cofinoga";
+"cardtype_delta" = "Delta";
+"cardtype_discover" = "Discover";
+"cardtype_electron" = "Electron";
+"cardtype_jcb" = "JCB";
+"cardtype_maestro" = "Maestro";
+"cardtype_mastercard" = "MasterCard";
+"cardtype_postepay" = "Postepay";
+"cardtype_4etoiles" = "4 étoiles";
+"cardtype_tarjetaaurora" = "Tarjeta Aurora";
+"cardtype_visa" = "Visa";
+
+/* PayPal-only */
+"paypal_success" = "Berjaya! Imbas anda berfungsi.";
+"paypal_scan_instructions" = "Memautkan kad anda semudah mengambil gambar.";
+
+/* Android-only */
+"keyboard" = "Papan Kekunci…";
+"manual_entry_title" = "Butiran Kad";
+"whoops" = "Oop!";
+"error_no_device_support" = "Peranti ini tidak dapat menggunakan kamera untuk membaca nombor kad.";
+"error_camera_connect_fail" = "Kamera peranti tidak tersedia.";
+"error_camera_unexpected_fail" = "Peranti mengalami ralat tidak dijangka semasa membuka kamera.";

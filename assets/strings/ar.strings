@@ -1,0 +1,49 @@
+"activate_flash" = "شغل الفلاش.";
+"app_not_authorized_message" = "هذا التطبيق غير معتمد لمسح البطاقة.";
+"app_not_authorized_title" = "التطبيق غير معتمد";
+"camera" = "الكاميرا";
+"cancel" = "إلغاء";
+"card_info" = "معلومات البطاقة";
+"card_io_logo" = "card.io‏";
+"deactivate_flash" = "أوقف تشغيل الفلاش.";
+"done" = "تم";
+"entry_card_number" = "رقم البطاقة";
+"entry_cvv" = "CVV‏";
+"entry_expires" = "تاريخ انتهاء الصلاحية";
+"entry_number" = "الرقم";
+"entry_title" = "البطاقة";
+"entry_postal_code" = "الرمز البريدي";
+"expires_placeholder" = "MM/YY‏";
+"manual_entry" = "أدخل يدويا";
+"ok" = "موافق";
+"paypal_logo" = "PayPal‏";
+"scan_guide" = "امسك البطاقة هنا.\n ستمسح تلقائيا.";
+
+"cardtype_americanexpress" = "American Express‏";
+"cardtype_cartaaura" = "Carta Aura‏";
+"cardtype_carteaurore" = "Carte Aurore‏";
+"cardtype_cartaprepagatapaypal" = "Carta Prepagata PayPal‏";
+"cardtype_cartebleue" = "Carte Bancaire‏";
+"cardtype_cofinoga" = "Cofinoga‏";
+"cardtype_delta" = "Delta‏";
+"cardtype_discover" = "Discover‏";
+"cardtype_electron" = "Electron‏";
+"cardtype_jcb" = "JCB‏";
+"cardtype_maestro" = "Maestro‏";
+"cardtype_mastercard" = "MasterCard‏";
+"cardtype_postepay" = "Postepay‏";
+"cardtype_4etoiles" = "‎4 étoiles‏";
+"cardtype_tarjetaaurora" = "Tarjeta Aurora‏";
+"cardtype_visa" = "Visa‏";
+
+/* PayPal-only */
+"paypal_success" = "نجاح! لقد نجح مسحك.";
+"paypal_scan_instructions" = "ربط بطاقتك يكون بسهولة التقاط صورة.";
+
+/* Android-only */
+"keyboard" = "لوحة المفاتيح…";
+"manual_entry_title" = "تفاصيل البطاقة";
+"whoops" = "عذراً!";
+"error_no_device_support" = "هذا الجهاز لا يمكنه استعمال الكاميرا لقراءة أرقام البطاقة.";
+"error_camera_connect_fail" = "كاميرا الجهاز غير متاحة.";
+"error_camera_unexpected_fail" = "الجهاز حدث به خطا غير متوقع عند فتح الكاميرا.";
