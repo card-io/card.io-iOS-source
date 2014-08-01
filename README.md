@@ -42,10 +42,15 @@ We use python-based build scripts.
     pip install -r pip_requirements.txt
 ```
 
-We use [baler](https://github.com/paypal/baler) (included in `pip_requirements.txt`) to encode assets (strings and images) within our library. Create a `.baler_env` file in the top project directory, and set the $PATH environment variable to include where you installed baler. Example:
+We use [baler](https://github.com/paypal/baler) (included in `pip_requirements.txt`) to encode assets (strings and images) within our library. Create a `.baler_env` file in the top project directory, and set the $PATH environment variable to include where you installed baler. Examples:
 
 ```
-    # Create a .baler_env
+    # Create a .baler_env, specifying the correct path for an installation using virtualenv
+    echo 'export PATH=$PATH:~/.virtualenvs/cardio/bin' > .baler_env
+    
+    # - OR -
+
+    # Create a .baler_env, specifying the correct path if not using virtualenv
     echo 'export PATH=$PATH:'`dirname \`which bale\`` > .baler_env
 ```
 
