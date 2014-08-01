@@ -27,7 +27,7 @@ Dev setup
 * clone this repo, including its `dmz` submodule: `git submodule update --init --recursive`
 * requires Xcode 5+ (toolchain for iOS 7)
 * requires Python 2.6+
-* for building releases, requires [`pip`](http://www.pip-installer.org/) and [`fabric`]()
+* for building releases, requires [`pip`](http://www.pip-installer.org/) and [`fabric`](http://www.fabfile.org)
 
 ### Python
 
@@ -44,7 +44,7 @@ We use python-based build scripts.
 
 ### Baler
 
-We use [baler](https://github.com/paypal/baler) (included in `pip_requirements.txt`) to encode assets (strings and images) within our library. Create a `.baler_env` file in the top project directory, and set the $PATH environment variable to include where you installed baler. Examples:
+We use [baler](https://github.com/paypal/baler) (included in `pip_requirements.txt`) to encode assets (strings and images) within our library. Create a `.baler_env` file in the top project directory, and set the `$PATH` environment variable to include where you installed baler. Examples:
 
 ```
     # Create a .baler_env, specifying the correct path for an installation using virtualenv
@@ -59,7 +59,7 @@ We use [baler](https://github.com/paypal/baler) (included in `pip_requirements.t
 Normal development
 ------------------
 
-Use Xcode in a normal fashion to build the library. The project's `icc` target builds a demo app which will allow you to exercise the library in various ways.
+Use Xcode in a normal fashion to build the library. The project's `icc` target is a demo app which will allow you to exercise the library in various ways.
 
 
 Unofficial card.io-iOS-SDK release
@@ -73,7 +73,7 @@ How to make a Release build of the library for your own use:
 Official card.io-iOS-SDK release
 --------------------------------
 
-[How to make an official card.io-iOS-SDK release](official_release.md)
+[How official releasers make an official release of card.io-iOS-SDK](official_release.md)
 
 
 Contributors
