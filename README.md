@@ -42,6 +42,8 @@ We use python-based build scripts.
     pip install -r pip_requirements.txt
 ```
 
+### Baler
+
 We use [baler](https://github.com/paypal/baler) (included in `pip_requirements.txt`) to encode assets (strings and images) within our library. Create a `.baler_env` file in the top project directory, and set the $PATH environment variable to include where you installed baler. Examples:
 
 ```
