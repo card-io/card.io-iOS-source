@@ -59,7 +59,7 @@ We use [baler](https://github.com/paypal/baler) (included in `pip_requirements.t
 Normal development
 ------------------
 
-Use Xcode in a normal fashion to build the library. The project's `icc` target builds a demo app which will allow you exercise the library in various ways.
+Use Xcode in a normal fashion to build the library. The project's `icc` target builds a demo app which will allow you to exercise the library in various ways.
 
 
 Unofficial card.io-iOS-SDK release
