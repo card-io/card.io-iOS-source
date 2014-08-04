@@ -56,6 +56,11 @@ We use [baler](https://github.com/paypal/baler) (included in `pip_requirements.t
     echo 'export PATH=$PATH:'`dirname \`which bale\`` > .baler_env
 ```
 
+### card.io-dmz
+
+The [card.io-dmz](https://github.com/card-io/card.io-dmz) submodule (included here in the `dmz` directory) includes the core image-processing code.
+
+
 Normal development
 ------------------
 
