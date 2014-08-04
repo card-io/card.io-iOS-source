@@ -15,7 +15,7 @@
 #pragma mark - Properties you MUST set
 
 /// Typically, your view controller will set itself as this delegate.
-@property(nonatomic, strong, readwrite) id<CardIOViewDelegate> delegate;
+@property(nonatomic, weak, readwrite) id<CardIOViewDelegate> delegate;
 
 
 #pragma mark - Properties you MAY set
