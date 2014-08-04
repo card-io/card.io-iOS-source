@@ -583,6 +583,7 @@
 
 - (void)dealloc {
   [[NSNotificationCenter defaultCenter] removeObserver:self];
+  self.hideableCardIOView.delegate = nil;
 }
 
 @end
