@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		03232D6D15210A030028EACA /* CardIOKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 03232D6A15210A030028EACA /* CardIOKeychain.m */; };
-		3E0133CD198ACEDD009E579A /* MainWindow~iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E0133CC198ACEDD009E579A /* MainWindow~iPad.xib */; };
+		3E00436C19901EC500BB8A1F /* MainWindow~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E00436B19901EB200BB8A1F /* MainWindow~ipad.xib */; };
 		3E0133E1198AD433009E579A /* CardIO-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 3E0133E0198AD433009E579A /* CardIO-Prefix.pch */; };
 		3E0133E4198AD6C5009E579A /* AdHocEntitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3E0133E3198AD6C5009E579A /* AdHocEntitlements.plist */; };
 		3E0133E7198AD75C009E579A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E0133E6198AD75C009E579A /* main.m */; };
@@ -101,7 +101,7 @@
 		3E9F4C56181F07B700F33B48 /* yellow_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 03CA8C5E130E1660006042CE /* yellow_button@2x.png */; };
 		3E9F4C57181F07B700F33B48 /* yak_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0387A5C81346D97200CE3230 /* yak_icon@2x.png */; };
 		3E9F4C58181F07B700F33B48 /* yak_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0387A5C91346D97200CE3230 /* yak_icon.png */; };
-		3E9F4C5A181F07B700F33B48 /* yak_icon~iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 032E420C134FA49400830810 /* yak_icon~iPad.png */; };
+		3E9F4C5A181F07B700F33B48 /* yak_icon~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 032E420C134FA49400830810 /* yak_icon~ipad.png */; };
 		3E9F4C5C181F07B700F33B48 /* card_io_logo_black.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DE7CA2517BD94F300D54383 /* card_io_logo_black.png */; };
 		3E9F4C5D181F07B700F33B48 /* RootViewController~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55DAEBCD17C8258B0041A4E6 /* RootViewController~ipad.xib */; };
 		3E9F4C5F181F07B700F33B48 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B55FAACD1610F3B20042B9FB /* Default-568h@2x.png */; };
@@ -189,7 +189,7 @@
 		0327DDC3158150CA008DDA68 /* modelc_5c241121.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = modelc_5c241121.hpp; path = models/generated/modelc_5c241121.hpp; sourceTree = "<group>"; };
 		0327DDC4158150CA008DDA68 /* modelc_01266c1b.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = modelc_01266c1b.hpp; path = models/generated/modelc_01266c1b.hpp; sourceTree = "<group>"; };
 		0327DDC5158150CA008DDA68 /* modelc_b00bf70c.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = modelc_b00bf70c.hpp; path = models/generated/modelc_b00bf70c.hpp; sourceTree = "<group>"; };
-		032E420C134FA49400830810 /* yak_icon~iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yak_icon~iPad.png"; sourceTree = "<group>"; };
+		032E420C134FA49400830810 /* yak_icon~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yak_icon~ipad.png"; sourceTree = "<group>"; };
 		03306CF81284952B00683F48 /* UnitTest.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTest.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		03306CF91284952B00683F48 /* UnitTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UnitTest-Info.plist"; sourceTree = "<group>"; };
 		0346CED8157D858400F99613 /* scan.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = scan.h; sourceTree = "<group>"; };
@@ -512,7 +512,7 @@
 		2DE7CA2617BD94F300D54383 /* card_io_logo_black@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "card_io_logo_black@2x.png"; path = "Resources/card_io_logo_black@2x.png"; sourceTree = "<group>"; };
 		2DF9307616557ED7000936BA /* CardIOBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CardIOBundle.h; path = Classes/CardIOBundle.h; sourceTree = "<group>"; };
 		2DF9307716557ED7000936BA /* CardIOBundle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CardIOBundle.m; path = Classes/CardIOBundle.m; sourceTree = "<group>"; };
-		3E0133CC198ACEDD009E579A /* MainWindow~iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = "MainWindow~iPad.xib"; path = "Resources/MainWindow~iPad.xib"; sourceTree = "<group>"; };
+		3E00436B19901EB200BB8A1F /* MainWindow~ipad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "MainWindow~ipad.xib"; path = "Resources/MainWindow~ipad.xib"; sourceTree = "<group>"; };
 		3E0133D8198AD2F3009E579A /* icc-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "icc-Info.plist"; path = "SupportFiles/icc-Info.plist"; sourceTree = SOURCE_ROOT; };
 		3E0133DA198AD30A009E579A /* CardIO_exported_symbols.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = CardIO_exported_symbols.txt; path = SupportFiles/CardIO_exported_symbols.txt; sourceTree = "<group>"; };
 		3E0133E0198AD433009E579A /* CardIO-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CardIO-Prefix.pch"; path = "SupportFiles/CardIO-Prefix.pch"; sourceTree = "<group>"; };
@@ -1000,7 +1000,7 @@
 				B55FAACD1610F3B20042B9FB /* Default-568h@2x.png */,
 				0387A5C81346D97200CE3230 /* yak_icon@2x.png */,
 				0387A5C91346D97200CE3230 /* yak_icon.png */,
-				032E420C134FA49400830810 /* yak_icon~iPad.png */,
+				032E420C134FA49400830810 /* yak_icon~ipad.png */,
 				3EA0739F16E6C26C00CA6E7F /* simulated_camera_0.png */,
 				5528BBBE16F7B1CA005D5011 /* simulated_camera_1.png */,
 				5528BBBF16F7B1CA005D5011 /* simulated_camera_2.png */,
@@ -1562,7 +1562,7 @@
 				1D3623240D0F684500981E51 /* iccAppDelegate.h */,
 				1D3623250D0F684500981E51 /* iccAppDelegate.m */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
-				3E0133CC198ACEDD009E579A /* MainWindow~iPad.xib */,
+				3E00436B19901EB200BB8A1F /* MainWindow~ipad.xib */,
 			);
 			name = Main;
 			sourceTree = "<group>";
@@ -1791,7 +1791,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E9F4C4E181F07B700F33B48 /* MainWindow.xib in Resources */,
-				3E0133CD198ACEDD009E579A /* MainWindow~iPad.xib in Resources */,
 				3E9F4C50181F07B700F33B48 /* RootViewController.xib in Resources */,
 				3E9F4C51181F07B700F33B48 /* green_button@2x.png in Resources */,
 				3E9F4C52181F07B700F33B48 /* green_button.png in Resources */,
@@ -1802,13 +1801,14 @@
 				3E9F4C56181F07B700F33B48 /* yellow_button@2x.png in Resources */,
 				3E9F4C57181F07B700F33B48 /* yak_icon@2x.png in Resources */,
 				3E9F4C58181F07B700F33B48 /* yak_icon.png in Resources */,
-				3E9F4C5A181F07B700F33B48 /* yak_icon~iPad.png in Resources */,
+				3E9F4C5A181F07B700F33B48 /* yak_icon~ipad.png in Resources */,
 				3E9F4C5C181F07B700F33B48 /* card_io_logo_black.png in Resources */,
 				3E9F4C5D181F07B700F33B48 /* RootViewController~ipad.xib in Resources */,
 				3E9F4C5F181F07B700F33B48 /* Default-568h@2x.png in Resources */,
 				3E9F4C60181F07B700F33B48 /* Default.png in Resources */,
 				3E9F4C61181F07B700F33B48 /* Default@2x.png in Resources */,
 				3E9F4C62181F07B700F33B48 /* simulated_camera_0.png in Resources */,
+				3E00436C19901EC500BB8A1F /* MainWindow~ipad.xib in Resources */,
 				3E9F4C63181F07B700F33B48 /* simulated_camera_1.png in Resources */,
 				3E9F4C64181F07B700F33B48 /* card_io_logo_black@2x.png in Resources */,
 				3E9F4C65181F07B700F33B48 /* simulated_camera_2.png in Resources */,
