@@ -34,5 +34,3 @@ cardtype_postepay
 cardtype_4etoiles
 cardtype_tarjetaaurora
 cardtype_visa
-paypal_success
-paypal_scan_instructions

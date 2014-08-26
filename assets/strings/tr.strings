@@ -35,15 +35,3 @@
 "cardtype_4etoiles" = "4 étoiles";
 "cardtype_tarjetaaurora" = "Tarjeta Aurora";
 "cardtype_visa" = "Visa";
-
-/* PayPal-only */
-"paypal_success" = "Başarılı! Tarama işlemi başarılı oldu.";
-"paypal_scan_instructions" = "Kartınızı eklemek fotoğraf çekmek kadar kolaydır.";
-
-/* Android-only */
-"keyboard" = "Klavye…";
-"manual_entry_title" = "Kart Ayrıntıları";
-"whoops" = "Pardon!";
-"error_no_device_support" = "Bu cihazın kamerası kart rakamlarını okuyamaz.";
-"error_camera_connect_fail" = "Cihaz kamerası kullanılamıyor.";
-"error_camera_unexpected_fail" = "Cihaz kamerayı açarken beklenmedik bir hata verdi.";

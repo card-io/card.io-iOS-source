@@ -35,15 +35,3 @@
 "cardtype_4etoiles" = "4 étoiles";
 "cardtype_tarjetaaurora" = "Tarjeta Aurora";
 "cardtype_visa" = "Visa";
-
-/* PayPal-only */
-"paypal_success" = "Fatto! Scansione completata.";
-"paypal_scan_instructions" = "Per collegare la tua carta,\nscatta una foto.";
-
-/* Android-only */
-"keyboard" = "Tastiera…";
-"manual_entry_title" = "Dati carta";
-"whoops" = "Oops!";
-"error_no_device_support" = "La fotocamera non legge il numero di carta.";
-"error_camera_connect_fail" = "Fotocamera non disponibile.";
-"error_camera_unexpected_fail" = "Errore inatteso nell’apertura della fotocamera.";

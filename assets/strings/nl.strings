@@ -35,15 +35,3 @@
 "cardtype_4etoiles" = "4 étoiles";
 "cardtype_tarjetaaurora" = "Tarjeta Aurora";
 "cardtype_visa" = "Visa";
-
-/* PayPal-only */
-"paypal_success" = "Voltooid! Uw scan is gelukt.";
-"paypal_scan_instructions" = "Uw kaart koppelen is net makkelijk als het maken van een foto.";
-
-/* Android-only */
-"keyboard" = "Toetsenbord…";
-"manual_entry_title" = "Kaartgegevens";
-"whoops" = "Oeps!";
-"error_no_device_support" = "Met de camera van dit apparaat kunnen geen kaartnummers worden gelezen.";
-"error_camera_connect_fail" = "Camera apparaat niet beschikbaar.";
-"error_camera_unexpected_fail" = "Er is een onverwachte fout opgetreden bij het starten van de camera.";

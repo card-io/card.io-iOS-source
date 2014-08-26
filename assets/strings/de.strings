@@ -35,15 +35,3 @@
 "cardtype_4etoiles" = "4 étoiles";
 "cardtype_tarjetaaurora" = "Tarjeta Aurora";
 "cardtype_visa" = "Visa";
-
-/* PayPal-only */
-"paypal_success" = "Kreditkarte erfolgreich eingelesen.";
-"paypal_scan_instructions" = "Eine Kreditkarte hinzuzufügen ist so einfach wie ein Foto zu schießen.";
-
-/* Android-only */
-"keyboard" = "Tastatur…";
-"manual_entry_title" = "Kreditkartendetails";
-"whoops" = "Leider ist ein Fehler aufgetreten.";
-"error_no_device_support" = "Dieses Gerät kann mit der Kamera keine Kreditkartennummern lesen.";
-"error_camera_connect_fail" = "Die Kamera ist nicht verfügbar.";
-"error_camera_unexpected_fail" = "Beim Öffnen der Kamera ist ein unerwarteter Fehler aufgetreten.";

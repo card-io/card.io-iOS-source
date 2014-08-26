@@ -35,15 +35,3 @@
 "cardtype_4etoiles" = "4 étoiles";
 "cardtype_tarjetaaurora" = "Tarjeta Aurora";
 "cardtype_visa" = "Visa";
-
-/* PayPal-only */
-"paypal_success" = "Gennemført! Din scanning lykkedes.";
-"paypal_scan_instructions" = "Det er ligeså let at tilknytte dit kort, som det er at tage et billede.";
-
-/* Android-only */
-"keyboard" = "Tastatur…";
-"manual_entry_title" = "Kortoplysninger";
-"whoops" = "Whoops!";
-"error_no_device_support" = "Denne enhed kan ikke anvende kameraet til at læse kortnumre.";
-"error_camera_connect_fail" = "Enhed kamera ikke er tilgængelig.";
-"error_camera_unexpected_fail" = "Enheden havde en uventet fejl under åbning af kamera.";

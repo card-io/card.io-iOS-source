@@ -35,15 +35,3 @@
 "cardtype_4etoiles" = "4 étueeles";
 "cardtype_tarjetaaurora" = "Terjeta Oorura";
 "cardtype_visa" = "Feesa";
-
-/* PayPal-only */
-"paypal_success" = "Sooccess! Yuoor scun vurked.";
-"paypal_scan_instructions" = "Leenking yuoor cerd is es iesy es tekeeng a peectoore-a.";
-
-/* Android-only */
-"keyboard" = "Keybuerd…";
-"manual_entry_title" = "Cerd Deteeels";
-"whoops" = "Vhuups!";
-"error_no_device_support" = "Thees defeece-a cunnut use-a zee cemera tu reed cerd noombers.";
-"error_camera_connect_fail" =  "Device camera is unavailable.";
-"error_camera_unexpected_fail" = "Zee defeece-a hed un unexpected irrur oopeneeng zee cemera.";

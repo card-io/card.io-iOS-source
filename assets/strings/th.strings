@@ -35,15 +35,3 @@
 "cardtype_4etoiles" = "4 étoiles";
 "cardtype_tarjetaaurora" = "Tarjeta Aurora";
 "cardtype_visa" = "Visa";
-
-/* PayPal-only */
-"paypal_success" = "สำเร็จ สแกนผ่านแล้ว";
-"paypal_scan_instructions" = "การเชื่อมโยงบัตรนั้นง่ายมากพอๆ กับการถ่ายภาพ";
-
-/* Android-only */
-"keyboard" = "คีย์บอร์ด…";
-"manual_entry_title" = "รายละเอียดบัตร";
-"whoops" = "ขออภัยค่ะ";
-"error_no_device_support" = "อุปกรณ์ไม่สามารถใช้กล้องเพื่ออ่านหมายเลขบัตรได้";
-"error_camera_connect_fail" = "กล้องของอุปกรณ์ไม่พร้อมใช้งาน";
-"error_camera_unexpected_fail" = "อุปกรณ์พบข้อผิดพลาดขณะเปิดกล้อง";

@@ -35,15 +35,3 @@
 "cardtype_4etoiles" = "‎4 étoiles‏";
 "cardtype_tarjetaaurora" = "Tarjeta Aurora‏";
 "cardtype_visa" = "Visa‏";
-
-/* PayPal-only */
-"paypal_success" = "نجاح! لقد نجح مسحك.";
-"paypal_scan_instructions" = "ربط بطاقتك يكون بسهولة التقاط صورة.";
-
-/* Android-only */
-"keyboard" = "لوحة المفاتيح…";
-"manual_entry_title" = "تفاصيل البطاقة";
-"whoops" = "عذراً!";
-"error_no_device_support" = "هذا الجهاز لا يمكنه استعمال الكاميرا لقراءة أرقام البطاقة.";
-"error_camera_connect_fail" = "كاميرا الجهاز غير متاحة.";
-"error_camera_unexpected_fail" = "الجهاز حدث به خطا غير متوقع عند فتح الكاميرا.";

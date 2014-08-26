@@ -35,15 +35,3 @@
 "cardtype_4etoiles" = "4 étoiles";
 "cardtype_tarjetaaurora" = "Tarjeta Aurora";
 "cardtype_visa" = "Visa";
-
-/* PayPal-only */
-"paypal_success" = "스캔이 완료되었습니다.";
-"paypal_scan_instructions" = "카드 연결은 사진 찍는 것 만큼 쉽습니다.";
-
-/* Android-only */
-"keyboard" = "키보드…";
-"manual_entry_title" = "카드 세부정보";
-"whoops" = "이런!";
-"error_no_device_support" = "기기가 카메라를 이용한 카드 숫자 판독을 지원하지 않습니다.";
-"error_camera_connect_fail" = "기기에서 카메라를 사용할 수 없습니다.";
-"error_camera_unexpected_fail" = "기기에서 카메라를 여는 동안 예상치 못한 오류가 발생했습니다.";

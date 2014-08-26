@@ -35,15 +35,3 @@
 "cardtype_4etoiles" = "4 étoiles";
 "cardtype_tarjetaaurora" = "Tarjeta Aurora";
 "cardtype_visa" = "Visa";
-
-/* PayPal-only */
-"paypal_success" = "成功！卡扫描已完成。";
-"paypal_scan_instructions" = "关联卡和拍照一样简单。";
-
-/* Android-only */
-"keyboard" = "键盘…";
-"manual_entry_title" = "卡详细信息";
-"whoops" = "糟糕！";
-"error_no_device_support" = "此设备无法使用摄像头读取卡号。";
-"error_camera_connect_fail" = "设备摄像头不可用。";
-"error_camera_unexpected_fail" = "设备打开摄像头时出现意外错误。";

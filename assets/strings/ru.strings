@@ -35,15 +35,3 @@
 "cardtype_4etoiles" = "4 étoiles";
 "cardtype_tarjetaaurora" = "Tarjeta Aurora";
 "cardtype_visa" = "Visa";
-
-/* PayPal-only */
-"paypal_success" = "Успешно! Считывание завершено.";
-"paypal_scan_instructions" = "Привязать карту к вашему счету теперь проще, чем сделать фото.";
-
-/* Android-only */
-"keyboard" = "Клавиатура…";
-"manual_entry_title" = "Информация о карте";
-"whoops" = "Ой…";
-"error_no_device_support" = "В данном устройстве нет опции считывания номера карты с помощью фотокамеры.";
-"error_camera_connect_fail" = "Фотокамера устройства недоступна.";
-"error_camera_unexpected_fail" = "Возникла незапланированная ошибка при открытии фотокамеры устройства.";
