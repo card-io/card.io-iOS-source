@@ -21,7 +21,6 @@
 
 @property(nonatomic, strong, readwrite) IBOutlet UIButton *scanButton;
 @property(nonatomic, strong, readwrite) IBOutlet UIButton *scanPicoPikaButton;
-@property(nonatomic, strong, readwrite) IBOutlet UIButton *recordButton;
 @property(nonatomic, strong, readwrite) IBOutlet UISwitch *manualSwitch;
 @property(nonatomic, strong, readwrite) IBOutlet UISwitch *expirySwitch;
 @property(nonatomic, strong, readwrite) IBOutlet UISwitch *cvvSwitch;
