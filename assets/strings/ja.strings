@@ -8,7 +8,7 @@
 "deactivate_flash" = "フラッシュをオフにしてください。";
 "done" = "完了";
 "entry_card_number" = "カード番号";
-"entry_cvv" = "CVV";
+"entry_cvv" = "カード確認コード";
 "entry_expires" = "有効期限";
 "entry_number" = "番号";
 "entry_title" = "カード";

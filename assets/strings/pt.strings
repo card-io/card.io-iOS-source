@@ -8,8 +8,8 @@
 "deactivate_flash" = "Desligue o flash.";
 "done" = "Concluído";
 "entry_card_number" = "Número do cartão";
-"entry_cvv" = "CVV";
-"entry_expires" = "Vencimento";
+"entry_cvv" = "CSC";
+"entry_expires" = "Validade";
 "entry_number" = "Número";
 "entry_title" = "Cartão";
 "entry_postal_code" = "Código Postal";
