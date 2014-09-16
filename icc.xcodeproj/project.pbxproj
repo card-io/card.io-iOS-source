@@ -13,6 +13,9 @@
 		3E0133E4198AD6C5009E579A /* AdHocEntitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3E0133E3198AD6C5009E579A /* AdHocEntitlements.plist */; };
 		3E0133E7198AD75C009E579A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E0133E6198AD75C009E579A /* main.m */; };
 		3E663B9D170FA92C008FCBE8 /* CardIOLocalizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA7E535170F8F8600BAE3F3 /* CardIOLocalizer.m */; };
+		3E9618E019C8EBBD0023CDBB /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E9618DF19C8EBBD0023CDBB /* AudioToolbox.framework */; };
+		3E9618E219C8EBC50023CDBB /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E9618E119C8EBC50023CDBB /* CoreMedia.framework */; };
+		3E9618E419C8EBCB0023CDBB /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E9618E319C8EBCB0023CDBB /* MobileCoreServices.framework */; };
 		3E9F4BDE181F03F300F33B48 /* CardIOTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 030735FF134167C000663C26 /* CardIOTableViewCell.m */; };
 		3E9F4BDF181F03F300F33B48 /* CardIOPaymentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0307CFF213304B210019C8F7 /* CardIOPaymentViewController.m */; };
 		3E9F4BE0181F03F300F33B48 /* CardIOVideoFrame.mm in Sources */ = {isa = PBXBuildFile; fileRef = 036DD66012663A6300EB719A /* CardIOVideoFrame.mm */; };
@@ -559,6 +562,9 @@
 		3E6DB8B518513EFC00C5853E /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = text; name = LICENSE.md; path = Release/LICENSE.md; sourceTree = "<group>"; };
 		3E6DB8B618513EFC00C5853E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; name = README.md; path = Release/README.md; sourceTree = "<group>"; };
 		3E6DB8B718513EFC00C5853E /* release_notes.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = release_notes.txt; path = Release/release_notes.txt; sourceTree = "<group>"; };
+		3E9618DF19C8EBBD0023CDBB /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		3E9618E119C8EBC50023CDBB /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		3E9618E319C8EBCB0023CDBB /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		3E9F4C49181F03F300F33B48 /* libCardIO.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCardIO.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E9F4C7F181F07B700F33B48 /* icc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = icc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EA0739F16E6C26C00CA6E7F /* simulated_camera_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = simulated_camera_0.png; sourceTree = "<group>"; };
@@ -651,7 +657,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E9618E019C8EBBD0023CDBB /* AudioToolbox.framework in Frameworks */,
 				3EB636AC1846CCA400F0527B /* AVFoundation.framework in Frameworks */,
+				3E9618E219C8EBC50023CDBB /* CoreMedia.framework in Frameworks */,
+				3E9618E419C8EBCB0023CDBB /* MobileCoreServices.framework in Frameworks */,
 				3E9F4C81181F09CD00F33B48 /* libCardIO.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1541,7 +1550,10 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3E9618DF19C8EBBD0023CDBB /* AudioToolbox.framework */,
 				3EB636AA1846C6A900F0527B /* AVFoundation.framework */,
+				3E9618E119C8EBC50023CDBB /* CoreMedia.framework */,
+				3E9618E319C8EBCB0023CDBB /* MobileCoreServices.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1698,7 +1710,7 @@
 			name = UnitTest;
 			productName = UnitTest;
 			productReference = 03306CF81284952B00683F48 /* UnitTest.octest */;
-			productType = "com.apple.product-type.bundle";
+			productType = "com.apple.product-type.bundle.ocunit-test";
 		};
 		3E9F4BD9181F03F300F33B48 /* CardIO */ = {
 			isa = PBXNativeTarget;
@@ -1745,7 +1757,7 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0600;
 				TargetAttributes = {
 					3E9F4C4A181F07B700F33B48 = {
 						DevelopmentTeam = V8KL7848Q4;
@@ -2055,10 +2067,15 @@
 		03DBA30D121B5A56008A1618 /* AdHoc */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
+				ARCHS = (
+					arm64,
+					armv7,
+					armv7s,
+				);
 				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_MODULES = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_MODULES_AUTOLINK = NO;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
@@ -2089,7 +2106,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -2141,7 +2157,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -2185,7 +2200,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_ENTITLEMENTS = SupportFiles/AdHocEntitlements.plist;
@@ -2230,7 +2244,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -2285,7 +2298,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -2326,7 +2338,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_ENTITLEMENTS = SupportFiles/AdHocEntitlements.plist;
@@ -2362,10 +2373,15 @@
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
+				ARCHS = (
+					arm64,
+					armv7,
+					armv7s,
+				);
 				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_MODULES = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_MODULES_AUTOLINK = NO;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
@@ -2388,6 +2404,7 @@
 					"$(SRCROOT)/opencv_device/lib/libopencv_core.a",
 					"$(SRCROOT)/opencv_device/lib/libopencv_imgproc.a",
 				);
+				OTHER_LIBTOOLFLAGS = "$(SRCROOT)/opencv_device/lib/libopencv_core.a $(SRCROOT)/opencv_device/lib/libopencv_imgproc.a";
 				PRELINK_FLAGS = "";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -2399,10 +2416,15 @@
 		C01FCF5008A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
+				ARCHS = (
+					arm64,
+					armv7,
+					armv7s,
+				);
 				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_MODULES = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_MODULES_AUTOLINK = NO;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
