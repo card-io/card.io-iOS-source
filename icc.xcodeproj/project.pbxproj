@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		03232D6D15210A030028EACA /* CardIOKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 03232D6A15210A030028EACA /* CardIOKeychain.m */; };
-		3E00436C19901EC500BB8A1F /* MainWindow~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E00436B19901EB200BB8A1F /* MainWindow~ipad.xib */; };
 		3E0133E1198AD433009E579A /* CardIO-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 3E0133E0198AD433009E579A /* CardIO-Prefix.pch */; };
 		3E0133E4198AD6C5009E579A /* AdHocEntitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3E0133E3198AD6C5009E579A /* AdHocEntitlements.plist */; };
 		3E0133E7198AD75C009E579A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E0133E6198AD75C009E579A /* main.m */; };
@@ -16,6 +15,7 @@
 		3E9618E019C8EBBD0023CDBB /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E9618DF19C8EBBD0023CDBB /* AudioToolbox.framework */; };
 		3E9618E219C8EBC50023CDBB /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E9618E119C8EBC50023CDBB /* CoreMedia.framework */; };
 		3E9618E419C8EBCB0023CDBB /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E9618E319C8EBCB0023CDBB /* MobileCoreServices.framework */; };
+		3E9618E819C8F6C70023CDBB /* MainWindow~iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E9618E719C8F6C70023CDBB /* MainWindow~iPad.xib */; };
 		3E9F4BDE181F03F300F33B48 /* CardIOTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 030735FF134167C000663C26 /* CardIOTableViewCell.m */; };
 		3E9F4BDF181F03F300F33B48 /* CardIOPaymentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0307CFF213304B210019C8F7 /* CardIOPaymentViewController.m */; };
 		3E9F4BE0181F03F300F33B48 /* CardIOVideoFrame.mm in Sources */ = {isa = PBXBuildFile; fileRef = 036DD66012663A6300EB719A /* CardIOVideoFrame.mm */; };
@@ -515,7 +515,6 @@
 		2DE7CA2617BD94F300D54383 /* card_io_logo_black@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "card_io_logo_black@2x.png"; path = "Resources/card_io_logo_black@2x.png"; sourceTree = "<group>"; };
 		2DF9307616557ED7000936BA /* CardIOBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CardIOBundle.h; path = Classes/CardIOBundle.h; sourceTree = "<group>"; };
 		2DF9307716557ED7000936BA /* CardIOBundle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CardIOBundle.m; path = Classes/CardIOBundle.m; sourceTree = "<group>"; };
-		3E00436B19901EB200BB8A1F /* MainWindow~ipad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "MainWindow~ipad.xib"; path = "Resources/MainWindow~ipad.xib"; sourceTree = "<group>"; };
 		3E0133D8198AD2F3009E579A /* icc-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "icc-Info.plist"; path = "SupportFiles/icc-Info.plist"; sourceTree = SOURCE_ROOT; };
 		3E0133DA198AD30A009E579A /* CardIO_exported_symbols.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = CardIO_exported_symbols.txt; path = SupportFiles/CardIO_exported_symbols.txt; sourceTree = "<group>"; };
 		3E0133E0198AD433009E579A /* CardIO-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CardIO-Prefix.pch"; path = "SupportFiles/CardIO-Prefix.pch"; sourceTree = "<group>"; };
@@ -565,6 +564,7 @@
 		3E9618DF19C8EBBD0023CDBB /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		3E9618E119C8EBC50023CDBB /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		3E9618E319C8EBCB0023CDBB /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		3E9618E719C8F6C70023CDBB /* MainWindow~iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = "MainWindow~iPad.xib"; path = "Resources/MainWindow~iPad.xib"; sourceTree = "<group>"; };
 		3E9F4C49181F03F300F33B48 /* libCardIO.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCardIO.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E9F4C7F181F07B700F33B48 /* icc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = icc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EA0739F16E6C26C00CA6E7F /* simulated_camera_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = simulated_camera_0.png; sourceTree = "<group>"; };
@@ -1574,7 +1574,7 @@
 				1D3623240D0F684500981E51 /* iccAppDelegate.h */,
 				1D3623250D0F684500981E51 /* iccAppDelegate.m */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
-				3E00436B19901EB200BB8A1F /* MainWindow~ipad.xib */,
+				3E9618E719C8F6C70023CDBB /* MainWindow~iPad.xib */,
 			);
 			name = Main;
 			sourceTree = "<group>";
@@ -1810,6 +1810,7 @@
 				3E0133E4198AD6C5009E579A /* AdHocEntitlements.plist in Resources */,
 				3E9F4C54181F07B700F33B48 /* red_button.png in Resources */,
 				3E9F4C55181F07B700F33B48 /* yellow_button.png in Resources */,
+				3E9618E819C8F6C70023CDBB /* MainWindow~iPad.xib in Resources */,
 				3E9F4C56181F07B700F33B48 /* yellow_button@2x.png in Resources */,
 				3E9F4C57181F07B700F33B48 /* yak_icon@2x.png in Resources */,
 				3E9F4C58181F07B700F33B48 /* yak_icon.png in Resources */,
@@ -1820,7 +1821,6 @@
 				3E9F4C60181F07B700F33B48 /* Default.png in Resources */,
 				3E9F4C61181F07B700F33B48 /* Default@2x.png in Resources */,
 				3E9F4C62181F07B700F33B48 /* simulated_camera_0.png in Resources */,
-				3E00436C19901EC500BB8A1F /* MainWindow~ipad.xib in Resources */,
 				3E9F4C63181F07B700F33B48 /* simulated_camera_1.png in Resources */,
 				3E9F4C64181F07B700F33B48 /* card_io_logo_black@2x.png in Resources */,
 				3E9F4C65181F07B700F33B48 /* simulated_camera_2.png in Resources */,
