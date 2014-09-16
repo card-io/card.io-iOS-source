@@ -485,13 +485,13 @@
                    withErrorMessage:@"CardIO couldn't lock for configuration within startSession"
  #endif
      ];
+    self.running = YES;
   }
 #elif SIMULATE_CAMERA
   self.simulatedCameraTimer = [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(simulateNewFrame) userInfo:nil repeats:YES];
   [self simulateNewFrame]; // grab the first frame right away
-#endif
-
   self.running = YES;
+#endif
 }
 
 - (void)stopSession {
