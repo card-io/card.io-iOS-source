@@ -1,5 +1,25 @@
 We usually only build OpenCV when we have to. Each time is a new adventure, so instead of an engineering solution, here are some notes about what it took to get it to build last time.
 
+
+Sep 11, 2014, Dave -- Xcode 6 GM, deployment target iOS 6.0
+-----------------------------------------------------------
+Opened OpenCV-iOS/OpenCV-iOS/OpenCV-iOS.xcodeproj
+
+For the OpenCV-iOS project,
+- changed Deployment Target to "iOS 6.0".
+- change ARCHS build setting from $(ARCHS_STANDARD_INCL_64_BIT) to "arm64 armv7 armv7s"
+
+Picked target "opencv_core", set Scheme to "Release".
+Built.
+
+Picked target "opencv_imgproc", set Scheme to "Release".
+Built.
+
+Used Organizer window to find build products.
+
+Copied static libs libopencv_core.a and libopencv_imgproc.a to icc/opencv-device/lib.
+
+
 Nov 1, 2013, Dave -- 64-bit build for iPhone 5S; redo in Xcode 5.0.1, deployment target >= iOS 5.1
 --------------------------------------------------------------------------------------------------
 Opened OpenCV-iOS/OpenCV-iOS/OpenCV-iOS.xcodeproj
