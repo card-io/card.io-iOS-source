@@ -431,6 +431,18 @@
     // In any case, though, the kludge crashes on iOS 8 Beta 2.
     // So, at least for the moment, avoid it in iOS 8!
     [root pushViewController:manualEntryViewController animated:YES];
+    //
+    // 17 Sep 2014 further notes:
+    // Can prevent the iOS 8 crash by adding `dispatch_after` as follows:
+    //    [self.navigationController presentViewController:[[UIViewController alloc] init] animated:NO completion:^{
+    //      dispatch_after(0, dispatch_get_main_queue(), ^{
+    //        [self.navigationController dismissViewControllerAnimated:NO completion:^{
+    //          [root pushViewController:manualEntryViewController animated:YES];
+    //        }];
+    //      });
+    //    }];
+    // However, this results in some ugly flashiness. (Even uglier on iOS 7 than on iOS 8.)
+    // So, for now, let's just wait and see whether that mysterious orientation-related edge case turns up someday under iOS 8.
   }
   else {
     // Force the system to again ask CardIOPaymentViewController for its preferred orientation
@@ -526,6 +538,18 @@
       // In any case, though, the kludge crashes on iOS 8 Beta 2.
       // So, at least for the moment, avoid it in iOS 8!
       [root pushViewController:dataEntryViewController animated:NO];
+      //
+      // 17 Sep 2014 further notes:
+      // Can prevent the iOS 8 crash by adding `dispatch_after` as follows:
+      //      [self.navigationController presentViewController:[[UIViewController alloc] init] animated:NO completion:^{
+      //        dispatch_after(0, dispatch_get_main_queue(), ^{
+      //          [self.navigationController dismissViewControllerAnimated:NO completion:^{
+      //            [root pushViewController:dataEntryViewController animated:NO];
+      //          }];
+      //        });
+      //      }];
+      // However, this results in some ugly flashiness. (Even uglier on iOS 7 than on iOS 8.)
+      // So, for now, let's just wait and see whether that mysterious orientation-related edge case turns up someday under iOS 8.
     }
     else {
       // Force the system to again ask CardIOPaymentViewController for its preferred orientation

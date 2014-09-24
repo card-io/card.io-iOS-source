@@ -79,6 +79,12 @@ static ScanAvailabilityStatus cachedScanAvailabilityStatus = ScanAvailabilityUnk
   return YES;
 }
 
+#pragma mark - Preload resources for faster launch of card.io
+
++ (void)preload {
+  [CardIOLocalizer preload];
+}
+
 #pragma mark - Screen obfuscation on backgrounding
 
 + (UIImageView *)blurredScreenImageView {

@@ -21,6 +21,13 @@
 /// @return YES iff the user's device supports camera-based card scanning.
 + (BOOL)canReadCardWithCamera;
 
+/// The preload method prepares card.io to launch faster. Calling preload is optional but suggested.
+/// On an iPhone 5S, for example, preloading makes card.io launch ~400ms faster.
+/// The best time to call preload is when displaying a view from which card.io might be launched;
+/// e.g., inside your view controller's viewWillAppear: method.
+/// preload works in the background; the call to preload returns immediately.
++ (void)preload;
+
 /// Returns a doubly Gaussian-blurred screenshot, intended for screenshots when backgrounding.
 /// @return Blurred screenshot.
 + (UIImageView *)blurredScreenImageView;

@@ -15,6 +15,8 @@
 
 + (NSTextAlignment)textAlignmentForLanguageOrLocale:(NSString *)languageOrLocale;
 
++ (void)preload;
+
 @end
 
 // This ugly stuff is to prevent name-mangling, so that this function

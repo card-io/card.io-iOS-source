@@ -8,6 +8,7 @@ card.io iOS SDK release notes
 * New class: CardIOUtilities
   - libraryVersion         (formerly a method of CardIOPaymentViewController)
   - canReadCardWithCamera  (formerly a method of CardIOPaymentViewController)
+  - preload                (formerly a method of CardIOView and of CardIOPaymentViewController)
   - blurredScreenImageView (new method)
 * New property on CardIOCreditCardInfo:
   - cardImage
@@ -18,6 +19,12 @@ card.io iOS SDK release notes
   - detectionMode
 * New notification:
   - CardIOScanningOrientationDidChangeNotification
+
+--
+
+3.9.0 (Tue 9/23/2014)
+
+* Add new optional method `preload` to noticeably speed up the creation of your first CardIOView or CardIOPaymentViewController.
 
 --
 

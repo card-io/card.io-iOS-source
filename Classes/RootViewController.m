@@ -476,6 +476,8 @@
   self.hideableCardIOView.delegate = self;
   
   self.originalOutcomeLabelWidth = self.outcomeLabel.frame.size.width;
+  
+  [CardIOUtilities preload];
 }
 
 - (UIStatusBarStyle) preferredStatusBarStyle {

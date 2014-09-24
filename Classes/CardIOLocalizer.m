@@ -376,7 +376,17 @@ static CardIOLocalizer *sFallbackLocalizer = nil;
     return NSTextAlignmentLeft;
   }
 }
+
+#pragma mark - Preload strings
+
++ (void)preload {
+  dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+    [[CardIOBundle sharedInstance] NSBundle];
+  });
+}
+
 @end
+
 
 #pragma mark - CardIOLocalizedString
 

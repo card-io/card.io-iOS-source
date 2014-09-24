@@ -25,6 +25,11 @@
     self.infoLabel.text = @"";
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+  [super viewWillAppear:animated];
+  [CardIOUtilities preload];
+}
+
 #pragma mark - User Actions
 
 - (void)scanCardClicked:(id)sender {
