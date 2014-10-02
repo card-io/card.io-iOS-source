@@ -552,6 +552,7 @@
 		3E4D865717BC4EBB0057505D /* CardIOView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = CardIOView.mm; path = Classes/CardIOView.mm; sourceTree = "<group>"; };
 		3E4D865A17BC50AB0057505D /* CardIOViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CardIOViewDelegate.h; path = CardIO_Public_API/CardIOViewDelegate.h; sourceTree = "<group>"; };
 		3E4D865D17BC58650057505D /* CardIOViewContinuation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CardIOViewContinuation.h; path = Classes/CardIOViewContinuation.h; sourceTree = "<group>"; };
+		3E4F946419DE10020077712A /* is.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = is.strings; path = assets/strings/is.strings; sourceTree = SOURCE_ROOT; };
 		3E583C2117BB03C900CB326A /* CardIOView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CardIOView.h; path = CardIO_Public_API/CardIOView.h; sourceTree = "<group>"; };
 		3E583C2517BB062100CB326A /* CardIOConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIOConfig.h; sourceTree = "<group>"; };
 		3E583C2617BB062100CB326A /* CardIOConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardIOConfig.m; sourceTree = "<group>"; };
@@ -1593,6 +1594,7 @@
 				3E0133F0198ADC7D009E579A /* es.strings */,
 				3E0133F1198ADC7D009E579A /* fr.strings */,
 				3E0133F2198ADC7D009E579A /* he.strings */,
+				3E4F946419DE10020077712A /* is.strings */,
 				3E0133F3198ADC7D009E579A /* it.strings */,
 				3E0133F4198ADC7D009E579A /* ja.strings */,
 				3E0133F5198ADC7D009E579A /* ko.strings */,
