@@ -4,7 +4,6 @@ card.io iOS SDK release notes
 4.0.0 (TBD)
 
 * Open-source the card.io source code.
-* Remove all references to App Token.
 * New class: CardIOUtilities
   - libraryVersion         (formerly a method of CardIOPaymentViewController)
   - canReadCardWithCamera  (formerly a method of CardIOPaymentViewController)
@@ -19,6 +18,13 @@ card.io iOS SDK release notes
   - detectionMode
 * New notification:
   - CardIOScanningOrientationDidChangeNotification
+
+--
+
+3.10.0 (Thu 10/2/2014)
+
+* Eliminate App Token. Developers no longer need to sign up on the card.io site before using card.io.
+* Add Icelandic (is) to our supported localizations. (Thank you, Martin Kaplan!)
 
 --
 
