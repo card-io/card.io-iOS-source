@@ -16,8 +16,6 @@
   #import "CardIOCardScanner.h"
 #endif
 
-#define kAnalyticsAPIPath @"/sdk/analytics.bplist"
-
 @implementation CardIOAnalytics
 
 - (id)initWithContext:(CardIOContext *)aContext {
