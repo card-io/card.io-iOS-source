@@ -1,6 +1,4 @@
 "activate_flash" = "Encender flash.";
-"app_not_authorized_message" = "Esta aplicación no está autorizada para escanear tarjetas.";
-"app_not_authorized_title" = "Aplicación no autorizada";
 "camera" = "Cámara";
 "cancel" = "Cancelar";
 "card_info" = "Información de tarjeta";

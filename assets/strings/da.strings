@@ -1,6 +1,4 @@
 "activate_flash" = "Slå blitzen til.";
-"app_not_authorized_message" = "Denne app er ikke godkendt til scanning af kort.";
-"app_not_authorized_title" = "Appen er ikke godkendt";
 "camera" = "Kamera";
 "cancel" = "Annuller";
 "card_info" = "Kortoplysninger";

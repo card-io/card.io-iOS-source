@@ -1,6 +1,4 @@
 "activate_flash" = "打开闪光灯。";
-"app_not_authorized_message" = "该应用程序未获得授权，不能用来扫描卡。";
-"app_not_authorized_title" = "应用程序未获授权";
 "camera" = "摄像头";
 "cancel" = "取消";
 "card_info" = "卡信息";

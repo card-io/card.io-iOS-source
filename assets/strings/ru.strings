@@ -1,6 +1,4 @@
 "activate_flash" = "Включить вспышку.";
-"app_not_authorized_message" = "Это приложение не авторизовано для сканирования карт.";
-"app_not_authorized_title" = "Приложение не авторизовано";
 "camera" = "Камера";
 "cancel" = "Отмена";
 "card_info" = "Информация о карте";

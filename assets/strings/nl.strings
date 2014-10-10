@@ -1,6 +1,4 @@
 "activate_flash" = "Flits aanzetten";
-"app_not_authorized_message" = "Deze toepassing is niet goedgekeurd voor het scannen van creditcards.";
-"app_not_authorized_title" = "Applicatie niet goedgekeurd";
 "camera" = "Camera";
 "cancel" = "Annuleren";
 "card_info" = "Creditcardgegevens";

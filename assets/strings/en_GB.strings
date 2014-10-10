@@ -1,6 +1,4 @@
 "activate_flash" = "Turn flash on.";
-"app_not_authorized_message" = "This application is not authorised for card scanning.";
-"app_not_authorized_title" = "Application Not Authorised";
 "camera" = "Camera";
 "cancel" = "Cancel";
 "card_info" = "Card Info";

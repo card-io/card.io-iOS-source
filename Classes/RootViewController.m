@@ -291,46 +291,6 @@
   }
 }
 
-- (void)displayI18nAlert {
-  if (self.i18nAlertViewBackground == nil) {
-    self.i18nAlertViewBackground = [[UIView alloc] initWithFrame:self.view.bounds];
-    self.i18nAlertViewBackground.backgroundColor = [UIColor blackColor];
-    self.i18nAlertViewBackground.userInteractionEnabled = NO;
-    [self.view addSubview:self.i18nAlertViewBackground];
-  }
-  
-  NSString *language = self.i18nLanguages[self.i18nLanguageIndex];
-  
-  NSString *title;
-  NSString *message;
-  
-  title = @"app_not_authorized_title";
-  message = @"app_not_authorized_message";
-
-  self.i18nAlertView = [[UIAlertView alloc] initWithTitle:CardIOLocalizedString(title, language, nil)
-                                                  message:CardIOLocalizedString(message, language, nil)
-                                                 delegate:self
-                                        cancelButtonTitle:CardIOLocalizedString(@"ok", language, nil) // OK
-                                        otherButtonTitles:nil];
-  [self.i18nAlertView show];
-  
-  UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, self.i18nAlertView.bounds.size.height - 54, self.i18nAlertView.bounds.size.width, 44)];
-  label.text = language;
-  label.textAlignment = NSTextAlignmentLeft;
-  label.textColor = [UIColor greenColor];
-  label.font = [UIFont fontWithName:@"Helvetica" size:32];
-  label.backgroundColor = [UIColor clearColor];
-  [self.i18nAlertView addSubview:label];
-  
-  if (self.i18nAutopilot) {
-    [self captureI18nScreenAndAdvance];
-  }
-}
-
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
-  [self displayNextI18nScreen];
-}
-
 - (void)dismissCurrentI18nScreen {
   if (self.i18nCardIOPaymentViewController) {
     [self.i18nCardIOPaymentViewController dismissViewControllerAnimated:NO completion:nil];
@@ -351,9 +311,6 @@
     if (self.i18nPhase < 2) {
       [self displayI18nCardIOPaymentViewController];
     }
-    else {
-      [self displayI18nAlert];
-    }
   }
   else {
     self.i18nLanguageIndex = 0;
@@ -361,9 +318,6 @@
   
     if (self.i18nPhase < 2) {
       [self displayI18nCardIOPaymentViewController];
-    }
-    else if (self.i18nPhase < 3) {
-      [self displayI18nAlert];
     }
     else {
       if (self.i18nAlertViewBackground != nil) {
@@ -383,9 +337,6 @@
     if (self.i18nPhase == 0 || self.i18nPhase == 1) {
       [self displayI18nCardIOPaymentViewController];
     }
-    else {
-      [self displayI18nAlert];
-    }
   }
   else {
     self.i18nLanguageIndex = [self.i18nLanguages count] - 1;
@@ -400,9 +351,6 @@
         self.i18nAlertViewBackground = nil;
       }
       [self displayI18nCardIOPaymentViewController];
-    }
-    else {
-      [self displayI18nAlert];
     }
   }
 }

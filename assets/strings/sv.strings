@@ -1,6 +1,4 @@
 "activate_flash" = "Sätt på blixten.";
-"app_not_authorized_message" = "Appen är inte godkänd för skanning av kort.";
-"app_not_authorized_title" = "Appen är inte godkänd";
 "camera" = "Kamera";
 "cancel" = "Avbryt";
 "card_info" = "Kortinfo";

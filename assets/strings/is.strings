@@ -1,6 +1,4 @@
 "activate_flash" = "Kveiktu á flassinu á myndavélinni.";
-"app_not_authorized_message" = "Þetta forrit hefur ekki leyfi til þess að skanna kort.";
-"app_not_authorized_title" = "Leyfisveiting ekki til staðar.";
 "camera" = "Myndavél";
 "cancel" = "Hætta við";
 "card_info" = "Kortaupplýsingar";

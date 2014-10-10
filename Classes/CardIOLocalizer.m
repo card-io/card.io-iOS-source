@@ -256,10 +256,10 @@ static CardIOLocalizer *sFallbackLocalizer = nil;
                                      @"es" : @[@"camera", @"Cámara"],
                                      @"zh-Hans" : @[@"camera", @"摄像头"],
                                      @"zh_HK" : @[@"camera", @"相機"],
-                                     @"en_AU" : @[@"app_not_authorized_title", @"Application Not Authorised"],
-                                     @"fr_FR" : @[@"app_not_authorized_title", @"Application non autorisée"],
-                                     @"en_XX" : @[@"app_not_authorized_title", @"Application Not Authorized"],
-                                     @"xx" : @[@"app_not_authorized_title", @"Application Not Authorized"],
+                                     @"en_AU" : @[@"entry_postal_code", @"Postcode"],
+                                     @"fr_FR" : @[@"entry_postal_code", @"Code postal"],
+                                     @"en_XX" : @[@"entry_postal_code", @"Postal Code"],
+                                     @"xx" : @[@"entry_postal_code", @"Postal Code"],
                                      };
 
   for(NSString *lang in testTranslations) {

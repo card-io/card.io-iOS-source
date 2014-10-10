@@ -1,6 +1,4 @@
 "activate_flash" = "Ligue o flash.";
-"app_not_authorized_message" = "Esta aplicação não está autorizada a fazer leitura de cartões.";
-"app_not_authorized_title" = "Aplicação não autorizada";
 "camera" = "Câmara";
 "cancel" = "Cancelar";
 "card_info" = "Informações do cartão";

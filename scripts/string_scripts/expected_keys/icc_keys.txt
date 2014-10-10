@@ -1,6 +1,4 @@
 activate_flash
-app_not_authorized_message
-app_not_authorized_title
 camera
 cancel
 card_info

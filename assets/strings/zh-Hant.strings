@@ -1,6 +1,4 @@
 "activate_flash" = "開啟閃光燈。";
-"app_not_authorized_message" = "此應用程式沒有掃描信用卡的授權。";
-"app_not_authorized_title" = "申請未獲授權";
 "camera" = "相機";
 "cancel" = "取消";
 "card_info" = "信用卡資料";

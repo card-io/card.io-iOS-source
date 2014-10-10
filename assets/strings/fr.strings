@@ -1,6 +1,4 @@
 "activate_flash" = "Activer le flash.";
-"app_not_authorized_message" = "Cette application n’est pas autorisée à scanner la carte.";
-"app_not_authorized_title" = "Application non autorisée";
 "camera" = "Appareil photo";
 "cancel" = "Annuler";
 "card_info" = "Infos sur la carte";

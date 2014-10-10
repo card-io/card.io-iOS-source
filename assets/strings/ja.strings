@@ -1,6 +1,4 @@
 "activate_flash" = "フラッシュをオンにしてください。";
-"app_not_authorized_message" = "このアプリではカードスキャンの使用が許可されていません。";
-"app_not_authorized_title" = "アプリでの使用が許可されていません";
 "camera" = "カメラ";
 "cancel" = "キャンセル";
 "card_info" = "カード情報";
