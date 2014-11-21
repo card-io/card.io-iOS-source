@@ -4,7 +4,7 @@ Official card.io-iOS-SDK release
 How to make an official card.io-iOS-SDK release:
 
 * To make any changes to `acknowledgments.md`, `LICENSE.md`, `README.md`, `CardIO.podspec`, or `release_notes.txt`, you'll find the original files in your icc project's `Release` folder.
-* Update release_notes.txt with any public-facing changes.
+* Update `release_notes.txt` with any public-facing changes.
 * Update `CardIO.podspec` to reflect the new version number. (Also double-check iOS version for `spec.platform` and `spec.ios.deployment-target`.)
 * Run `fab build:outdir=~` (or specify some other output directory).
 * In the resulting directory, take a pass through all public-facing files (header files, release notes, etc.) to make sure they're up to date, clear, and perfect. Except for the **card.io** version number, which we'll fix in just a bit.
@@ -17,8 +17,8 @@ How to make an official card.io-iOS-SDK release:
 * Push to icc `develop`
 * Merge and push to icc `master`
 * Now we'll update the github.com repo:
-  1. From the folder created by the second `fab build` you did, just a couple of steps ago, copy all files and folders to your local clone of the github.com card.io-iOS-SDK repo.
-  2. Commit to your local clone of the github card.io-iOS-SDK repo with a commit message of the form "Release x.y.z".
+  1. From the folder created by the second `fab build` you did, just a couple of steps ago, copy all files and folders to your local clone of the github.com `card.io-iOS-SDK` repo.
+  2. Commit to your local clone of the github `card.io-iOS-SDK` repo with a commit message of the form "Release x.y.z".
   3. Tag the icc commit used for the release. The convention for the tag is of the form "x.y.z".
     [Note to GUI-using people: make an *annotated* tag, via command line `git tag -a x.y.z -m x.y.z`.]
   4. Push to github.com card.io-iOS-SDK.
