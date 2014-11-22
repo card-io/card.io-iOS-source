@@ -24,7 +24,7 @@ If you merely wish to incorporate **card.io** within your iOS app, simply downlo
 Dev setup
 ---------
 
-* clone this repo, including its `dmz` submodule: `git submodule update --init --recursive`
+* clone this repo, including its `dmz` submodule: `git submodule sync; git submodule update --init --recursive`
 * requires Xcode 5+ (toolchain for iOS 7)
 * requires Python 2.6+
 * for building releases, requires [`pip`](http://www.pip-installer.org/) and [`fabric`](http://www.fabfile.org)
