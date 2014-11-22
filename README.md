@@ -78,7 +78,7 @@ How to make a Release build of the library for your own use:
 Official card.io-iOS-SDK release
 --------------------------------
 
-[How official releasers make an official release of card.io-iOS-SDK](official_release.md)
+[How official releasers officially make an official release of card.io-iOS-SDK](official_release.md)
 
 
 Contributors
