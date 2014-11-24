@@ -12,11 +12,6 @@
 
 // Debug settings
 
-// Disable requests to the analytics server
-#ifndef DISABLE_ANALYTICS
-#define DISABLE_ANALYTICS CARDIO_DEBUG
-#endif
-
 // Enable debugging for the DMZ code
 #ifndef DMZ_DEBUG
 #define DMZ_DEBUG CARDIO_DEBUG
@@ -37,19 +32,7 @@
 #define SIMULATE_CAMERA (!USE_CAMERA && CARDIO_DEBUG)
 #endif
 
-
 // Feature-build settings
-
-// Allow client code the option of skipping the manual entry interface
-#ifndef EARLY_EXIT_ENABLED
-#define EARLY_EXIT_ENABLED CARDIO_DEBUG
-#endif
-
-// Allow UI modifications like removal of PayPal/card.io logo
-#ifndef WHITELABEL
-#define WHITELABEL 0
-#endif
-
 
 #if USE_CAMERA
   #include "opencv2/core/core_c.h"

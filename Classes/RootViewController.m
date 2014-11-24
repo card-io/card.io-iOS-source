@@ -90,45 +90,6 @@
   paymentVC.suppressScannedCardImage = self.hideCardImageSwitch ? self.hideCardImageSwitch.on : NO;
   paymentVC.maskManualEntryDigits = self.doABTestingSwitch.on;
 
-#define TEST_WHITELABEL 0
-#if TEST_WHITELABEL
-  paymentVC.hideCardIOLogo = YES;
-  paymentVC.scanInstructions = @"Hold yo shizzle he-ah.\nI pity the foo'.\nDoes not work in dark.";
-  UIView *testView = [[UIView alloc] initWithFrame:CGRectMake(10, 10, 50, 90)];
-  testView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:1 alpha:1.0];
-  testView.userInteractionEnabled = NO;
-  paymentVC.scanOverlayView = testView;
-  paymentVC.guideColor = [UIColor yellowColor];
-  [[NSNotificationCenter defaultCenter] addObserverForName:CardIOScanningOrientationDidChangeNotification
-                                                    object:nil
-                                                     queue:nil
-                                                usingBlock:^(NSNotification *notification) {
-                                                  NSValue *orientationValue = [notification.userInfo objectForKey:CardIOCurrentScanningOrientation];
-                                                  UIInterfaceOrientation currentOrientation;
-                                                  [orientationValue getValue:&currentOrientation];
-                                                  [UIView beginAnimations:@"chameleon" context:NULL];
-                                                  [UIView setAnimationDuration:[[notification.userInfo objectForKey:CardIOScanningOrientationAnimationDuration] doubleValue]];
-                                                  switch (currentOrientation) {
-                                                    case UIInterfaceOrientationPortrait:
-                                                      testView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:1 alpha:0.3f];
-                                                      break;
-                                                    case UIInterfaceOrientationPortraitUpsideDown:
-                                                      testView.backgroundColor = [UIColor colorWithRed:1 green:0 blue:0 alpha:0.3f];
-                                                      break;
-                                                    case UIInterfaceOrientationLandscapeLeft:
-                                                      testView.backgroundColor = [UIColor colorWithRed:0 green:1 blue:0 alpha:0.3f];
-                                                      break;
-                                                    case UIInterfaceOrientationLandscapeRight:
-                                                      testView.backgroundColor = [UIColor colorWithRed:1 green:1 blue:1 alpha:0.3f];
-                                                      break;
-                                                    default:
-                                                      CardIOLog(@"Ummm.....");
-                                                      break;
-                                                  }
-                                                  [UIView commitAnimations];  
-                                                }];
-#endif
-  
   if (self.modalPresentationStyleSegment) {
     paymentVC.modalPresentationStyle = (UIModalPresentationStyle)self.modalPresentationStyleSegment.selectedSegmentIndex;
   }
@@ -164,46 +125,7 @@
 //  cardIOView.allowFreelyRotatingCardGuide = NO;
   
   cardIOView.languageOrLocale = self.language;
-  
-#define TEST_WHITELABEL 0
-#if TEST_WHITELABEL
-  cardIOView.hideCardIOLogo = YES;
-  cardIOView.scanInstructions = @"Hold yo shizzle he-ah.\nI pity the foo'.\nDoes not work in dark.";
-  UIView *testView = [[UIView alloc] initWithFrame:CGRectMake(10, 10, 50, 90)];
-  testView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:1 alpha:1.0];
-  testView.userInteractionEnabled = NO;
-  cardIOView.scanOverlayView = testView;
-  cardIOView.guideColor = [UIColor yellowColor];
-  [[NSNotificationCenter defaultCenter] addObserverForName:CardIOScanningOrientationDidChangeNotification
-                                                    object:nil
-                                                     queue:nil
-                                                usingBlock:^(NSNotification *notification) {
-                                                  NSValue *orientationValue = [notification.userInfo objectForKey:CardIOCurrentScanningOrientation];
-                                                  UIInterfaceOrientation currentOrientation;
-                                                  [orientationValue getValue:&currentOrientation];
-                                                  [UIView beginAnimations:@"chameleon" context:NULL];
-                                                  [UIView setAnimationDuration:[[notification.userInfo objectForKey:CardIOScanningOrientationAnimationDuration] doubleValue]];
-                                                  switch (currentOrientation) {
-                                                    case UIInterfaceOrientationPortrait:
-                                                      testView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:1 alpha:0.3f];
-                                                      break;
-                                                    case UIInterfaceOrientationPortraitUpsideDown:
-                                                      testView.backgroundColor = [UIColor colorWithRed:1 green:0 blue:0 alpha:0.3f];
-                                                      break;
-                                                    case UIInterfaceOrientationLandscapeLeft:
-                                                      testView.backgroundColor = [UIColor colorWithRed:0 green:1 blue:0 alpha:0.3f];
-                                                      break;
-                                                    case UIInterfaceOrientationLandscapeRight:
-                                                      testView.backgroundColor = [UIColor colorWithRed:1 green:1 blue:1 alpha:0.3f];
-                                                      break;
-                                                    default:
-                                                      CardIOLog(@"Ummm.....");
-                                                      break;
-                                                  }
-                                                  [UIView commitAnimations];
-                                                }];
-#endif
-  
+
 #if TEST_HIDEABLE_CARDIOVIEW
   self.hideableCardIOView.hidden = NO;
 #else
