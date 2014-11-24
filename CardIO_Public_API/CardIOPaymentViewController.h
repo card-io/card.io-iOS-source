@@ -165,6 +165,13 @@ extern NSString * const CardIOCurrentScanningOrientation;
 /// Returned as an NSNumber wrapping an NSTimeInterval (i.e. a double).
 extern NSString * const CardIOScanningOrientationAnimationDuration;
 
-/// Previous versions of card.io provided an informative message when the user first launched card.io.
+
+#pragma mark - Deprecated properties
+
+/// Previous versions of card.io (prior to 3.2.3) provided an informative message when the user first launched card.io.
 @property(nonatomic, assign, readwrite) BOOL showsFirstUseAlert __attribute__((deprecated("The former first-time alert is no more.")));
+
+/// Previous versions of card.io (prior to 3.10.0) required you to obtain an "application token" from the card.io website.
+@property(nonatomic, copy, readwrite) NSString *appToken __attribute__((deprecated("The former appToken is no longer required.")));
+
 @end
