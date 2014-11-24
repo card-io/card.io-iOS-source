@@ -1888,7 +1888,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "[ -f .baler_env ] && source .baler_env 2>/dev/null\n echo \"Baling bundle with `which bale`\"\n bale assets/ Classes/ --overwrite-delay 0 -z -c CardIOBundle || (echo 'Failed to generate bundle via baler!' ; exit 1)";
+			shellScript = "export PATH=/usr/local/bin:$PATH\n\nif [ -f .baler_env ]; then\nsource .baler_env 2>/dev/null\nelif which bale >/dev/null; then\necho \"Using default bale\"\nelse\necho \"Check setup instructions: .baler_env is missing\"\nexit 1;\nfi\n\n echo \"Baling bundle with `which bale`\"\n bale assets/bundle/,strings/projects/card.io/ Classes/ --overwrite-delay 0 -z -c CardIOBundle || (echo 'Failed to generate bundle via baler!' ; exit 1)";
 		};
 /* End PBXShellScriptBuildPhase section */
 
