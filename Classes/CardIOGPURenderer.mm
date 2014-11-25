@@ -316,13 +316,13 @@ const GLubyte Indices[] = {
   [self withContextDo:^{
     [self prepareTexture];
     
-#ifdef CARDIO_DEBUG
+#if CARDIO_DEBUG
     while (glGetError()); // Clear GL Errors
 #endif
     
     glTexImage2D(GL_TEXTURE_2D, 0, GL_LUMINANCE, image->width, image->height, 0, GL_LUMINANCE, GL_UNSIGNED_BYTE, image->imageData);
     
-#ifdef CARDIO_DEBUG
+#if CARDIO_DEBUG
     GLuint error = glGetError();
     if (error != GL_NO_ERROR) {
       CardIOLog(@"glTexImage2D error: %u", error);

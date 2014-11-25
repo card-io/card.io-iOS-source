@@ -7,6 +7,7 @@
 #import "iccChoicesSelectViewController.h"
 #import "CardIO.h"
 #import "CardIOCGGeometry.h"
+#import "TestGeneratedModels.h"
 
 #if CARDIO_DEBUG
 #import "CardIOLocalizer.h"
@@ -346,6 +347,10 @@
   self.hideableCardIOView.delegate = self;
   
   self.originalOutcomeLabelWidth = self.outcomeLabel.frame.size.width;
+
+#if TEST_GENERATED_MODELS
+  [TestGeneratedModels selfCheck];
+#endif
   
   [CardIOUtilities preload];
 }

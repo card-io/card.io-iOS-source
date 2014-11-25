@@ -234,6 +234,8 @@ NSString * const CardIOScanningOrientationAnimationDuration = @"CardIOScanningOr
   self.readCardInfo = processedFrame.scanner.cardInfo;
   CardIOCreditCardInfo *cardInfo = [[CardIOCreditCardInfo alloc] init];
   cardInfo.cardNumber = self.readCardInfo.numbers;
+  cardInfo.expiryMonth = self.readCardInfo.expiryMonth;
+  cardInfo.expiryYear = self.readCardInfo.expiryYear;
   cardInfo.scanned = YES;
 
   self.cardImage = [processedFrame imageWithGrayscale:NO];
@@ -295,11 +297,12 @@ NSString * const CardIOScanningOrientationAnimationDuration = @"CardIOScanningOr
 #define DESCRIBE_BOOL(property) (self.property ? "; " #property : "")
 
 - (NSString *)description {
-  return [NSString stringWithFormat:@"{delegate: %@; %s%s%s%s}"
+  return [NSString stringWithFormat:@"{delegate: %@; %s%s%s%s%s}"
           ,self.delegate
           ,DESCRIBE_BOOL(useCardIOLogo)
-          ,DESCRIBE_BOOL(allowFreelyRotatingCardGuide)
           ,DESCRIBE_BOOL(hideCardIOLogo)
+          ,DESCRIBE_BOOL(allowFreelyRotatingCardGuide)
+          ,DESCRIBE_BOOL(collectExpiry)
           ,(self.detectionMode == CardIODetectionModeCardImageAndNumber
             ? "DetectNumber"
             : (self.detectionMode == CardIODetectionModeCardImageOnly
@@ -326,12 +329,13 @@ CONFIG_PASSTHROUGH_SETTER(t, prop_lc, prop_uc)
 
 CONFIG_PASSTHROUGH_READWRITE(NSString *, languageOrLocale, LanguageOrLocale)
 CONFIG_PASSTHROUGH_READWRITE(BOOL, useCardIOLogo, UseCardIOLogo)
+CONFIG_PASSTHROUGH_READWRITE(BOOL, hideCardIOLogo, HideCardIOLogo)
 CONFIG_PASSTHROUGH_READWRITE(UIColor *, guideColor, GuideColor)
 CONFIG_PASSTHROUGH_READWRITE(CGFloat, scannedImageDuration, ScannedImageDuration)
 CONFIG_PASSTHROUGH_READWRITE(BOOL, allowFreelyRotatingCardGuide, AllowFreelyRotatingCardGuide)
 
 CONFIG_PASSTHROUGH_READWRITE(NSString *, scanInstructions, ScanInstructions)
-CONFIG_PASSTHROUGH_READWRITE(BOOL, hideCardIOLogo, HideCardIOLogo)
+CONFIG_PASSTHROUGH_READWRITE(BOOL, collectExpiry, CollectExpiry)
 CONFIG_PASSTHROUGH_READWRITE(UIView *, scanOverlayView, ScanOverlayView)
 
 CONFIG_PASSTHROUGH_READWRITE(CardIODetectionMode, detectionMode, DetectionMode)

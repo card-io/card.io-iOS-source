@@ -10,6 +10,14 @@
 #import "CardIOMacros.h"
 #import "CardIOReadCardInfo.h"
 
+#include "sobel.h"
+
+#include "opencv2/imgproc/imgproc_c.h"
+#include "morph.h"
+#include <vector>
+
+#define SCAN_FOREVER 0  // useful for debugging expiry
+
 @interface CardIOCardScanner ()
 
 // intentionally atomic -- card scanners get passed around between threads
@@ -51,13 +59,15 @@
         isoSpeed:(NSInteger)isoSpeed
     shutterSpeed:(float)shutterSpeed
        torchIsOn:(BOOL)torchIsOn
-     markFlipped:(BOOL)flipped {
+     markFlipped:(BOOL)flipped
+   collectExpiry:(BOOL)collectExpiry {
 
   if (self.scanIsComplete) {
     return;
   }
   
   FrameScanResult result;
+  bool collectCardNumber = (_scannerState.timeOfCardNumberCompletionInMilliseconds == 0);
   
   // A little bit of a hack, but we prepopulate focusScore and brightness information
   result.focus_score = focusScore;
@@ -67,25 +77,30 @@
   result.torch_is_on = torchIsOn;
   
   result.flipped = flipped;
-  scanner_add_frame(&_scannerState, y.image, &result);
+  scanner_add_frame(&_scannerState, y.image, collectExpiry, &result);
   self.lastFrameWasUsable = result.usable;
-  if(result.usable) {
-    NSMutableArray *x = [NSMutableArray arrayWithCapacity:result.hseg.n_offsets];
-    for(uint8_t i = 0; i < result.hseg.n_offsets; i++) {
-      NSNumber *xOffset = [NSNumber numberWithUnsignedShort:result.hseg.offsets[i]];
-      [x addObject:xOffset];
+  if (collectCardNumber) {
+    if(result.usable) {
+      NSMutableArray *x = [NSMutableArray arrayWithCapacity:result.hseg.n_offsets];
+      for(uint8_t i = 0; i < result.hseg.n_offsets; i++) {
+        NSNumber *xOffset = [NSNumber numberWithUnsignedShort:result.hseg.offsets[i]];
+        [x addObject:xOffset];
+      }
+      self.xOffsets = x;
+      self.yOffset = result.vseg.y_offset;
+    } else {
+      self.lastFrameWasUpsideDown = result.upside_down;
+      self.xOffsets = nil;
+      self.yOffset = 0;
     }
-    self.xOffsets = x;
-    self.yOffset = result.vseg.y_offset;
-  } else {
-    self.lastFrameWasUpsideDown = result.upside_down;
-    self.xOffsets = nil;
-    self.yOffset = 0;
   }
   [self markCachesDirty];
 }
 
 - (BOOL)complete {
+#if SCAN_FOREVER
+  return false;
+#endif
   return (self.cardInfo != nil);
 }
 
@@ -102,19 +117,59 @@
     ScannerResult result;
     scanner_result(&_scannerState, &result);
     if(result.complete) {
+      NSString *cardNumber = nil;
       self.scanIsComplete = YES;
       NSMutableArray *numbers = [NSMutableArray arrayWithCapacity:result.n_numbers];
       for(uint8_t i = 0; i < result.n_numbers; i++) {
         NSNumber *predictionNumber = [NSNumber numberWithInt:(int)result.predictions(i)];
         [numbers addObject:predictionNumber];
       }
-      NSString *cardNumber = [numbers componentsJoinedByString:@""];
-      self.cardInfoCache = [CardIOReadCardInfo cardInfoWithNumber:cardNumber xOffsets:self.xOffsets yOffset:self.yOffset];
-    }
-    else {
+      cardNumber = [numbers componentsJoinedByString:@""];
+
+#if CARDIO_DEBUG
+      NSMutableArray *expiryGroupedRects = [[NSMutableArray alloc] init];
+      for (GroupedRectsListIterator group = result.expiry_groups.begin(); group != result.expiry_groups.end(); ++group) {
+        NSMutableArray *rects = [[NSMutableArray alloc] init];
+        for (CharacterRectListIterator rect = group->character_rects.begin(); rect != group->character_rects.end(); ++rect) {
+          [rects addObject:@{@"left" : @(rect->left), @"top" : @(rect->top), @"finalImage" : [NSValue valueWithPointer:rect->final_image]}];
+        }
+        [expiryGroupedRects addObject:@{@"left" : @(group->left),
+                                        @"top" : @(group->top),
+                                        @"width" : @(group->width),
+                                        @"height" : @(group->height),
+                                        @"characterRects" : rects,
+                                        @"recentlySeenCount" : @(group->recently_seen_count)
+         }];
+      }
+
+      NSMutableArray *nameGroupedRects = [[NSMutableArray alloc] init];
+      for (GroupedRectsListIterator group = result.name_groups.begin(); group != result.name_groups.end(); ++group) {
+        NSMutableArray *rects = [[NSMutableArray alloc] init];
+        for (CharacterRectListIterator rect = group->character_rects.begin(); rect != group->character_rects.end(); ++rect) {
+          [rects addObject:@{@"left" : @(rect->left), @"top" : @(rect->top)}];
+        }
+        [nameGroupedRects addObject:@{@"left" : @(group->left),
+         @"top" : @(group->top),
+         @"width" : @(group->width),
+         @"height" : @(group->height),
+         @"characterRects" : rects}];
+      }
+#endif
+
+      self.cardInfoCache = [CardIOReadCardInfo cardInfoWithNumber:cardNumber
+                                                         xOffsets:self.xOffsets
+                                                          yOffset:self.yOffset
+                                                      expiryMonth:result.expiry_month
+                                                       expiryYear:result.expiry_year
+#if CARDIO_DEBUG
+                                               expiryGroupedRects:expiryGroupedRects
+                                                 nameGroupedRects:nameGroupedRects
+#endif
+                            ];
+    } else {
       self.cardInfoCache = nil;
     }
-
+    
     self.cardInfoCacheDirty = NO;
   }
 
@@ -145,7 +200,8 @@
         isoSpeed:(NSInteger)isoSpeed
     shutterSpeed:(float)shutterSpeed
        torchIsOn:(BOOL)torchIsOn
-     markFlipped:(BOOL)flipped {}
+     markFlipped:(BOOL)flipped
+   collectExpiry:(BOOL)collectExpiry {}
 
 - (BOOL)complete {
   return (self.cardInfo != nil);
@@ -155,7 +211,14 @@
   if (_considerItScanned) {
     return [CardIOReadCardInfo cardInfoWithNumber:@"4567891234567898"
                                          xOffsets:[NSArray arrayWithObjects:@40,@60,@80,@100, @130,@150,@170,@190, @220,@240,@260,@280, @310,@330,@350,@370, nil]
-                                          yOffset:100];
+                                          yOffset:100
+                                      expiryMonth:0
+                                       expiryYear:0
+#if CARDIO_DEBUG
+                               expiryGroupedRects:nil
+                                 nameGroupedRects:nil
+#endif
+            ];
   }
   else {
     return nil;

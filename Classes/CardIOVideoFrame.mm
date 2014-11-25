@@ -16,6 +16,11 @@
 
 #import "CardIODetectionMode.h"
 
+#if CARDIO_DEBUG
+#import "CardIOCardOverlay.h"
+#include "sobel.h"
+#endif
+
 #pragma mark - Constants controlling card recognition sensitivity
 
 #define kMinLuma 100
@@ -81,6 +86,10 @@
   if(self.detectionMode == CardIODetectionModeCardImageOnly) {
     performAllProcessing = YES;
   }
+  
+#if CARDIO_DEBUG
+  self.debugCardImage = nil;
+#endif
 
   if(self.focusOk || performAllProcessing) {
     CardIOIplImage *brSample = [CardIOIplImage imageFromYCbCrBuffer:imageBuffer plane:CBCR_PLANE];
@@ -133,7 +142,35 @@
                     isoSpeed:self.isoSpeed
                 shutterSpeed:self.shutterSpeed
                    torchIsOn:self.torchIsOn
-                 markFlipped:self.flipped];
+                 markFlipped:self.flipped
+               collectExpiry:self.collectExpiry];
+      
+#if CARDIO_DEBUG
+      if (self.scanner.cardInfo != nil) {
+#if 1
+        UIImage *cardImage = [self.cardY UIImage];
+#else
+        CardIOIplImage *sobelImage16 = [CardIOIplImage imageWithSize:self.cardY.cvSize depth:IPL_DEPTH_16S channels:1];
+        cvSetZero(sobelImage16.image);
+        
+        CvRect belowNumbersRect = cvRect(0, self.scanner.cardInfo.yOffset + kNumberHeight, self.cardY.cvSize.width, self.cardY.cvSize.height - (self.scanner.cardInfo.yOffset + kNumberHeight));
+        cvSetImageROI(self.cardY.image, belowNumbersRect);
+        cvSetImageROI(sobelImage16.image, belowNumbersRect);
+        
+        llcv_scharr3_dx_abs(cardY.image, sobelImage16.image);
+        
+        cvResetImageROI(cardY.image);
+        cvResetImageROI(sobelImage16.image);
+        
+        CardIOIplImage *sobelImage = [CardIOIplImage imageWithSize:self.cardY.cvSize depth:IPL_DEPTH_8U channels:1];
+        cvConvertScale(sobelImage16.image, sobelImage.image);
+        
+        UIImage *cardImage = [sobelImage UIImage];
+#endif
+        self.debugCardImage = [CardIOCardOverlay cardImage:cardImage withDisplayInfo:self.scanner.cardInfo annotated:NO];
+      }
+#endif
+      
       if(self.scanner.complete) {
         self.cardInfo = self.scanner.cardInfo;
         

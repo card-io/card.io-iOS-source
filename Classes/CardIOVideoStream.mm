@@ -558,6 +558,9 @@
 didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
        fromConnection:(AVCaptureConnection *)connection {
   @autoreleasepool {
+#if LOG_FPS
+    static double fps = 0;
+#endif
 #if SIMULATE_CAMERA
     CardIOVideoFrame *frame = [[CardIOVideoFrame alloc] initWithSampleBuffer:nil interfaceOrientation:self.interfaceOrientation];
     frame.scanner = self.scanner;
@@ -574,15 +577,16 @@ didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
       self.numFrames++;
       if(self.numFrames % 20 == 0) {
         NSTimeInterval elapsed = [[NSDate date] timeIntervalSinceDate:self.start];
-        CardIOLog(@"Elapsed: %0.1f. Frames: %lu. FPS: %0.2f", elapsed, (unsigned long)self.numFrames, self.numFrames / elapsed);
+        fps = self.numFrames / elapsed;
+        CardIOLog(@"Elapsed: %0.1f. Frames: %lu. FPS: %0.2f", elapsed, (unsigned long)self.numFrames, fps);
         self.numFrames = 0;
         self.start = [NSDate date];
-  #pragma unused(elapsed)
       }
     }
   #endif
 #endif
 
+    frame.collectExpiry = self.config.collectExpiry;
     frame.detectionMode = self.config.detectionMode;
 
     if (self.running) {
@@ -623,6 +627,17 @@ didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
                            [self torchIsOn] ? @"ON" : @"OFF",
                            (long)frame.isoSpeed,
                            frame.shutterSpeed];
+  #if LOG_FPS
+      CGSize imageSize = (frame.debugCardImage ? frame.debugCardImage.size : CGSizeMake(kCreditCardTargetWidth, kCreditCardTargetHeight));
+      UIFont *font = [UIFont boldSystemFontOfSize:48];
+      UIGraphicsBeginImageContext(imageSize);
+      [frame.debugCardImage drawInRect:CGRectMake(0, 0, imageSize.width, imageSize.height)];
+      CGRect rect = CGRectMake(10, 10, imageSize.width, imageSize.height);
+      [[UIColor yellowColor] set];
+      [[NSString stringWithFormat:@"%0.2f", fps] drawInRect:CGRectIntegral(rect) withFont:font];
+      frame.debugCardImage = UIGraphicsGetImageFromCurrentImageContext();
+      UIGraphicsEndImageContext();
+  #endif
 #endif
 
       [self performSelectorOnMainThread:@selector(sendFrameToDelegate:) withObject:frame waitUntilDone:NO];
