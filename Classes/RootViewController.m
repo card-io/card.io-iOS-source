@@ -122,6 +122,7 @@
   cardIOView = self.adHocCardIOView;
 #endif
   
+  cardIOView.collectExpiry = self.expirySwitch.on;
   cardIOView.useCardIOLogo = self.useCardIOLogoSwitch.on;
 //  cardIOView.allowFreelyRotatingCardGuide = NO;
   
@@ -437,6 +438,10 @@
     NSString *cardType = [CardIOCreditCardInfo displayStringForCardType:cardInfo.cardType usingLanguageOrLocale:nil];
     [resultStr appendFormat:@"%@\n", [cardType length] ? cardType : @"Unrecognized card type"];
 
+    if(self.expirySwitch.on) {
+      [resultStr appendFormat:@"Expiry: %02lu/%02lu\n", (unsigned long)cardInfo.expiryMonth, (unsigned long)cardInfo.expiryYear];
+    }
+    
 #if CARDIO_DEBUG
     [self setOutcomeText:resultStr image:cardInfo.cardImage];
 #else
