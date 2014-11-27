@@ -10,6 +10,12 @@
 #define NS_BLOCK_ASSERTIONS 1
 #endif
 
+// Disable expiry scanning on non-64-bit processors, because of a weird bug --
+// involving Eigen or maybe the Clang optimizer -- which I can't get to the bottom of!
+#if SCAN_EXPIRY && !defined(__LP64__)
+  #undef SCAN_EXPIRY
+#endif
+
 // Debug settings
 
 // Enable debugging for the DMZ code
