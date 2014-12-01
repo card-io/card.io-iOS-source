@@ -95,11 +95,12 @@ def build(outdir=None, device_sdk=None, simulator_sdk=None, **kwargs):
         message = """
                      You must provide outdir=<sdk output parent dir>
                      Example usage:
-                       `fab build:outdir=~`
+                       `fab build:outdir=~` - normal build
+                       `fab build:outdir=~,SCAN_EXPIRY=1` - to enable the experimental expiry scan feature
                   """
         abort(textwrap.dedent(message).format(**locals()))
 
-    if _confirm_ready_for_release("assets/bundle/strings"):
+    if _confirm_ready_for_release("assets/strings"):
 		sys.exit(1)
 
     outdir = os.path.abspath(os.path.expanduser(outdir))
