@@ -99,7 +99,7 @@ def build(outdir=None, device_sdk=None, simulator_sdk=None, **kwargs):
                   """
         abort(textwrap.dedent(message).format(**locals()))
 
-    if _confirm_ready_for_release("assets/bundle/strings"):
+    if _confirm_ready_for_release("assets/strings"):
 		sys.exit(1)
 
     outdir = os.path.abspath(os.path.expanduser(outdir))
