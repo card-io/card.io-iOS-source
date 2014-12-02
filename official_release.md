@@ -29,7 +29,8 @@ How to make an official card.io-iOS-SDK release:
   4. Fill in `Release title` and `Describe this release` as you please. (See previous Releases for examples.)
   5. Click `Publish release`.
   6. Back on the "Releases" page, admire your results.
-* Finally, we'll update CocoaPods.
+* Next, we'll update CocoaPods.
   1. In Terminal, `cd` to your local card.io-iOS-SDK directory.
   2. Run `pod trunk push CardIO.podspec`.
-* Post appropriate notifications on (1) Twitter and (2) https://groups.google.com/forum/#!forum/card-io-sdk-announce
+* And now update the library in [our Cordova/Phonegap Plugin repo](https://github.com/card-io/card.io-iOS-SDK-PhoneGap) under `src/ios/CardIO`.
+* Finally, post appropriate notifications on (1) Twitter and (2) https://groups.google.com/forum/#!forum/card-io-sdk-announce
