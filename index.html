@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Card.io-ios-source : The open-source code for the card.io-iOS-SDK:  provides fast, easy credit card scanning in mobile apps">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Card.io-ios-source</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/card-io/card.io-iOS-source">View on GitHub</a>
+
+          <h1 id="project_title">Card.io-ios-source</h1>
+          <h2 id="project_tagline">The open-source code for the card.io-iOS-SDK:  provides fast, easy credit card scanning in mobile apps</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/card-io/card.io-iOS-source/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/card-io/card.io-iOS-source/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <p><a href="https://www.card.io"><img src="https://github.com/card-io/card.io-iOS-source/tree/master/Resources/cardio_logo_220.png" alt="card.io logo" title="card.io"></a></p>
+
+<h1>
+<a id="credit-card-scanning-for-mobile-apps" class="anchor" href="#credit-card-scanning-for-mobile-apps" aria-hidden="true"><span class="octicon octicon-link"></span></a>Credit card scanning for mobile apps</h1>
+
+<h3>
+<a id="yes-thats-right-the-cardio-library-for-ios-is-now-open-source" class="anchor" href="#yes-thats-right-the-cardio-library-for-ios-is-now-open-source" aria-hidden="true"><span class="octicon octicon-link"></span></a>Yes, that's right: the <a href="https://www.card.io">card.io</a> library for iOS is now open-source!</h3>
+
+<p>This repository contains everything needed to build the <strong>card.io</strong> library for iOS.</p>
+
+<p>What it does not yet contain is much in the way of documentation. <img class="emoji" title=":crying_cat_face:" alt=":crying_cat_face:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f63f.png" height="20" width="20" align="absmiddle"> So please feel free to ask any questions by creating github issues -- we'll gradually build our documentation based on the discussions there.</p>
+
+<p>Note that this is actual production code, which has been iterated upon by multiple developers over several years. If you see something that could benefit from being tidied up, rewritten, or otherwise improved, your Pull Requests will be welcome! See <a href="CONTRIBUTING.md">CONTRIBUTING.md</a> for details.</p>
+
+<p>Brought to you by<br>
+<a href="https://paypal.com/" title="PayPal"><img src="https://github.com/card-io/card.io-iOS-source/tree/master/Resources/pp_h_rgb.png" alt="PayPal logo"></a></p>
+
+<h2>
+<a id="using-cardio" class="anchor" href="#using-cardio" aria-hidden="true"><span class="octicon octicon-link"></span></a>Using <strong>card.io</strong>
+</h2>
+
+<p>If you merely wish to incorporate <strong>card.io</strong> within your iOS app, simply download the latest official release from <a href="https://github.com/card-io/card.io-iOS-SDK">https://github.com/card-io/card.io-iOS-SDK</a>. That repository includes complete integration instructions and sample code.</p>
+
+<h2>
+<a id="dev-setup" class="anchor" href="#dev-setup" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dev setup</h2>
+
+<ul>
+<li>clone this repo, including its <code>dmz</code> submodule: <code>git submodule sync; git submodule update --init --recursive</code>
+</li>
+<li>requires Xcode 5+ (toolchain for iOS 7)</li>
+<li>requires Python 2.6+</li>
+<li>for building releases, requires <a href="http://www.pip-installer.org/"><code>pip</code></a> and <a href="http://www.fabfile.org"><code>fabric</code></a>
+</li>
+</ul>
+
+<h3>
+<a id="python" class="anchor" href="#python" aria-hidden="true"><span class="octicon octicon-link"></span></a>Python</h3>
+
+<p>We use python-based build scripts.</p>
+
+<pre><code>    # If you are using virtualenv and virtualenvwrapper, create a virtualenv
+    # (optional but recommended)
+    mkvirtualenv cardio
+
+    # Install dependencies
+    pip install -r pip_requirements.txt
+</code></pre>
+
+<h3>
+<a id="baler" class="anchor" href="#baler" aria-hidden="true"><span class="octicon octicon-link"></span></a>Baler</h3>
+
+<p>We use <a href="https://github.com/paypal/baler">baler</a> (included in <code>pip_requirements.txt</code>) to encode assets (strings and images) within our library. Create a <code>.baler_env</code> file in the top project directory, and set the <code>$PATH</code> environment variable to include where you installed baler. Examples:</p>
+
+<pre><code>    # Create a .baler_env, specifying the correct path for an installation using virtualenv
+    echo 'export PATH=$PATH:~/.virtualenvs/cardio/bin' &gt; .baler_env
+
+    # - OR -
+
+    # Create a .baler_env, specifying the correct path if not using virtualenv
+    echo 'export PATH=$PATH:'`dirname \`which bale\`` &gt; .baler_env
+</code></pre>
+
+<h3>
+<a id="cardio-dmz" class="anchor" href="#cardio-dmz" aria-hidden="true"><span class="octicon octicon-link"></span></a>card.io-dmz</h3>
+
+<p>The <a href="https://github.com/card-io/card.io-dmz">card.io-dmz</a> submodule (included here in the <code>dmz</code> directory) includes the core image-processing code.</p>
+
+<h2>
+<a id="normal-development" class="anchor" href="#normal-development" aria-hidden="true"><span class="octicon octicon-link"></span></a>Normal development</h2>
+
+<p>Use Xcode in a normal fashion to build the library. The project's <code>icc</code> target is a demo app which will allow you to exercise the library in various ways.</p>
+
+<h2>
+<a id="unofficial-cardio-ios-sdk-release" class="anchor" href="#unofficial-cardio-ios-sdk-release" aria-hidden="true"><span class="octicon octicon-link"></span></a>Unofficial card.io-iOS-SDK release</h2>
+
+<p>How to make a Release build of the library for your own use:</p>
+
+<ul>
+<li>Run <code>fab build:outdir=~</code> (or specify some other output directory).</li>
+</ul>
+
+<h2>
+<a id="official-cardio-ios-sdk-release" class="anchor" href="#official-cardio-ios-sdk-release" aria-hidden="true"><span class="octicon octicon-link"></span></a>Official card.io-iOS-SDK release</h2>
+
+<p><a href="official_release.md">How official releasers officially make an official release of card.io-iOS-SDK</a></p>
+
+<h2>
+<a id="contributors" class="anchor" href="#contributors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contributors</h2>
+
+<p><strong>card.io</strong> was created by <a href="https://github.com/josharian/">Josh Bleecher Snyder</a>.</p>
+
+<p>Subsequent help has come from <a href="https://github.com/burnto/">Brent Fitzgerald</a>, <a href="https://github.com/tomwhipple">Tom Whipple</a>, <a href="https://github.com/dgoldman-ebay">Dave Goldman</a>, and <a href="https://github.com/romk1n">Roman Punskyy</a>.</p>
+
+<p>And from <strong>you</strong>! Pull requests and new issues are welcome. See <a href="CONTRIBUTING.md">CONTRIBUTING.md</a> for details.</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Card.io-ios-source maintained by <a href="https://github.com/card-io">card-io</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
