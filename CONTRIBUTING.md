@@ -2,6 +2,8 @@
 
 ### *Pull requests are welcome!*
 
+Please create your code by forking from the `develop` branch of the repo, not the `master` branch.
+
 
 General Guidelines
 ------------------
