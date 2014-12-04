@@ -7,7 +7,6 @@ card.io's iOS SDK uses code from the following libraries (with gratitude!):
   * [Eigen](http://eigen.tuxfamily.org)
   * Erica Sadun's [iPhone Developer's Cookbook Code Samples and uidevice-extension categories](https://github.com/erica/)
   * Georg Kitz's [UIDevice-with-UniqueIdentifier-for-iOS-5](https://github.com/gekitz/UIDevice-with-UniqueIdentifier-for-iOS-5)
-  * Base64 [en|de]coding methods by Dave Winer, via Colloquy's [Chat Core](http://colloquy.info/project/wiki/Source%20Code)
   * Tomáš Znamenáček's [Lambda Alert](https://github.com/zoul/Lambda-Alert)
   * Josh Bleecher Snyder's [TLCommon](https://github.com/treelinelabs/TLCommon)
   * Facebook's [Three20](https://github.com/facebook/three20)
@@ -51,10 +50,6 @@ George Kitz's UIDevice-with-UniqueIdentifier-for-iOS-5, MIT license:
     LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
     OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
     SOFTWARE.
-
-Colloquy's Chat Core, BSD license:
-
-    Actual license text not provided -- [the Colloquy website](http://colloquy.info/project/wiki/Source%20Code) says "Chat Core is licensed under the BSD license terms". For generic BSD license text, see http://opensource.org/licenses/bsd-license.php
 
 Willow Garage's OpenCV, BSD license:
 

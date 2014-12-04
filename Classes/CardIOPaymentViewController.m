@@ -216,24 +216,6 @@
   }
 }
 
-// Pretty sure that this is better not implemented. But leave around for a while, just in case we find some pathologic case.
-//- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation {
-//  UIDeviceOrientation deviceOrientation = [UIDevice currentDevice].orientation;
-//  if ((deviceOrientation == UIDeviceOrientationUnknown || deviceOrientation == UIDeviceOrientationFaceUp || deviceOrientation == UIDeviceOrientationFaceDown) &&
-//      ([self supportedInterfaceOrientations] & (1 << self.initialInterfaceOrientationForViewcontroller)) != 0) {
-//    return self.initialInterfaceOrientationForViewcontroller;
-//  }
-//  else {
-//    UIInterfaceOrientation statusBarOrientation = [UIApplication sharedApplication].statusBarOrientation;
-//    if (([self supportedInterfaceOrientations] & (1 << statusBarOrientation)) != 0) {
-//      return statusBarOrientation;
-//    }
-//    else {
-//      return UIInterfaceOrientationPortrait;
-//    }
-//  }
-//}
-
 - (BOOL)isBeingPresentedModally {
   UIViewController *viewController = self;
   while (viewController) {
