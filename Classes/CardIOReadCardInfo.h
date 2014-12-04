@@ -3,9 +3,6 @@
 //  See the file "LICENSE.md" for the full license governing this code.
 //
 
-// A wrapper used for parsing the server's response,
-// and containing the card info that the server read.
-
 #import <Foundation/Foundation.h>
 
 

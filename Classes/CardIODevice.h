@@ -11,9 +11,5 @@
 
 + (BOOL)hasVideoCamera;
 + (BOOL)shouldSetPixelFormat;
-+ (NSString *)platformName;
-
-+ (CGFloat)imageScaleForCurrentDevice;
-+ (BOOL)deviceUses2x;
 
 @end

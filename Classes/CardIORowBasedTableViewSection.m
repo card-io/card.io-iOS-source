@@ -114,7 +114,5 @@
   }
 }
 
-#pragma mark - Memory management
-
 
 @end

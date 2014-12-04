@@ -7,11 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		03232D6D15210A030028EACA /* CardIOKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 03232D6A15210A030028EACA /* CardIOKeychain.m */; };
 		3E0133E1198AD433009E579A /* CardIO-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 3E0133E0198AD433009E579A /* CardIO-Prefix.pch */; };
 		3E0133E4198AD6C5009E579A /* AdHocEntitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3E0133E3198AD6C5009E579A /* AdHocEntitlements.plist */; };
 		3E0133E7198AD75C009E579A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E0133E6198AD75C009E579A /* main.m */; };
-		3E663B9D170FA92C008FCBE8 /* CardIOLocalizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA7E535170F8F8600BAE3F3 /* CardIOLocalizer.m */; };
 		3E9618E019C8EBBD0023CDBB /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E9618DF19C8EBBD0023CDBB /* AudioToolbox.framework */; };
 		3E9618E219C8EBC50023CDBB /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E9618E119C8EBC50023CDBB /* CoreMedia.framework */; };
 		3E9618E419C8EBCB0023CDBB /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E9618E319C8EBCB0023CDBB /* MobileCoreServices.framework */; };
@@ -41,10 +39,8 @@
 		3E9F4BF5181F03F300F33B48 /* CardIOCreditCardNumberFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = D13A60C313D4BF4400123D1A /* CardIOCreditCardNumberFormatter.m */; };
 		3E9F4BF6181F03F300F33B48 /* CardIOCreditCardExpiryFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = D13A60C713D4F3A900123D1A /* CardIOCreditCardExpiryFormatter.m */; };
 		3E9F4BF7181F03F300F33B48 /* CardIOExpiryTextFieldDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D13A60CC13D502BF00123D1A /* CardIOExpiryTextFieldDelegate.m */; };
-		3E9F4BF9181F03F300F33B48 /* CardIOModalActivityIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F8A4891256A9FB00AB3AF3 /* CardIOModalActivityIndicator.m */; };
 		3E9F4BFA181F03F300F33B48 /* CardIOMacros.m in Sources */ = {isa = PBXBuildFile; fileRef = 0393B0B5143A625300A65A00 /* CardIOMacros.m */; };
 		3E9F4BFC181F03F300F33B48 /* CardIOTransitionView.m in Sources */ = {isa = PBXBuildFile; fileRef = D1F66D67146456880001F15F /* CardIOTransitionView.m */; };
-		3E9F4BFD181F03F300F33B48 /* CardIOKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 03232D6A15210A030028EACA /* CardIOKeychain.m */; };
 		3E9F4BFE181F03F300F33B48 /* CardIOCardScanner.mm in Sources */ = {isa = PBXBuildFile; fileRef = 03C8E03C1570272F00569A22 /* CardIOCardScanner.mm */; };
 		3E9F4C00181F03F300F33B48 /* dmz_all.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0378AE18158C01CA00545AAA /* dmz_all.cpp */; settings = {COMPILER_FLAGS = "-O3"; }; };
 		3E9F4C01181F03F300F33B48 /* CardIOAnalytics.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8487783115A39BCB00B08B41 /* CardIOAnalytics.mm */; };
@@ -73,7 +69,6 @@
 		3E9F4C27181F03F300F33B48 /* convert.h in Headers */ = {isa = PBXBuildFile; fileRef = 0366075A13FC403C006B2C36 /* convert.h */; };
 		3E9F4C28181F03F300F33B48 /* CardIOTransitionView.h in Headers */ = {isa = PBXBuildFile; fileRef = D1F66D66146456880001F15F /* CardIOTransitionView.h */; };
 		3E9F4C29181F03F300F33B48 /* CardIOPaymentViewControllerContinuation.h in Headers */ = {isa = PBXBuildFile; fileRef = 03EE575014EEBCB500CE3715 /* CardIOPaymentViewControllerContinuation.h */; };
-		3E9F4C2A181F03F300F33B48 /* CardIOKeychain.h in Headers */ = {isa = PBXBuildFile; fileRef = 03232D6915210A030028EACA /* CardIOKeychain.h */; };
 		3E9F4C2C181F03F300F33B48 /* CardIOCardScanner.h in Headers */ = {isa = PBXBuildFile; fileRef = 03C8E03B1570272F00569A22 /* CardIOCardScanner.h */; };
 		3E9F4C2D181F03F300F33B48 /* modelm_befe75da.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 03ABD1CE15794234004BE637 /* modelm_befe75da.hpp */; };
 		3E9F4C30181F03F300F33B48 /* CardIOAnalytics.h in Headers */ = {isa = PBXBuildFile; fileRef = 8487783015A39BCB00B08B41 /* CardIOAnalytics.h */; };
@@ -124,9 +119,7 @@
 		3ECDD2881885FAA000361A0F /* NSObject+CardioCategoryTest.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ECDD2861885FAA000361A0F /* NSObject+CardioCategoryTest.h */; };
 		3ECDD2891885FAA000361A0F /* NSObject+CardioCategoryTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ECDD2871885FAA000361A0F /* NSObject+CardioCategoryTest.m */; };
 		3ED8A878197DBDAE00069761 /* CardIOUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED8A874197DBD5F00069761 /* CardIOUtilities.m */; };
-		3ED8A879197DC08200069761 /* CardIOUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED8A874197DBD5F00069761 /* CardIOUtilities.m */; };
 		55CD7FA818EF777F00BB381A /* iccChoicesSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55CD7FA718EF777F00BB381A /* iccChoicesSelectViewController.m */; };
-		B5EDB914168E053E0055E716 /* CardIOAnimation.mm in Sources */ = {isa = PBXBuildFile; fileRef = B5EDB90F168E05370055E716 /* CardIOAnimation.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -184,8 +177,6 @@
 		031F1279132EBFC700738505 /* CardIOVideoStreamDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIOVideoStreamDelegate.h; sourceTree = "<group>"; };
 		031F127D132EC5CA00738505 /* CardIODevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CardIODevice.h; path = Classes/CardIODevice.h; sourceTree = "<group>"; };
 		031F127E132EC5CA00738505 /* CardIODevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CardIODevice.m; path = Classes/CardIODevice.m; sourceTree = "<group>"; };
-		03232D6915210A030028EACA /* CardIOKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CardIOKeychain.h; path = Classes/CardIOKeychain.h; sourceTree = "<group>"; };
-		03232D6A15210A030028EACA /* CardIOKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CardIOKeychain.m; path = Classes/CardIOKeychain.m; sourceTree = "<group>"; };
 		0327DDB7158150C0008DDA68 /* modelc_5c241121.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = modelc_5c241121.cpp; path = models/generated/modelc_5c241121.cpp; sourceTree = "<group>"; };
 		0327DDB8158150C0008DDA68 /* modelc_01266c1b.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = modelc_01266c1b.cpp; path = models/generated/modelc_01266c1b.cpp; sourceTree = "<group>"; };
 		0327DDB9158150C0008DDA68 /* modelc_b00bf70c.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = modelc_b00bf70c.cpp; path = models/generated/modelc_b00bf70c.cpp; sourceTree = "<group>"; };
@@ -505,8 +496,6 @@
 		03CA8C5D130E1660006042CE /* yellow_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yellow_button.png; sourceTree = "<group>"; };
 		03CA8C5E130E1660006042CE /* yellow_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yellow_button@2x.png"; sourceTree = "<group>"; };
 		03EE575014EEBCB500CE3715 /* CardIOPaymentViewControllerContinuation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CardIOPaymentViewControllerContinuation.h; path = Classes/CardIOPaymentViewControllerContinuation.h; sourceTree = "<group>"; };
-		03F8A4881256A9FB00AB3AF3 /* CardIOModalActivityIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CardIOModalActivityIndicator.h; path = Classes/CardIOModalActivityIndicator.h; sourceTree = "<group>"; };
-		03F8A4891256A9FB00AB3AF3 /* CardIOModalActivityIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CardIOModalActivityIndicator.m; path = Classes/CardIOModalActivityIndicator.m; sourceTree = "<group>"; };
 		03F8A48E1256AA4700AB3AF3 /* CardIOCGGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIOCGGeometry.h; sourceTree = "<group>"; };
 		1D3623240D0F684500981E51 /* iccAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = iccAppDelegate.h; path = Classes/iccAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* iccAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = iccAppDelegate.m; path = Classes/iccAppDelegate.m; sourceTree = "<group>"; };
@@ -752,14 +741,10 @@
 				B5EDB90F168E05370055E716 /* CardIOAnimation.mm */,
 				558BAE5E17CC255E007EE3BC /* CardIOIccVersion.h */,
 				558BAE5F17CC2878007EE3BC /* CardIOIccVersion.h.template */,
-				03232D6915210A030028EACA /* CardIOKeychain.h */,
-				03232D6A15210A030028EACA /* CardIOKeychain.m */,
 				3EA7E534170F8F8600BAE3F3 /* CardIOLocalizer.h */,
 				3EA7E535170F8F8600BAE3F3 /* CardIOLocalizer.m */,
 				0353A9A6134B8C580085FB38 /* CardIOMacros.h */,
 				0393B0B5143A625300A65A00 /* CardIOMacros.m */,
-				03F8A4881256A9FB00AB3AF3 /* CardIOModalActivityIndicator.h */,
-				03F8A4891256A9FB00AB3AF3 /* CardIOModalActivityIndicator.m */,
 				03AB87FC135B35FA00E45403 /* CardIOString.h */,
 				03AB87FD135B35FA00E45403 /* CardIOString.m */,
 				844D4D5914469AB20070FCB3 /* CardIOStyles.h */,
@@ -1671,7 +1656,6 @@
 				3E9F4C27181F03F300F33B48 /* convert.h in Headers */,
 				3E9F4C28181F03F300F33B48 /* CardIOTransitionView.h in Headers */,
 				3E9F4C29181F03F300F33B48 /* CardIOPaymentViewControllerContinuation.h in Headers */,
-				3E9F4C2A181F03F300F33B48 /* CardIOKeychain.h in Headers */,
 				3E9F4C2C181F03F300F33B48 /* CardIOCardScanner.h in Headers */,
 				3E9F4C2D181F03F300F33B48 /* modelm_befe75da.hpp in Headers */,
 				3E9F4C30181F03F300F33B48 /* CardIOAnalytics.h in Headers */,
@@ -1897,10 +1881,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03232D6D15210A030028EACA /* CardIOKeychain.m in Sources */,
-				B5EDB914168E053E0055E716 /* CardIOAnimation.mm in Sources */,
-				3ED8A879197DC08200069761 /* CardIOUtilities.m in Sources */,
-				3E663B9D170FA92C008FCBE8 /* CardIOLocalizer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1934,11 +1914,9 @@
 				3E9F4BF5181F03F300F33B48 /* CardIOCreditCardNumberFormatter.m in Sources */,
 				3E9F4BF6181F03F300F33B48 /* CardIOCreditCardExpiryFormatter.m in Sources */,
 				3E9F4BF7181F03F300F33B48 /* CardIOExpiryTextFieldDelegate.m in Sources */,
-				3E9F4BF9181F03F300F33B48 /* CardIOModalActivityIndicator.m in Sources */,
 				3ED8A878197DBDAE00069761 /* CardIOUtilities.m in Sources */,
 				3E9F4BFA181F03F300F33B48 /* CardIOMacros.m in Sources */,
 				3E9F4BFC181F03F300F33B48 /* CardIOTransitionView.m in Sources */,
-				3E9F4BFD181F03F300F33B48 /* CardIOKeychain.m in Sources */,
 				3E9F4BFE181F03F300F33B48 /* CardIOCardScanner.mm in Sources */,
 				3E9F4C00181F03F300F33B48 /* dmz_all.cpp in Sources */,
 				3E9F4C01181F03F300F33B48 /* CardIOAnalytics.mm in Sources */,
