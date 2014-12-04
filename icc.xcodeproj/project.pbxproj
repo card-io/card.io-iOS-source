@@ -32,7 +32,6 @@
 		3E9F4BEE181F03F300F33B48 /* CardIORowBasedTableViewSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 030735F01341615D00663C26 /* CardIORowBasedTableViewSection.m */; };
 		3E9F4BEF181F03F300F33B48 /* CardIOConfigurableTextFieldDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0307360613416B0600663C26 /* CardIOConfigurableTextFieldDelegate.m */; };
 		3E9F4BF0181F03F300F33B48 /* CardIOReadCardInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 034BEDC013577AED00ECEBF6 /* CardIOReadCardInfo.m */; };
-		3E9F4BF1181F03F300F33B48 /* CardIOString.m in Sources */ = {isa = PBXBuildFile; fileRef = 03AB87FD135B35FA00E45403 /* CardIOString.m */; };
 		3E9F4BF2181F03F300F33B48 /* CardIOResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C86E58136650ED006B23F9 /* CardIOResource.m */; };
 		3E9F4BF3181F03F300F33B48 /* CardIOCreditCardInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AF634813CCB3C300330C76 /* CardIOCreditCardInfo.m */; };
 		3E9F4BF4181F03F300F33B48 /* CardIOMultipleFieldTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D1800C7013CE6D0C0004444E /* CardIOMultipleFieldTableViewCell.m */; };
@@ -478,8 +477,6 @@
 		03A2648B1576F55100F7DAFE /* StdList */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = StdList; sourceTree = "<group>"; };
 		03A2648C1576F55100F7DAFE /* StdVector */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = StdVector; sourceTree = "<group>"; };
 		03A2648D1576F55100F7DAFE /* SVD */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SVD; sourceTree = "<group>"; };
-		03AB87FC135B35FA00E45403 /* CardIOString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CardIOString.h; path = Classes/CardIOString.h; sourceTree = "<group>"; };
-		03AB87FD135B35FA00E45403 /* CardIOString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CardIOString.m; path = Classes/CardIOString.m; sourceTree = "<group>"; };
 		03ABD1CD15794234004BE637 /* modelm_befe75da.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = modelm_befe75da.cpp; path = models/generated/modelm_befe75da.cpp; sourceTree = "<group>"; };
 		03ABD1CE15794234004BE637 /* modelm_befe75da.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = modelm_befe75da.hpp; path = models/generated/modelm_befe75da.hpp; sourceTree = "<group>"; };
 		03B21724134648EE00958550 /* CardIODataEntryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CardIODataEntryViewController.h; path = Classes/CardIODataEntryViewController.h; sourceTree = "<group>"; };
@@ -745,8 +742,6 @@
 				3EA7E535170F8F8600BAE3F3 /* CardIOLocalizer.m */,
 				0353A9A6134B8C580085FB38 /* CardIOMacros.h */,
 				0393B0B5143A625300A65A00 /* CardIOMacros.m */,
-				03AB87FC135B35FA00E45403 /* CardIOString.h */,
-				03AB87FD135B35FA00E45403 /* CardIOString.m */,
 				844D4D5914469AB20070FCB3 /* CardIOStyles.h */,
 				3ED8A874197DBD5F00069761 /* CardIOUtilities.m */,
 				3ECDD2861885FAA000361A0F /* NSObject+CardioCategoryTest.h */,
@@ -1907,7 +1902,6 @@
 				3E9F4BEF181F03F300F33B48 /* CardIOConfigurableTextFieldDelegate.m in Sources */,
 				3E9F4BF0181F03F300F33B48 /* CardIOReadCardInfo.m in Sources */,
 				3ECDD2891885FAA000361A0F /* NSObject+CardioCategoryTest.m in Sources */,
-				3E9F4BF1181F03F300F33B48 /* CardIOString.m in Sources */,
 				3E9F4BF2181F03F300F33B48 /* CardIOResource.m in Sources */,
 				3E9F4BF3181F03F300F33B48 /* CardIOCreditCardInfo.m in Sources */,
 				3E9F4BF4181F03F300F33B48 /* CardIOMultipleFieldTableViewCell.m in Sources */,

@@ -8,7 +8,6 @@
 #import "CardIOGPUGaussianBlurFilter.h"
 #import "CardIOIccVersion.h"
 #import "CardIOLocalizer.h"
-#import "CardIOString.h"
 #import "CardIOView.h"
 
 @implementation CardIOUtilities
@@ -17,7 +16,7 @@
 
 + (NSString *)libraryVersion {
   NSString *dateString = [[[NSString stringWithUTF8String:__DATE__] stringByReplacingOccurrencesOfString:@" " withString:@"."] stringByReplacingOccurrencesOfString:@".." withString:@"."];
-  NSString *timeHash = [[CardIOString md5:[NSString stringWithUTF8String:__TIME__]] substringToIndex:4];
+  NSString *timeHash = [NSString stringWithUTF8String:__TIME__];
   NSMutableString *libraryVersion = [NSMutableString stringWithFormat:@"%@-%@", dateString, timeHash];
   
   // make the compile time options visible for sanity checking, and so we don't ship the wrong thing.

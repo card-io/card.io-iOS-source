@@ -9,7 +9,6 @@
 #import "CardIOContext.h"
 #import "CardIODataEntryViewController.h"
 #import "CardIODevice.h"
-#import "CardIOString.h"
 #import "CardIOLocalizer.h"
 #import "CardIOMacros.h"
 #import "CardIOStyles.h"

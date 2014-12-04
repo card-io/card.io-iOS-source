@@ -9,7 +9,6 @@ card.io's iOS SDK uses code from the following libraries (with gratitude!):
   * Georg Kitz's [UIDevice-with-UniqueIdentifier-for-iOS-5](https://github.com/gekitz/UIDevice-with-UniqueIdentifier-for-iOS-5)
   * Tomáš Znamenáček's [Lambda Alert](https://github.com/zoul/Lambda-Alert)
   * Josh Bleecher Snyder's [TLCommon](https://github.com/treelinelabs/TLCommon)
-  * Facebook's [Three20](https://github.com/facebook/three20)
   * [Openstack](http://openstack.org/)
 
 Full licenses
@@ -100,22 +99,6 @@ Tomáš Znamenáček's Lambda Alert, MIT license:
     liability, whether in an action of contract, tort or otherwise, arising from,
     out of or in connection with the Software or the use or other dealings in
     the Software.
-
-Facebook's Three20, Apache 2.0 license:
-
-    Copyright 2009-2011 Facebook
-
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
- 
-       http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
 
 Openstack, Apache 2.0 license:
 
