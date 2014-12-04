@@ -8,6 +8,8 @@
 // iPhone Developer's Cookbook, 3.0 Edition
 // BSD License, Use at your own risk
 
+// TODO: When we drop support for iOS 6, then we can remove all of the 3GS-related code in here.
+
 #import "CardIODevice.h"
 #import <MobileCoreServices/UTCoreTypes.h>
 #import "CardIOMacros.h"
