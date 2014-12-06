@@ -25,25 +25,18 @@ class ViewController: UIViewController, CardIOPaymentViewControllerDelegate {
     var cardIOVC = CardIOPaymentViewController(paymentDelegate: self)
     cardIOVC.modalPresentationStyle = .FormSheet
     presentViewController(cardIOVC, animated: true, completion: nil)
-    
-    
   }
   
   func userDidCancelPaymentViewController(paymentViewController: CardIOPaymentViewController!) {
-    
     resultLabel.text = "user canceled"
     paymentViewController?.dismissViewControllerAnimated(true, completion: nil)
   }
   
   func userDidProvideCreditCardInfo(cardInfo: CardIOCreditCardInfo!, inPaymentViewController paymentViewController: CardIOPaymentViewController!) {
-    
     if let info = cardInfo {
       let str = NSString(format: "Received card info.\n Number: %@\n expiry: %02lu/%lu\n cvv: %@.", info.redactedCardNumber, info.expiryMonth, info.expiryYear, info.cvv)
       resultLabel.text = str
     }
     paymentViewController?.dismissViewControllerAnimated(true, completion: nil)
-  }
-  
-
+  }  
 }
-
