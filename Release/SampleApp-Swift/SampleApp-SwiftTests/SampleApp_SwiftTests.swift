@@ -1,9 +1,8 @@
 //
-//  SampleApp_SwiftTests.swift
-//  SampleApp-SwiftTests
+//  ViewController.swift
+//  SampleApp-Swift
 //
-//  Created by Punskyy, Roman on 12/5/14.
-//  Copyright (c) 2014 Punskyy, Roman. All rights reserved.
+//  Copyright (c) 2014 PayPal. All rights reserved.
 //
 
 import UIKit
