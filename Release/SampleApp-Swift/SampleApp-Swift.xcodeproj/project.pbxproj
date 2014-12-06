@@ -14,11 +14,6 @@
 		D534F1D11A324F63003C3AB4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D534F1CF1A324F63003C3AB4 /* LaunchScreen.xib */; };
 		D534F1DD1A324F64003C3AB4 /* SampleApp_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D534F1DC1A324F64003C3AB4 /* SampleApp_SwiftTests.swift */; };
 		D534F1FA1A324F97003C3AB4 /* libCardIO.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D534F1F91A324F97003C3AB4 /* libCardIO.a */; };
-		D5F80D3E1A3255E900338199 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5F80D3D1A3255E900338199 /* AudioToolbox.framework */; };
-		D5F80D401A3255F400338199 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D5F80D3F1A3255F400338199 /* libc++.dylib */; };
-		D5F80D441A32562000338199 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5F80D431A32562000338199 /* MobileCoreServices.framework */; };
-		D5F80D461A32568A00338199 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5F80D451A32568A00338199 /* AVFoundation.framework */; };
-		D5F80D481A3256A500338199 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5F80D471A3256A500338199 /* CoreMedia.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,12 +47,6 @@
 		D534F1F81A324F97003C3AB4 /* CardIOViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIOViewDelegate.h; sourceTree = "<group>"; };
 		D534F1F91A324F97003C3AB4 /* libCardIO.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libCardIO.a; sourceTree = "<group>"; };
 		D5F80D3C1A32507E00338199 /* SampleApp-Swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SampleApp-Swift-Bridging-Header.h"; sourceTree = "<group>"; };
-		D5F80D3D1A3255E900338199 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		D5F80D3F1A3255F400338199 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
-		D5F80D411A32560500338199 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
-		D5F80D431A32562000338199 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
-		D5F80D451A32568A00338199 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		D5F80D471A3256A500338199 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,11 +54,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5F80D481A3256A500338199 /* CoreMedia.framework in Frameworks */,
-				D5F80D461A32568A00338199 /* AVFoundation.framework in Frameworks */,
-				D5F80D441A32562000338199 /* MobileCoreServices.framework in Frameworks */,
-				D5F80D401A3255F400338199 /* libc++.dylib in Frameworks */,
-				D5F80D3E1A3255E900338199 /* AudioToolbox.framework in Frameworks */,
 				D534F1FA1A324F97003C3AB4 /* libCardIO.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -145,12 +129,6 @@
 		D534F1F01A324F97003C3AB4 /* CardIO */ = {
 			isa = PBXGroup;
 			children = (
-				D5F80D471A3256A500338199 /* CoreMedia.framework */,
-				D5F80D451A32568A00338199 /* AVFoundation.framework */,
-				D5F80D431A32562000338199 /* MobileCoreServices.framework */,
-				D5F80D411A32560500338199 /* CoreVideo.framework */,
-				D5F80D3F1A3255F400338199 /* libc++.dylib */,
-				D5F80D3D1A3255E900338199 /* AudioToolbox.framework */,
 				D534F1F11A324F97003C3AB4 /* CardIO.h */,
 				D534F1F21A324F97003C3AB4 /* CardIOCreditCardInfo.h */,
 				D534F1F31A324F97003C3AB4 /* CardIODetectionMode.h */,
@@ -345,6 +323,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-lc++";
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "SampleApp-Swift/SampleApp-Swift-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -382,6 +361,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "-lc++";
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "SampleApp-Swift/SampleApp-Swift-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
