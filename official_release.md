@@ -14,9 +14,8 @@ How to make an official card.io-iOS-SDK release:
 * Tag the card.io-iOS-SDK commit used for the release. The convention for the tag is of the form "iOS_x.y.z".
     [Note to GUI-using people: make an *annotated* tag, via command line `git tag -a iOS_x.y.z -m 'iOS_x.y.z'`.]
 * Run the `fab build:outdir=~` command again, and confirm that now the correct version number appears in the header files.
-* Push to card.io-iOS-SDK `develop`
-* Merge and push to card.io-iOS-SDK `master`
-* Now we'll update the github.com repo:
+* Merge and push to card.io-iOS-source `master`
+* Now we'll update the card.io-iOS-SDK repo:
   1. From the folder created by the second `fab build` you did, just a couple of steps ago, copy all files and folders to your local clone of the github.com `card.io-iOS-SDK` repo.
   2. Commit to your local clone of the github `card.io-iOS-SDK` repo with a commit message of the form "Release x.y.z".
   3. Tag the card.io-iOS-SDK commit used for the release. The convention for the tag is of the form "x.y.z".
