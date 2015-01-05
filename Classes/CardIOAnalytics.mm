@@ -5,7 +5,6 @@
 
 #import "CardIOAnalytics.h"
 #import "CardIOMacros.h"
-#import "CardIOString.h"
 #import "CardIODevice.h"
 #import "CardIOContext.h"
 

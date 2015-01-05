@@ -7,7 +7,6 @@
 #import "CardIOResource.h"
 #import "CardIOCGGeometry.h"
 
-#import "CardIOString.h"
 #import "CardIODevice.h"
 
 #define kBoltDefaultWidth 13.0f

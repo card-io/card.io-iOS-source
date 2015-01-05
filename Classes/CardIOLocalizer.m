@@ -414,26 +414,32 @@ NSString *CardIOLocalizedStringWithAlert(NSString *key,
   
   // If no region is specified, then start with the device's current locale (if the language matches):
   if ([languageOrLocale rangeOfString:@"_"].location == NSNotFound) {
-    NSString* localeIdentifier = [[NSLocale currentLocale] localeIdentifier];
-    if ([localeIdentifier hasPrefix:languageOrLocale]) {
-      languageOrLocale = localeIdentifier;
+    NSString *deviceLanguage = [[NSLocale currentLocale] objectForKey:NSLocaleLanguageCode];
+    NSString *deviceRegion = [[NSLocale currentLocale] objectForKey:NSLocaleCountryCode];
+    NSString *deviceLocale;
+    if ([deviceRegion length]) {
+      deviceLocale = [NSString stringWithFormat:@"%@_%@", deviceLanguage, deviceRegion];
     }
     else {
+      deviceLocale = deviceLanguage;
+    }
+    
+    if ([deviceLanguage hasPrefix:languageOrLocale]) {
+      languageOrLocale = deviceLocale;
+    }
+    else if ([deviceRegion length]) {
       // For language-matching here, treat missing device dialect as wildcard; e.g, "zh" matches either "zh-Hans" or "zh-Hant":
-      NSString *deviceRegion = [localeIdentifier componentsSeparatedByString:@"_"][1];
-      if ([deviceRegion length]) {
-        NSUInteger targetHyphenLocation = [languageOrLocale rangeOfString:@"-"].location;
-        if (targetHyphenLocation != NSNotFound) {
-          NSString *targetLanguage = [languageOrLocale substringToIndex:targetHyphenLocation];
-          if ([localeIdentifier hasPrefix:targetLanguage]) {
-            languageOrLocale = [NSString stringWithFormat:@"%@_%@", languageOrLocale, deviceRegion];
-          }
-          else if ([languageOrLocale caseInsensitiveCompare:@"zh-Hant"] == NSOrderedSame &&
-                   ([deviceRegion isEqualToString:@"HK"] || [deviceRegion isEqualToString:@"TW"])) {
-            // Very special case: target language is zh-Hant, and device region is either xx_HK or xx_TW,
-            // for *any* "xx" (because device region could be en_HK or en_TW):
-            languageOrLocale = [NSString stringWithFormat:@"%@_%@", languageOrLocale, deviceRegion];
-          }
+      NSUInteger targetHyphenLocation = [languageOrLocale rangeOfString:@"-"].location;
+      if (targetHyphenLocation != NSNotFound) {
+        NSString *targetLanguage = [languageOrLocale substringToIndex:targetHyphenLocation];
+        if ([deviceLanguage hasPrefix:targetLanguage]) {
+          languageOrLocale = [NSString stringWithFormat:@"%@_%@", languageOrLocale, deviceRegion];
+        }
+        else if ([languageOrLocale caseInsensitiveCompare:@"zh-Hant"] == NSOrderedSame &&
+                 ([deviceRegion isEqualToString:@"HK"] || [deviceRegion isEqualToString:@"TW"])) {
+          // Very special case: target language is zh-Hant, and device region is either xx_HK or xx_TW,
+          // for *any* "xx" (because device region could be en_HK or en_TW):
+          languageOrLocale = [NSString stringWithFormat:@"%@_%@", languageOrLocale, deviceRegion];
         }
       }
     }

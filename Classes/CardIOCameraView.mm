@@ -17,7 +17,6 @@
 #import "CardIOReadCardInfo.h"
 #import "CardIOResource.h"
 #import "CardIOShutterView.h"
-#import "CardIOString.h"
 #import "CardIOStyles.h"
 #import "CardIOVideoFrame.h"
 #import "CardIOVideoStream.h"

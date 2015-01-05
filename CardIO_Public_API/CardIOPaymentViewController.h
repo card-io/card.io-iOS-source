@@ -37,7 +37,7 @@
 /// E.g., specifying "en" on a device set to "English" and "United Kingdom" will result in "en_GB".
 ///
 /// These localizations are currently included:
-/// ar,da,de,en,en_AU,en_GB,en_SE,es,es_MX,fr,he,it,ja,ko,ms,nb,nl,pl,pt,pt_BR,ru,sv,th,tr,zh-Hans,zh-Hant,zh-Hant_TW.
+/// ar,da,de,en,en_AU,en_GB,en_SE,es,es_MX,fr,he,is,it,ja,ko,ms,nb,nl,pl,pt,pt_BR,ru,sv,th,tr,zh-Hans,zh-Hant,zh-Hant_TW.
 @property(nonatomic, copy, readwrite) NSString *languageOrLocale;
 
 /// If YES, the status bar's style will be kept as whatever your app has set it to.

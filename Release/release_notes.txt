@@ -1,9 +1,15 @@
 card.io iOS SDK release notes
 =============================
 
-4.0.0 (TBD)
+4.0.1 (Mon 1/5/2015)
 
-* Open-source the card.io source code.
+* Fix a potential rare crash. (see https://github.com/paypal/PayPal-iOS-SDK/issues/220 for a similar case)
+
+--
+
+4.0.0 (Mon 12/1/2014)
+
+* Build from the new open-source edition of card.io: https://github.com/card-io/card.io-iOS-source
 * New class: CardIOUtilities
   - libraryVersion         (formerly a method of CardIOPaymentViewController)
   - canReadCardWithCamera  (formerly a method of CardIOPaymentViewController)

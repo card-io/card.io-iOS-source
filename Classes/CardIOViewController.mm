@@ -26,7 +26,6 @@
 #import "CardIOCreditCardInfo.h"
 #import "CardIOAnalytics.h"
 #import "CardIOGuideLayer.h"
-#import "CardIOString.h"
 #import "CardIOContext.h"
 #import "CardIOLocalizer.h"
 #import "CardIOTransitionView.h"

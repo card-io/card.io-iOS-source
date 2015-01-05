@@ -8,24 +8,12 @@
 // iPhone Developer's Cookbook, 3.0 Edition
 // BSD License, Use at your own risk
 
+// TODO: When we drop support for iOS 6, then we can remove all of the 3GS-related code in here.
+
 #import "CardIODevice.h"
 #import <MobileCoreServices/UTCoreTypes.h>
-#import <sys/sysctl.h>
-#import "CardIOString.h"
 #import "CardIOMacros.h"
-#import <sys/mman.h>
-#import <unistd.h>
-#import <fcntl.h>
-#import "CardIOPaymentViewController.h"
-#import <mach/mach_init.h>
-#import <mach/vm_map.h>
-#import "CardIOKeychain.h"
-
-
-#include <sys/socket.h> // Per msqr
 #include <sys/sysctl.h>
-#include <net/if.h>
-#include <net/if_dl.h>
 
 #pragma mark -
 
@@ -78,18 +66,6 @@
   // The 3GS chokes when you set the pixel format!?
   // Fortunately, the default is the one we want anyway.
   return ![self is3GS];
-}
-
-+ (CGFloat)imageScaleForCurrentDevice {
-  CGFloat scale = 1.0;
-  if([UIScreen instancesRespondToSelector:@selector(scale)]) {
-		scale = [[UIScreen mainScreen] scale];
-	}
-  return scale;
-}
-
-+ (BOOL)deviceUses2x {
-  return ([self imageScaleForCurrentDevice] > 1.0);
 }
 
 @end
