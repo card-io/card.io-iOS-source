@@ -22,6 +22,8 @@
 @property(nonatomic, assign, readwrite) BOOL hiddenLabels;
 @property(nonatomic, assign, readwrite) NSTextAlignment textAlignment;
 
-- (BOOL)labelFitsInMultiField:(NSString *)labelText;
+- (BOOL)textFitsInMultiFieldForLabel:(NSString *)labelText
+                      forPlaceholder:(NSString *)placeholderText
+                       forFieldWidth:(CGFloat)fieldWidth;
 
 @end

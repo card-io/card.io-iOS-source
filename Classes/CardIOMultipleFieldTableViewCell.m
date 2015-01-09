@@ -16,7 +16,6 @@
 #define kLineSeparatorWidthPreIOS7 1.0f
 #define kLineSeparatorWidthIOS7 0.5f
 #define kLineSeparatorGrayColor 0.75f
-#define kMaxLabelWidthForMultiField 70
 
 @interface CardIOMultipleFieldContentView : UIView
 
@@ -226,12 +225,22 @@
   [self setNeedsDisplay]; // otherwise our vertical dividers won't redraw
 }
 
-- (BOOL)labelFitsInMultiField:(NSString *)labelText {
-  CGFloat fontSize = [CardIOTableViewCell defaultTextLabelFontSizeForCellStyle:self.cellStyle];
-  UIFont *font = [CardIOTableViewCell defaultTextLabelFontForCellStyle:self.cellStyle fontSize:fontSize];
-  CGFloat measuredLabelWidth = [labelText sizeWithFont:font].width;
+- (BOOL)textFitsInMultiFieldForLabel:(NSString *)labelText
+                      forPlaceholder:(NSString *)placeholderText
+                       forFieldWidth:(CGFloat)fieldWidth {
 
-  return (measuredLabelWidth <= kMaxLabelWidthForMultiField);
+  // Each field within the cell = <CELLPADDING><Label><CELLPADDING><Field><CELLPADDING>
+  // (Reverse that for right-to-left languages.)
+
+  CGFloat labelFontSize = [CardIOTableViewCell defaultTextLabelFontSizeForCellStyle:self.cellStyle];
+  UIFont *labelFont = [CardIOTableViewCell defaultTextLabelFontForCellStyle:self.cellStyle fontSize:labelFontSize];
+  CGFloat measuredLabelWidth = [labelText sizeWithFont:labelFont].width;
+
+  CGFloat placeholderFontSize = [CardIOTableViewCell defaultDetailTextLabelFontSizeForCellStyle:self.cellStyle];
+  UIFont *placeholderFont = [CardIOTableViewCell defaultDetailTextLabelFontForCellStyle:self.cellStyle fontSize:placeholderFontSize];
+  CGFloat measuredPlaceholderWidth = [placeholderText sizeWithFont:placeholderFont].width;
+
+  return (measuredLabelWidth + measuredPlaceholderWidth + 3 * CELLPADDING < fieldWidth);
 }
 
 @end
@@ -280,8 +289,12 @@
 
 #pragma mark -
 
-- (BOOL)labelFitsInMultiField:(NSString *)labelText {
-  return [content labelFitsInMultiField:labelText];
+- (BOOL)textFitsInMultiFieldForLabel:(NSString *)labelText
+                      forPlaceholder:(NSString *)placeholderText
+                       forFieldWidth:(CGFloat)fieldWidth {
+  return [content textFitsInMultiFieldForLabel:labelText
+                                forPlaceholder:placeholderText
+                                 forFieldWidth:(CGFloat)fieldWidth];
 }
 
 #pragma mark - UITableView delegate/dataSource

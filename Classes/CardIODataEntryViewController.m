@@ -30,6 +30,7 @@
 
 #define kStatusBarHeight  20
 #define kiOS7TableViewBorderColor 0.78f
+#define kMinimumDefaultRowWidth 320.0f
 
 @interface CardIODataEntryViewController ()
 
@@ -224,8 +225,9 @@
     if (collectBoth) {
       NSString *expiryText = CardIOLocalizedString(@"entry_expires", self.context.languageOrLocale, nil); // Expires
       NSString* cvvText = CardIOLocalizedString(@"entry_cvv", self.context.languageOrLocale, nil); // CVV
-      bothInOneRow = ([multiFieldRow labelFitsInMultiField:expiryText] &&
-                      [multiFieldRow labelFitsInMultiField:cvvText]);
+      CGFloat fieldWidthForTwoFieldsPerRow = kMinimumDefaultRowWidth / 2;
+      bothInOneRow = ([multiFieldRow textFitsInMultiFieldForLabel:@"" forPlaceholder:expiryText forFieldWidth:fieldWidthForTwoFieldsPerRow] &&
+                      [multiFieldRow textFitsInMultiFieldForLabel:@"" forPlaceholder:cvvText forFieldWidth:fieldWidthForTwoFieldsPerRow]);
     }
 
     multiFieldRow.hiddenLabels = YES;
