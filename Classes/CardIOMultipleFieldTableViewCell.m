@@ -164,7 +164,7 @@
 
     UILabel *label = self.labelLabels[index];
 
-    if(index < [_labels count]) {
+    if(index < [_labels count] && !self.hiddenLabel) {
       label.text = _labels[index];
     } else {
       label.text = @"";
