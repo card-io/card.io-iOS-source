@@ -10,5 +10,3 @@ icc.xcodeproj/project.xcworkspace/xcuserdata/*
 /Classes/CardIOIccVersion.h
 /Release/SampleApp/ScanExample.xcodeproj/project.xcworkspace/
 /Release/SampleApp/ScanExample.xcodeproj/xcuserdata/
-/Classes/CardIOBundle.h
-/Classes/CardIOBundle.m
