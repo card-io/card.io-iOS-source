@@ -1893,7 +1893,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/bash;
-			shellScript = "export PATH=\"/usr/local/bin:$PATH\"\nbash\nif [ ! -L \".git/hooks/pre-commit\" ]\nthen\n  echo \"Installing pre-commit hook for strings submodule\"\n  ln -s `pwd`/scripts/string_scripts/pre-commit.sh .git/hooks/pre-commit\nfi";
+			shellScript = "export PATH=\"/usr/local/bin:$PATH\"\nif [ -d \".git\" ]; then\n  if [ ! -L \".git/hooks/pre-commit\" ]; then\n    echo \"Installing pre-commit hook for strings submodule\"\n    mkdir -p \".git/hooks\"\n    ln -s `pwd`/scripts/string_scripts/pre-commit.sh .git/hooks/pre-commit\n  fi\nfi";
 		};
 		3E9F4BDC181F03F300F33B48 /* Baler */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1906,8 +1906,8 @@
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "export PATH=/usr/local/bin:$PATH\n\nif [ -f .baler_env ]; then\nsource .baler_env 2 > /dev/null\nelif which bale > /dev/null; then\necho \"Using default bale\"\nelse\necho \"Check setup instructions: .baler_env is missing\"\nexit 1;\nfi\n\necho \"Baling bundle with `which bale`\"\nbale assets/ Classes/ --overwrite-delay 0 -z -c CardIOBundle || (echo 'Failed to generate bundle via baler!' ; exit 1)";
+			shellPath = /bin/bash;
+			shellScript = "export PATH=/usr/local/bin:$PATH\n\nif [ -f .baler_envx ]; then\n  source .baler_env 2 > /dev/null\nelif which bale > /dev/null; then\n echo \"Using default bale\"\nelse\n  echo \"baler is missing, so skipping the baler step\"\n  exit 0;\nfi\n\necho \"Baling bundle with `which bale`\"\nbale assets/ Classes/ --overwrite-delay 0 -z -c CardIOBundle || (echo 'Failed to generate bundle via baler!' ; exit 1)";
 		};
 /* End PBXShellScriptBuildPhase section */
 

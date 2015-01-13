@@ -147,7 +147,7 @@
 }
 
 - (IBAction)languageChangeAction:(id)sender {
-  NSArray *choices = @[@"ar", @"da", @"de", @"en", @"en_AU", @"en_GB", @"en_SE", @"en_DE", @"en_IL", @"en_JP", @"es", @"es_MX", @"fr", @"he", @"is", @"it", @"ja", @"ko", @"ms", @"nb", @"nl", @"pl", @"pt", @"pt_BR", @"ru", @"sv", @"th", @"tr", @"zh-Hans", @"zh-Hant", @"zh-Hant_TW"];
+  NSArray *choices = @[@"ar", @"da", @"de", @"en", @"en_AU", @"en_GB", @"en_SE", @"es", @"es_MX", @"fr", @"he", @"is", @"it", @"ja", @"ko", @"ms", @"nb", @"nl", @"pl", @"pt", @"pt_BR", @"ru", @"sv", @"th", @"tr", @"zh-Hans", @"zh-Hant", @"zh-Hant_TW"];
   
   iccChoicesSelectViewController *vc = [[iccChoicesSelectViewController alloc] initWithTitle:@"Language" choices:choices currentSelection:self.language completion:^(NSString *selection) {
     if (selection) {
