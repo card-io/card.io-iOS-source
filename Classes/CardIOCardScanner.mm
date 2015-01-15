@@ -77,7 +77,7 @@
   result.torch_is_on = torchIsOn;
   
   result.flipped = flipped;
-  scanner_add_frame(&_scannerState, y.image, collectExpiry, &result);
+  scanner_add_frame_with_expiry(&_scannerState, y.image, collectExpiry, &result);
   self.lastFrameWasUsable = result.usable;
   if (collectCardNumber) {
     if(result.usable) {
