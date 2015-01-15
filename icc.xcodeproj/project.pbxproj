@@ -2140,7 +2140,6 @@
 					"DMZ_DEBUG=1",
 					"DEBUG=1",
 					"TEST_GENERATED_MODELS=1",
-					"SCAN_EXPIRY=1",
 				);
 				"GCC_PREPROCESSOR_DEFINITIONS[sdk=iphonesimulator*]" = (
 					"CARDIO_DEBUG=1",
@@ -2290,7 +2289,6 @@
 					"DMZ_DEBUG=1",
 					"DEBUG=1",
 					"TEST_GENERATED_MODELS=1",
-					"SCAN_EXPIRY=1",
 				);
 				"GCC_PREPROCESSOR_DEFINITIONS[sdk=iphonesimulator*]" = (
 					"CARDIO_DEBUG=1",

@@ -10,10 +10,14 @@
 #define NS_BLOCK_ASSERTIONS 1
 #endif
 
-// Disable expiry scanning on non-64-bit processors, because of a weird bug --
+/// Expiry scanning defaults to enabled for iOS...
+#ifndef SCAN_EXPIRY
+#define SCAN_EXPIRY 1
+#endif
+// ...but disable expiry scanning on non-64-bit processors, because of a weird bug --
 // involving Eigen or maybe the Clang optimizer -- which I can't get to the bottom of!
 #if SCAN_EXPIRY && !defined(__LP64__)
-  #undef SCAN_EXPIRY
+  #define SCAN_EXPIRY 0
 #endif
 
 // Debug settings
