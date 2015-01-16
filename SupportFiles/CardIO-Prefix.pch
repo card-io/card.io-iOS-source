@@ -10,16 +10,6 @@
 #define NS_BLOCK_ASSERTIONS 1
 #endif
 
-/// Expiry scanning defaults to enabled for iOS...
-#ifndef SCAN_EXPIRY
-#define SCAN_EXPIRY 1
-#endif
-// ...but disable expiry scanning on non-64-bit processors, because of a weird bug --
-// involving Eigen or maybe the Clang optimizer -- which I can't get to the bottom of!
-#if SCAN_EXPIRY && !defined(__LP64__)
-  #define SCAN_EXPIRY 0
-#endif
-
 // Debug settings
 
 // Enable debugging for the DMZ code
@@ -32,7 +22,7 @@
 #define BALER_DEBUG CARDIO_DEBUG
 #endif
 
-// Use the camera if not simulator or in release mode
+// Use the camera if not simulator, or in release mode
 #ifndef USE_CAMERA
 #define USE_CAMERA 1
 #endif
@@ -42,7 +32,15 @@
 #define SIMULATE_CAMERA (!USE_CAMERA && CARDIO_DEBUG)
 #endif
 
-// Feature-build settings
+#if USE_CAMERA
+  // Expiry scanning defaults to enabled
+  #ifndef SCAN_EXPIRY
+  #define SCAN_EXPIRY 1
+  #endif
+#elif SCAN_EXPIRY
+  #undef SCAN_EXPIRY
+  #define SCAN_EXPIRY 0
+#endif
 
 #if USE_CAMERA
   #include "opencv2/core/core_c.h"
