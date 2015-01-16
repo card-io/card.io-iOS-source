@@ -60,7 +60,7 @@
     shutterSpeed:(float)shutterSpeed
        torchIsOn:(BOOL)torchIsOn
      markFlipped:(BOOL)flipped
-   collectExpiry:(BOOL)collectExpiry {
+      scanExpiry:(BOOL)scanExpiry {
 
   if (self.scanIsComplete) {
     return;
@@ -77,7 +77,7 @@
   result.torch_is_on = torchIsOn;
   
   result.flipped = flipped;
-  scanner_add_frame_with_expiry(&_scannerState, y.image, collectExpiry, &result);
+  scanner_add_frame_with_expiry(&_scannerState, y.image, scanExpiry, &result);
   self.lastFrameWasUsable = result.usable;
   if (collectCardNumber) {
     if(result.usable) {
@@ -201,7 +201,7 @@
     shutterSpeed:(float)shutterSpeed
        torchIsOn:(BOOL)torchIsOn
      markFlipped:(BOOL)flipped
-   collectExpiry:(BOOL)collectExpiry {}
+      scanExpiry:(BOOL)scanExpiry {}
 
 - (BOOL)complete {
   return (self.cardInfo != nil);

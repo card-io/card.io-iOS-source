@@ -43,7 +43,7 @@ typedef enum {
 @property(nonatomic, assign, readwrite) BOOL foundLeftEdge;
 @property(nonatomic, assign, readwrite) BOOL foundRightEdge;
 @property(nonatomic, assign, readwrite) BOOL flipped;
-@property(nonatomic, assign, readwrite) BOOL collectExpiry;
+@property(nonatomic, assign, readwrite) BOOL scanExpiry;
 @property(nonatomic, assign, readwrite) NSInteger isoSpeed;
 @property(nonatomic, assign, readwrite) float shutterSpeed;
 @property(nonatomic, strong, readwrite) CardIOIplImage *ySample;

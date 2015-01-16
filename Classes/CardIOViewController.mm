@@ -103,6 +103,7 @@
   
   self.cardIOView.scanInstructions = self.context.scanInstructions;
   self.cardIOView.collectExpiry = self.context.collectExpiry;
+  self.cardIOView.scanExpiry = self.context.scanExpiry;
   self.cardIOView.scanOverlayView = self.context.scanOverlayView;
   
   self.cardIOView.detectionMode = self.context.detectionMode;

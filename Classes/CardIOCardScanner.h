@@ -22,7 +22,7 @@
     shutterSpeed:(float)shutterSpeed
        torchIsOn:(BOOL)torchIsOn
      markFlipped:(BOOL)flipped
-   collectExpiry:(BOOL)collectExpiry;
+      scanExpiry:(BOOL)scanExpiry;
 - (BOOL)complete;
 
 // these properties are intentionally (superstitiously, anyhow) atomic -- card scanners get passed around between threads

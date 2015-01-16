@@ -143,7 +143,7 @@
                 shutterSpeed:self.shutterSpeed
                    torchIsOn:self.torchIsOn
                  markFlipped:self.flipped
-               collectExpiry:self.collectExpiry];
+                  scanExpiry:self.scanExpiry];
       
 #if CARDIO_DEBUG
       if (self.scanner.cardInfo != nil) {

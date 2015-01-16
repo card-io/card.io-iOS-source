@@ -28,6 +28,7 @@
 @property(nonatomic, assign, readwrite) BOOL suppressScannedCardImage;
 @property(nonatomic, assign, readwrite) BOOL maskManualEntryDigits;
 
+
 #if CARDIO_DEBUG
 @property(nonatomic, assign, readwrite) BOOL doABTesting;
 #endif
@@ -44,5 +45,7 @@
 @property(nonatomic, retain, readwrite) UIView *scanOverlayView;
 
 @property(nonatomic, assign, readwrite) CardIODetectionMode detectionMode;
+
+@property(nonatomic, assign, readwrite) BOOL scanExpiry;
 
 @end

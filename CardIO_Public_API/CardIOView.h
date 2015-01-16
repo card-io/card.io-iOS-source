@@ -75,6 +75,11 @@
 /// Set to NO if you don't need to collect the card expiration. Defaults to YES.
 @property(nonatomic, assign, readwrite) BOOL collectExpiry;
 
+/// Set to NO if you don't want the camera to scan the card expiration.
+/// Applies only if collectExpiry is also YES.
+/// Defaults to YES.
+@property(nonatomic, assign, readwrite) BOOL scanExpiry;
+
 /// CardIODetectionModeCardImageAndNumber: the scanner must successfully identify the card number.
 /// CardIODetectionModeCardImageOnly: don't scan the card, just detect a credit-card-shaped card.
 /// CardIODetectionModeAutomatic: start as CardIODetectionModeCardImageAndNumber, but fall back to

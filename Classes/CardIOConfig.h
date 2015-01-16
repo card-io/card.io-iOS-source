@@ -17,6 +17,7 @@
 @property(nonatomic, assign, readwrite) BOOL allowFreelyRotatingCardGuide;
 
 @property(nonatomic, assign, readwrite) BOOL collectExpiry;
+@property(nonatomic, assign, readwrite) BOOL scanExpiry;
 
 @property(nonatomic, copy, readwrite)   NSString *scanInstructions;
 @property(nonatomic, assign, readwrite) BOOL hideCardIOLogo;

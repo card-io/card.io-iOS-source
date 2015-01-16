@@ -586,7 +586,7 @@ didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
   #endif
 #endif
 
-    frame.collectExpiry = self.config.collectExpiry;
+    frame.scanExpiry = self.config.collectExpiry && self.config.scanExpiry;
     frame.detectionMode = self.config.detectionMode;
 
     if (self.running) {
