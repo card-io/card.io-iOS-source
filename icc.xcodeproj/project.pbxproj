@@ -553,8 +553,10 @@
 		3E9618E119C8EBC50023CDBB /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		3E9618E319C8EBCB0023CDBB /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		3E9618E719C8F6C70023CDBB /* MainWindow~iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = "MainWindow~iPad.xib"; path = "Resources/MainWindow~iPad.xib"; sourceTree = "<group>"; };
-		3E9C61FF1A68F1FB003648D5 /* modelm_0ce5632a.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = modelm_0ce5632a.cpp; sourceTree = "<group>"; };
-		3E9C62001A68F1FB003648D5 /* modelm_0ce5632a.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = modelm_0ce5632a.hpp; sourceTree = "<group>"; };
+		3E9C62011A69B762003648D5 /* modelc_5cff994c.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = modelc_5cff994c.cpp; sourceTree = "<group>"; };
+		3E9C62021A69B762003648D5 /* modelc_5cff994c.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = modelc_5cff994c.hpp; sourceTree = "<group>"; };
+		3E9C62061A6D82EF003648D5 /* modelm_e43af6f6.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = modelm_e43af6f6.cpp; sourceTree = "<group>"; };
+		3E9C62071A6D82EF003648D5 /* modelm_e43af6f6.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = modelm_e43af6f6.hpp; sourceTree = "<group>"; };
 		3E9F4C49181F03F300F33B48 /* libCardIO.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCardIO.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E9F4C7F181F07B700F33B48 /* icc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = icc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EA0739F16E6C26C00CA6E7F /* simulated_camera_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = simulated_camera_0.png; sourceTree = "<group>"; };
@@ -581,8 +583,6 @@
 		3ED9F6E21A23CF3200BD07F8 /* expiry_seg.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; lineEnding = 0; path = expiry_seg.cpp; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
 		3ED9F6E31A23CF3200BD07F8 /* expiry_seg.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = expiry_seg.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		3ED9F6E41A23CF3200BD07F8 /* expiry_types.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = expiry_types.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		3EE558761A5478B10094929A /* modelc_918daa9c.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = modelc_918daa9c.cpp; sourceTree = "<group>"; };
-		3EE558771A5478B10094929A /* modelc_918daa9c.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = modelc_918daa9c.hpp; sourceTree = "<group>"; };
 		5528BBBE16F7B1CA005D5011 /* simulated_camera_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = simulated_camera_1.png; sourceTree = "<group>"; };
 		5528BBBF16F7B1CA005D5011 /* simulated_camera_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = simulated_camera_2.png; sourceTree = "<group>"; };
 		5528BBC016F7B1CA005D5011 /* simulated_camera_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = simulated_camera_3.png; sourceTree = "<group>"; };
@@ -1621,12 +1621,12 @@
 		3ED9F6D71A23CDBE00BD07F8 /* expiry */ = {
 			isa = PBXGroup;
 			children = (
-				3E9C61FF1A68F1FB003648D5 /* modelm_0ce5632a.cpp */,
-				3E9C62001A68F1FB003648D5 /* modelm_0ce5632a.hpp */,
+				3E9C62061A6D82EF003648D5 /* modelm_e43af6f6.cpp */,
+				3E9C62071A6D82EF003648D5 /* modelm_e43af6f6.hpp */,
+				3E9C62011A69B762003648D5 /* modelc_5cff994c.cpp */,
+				3E9C62021A69B762003648D5 /* modelc_5cff994c.hpp */,
 				3ED9F6DC1A23CDBE00BD07F8 /* modelm_730c4cbd.cpp */,
 				3ED9F6DD1A23CDBE00BD07F8 /* modelm_730c4cbd.hpp */,
-				3EE558761A5478B10094929A /* modelc_918daa9c.cpp */,
-				3EE558771A5478B10094929A /* modelc_918daa9c.hpp */,
 			);
 			name = expiry;
 			path = models/expiry;
