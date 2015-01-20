@@ -31,16 +31,18 @@ Dev setup
 
 ### Python
 
-We use python-based build scripts.
+We use Python-based build scripts.
 
-```
-    # If you are using virtualenv and virtualenvwrapper, create a virtualenv
-    # (optional but recommended)
+ If you are using [virtualenv](https://virtualenv.pypa.io) and [virtualenvwrapper](http://www.doughellmann.com/docs/virtualenvwrapper), create a virtual environment (optional but recommended):
+
+    # Create virtual environment for Python
     mkvirtualenv cardio
 
-    # Install dependencies
+Install required Python dependencies (this command may require sudo rights if installing globally):
+
+    # Install required dependencies
     pip install -r pip_requirements.txt
-```
+
 
 ### Baler
 
