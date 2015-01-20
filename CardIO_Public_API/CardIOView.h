@@ -72,11 +72,7 @@
 ///   * Minimize animations, redrawing, or any other CPU/GPU/memory intensive activities
 @property(nonatomic, retain, readwrite) UIView *scanOverlayView;
 
-/// Set to NO if you don't need to collect the card expiration. Defaults to YES.
-@property(nonatomic, assign, readwrite) BOOL collectExpiry;
-
 /// Set to NO if you don't want the camera to try to scan the card expiration.
-/// Applies only if collectExpiry is also YES.
 /// Defaults to YES.
 @property(nonatomic, assign, readwrite) BOOL scanExpiry;
 

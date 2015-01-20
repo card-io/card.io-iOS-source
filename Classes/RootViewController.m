@@ -122,8 +122,7 @@
   cardIOView = self.adHocCardIOView;
 #endif
   
-  cardIOView.collectExpiry = self.expirySwitch.on;
-  cardIOView.scanExpiry = NO; // ***
+  cardIOView.scanExpiry = self.expirySwitch.on;
   cardIOView.useCardIOLogo = self.useCardIOLogoSwitch.on;
 //  cardIOView.allowFreelyRotatingCardGuide = NO;
   

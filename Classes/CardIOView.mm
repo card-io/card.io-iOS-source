@@ -297,12 +297,11 @@ NSString * const CardIOScanningOrientationAnimationDuration = @"CardIOScanningOr
 #define DESCRIBE_BOOL(property) (self.property ? "; " #property : "")
 
 - (NSString *)description {
-  return [NSString stringWithFormat:@"{delegate: %@; %s%s%s%s%s%s}"
+  return [NSString stringWithFormat:@"{delegate: %@; %s%s%s%s%s}"
           ,self.delegate
           ,DESCRIBE_BOOL(useCardIOLogo)
           ,DESCRIBE_BOOL(hideCardIOLogo)
           ,DESCRIBE_BOOL(allowFreelyRotatingCardGuide)
-          ,DESCRIBE_BOOL(collectExpiry)
           ,DESCRIBE_BOOL(scanExpiry)
           ,(self.detectionMode == CardIODetectionModeCardImageAndNumber
             ? "DetectNumber"
@@ -336,7 +335,6 @@ CONFIG_PASSTHROUGH_READWRITE(CGFloat, scannedImageDuration, ScannedImageDuration
 CONFIG_PASSTHROUGH_READWRITE(BOOL, allowFreelyRotatingCardGuide, AllowFreelyRotatingCardGuide)
 
 CONFIG_PASSTHROUGH_READWRITE(NSString *, scanInstructions, ScanInstructions)
-CONFIG_PASSTHROUGH_READWRITE(BOOL, collectExpiry, CollectExpiry)
 CONFIG_PASSTHROUGH_READWRITE(BOOL, scanExpiry, ScanExpiry)
 CONFIG_PASSTHROUGH_READWRITE(UIView *, scanOverlayView, ScanOverlayView)
 
