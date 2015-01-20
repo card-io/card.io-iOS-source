@@ -121,11 +121,8 @@
 
 /// Set to YES if you need to collect the billing postal code. Defaults to NO.
 @property(nonatomic, assign, readwrite) BOOL collectPostalCode;
-/// Deprecated.
-/// @see collectPostalCode
-@property(nonatomic, assign, readwrite, getter=collectPostalCode, setter=setCollectPostalCode:) BOOL collectZip __attribute__((deprecated("Use collectPostalCode instead.")));
 
-/// Set to NO if you don't want the camera to scan the card expiration.
+/// Set to NO if you don't want the camera to try to scan the card expiration.
 /// Applies only if collectExpiry is also YES.
 /// Defaults to YES.
 @property(nonatomic, assign, readwrite) BOOL scanExpiry;
@@ -169,14 +166,5 @@ extern NSString * const CardIOCurrentScanningOrientation;
 ///
 /// Returned as an NSNumber wrapping an NSTimeInterval (i.e. a double).
 extern NSString * const CardIOScanningOrientationAnimationDuration;
-
-
-#pragma mark - Deprecated properties
-
-/// Previous versions of card.io (prior to 3.2.3) provided an informative message when the user first launched card.io.
-@property(nonatomic, assign, readwrite) BOOL showsFirstUseAlert __attribute__((deprecated("The former first-time alert is no more.")));
-
-/// Previous versions of card.io (prior to 3.10.0) required you to obtain an "application token" from the card.io website.
-@property(nonatomic, copy, readwrite) NSString *appToken __attribute__((deprecated("The former appToken is no longer required.")));
 
 @end

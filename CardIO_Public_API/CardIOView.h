@@ -75,7 +75,7 @@
 /// Set to NO if you don't need to collect the card expiration. Defaults to YES.
 @property(nonatomic, assign, readwrite) BOOL collectExpiry;
 
-/// Set to NO if you don't want the camera to scan the card expiration.
+/// Set to NO if you don't want the camera to try to scan the card expiration.
 /// Applies only if collectExpiry is also YES.
 /// Defaults to YES.
 @property(nonatomic, assign, readwrite) BOOL scanExpiry;
@@ -123,11 +123,5 @@ extern NSString * const CardIOScanningOrientationAnimationDuration;
 /// The actual camera preview area within the CardIOView. Location is relative to the CardIOView's origin.
 /// You might want to use this, for example, when adjusting your view controller's view layout.
 @property(nonatomic, assign, readonly) CGRect cameraPreviewFrame;
-
-
-#pragma mark - Deprecated properties
-
-/// Previous versions of card.io (prior to 3.10.0) required you to obtain an "application token" from the card.io website.
-@property(nonatomic, copy, readwrite) NSString *appToken __attribute__((deprecated("The former appToken is no longer required.")));
 
 @end
