@@ -43,6 +43,7 @@ typedef enum {
 @property(nonatomic, assign, readwrite) BOOL foundLeftEdge;
 @property(nonatomic, assign, readwrite) BOOL foundRightEdge;
 @property(nonatomic, assign, readwrite) BOOL flipped;
+@property(nonatomic, assign, readwrite) BOOL scanExpiry;
 @property(nonatomic, assign, readwrite) NSInteger isoSpeed;
 @property(nonatomic, assign, readwrite) float shutterSpeed;
 @property(nonatomic, strong, readwrite) CardIOIplImage *ySample;
@@ -61,6 +62,7 @@ typedef enum {
 
 #if CARDIO_DEBUG
 @property(nonatomic, strong, readwrite) NSString *debugString;
+@property(nonatomic, strong, readwrite) UIImage *debugCardImage;
 #endif
 
 @end

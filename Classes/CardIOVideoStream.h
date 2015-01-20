@@ -12,7 +12,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import "dmz.h"
 
-#define LOG_FPS 0 // for performance tuning/testing
+#define LOG_FPS 1 // for performance tuning/testing
 
 @class CardIOCardScanner;
 @class CardIOConfig;

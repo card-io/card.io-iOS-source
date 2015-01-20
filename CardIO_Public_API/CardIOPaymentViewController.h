@@ -125,6 +125,11 @@
 /// @see collectPostalCode
 @property(nonatomic, assign, readwrite, getter=collectPostalCode, setter=setCollectPostalCode:) BOOL collectZip __attribute__((deprecated("Use collectPostalCode instead.")));
 
+/// Set to NO if you don't want the camera to scan the card expiration.
+/// Applies only if collectExpiry is also YES.
+/// Defaults to YES.
+@property(nonatomic, assign, readwrite) BOOL scanExpiry;
+
 /// Set to YES to show the card.io logo over the camera view instead of the PayPal logo. Defaults to NO.
 @property(nonatomic, assign, readwrite) BOOL useCardIOLogo;
 

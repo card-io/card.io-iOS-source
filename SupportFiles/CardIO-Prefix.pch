@@ -22,7 +22,7 @@
 #define BALER_DEBUG CARDIO_DEBUG
 #endif
 
-// Use the camera if not simulator or in release mode
+// Use the camera if not simulator, or in release mode
 #ifndef USE_CAMERA
 #define USE_CAMERA 1
 #endif
@@ -32,7 +32,15 @@
 #define SIMULATE_CAMERA (!USE_CAMERA && CARDIO_DEBUG)
 #endif
 
-// Feature-build settings
+#if USE_CAMERA
+  // Expiry scanning defaults to enabled
+  #ifndef SCAN_EXPIRY
+  #define SCAN_EXPIRY 1
+  #endif
+#elif SCAN_EXPIRY
+  #undef SCAN_EXPIRY
+  #define SCAN_EXPIRY 0
+#endif
 
 #if USE_CAMERA
   #include "opencv2/core/core_c.h"

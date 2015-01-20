@@ -7,6 +7,7 @@
 #import "iccChoicesSelectViewController.h"
 #import "CardIO.h"
 #import "CardIOCGGeometry.h"
+#import "TestGeneratedModels.h"
 
 #if CARDIO_DEBUG
 #import "CardIOLocalizer.h"
@@ -121,6 +122,8 @@
   cardIOView = self.adHocCardIOView;
 #endif
   
+  cardIOView.collectExpiry = self.expirySwitch.on;
+  cardIOView.scanExpiry = NO; // ***
   cardIOView.useCardIOLogo = self.useCardIOLogoSwitch.on;
 //  cardIOView.allowFreelyRotatingCardGuide = NO;
   
@@ -346,6 +349,10 @@
   self.hideableCardIOView.delegate = self;
   
   self.originalOutcomeLabelWidth = self.outcomeLabel.frame.size.width;
+
+#if TEST_GENERATED_MODELS
+  [TestGeneratedModels selfCheck];
+#endif
   
   [CardIOUtilities preload];
 }
@@ -432,6 +439,10 @@
     NSString *cardType = [CardIOCreditCardInfo displayStringForCardType:cardInfo.cardType usingLanguageOrLocale:nil];
     [resultStr appendFormat:@"%@\n", [cardType length] ? cardType : @"Unrecognized card type"];
 
+    if(self.expirySwitch.on) {
+      [resultStr appendFormat:@"Expiry: %02lu/%02lu\n", (unsigned long)cardInfo.expiryMonth, (unsigned long)cardInfo.expiryYear];
+    }
+    
 #if CARDIO_DEBUG
     [self setOutcomeText:resultStr image:cardInfo.cardImage];
 #else

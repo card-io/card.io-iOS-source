@@ -21,7 +21,8 @@
         isoSpeed:(NSInteger)isoSpeed
     shutterSpeed:(float)shutterSpeed
        torchIsOn:(BOOL)torchIsOn
-     markFlipped:(BOOL)flipped;
+     markFlipped:(BOOL)flipped
+      scanExpiry:(BOOL)scanExpiry;
 - (BOOL)complete;
 
 // these properties are intentionally (superstitiously, anyhow) atomic -- card scanners get passed around between threads

@@ -60,6 +60,9 @@ typedef enum {
 @property(nonatomic, assign, readwrite) float allEdgesFoundDecayedScore;
 @property(nonatomic, assign, readwrite) float numEdgesFoundDecayedScore;
 
+#if CARDIO_DEBUG
+@property(nonatomic, strong, readwrite) CALayer *debugOverlay;
+#endif
 @end
 
 
@@ -82,32 +85,32 @@ typedef enum {
     _allEdgesFoundDecayedScore = 0.0f;
     _numEdgesFoundDecayedScore = 0.0f;
 
-    self.fauxCardLayer = [CAGradientLayer layer];
-    self.topLayer = [CAShapeLayer layer];
-    self.bottomLayer = [CAShapeLayer layer];
-    self.leftLayer = [CAShapeLayer layer];
-    self.rightLayer = [CAShapeLayer layer];
+    _fauxCardLayer = [CAGradientLayer layer];
+    _topLayer = [CAShapeLayer layer];
+    _bottomLayer = [CAShapeLayer layer];
+    _leftLayer = [CAShapeLayer layer];
+    _rightLayer = [CAShapeLayer layer];
     
-    self.topLeftLayer = [CAShapeLayer layer];
-    self.topRightLayer = [CAShapeLayer layer];
-    self.bottomLeftLayer = [CAShapeLayer layer];
-    self.bottomRightLayer = [CAShapeLayer layer];
+    _topLeftLayer = [CAShapeLayer layer];
+    _topRightLayer = [CAShapeLayer layer];
+    _bottomLeftLayer = [CAShapeLayer layer];
+    _bottomRightLayer = [CAShapeLayer layer];
     
-    self.fauxCardLayer.cornerRadius = 0.0f;
-    self.fauxCardLayer.masksToBounds = YES;
-    self.fauxCardLayer.borderWidth = 0.0f;
+    _fauxCardLayer.cornerRadius = 0.0f;
+    _fauxCardLayer.masksToBounds = YES;
+    _fauxCardLayer.borderWidth = 0.0f;
     
-    self.fauxCardLayer.startPoint = CGPointMake(0.5f, 0.0f); // top center
-    self.fauxCardLayer.endPoint = CGPointMake(0.5f, 1.0f); // bottom center
-    self.fauxCardLayer.locations = [NSArray arrayWithObjects:
-                                    [NSNumber numberWithFloat:0.0f],
-                                    [NSNumber numberWithFloat:1.0f],
-                                    nil];
-    self.fauxCardLayer.colors = [NSArray arrayWithObjects:
-                                 (id)[UIColor colorWithWhite:1.0f alpha:0.2f].CGColor,
-                                 (id)[UIColor colorWithWhite:0.0f alpha:0.2f].CGColor,
-                                 nil];
-    [self addSublayer:self.fauxCardLayer];
+    _fauxCardLayer.startPoint = CGPointMake(0.5f, 0.0f); // top center
+    _fauxCardLayer.endPoint = CGPointMake(0.5f, 1.0f); // bottom center
+    _fauxCardLayer.locations = [NSArray arrayWithObjects:
+                                [NSNumber numberWithFloat:0.0f],
+                                [NSNumber numberWithFloat:1.0f],
+                                nil];
+    _fauxCardLayer.colors = [NSArray arrayWithObjects:
+                             (id)[UIColor colorWithWhite:1.0f alpha:0.2f].CGColor,
+                             (id)[UIColor colorWithWhite:0.0f alpha:0.2f].CGColor,
+                             nil];
+    [self addSublayer:_fauxCardLayer];
 
     _backgroundOverlay = [CAShapeLayer layer];
     _backgroundOverlay.cornerRadius = 0.0f;
@@ -115,16 +118,24 @@ typedef enum {
     _backgroundOverlay.borderWidth = 0.0f;
     _backgroundOverlay.fillColor = [UIColor colorWithWhite:0.0f alpha:0.7f].CGColor;
     [self addSublayer:_backgroundOverlay];
+
+#if CARDIO_DEBUG
+    _debugOverlay = [CALayer layer];
+    _debugOverlay.cornerRadius = 0.0f;
+    _debugOverlay.masksToBounds = YES;
+    _debugOverlay.borderWidth = 0.0f;
+    [self addSublayer:_debugOverlay];
+#endif
     
     NSArray *edgeLayers = [NSArray arrayWithObjects:
-                           self.topLayer,
-                           self.bottomLayer,
-                           self.leftLayer,
-                           self.rightLayer,
-                           self.topLeftLayer,
-                           self.topRightLayer,
-                           self.bottomLeftLayer,
-                           self.bottomRightLayer,
+                           _topLayer,
+                           _bottomLayer,
+                           _leftLayer,
+                           _rightLayer,
+                           _topLeftLayer,
+                           _topRightLayer,
+                           _bottomLeftLayer,
+                           _bottomRightLayer,
                            nil];
     
     for(CAShapeLayer *layer in edgeLayers) {
@@ -138,7 +149,7 @@ typedef enum {
     }
     
     // setting the capture frame here serves to initialize the remaining shapelayer properties
-    self.videoFrame = nil;
+    _videoFrame = nil;
 
     [self setNeedsLayout];
   }
@@ -424,8 +435,21 @@ typedef enum {
   if (deviceOrientation != self.deviceOrientation) {
     self.deviceOrientation = deviceOrientation;
     [self animateFauxCardLayerToFrame:self.guideFrame];
+#if CARDIO_DEBUG
+    [self rotateDebugOverlay];
+#endif
   }
 }
+
+#if CARDIO_DEBUG
+- (void)rotateDebugOverlay {
+  self.debugOverlay.frame = self.guideFrame;
+  
+  //  InterfaceToDeviceOrientationDelta delta = orientationDelta(self.interfaceOrientation, self.deviceOrientation);
+  //  CGFloat rotation = -rotationForOrientationDelta(delta); // undo the orientation delta
+  //  self.debugOverlay.transform = CATransform3DMakeRotation(rotation, 0, 0, 1);
+}
+#endif
 
 - (void)setVideoFrame:(CardIOVideoFrame *)newFrame {
   _videoFrame = newFrame;
@@ -447,6 +471,10 @@ typedef enum {
   } else if (self.allEdgesFoundDecayedScore <= 0.1f){
     [self showCardFound:NO];
   }
+  
+#if CARDIO_DEBUG
+  self.debugOverlay.contents = (id)self.videoFrame.debugCardImage.CGImage;
+#endif
 }
 
 - (void)setGuideColor:(UIColor *)newGuideColor {
@@ -489,6 +517,10 @@ typedef enum {
     CGFloat inset = [self lineWidth] / 2;
     rotatedGuideFrame = CGRectInset(rotatedGuideFrame, inset, inset);
     [self.guideLayerDelegate guideLayerDidLayout:rotatedGuideFrame];
+    
+#if CARDIO_DEBUG
+  [self rotateDebugOverlay];
+#endif
   });
 }
 

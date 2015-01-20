@@ -96,12 +96,14 @@
   self.cardIOView.delegate = self;
   self.cardIOView.languageOrLocale = self.context.languageOrLocale;
   self.cardIOView.useCardIOLogo = self.context.useCardIOLogo;
+  self.cardIOView.hideCardIOLogo = self.context.hideCardIOLogo;
   self.cardIOView.guideColor = self.context.guideColor;
   self.cardIOView.scannedImageDuration = ((CGFloat) 0.1f);
   self.cardIOView.allowFreelyRotatingCardGuide = self.context.allowFreelyRotatingCardGuide;
   
   self.cardIOView.scanInstructions = self.context.scanInstructions;
-  self.cardIOView.hideCardIOLogo = self.context.hideCardIOLogo;
+  self.cardIOView.collectExpiry = self.context.collectExpiry;
+  self.cardIOView.scanExpiry = self.context.scanExpiry;
   self.cardIOView.scanOverlayView = self.context.scanOverlayView;
   
   self.cardIOView.detectionMode = self.context.detectionMode;

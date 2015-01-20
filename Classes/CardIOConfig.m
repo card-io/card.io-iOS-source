@@ -11,6 +11,7 @@
   if ((self = [super init])) {
     _allowFreelyRotatingCardGuide = YES;
     _scanReport = [[CardIOAnalytics alloc] initWithContext:nil];
+    _scanExpiry = YES;
   }
   return self;
 }

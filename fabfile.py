@@ -95,7 +95,8 @@ def build(outdir=None, device_sdk=None, simulator_sdk=None, **kwargs):
         message = """
                      You must provide outdir=<sdk output parent dir>
                      Example usage:
-                       `fab build:outdir=~`
+                       `fab build:outdir=~` - normal build
+                       `fab build:outdir=~,SCAN_EXPIRY=0` - to disable the experimental expiry-scan feature
                   """
         abort(textwrap.dedent(message).format(**locals()))
 

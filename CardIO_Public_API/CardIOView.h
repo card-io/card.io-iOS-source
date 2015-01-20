@@ -42,6 +42,9 @@
 /// Set to YES to show the card.io logo over the camera instead of the PayPal logo. Defaults to NO.
 @property(nonatomic, assign, readwrite) BOOL useCardIOLogo;
 
+/// Hide the PayPal or card.io logo in the scan view. Defaults to NO.
+@property(nonatomic, assign, readwrite) BOOL hideCardIOLogo;
+
 /// By default, in camera view the card guide and the buttons always rotate to match the device's orientation.
 ///   All four orientations are permitted, regardless of any app or viewcontroller constraints.
 /// If you wish, the card guide and buttons can instead obey standard iOS constraints, including
@@ -52,9 +55,6 @@
 /// Set the scan instruction text. If nil, use the default text. Defaults to nil.
 /// Use newlines as desired to control the wrapping of text onto multiple lines.
 @property(nonatomic, copy, readwrite) NSString *scanInstructions;
-
-/// Hide the PayPal or card.io logo in the scan view. Defaults to NO.
-@property(nonatomic, assign, readwrite) BOOL hideCardIOLogo;
 
 /// A custom view that will be overlaid atop the entire scan view. Defaults to nil.
 /// If you set a scanOverlayView, be sure to:
@@ -71,6 +71,14 @@
 ///
 ///   * Minimize animations, redrawing, or any other CPU/GPU/memory intensive activities
 @property(nonatomic, retain, readwrite) UIView *scanOverlayView;
+
+/// Set to NO if you don't need to collect the card expiration. Defaults to YES.
+@property(nonatomic, assign, readwrite) BOOL collectExpiry;
+
+/// Set to NO if you don't want the camera to scan the card expiration.
+/// Applies only if collectExpiry is also YES.
+/// Defaults to YES.
+@property(nonatomic, assign, readwrite) BOOL scanExpiry;
 
 /// CardIODetectionModeCardImageAndNumber: the scanner must successfully identify the card number.
 /// CardIODetectionModeCardImageOnly: don't scan the card, just detect a credit-card-shaped card.

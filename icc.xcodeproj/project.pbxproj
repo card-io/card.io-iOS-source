@@ -118,6 +118,7 @@
 		3ECDD2881885FAA000361A0F /* NSObject+CardioCategoryTest.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ECDD2861885FAA000361A0F /* NSObject+CardioCategoryTest.h */; };
 		3ECDD2891885FAA000361A0F /* NSObject+CardioCategoryTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ECDD2871885FAA000361A0F /* NSObject+CardioCategoryTest.m */; };
 		3ED8A878197DBDAE00069761 /* CardIOUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED8A874197DBD5F00069761 /* CardIOUtilities.m */; };
+		3EE558981A5B4BC60094929A /* TestGeneratedModels.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3ED9F6DF1A23CDD800BD07F8 /* TestGeneratedModels.mm */; };
 		55CD7FA818EF777F00BB381A /* iccChoicesSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55CD7FA718EF777F00BB381A /* iccChoicesSelectViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -167,7 +168,7 @@
 		0307CFF213304B210019C8F7 /* CardIOPaymentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = CardIOPaymentViewController.m; path = Classes/CardIOPaymentViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		030A71401214AC9700BE07FB /* CardIOIplImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIOIplImage.h; sourceTree = "<group>"; };
 		030A71411214AC9700BE07FB /* CardIOIplImage.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CardIOIplImage.mm; sourceTree = "<group>"; };
-		03158E721395A543004E139D /* dmz.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dmz.h; sourceTree = "<group>"; };
+		03158E721395A543004E139D /* dmz.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = dmz.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		03158E8C1396AF3A004E139D /* dmz.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dmz.cpp; sourceTree = "<group>"; };
 		03158EAA13980128004E139D /* mz.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mz.h; sourceTree = "<group>"; };
 		03158EB213986D51004E139D /* mz.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mz.cpp; sourceTree = "<group>"; };
@@ -185,8 +186,8 @@
 		032E420C134FA49400830810 /* yak_icon~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yak_icon~ipad.png"; sourceTree = "<group>"; };
 		03306CF81284952B00683F48 /* UnitTest.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTest.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		03306CF91284952B00683F48 /* UnitTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UnitTest-Info.plist"; sourceTree = "<group>"; };
-		0346CED8157D858400F99613 /* scan.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = scan.h; sourceTree = "<group>"; };
-		0346CED9157D870000F99613 /* frame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = frame.h; sourceTree = "<group>"; };
+		0346CED8157D858400F99613 /* scan.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = scan.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		0346CED9157D870000F99613 /* frame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = frame.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		0346CEDA157D870B00F99613 /* frame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = frame.cpp; sourceTree = "<group>"; };
 		0346CEDF157D884D00F99613 /* n_vseg.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = n_vseg.cpp; sourceTree = "<group>"; };
 		0346CEE3157D885700F99613 /* n_hseg.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = n_hseg.cpp; sourceTree = "<group>"; };
@@ -552,6 +553,10 @@
 		3E9618E119C8EBC50023CDBB /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		3E9618E319C8EBCB0023CDBB /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		3E9618E719C8F6C70023CDBB /* MainWindow~iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = "MainWindow~iPad.xib"; path = "Resources/MainWindow~iPad.xib"; sourceTree = "<group>"; };
+		3E9C62011A69B762003648D5 /* modelc_5cff994c.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = modelc_5cff994c.cpp; sourceTree = "<group>"; };
+		3E9C62021A69B762003648D5 /* modelc_5cff994c.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = modelc_5cff994c.hpp; sourceTree = "<group>"; };
+		3E9C62061A6D82EF003648D5 /* modelm_e43af6f6.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = modelm_e43af6f6.cpp; sourceTree = "<group>"; };
+		3E9C62071A6D82EF003648D5 /* modelm_e43af6f6.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = modelm_e43af6f6.hpp; sourceTree = "<group>"; };
 		3E9F4C49181F03F300F33B48 /* libCardIO.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCardIO.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E9F4C7F181F07B700F33B48 /* icc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = icc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EA0739F16E6C26C00CA6E7F /* simulated_camera_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = simulated_camera_0.png; sourceTree = "<group>"; };
@@ -569,6 +574,15 @@
 		3ED37A1117A89BA500A09325 /* CardIOPostalCodeTextFieldDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CardIOPostalCodeTextFieldDelegate.m; path = Classes/CardIOPostalCodeTextFieldDelegate.m; sourceTree = "<group>"; };
 		3ED8A874197DBD5F00069761 /* CardIOUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CardIOUtilities.m; path = Classes/CardIOUtilities.m; sourceTree = "<group>"; };
 		3ED8A876197DBDA900069761 /* CardIOUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CardIOUtilities.h; path = CardIO_Public_API/CardIOUtilities.h; sourceTree = "<group>"; };
+		3ED9F6DC1A23CDBE00BD07F8 /* modelm_730c4cbd.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; lineEnding = 0; path = modelm_730c4cbd.cpp; sourceTree = "<group>"; };
+		3ED9F6DD1A23CDBE00BD07F8 /* modelm_730c4cbd.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; lineEnding = 0; path = modelm_730c4cbd.hpp; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
+		3ED9F6DE1A23CDD800BD07F8 /* TestGeneratedModels.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TestGeneratedModels.h; path = models/TestGeneratedModels.h; sourceTree = "<group>"; };
+		3ED9F6DF1A23CDD800BD07F8 /* TestGeneratedModels.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = TestGeneratedModels.mm; path = models/TestGeneratedModels.mm; sourceTree = "<group>"; };
+		3ED9F6E01A23CF3200BD07F8 /* expiry_categorize.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; lineEnding = 0; path = expiry_categorize.cpp; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
+		3ED9F6E11A23CF3200BD07F8 /* expiry_categorize.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = expiry_categorize.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		3ED9F6E21A23CF3200BD07F8 /* expiry_seg.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; lineEnding = 0; path = expiry_seg.cpp; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
+		3ED9F6E31A23CF3200BD07F8 /* expiry_seg.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = expiry_seg.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		3ED9F6E41A23CF3200BD07F8 /* expiry_types.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = expiry_types.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		5528BBBE16F7B1CA005D5011 /* simulated_camera_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = simulated_camera_1.png; sourceTree = "<group>"; };
 		5528BBBF16F7B1CA005D5011 /* simulated_camera_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = simulated_camera_2.png; sourceTree = "<group>"; };
 		5528BBC016F7B1CA005D5011 /* simulated_camera_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = simulated_camera_3.png; sourceTree = "<group>"; };
@@ -852,6 +866,11 @@
 		0346CEDE157D87F500F99613 /* scan */ = {
 			isa = PBXGroup;
 			children = (
+				3ED9F6E11A23CF3200BD07F8 /* expiry_categorize.h */,
+				3ED9F6E01A23CF3200BD07F8 /* expiry_categorize.cpp */,
+				3ED9F6E31A23CF3200BD07F8 /* expiry_seg.h */,
+				3ED9F6E21A23CF3200BD07F8 /* expiry_seg.cpp */,
+				3ED9F6E41A23CF3200BD07F8 /* expiry_types.h */,
 				0346CED9157D870000F99613 /* frame.h */,
 				0346CEDA157D870B00F99613 /* frame.cpp */,
 				0346CEED157D88D800F99613 /* n_categorize.h */,
@@ -1453,6 +1472,9 @@
 		03ABD1D415794239004BE637 /* models */ = {
 			isa = PBXGroup;
 			children = (
+				3ED9F6DE1A23CDD800BD07F8 /* TestGeneratedModels.h */,
+				3ED9F6DF1A23CDD800BD07F8 /* TestGeneratedModels.mm */,
+				3ED9F6D71A23CDBE00BD07F8 /* expiry */,
 				03ABD1D51579423D004BE637 /* generated */,
 			);
 			name = models;
@@ -1594,6 +1616,20 @@
 			);
 			name = Strings;
 			path = strings/projects/card.io/Strings;
+			sourceTree = "<group>";
+		};
+		3ED9F6D71A23CDBE00BD07F8 /* expiry */ = {
+			isa = PBXGroup;
+			children = (
+				3E9C62061A6D82EF003648D5 /* modelm_e43af6f6.cpp */,
+				3E9C62071A6D82EF003648D5 /* modelm_e43af6f6.hpp */,
+				3E9C62011A69B762003648D5 /* modelc_5cff994c.cpp */,
+				3E9C62021A69B762003648D5 /* modelc_5cff994c.hpp */,
+				3ED9F6DC1A23CDBE00BD07F8 /* modelm_730c4cbd.cpp */,
+				3ED9F6DD1A23CDBE00BD07F8 /* modelm_730c4cbd.hpp */,
+			);
+			name = expiry;
+			path = models/expiry;
 			sourceTree = "<group>";
 		};
 		849799A5159E5E4D00527FF5 /* CardIOGPU */ = {
@@ -1938,6 +1974,7 @@
 				3E9F4C6C181F07B700F33B48 /* RootViewController.m in Sources */,
 				3E0133E7198AD75C009E579A /* main.m in Sources */,
 				55CD7FA818EF777F00BB381A /* iccChoicesSelectViewController.m in Sources */,
+				3EE558981A5B4BC60094929A /* TestGeneratedModels.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2094,6 +2131,12 @@
 					"DMZ_DEBUG=1",
 					"DEBUG=1",
 				);
+				"GCC_PREPROCESSOR_DEFINITIONS[sdk=iphoneos*]" = (
+					"CARDIO_DEBUG=1",
+					"DMZ_DEBUG=1",
+					"DEBUG=1",
+					"TEST_GENERATED_MODELS=1",
+				);
 				"GCC_PREPROCESSOR_DEFINITIONS[sdk=iphonesimulator*]" = (
 					"CARDIO_DEBUG=1",
 					"USE_CAMERA=0",
@@ -2234,12 +2277,14 @@
 					"CARDIO_DEBUG=1",
 					"USE_CAMERA=0",
 					"DMZ_DEBUG=1",
+					"TEST_GENERATED_MODELS=1",
 				);
 				"GCC_PREPROCESSOR_DEFINITIONS[sdk=iphoneos*]" = (
 					"CARDIO_DEBUG=1",
 					"USE_CAMERA=1",
 					"DMZ_DEBUG=1",
 					"DEBUG=1",
+					"TEST_GENERATED_MODELS=1",
 				);
 				"GCC_PREPROCESSOR_DEFINITIONS[sdk=iphonesimulator*]" = (
 					"CARDIO_DEBUG=1",
