@@ -4,6 +4,16 @@
 
 #import <tgmath.h>
 
+#if USE_CAMERA
+// Expiry scanning defaults to enabled
+#ifndef SCAN_EXPIRY
+#define SCAN_EXPIRY 1
+#endif
+#elif SCAN_EXPIRY
+#undef SCAN_EXPIRY
+#define SCAN_EXPIRY 0
+#endif
+
 #ifdef __OBJC__
   #import <Foundation/Foundation.h>
   #import <UIKit/UIKit.h>
