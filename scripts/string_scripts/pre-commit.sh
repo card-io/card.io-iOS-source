@@ -40,48 +40,5 @@ then
         fi
     fi
 fi
-
-if [[ $result == 0 ]]
-then
-    # If all staged .strings files do pass those tests, then see whether
-    #   en.strings or en_SE.strings is staged.
-
-    en_grep=`git diff --cached --name-status | grep "/\(en\|en_SE\).strings"`
-
-    if [[ -n "$en_grep" ]]
-    then
-        # If either of these English files is staged, then
-        # check en.strings if unstaged,
-        # update en_SE.strings based on en.strings,
-        # and make sure that both files are staged.
-
-        en_strings=`echo $en_grep | grep "en.strings"`
-
-        if [[ -z "$en_strings" ]]
-        then
-            ./scripts/string_scripts/review_strings_file.sh $strings_dir/en.strings
-            let "result |= $?"
-        fi
-
-        if [[ $result == 0 ]]
-        then
-            # Generate en_SE.strings
-            ./scripts/string_scripts/swedishize.py $strings_dir
-            let "result |= $?"
-
-            if [[ $result == 0 ]]
-            then
-                # Include en and en_SE files in this commit
-                git add $strings_dir/en.strings $strings_dir/en_SE.strings
-                let "result |= $?"
-                if [[ $result == 0 ]]
-                then
-                    echo "[en.strings] staged"
-                    echo "[en_SE.strings] staged"
-                fi
-            fi
-        fi
-    fi
-fi
     
 exit $result
