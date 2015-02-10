@@ -513,7 +513,6 @@
 		3E0133EA198ADC7D009E579A /* de.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de.strings; path = assets/strings/de.strings; sourceTree = SOURCE_ROOT; };
 		3E0133EB198ADC7D009E579A /* en_AU.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en_AU.strings; path = assets/strings/en_AU.strings; sourceTree = SOURCE_ROOT; };
 		3E0133EC198ADC7D009E579A /* en_GB.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en_GB.strings; path = assets/strings/en_GB.strings; sourceTree = SOURCE_ROOT; };
-		3E0133ED198ADC7D009E579A /* en_SE.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en_SE.strings; path = assets/strings/en_SE.strings; sourceTree = SOURCE_ROOT; };
 		3E0133EE198ADC7D009E579A /* en.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en.strings; path = assets/strings/en.strings; sourceTree = SOURCE_ROOT; };
 		3E0133EF198ADC7D009E579A /* es_MX.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es_MX.strings; path = assets/strings/es_MX.strings; sourceTree = SOURCE_ROOT; };
 		3E0133F0198ADC7D009E579A /* es.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es.strings; path = assets/strings/es.strings; sourceTree = SOURCE_ROOT; };
@@ -555,10 +554,6 @@
 		3E9618E119C8EBC50023CDBB /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		3E9618E319C8EBCB0023CDBB /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		3E9618E719C8F6C70023CDBB /* MainWindow~iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = "MainWindow~iPad.xib"; path = "Resources/MainWindow~iPad.xib"; sourceTree = "<group>"; };
-		3E9C622B1A72BFCD003648D5 /* modelc_13a159cd.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = modelc_13a159cd.cpp; sourceTree = "<group>"; };
-		3E9C622C1A72BFCD003648D5 /* modelc_13a159cd.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = modelc_13a159cd.hpp; sourceTree = "<group>"; };
-		3E9C622D1A72BFCD003648D5 /* modelm_95f644e2.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = modelm_95f644e2.cpp; sourceTree = "<group>"; };
-		3E9C622E1A72BFCD003648D5 /* modelm_95f644e2.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = modelm_95f644e2.hpp; sourceTree = "<group>"; };
 		3E9F4C49181F03F300F33B48 /* libCardIO.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCardIO.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E9F4C7F181F07B700F33B48 /* icc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = icc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EA0739F16E6C26C00CA6E7F /* simulated_camera_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = simulated_camera_0.png; sourceTree = "<group>"; };
@@ -596,8 +591,6 @@
 		55CD7FA718EF777F00BB381A /* iccChoicesSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = iccChoicesSelectViewController.m; path = Classes/iccChoicesSelectViewController.m; sourceTree = "<group>"; };
 		55DAEBCD17C8258B0041A4E6 /* RootViewController~ipad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = "RootViewController~ipad.xib"; path = "Classes/RootViewController~ipad.xib"; sourceTree = "<group>"; };
 		844D4D5914469AB20070FCB3 /* CardIOStyles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CardIOStyles.h; path = Classes/CardIOStyles.h; sourceTree = "<group>"; };
-		845D9D2115C33D39001CD1A9 /* rand_util.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = rand_util.h; sourceTree = "<group>"; };
-		845D9D2315C33EF4001CD1A9 /* rand_util.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = rand_util.c; sourceTree = "<group>"; };
 		8487783015A39BCB00B08B41 /* CardIOAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CardIOAnalytics.h; path = Classes/CardIOAnalytics.h; sourceTree = "<group>"; };
 		8487783115A39BCB00B08B41 /* CardIOAnalytics.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; lineEnding = 0; name = CardIOAnalytics.mm; path = Classes/CardIOAnalytics.mm; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		84979985159E5E0500527FF5 /* mz_ios.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = mz_ios.mm; sourceTree = "<group>"; };
@@ -828,8 +821,6 @@
 				037FEFD0157E8E59009FE82A /* neon.h */,
 				037FEFD2157E8EE5009FE82A /* processor_support.h */,
 				037FEFD1157E8EE5009FE82A /* processor_support.cpp */,
-				845D9D2115C33D39001CD1A9 /* rand_util.h */,
-				845D9D2315C33EF4001CD1A9 /* rand_util.c */,
 			);
 			name = dmz;
 			path = ../dmz;
@@ -1592,7 +1583,6 @@
 				3E0133EA198ADC7D009E579A /* de.strings */,
 				3E0133EB198ADC7D009E579A /* en_AU.strings */,
 				3E0133EC198ADC7D009E579A /* en_GB.strings */,
-				3E0133ED198ADC7D009E579A /* en_SE.strings */,
 				3E0133EE198ADC7D009E579A /* en.strings */,
 				3E0133EF198ADC7D009E579A /* es_MX.strings */,
 				3E0133F0198ADC7D009E579A /* es.strings */,
@@ -1625,10 +1615,6 @@
 			children = (
 				3E2449E91A817DB800ECC31C /* modelc_bf4dd6c8.cpp */,
 				3E2449EA1A817DB800ECC31C /* modelc_bf4dd6c8.hpp */,
-				3E9C622B1A72BFCD003648D5 /* modelc_13a159cd.cpp */,
-				3E9C622C1A72BFCD003648D5 /* modelc_13a159cd.hpp */,
-				3E9C622D1A72BFCD003648D5 /* modelm_95f644e2.cpp */,
-				3E9C622E1A72BFCD003648D5 /* modelm_95f644e2.hpp */,
 				3ED9F6DC1A23CDBE00BD07F8 /* modelm_730c4cbd.cpp */,
 				3ED9F6DD1A23CDBE00BD07F8 /* modelm_730c4cbd.hpp */,
 			);

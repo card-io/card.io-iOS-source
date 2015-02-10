@@ -42,6 +42,16 @@
   #define SCAN_EXPIRY 0
 #endif
 
+// There's a C++ compiler bug for 32-bit builds
+// which causes expiry-scanning to crash.
+// Will remove this restriction when we come up
+// with a work-around.
+// (NOTE: this appears in both icc_Prefix.pch and CardIO-Prefix.pch)
+#ifndef __LP64__
+  #undef SCAN_EXPIRY
+  #define SCAN_EXPIRY 0
+#endif
+
 #if USE_CAMERA
   #include "opencv2/core/core_c.h"
   #include "opencv2/core/core.hpp"
