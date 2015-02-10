@@ -133,7 +133,7 @@ def build(outdir=None, device_sdk=None, simulator_sdk=None, **kwargs):
             dmz_all_filename = os.path.join("dmz", "dmz_all.cpp")
             with open(dmz_all_filename) as f:
                 old_dmz_all = f.read()
-            local("fab {verbose} concat".format(verbose="verbose" if env.verbose else ""))
+            local("fab concat")
             with open(dmz_all_filename) as f:
                 new_dmz_all = f.read()
             if old_dmz_all != new_dmz_all:
