@@ -147,19 +147,22 @@
       
 #if CARDIO_DEBUG
       if (self.scanner.cardInfo != nil) {
-#if 1
+#if 0
         UIImage *cardImage = [self.cardY UIImage];
 #else
         CardIOIplImage *sobelImage16 = [CardIOIplImage imageWithSize:self.cardY.cvSize depth:IPL_DEPTH_16S channels:1];
         cvSetZero(sobelImage16.image);
         
-        CvRect belowNumbersRect = cvRect(0, self.scanner.cardInfo.yOffset + kNumberHeight, self.cardY.cvSize.width, self.cardY.cvSize.height - (self.scanner.cardInfo.yOffset + kNumberHeight));
+        CvRect belowNumbersRect = cvRect(0,
+                                         (int)(self.scanner.cardInfo.yOffset + kNumberHeight),
+                                         (int) self.cardY.cvSize.width,
+                                         (int) (self.cardY.cvSize.height - (self.scanner.cardInfo.yOffset + kNumberHeight)));
         cvSetImageROI(self.cardY.image, belowNumbersRect);
         cvSetImageROI(sobelImage16.image, belowNumbersRect);
         
-        llcv_scharr3_dx_abs(cardY.image, sobelImage16.image);
+        llcv_scharr3_dx_abs(self.cardY.image, sobelImage16.image);
         
-        cvResetImageROI(cardY.image);
+        cvResetImageROI(self.cardY.image);
         cvResetImageROI(sobelImage16.image);
         
         CardIOIplImage *sobelImage = [CardIOIplImage imageWithSize:self.cardY.cvSize depth:IPL_DEPTH_8U channels:1];
