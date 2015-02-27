@@ -24,8 +24,6 @@
 @property(assign, readwrite) ScannerState scannerState;
 @property(strong, readwrite) CardIOReadCardInfo *cardInfoCache;
 @property(assign, readwrite) BOOL cardInfoCacheDirty;
-@property(strong, readwrite) NSArray *xOffsets;
-@property(assign, readwrite) uint16_t yOffset;
 @property(assign, readwrite) BOOL lastFrameWasUsable;
 @property(assign, readwrite) BOOL lastFrameWasUpsideDown;
 @property(assign, readwrite) BOOL scanIsComplete;
@@ -67,7 +65,6 @@
   }
   
   FrameScanResult result;
-  bool collectCardNumber = (_scannerState.timeOfCardNumberCompletionInMilliseconds == 0);
   
   // A little bit of a hack, but we prepopulate focusScore and brightness information
   result.focus_score = focusScore;
@@ -79,20 +76,8 @@
   result.flipped = flipped;
   scanner_add_frame_with_expiry(&_scannerState, y.image, scanExpiry, &result);
   self.lastFrameWasUsable = result.usable;
-  if (collectCardNumber) {
-    if(result.usable) {
-      NSMutableArray *x = [NSMutableArray arrayWithCapacity:result.hseg.n_offsets];
-      for(uint8_t i = 0; i < result.hseg.n_offsets; i++) {
-        NSNumber *xOffset = [NSNumber numberWithUnsignedShort:result.hseg.offsets[i]];
-        [x addObject:xOffset];
-      }
-      self.xOffsets = x;
-      self.yOffset = result.vseg.y_offset;
-    } else {
-      self.lastFrameWasUpsideDown = result.upside_down;
-      self.xOffsets = nil;
-      self.yOffset = 0;
-    }
+  if(!result.usable) {
+    self.lastFrameWasUpsideDown = result.upside_down;
   }
   [self markCachesDirty];
 }
@@ -156,9 +141,15 @@
       }
 #endif
 
+      NSMutableArray *xOffsets = [NSMutableArray arrayWithCapacity:result.hseg.n_offsets];
+      for(uint8_t i = 0; i < result.hseg.n_offsets; i++) {
+        NSNumber *xOffset = [NSNumber numberWithUnsignedShort:result.hseg.offsets[i]];
+        [xOffsets addObject:xOffset];
+      }
+
       self.cardInfoCache = [CardIOReadCardInfo cardInfoWithNumber:cardNumber
-                                                         xOffsets:self.xOffsets
-                                                          yOffset:self.yOffset
+                                                         xOffsets:xOffsets
+                                                          yOffset:result.vseg.y_offset
                                                       expiryMonth:result.expiry_month
                                                        expiryYear:result.expiry_year
 #if CARDIO_DEBUG
