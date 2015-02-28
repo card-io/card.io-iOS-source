@@ -16,7 +16,7 @@
 #include "morph.h"
 #include <vector>
 
-#define SCAN_FOREVER 0  // useful for debugging expiry
+#define SCAN_FOREVER 1  // useful for debugging expiry
 
 @interface CardIOCardScanner ()
 
