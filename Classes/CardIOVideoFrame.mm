@@ -147,49 +147,94 @@
                   scanExpiry:self.scanExpiry];
       
 #if CARDIO_DEBUG
-      if (self.scanner.cardInfo != nil) {
 #if 0
+      if (self.scanner.cardInfo != nil) {
         UIImage *cardImage = [self.cardY UIImage];
-#else
-        CardIOIplImage *sobelImage = [CardIOIplImage imageWithSize:self.cardY.cvSize depth:IPL_DEPTH_8U channels:1];
-        CardIOIplImage *sobelImage16 = [CardIOIplImage imageWithSize:self.cardY.cvSize depth:IPL_DEPTH_16S channels:1];
-        
-        cvCopy(self.cardY.image, sobelImage.image);
-        cvConvertScale(sobelImage.image, sobelImage16.image);
-        
-        CvRect relevant_rect = cvRect(0,
-                                      (int)(self.cardY.cvSize.height / 2),
-                                      (int)(self.cardY.cvSize.width),
-                                      (int)(self.cardY.cvSize.height / 2));
-        cvSetImageROI(self.cardY.image, relevant_rect);
-        cvSetImageROI(sobelImage16.image, relevant_rect);
-        
-        llcv_scharr3_dx_abs(self.cardY.image, sobelImage16.image);
-        
-        cvResetImageROI(self.cardY.image);
-        cvResetImageROI(sobelImage16.image);
-        
-        std::vector<StripeSum> stripe_sums = sorted_stripes(sobelImage16.image,
-                                                            (uint16_t)(self.cardY.cvSize.height / 2),
-                                                            kSmallCharacterHeight,
-                                                            kNumberHeight,
-                                                            10);
-        
-        for (size_t index = 0; index < stripe_sums.size(); index++) {
-          StripeSum stripe_sum = stripe_sums[index];
-          CvRect stripe_rect = cvRect((int) (25 * index),
-                                      stripe_sum.base_row,
-                                      50,
-                                      stripe_sum.height);
-          cvRectangleR(sobelImage16.image, stripe_rect, cvScalar(SHRT_MAX / (index + 1), 0, 0, SHRT_MAX), CV_FILLED);
-        }
-        
-        cvConvertScale(sobelImage16.image, sobelImage.image);
-        
-        UIImage *cardImage = [sobelImage UIImage];
-#endif
         self.debugCardImage = [CardIOCardOverlay cardImage:cardImage withDisplayInfo:self.scanner.cardInfo annotated:NO];
       }
+#else
+      if (!self.flipped) {
+        static NSDate *lastUpdated = [NSDate dateWithTimeIntervalSince1970:0];
+
+        static CardIOIplImage *sobelImage = [CardIOIplImage imageWithSize:self.cardY.cvSize depth:IPL_DEPTH_8U channels:1];
+        static CardIOIplImage *sobelImage16 = [CardIOIplImage imageWithSize:self.cardY.cvSize depth:IPL_DEPTH_16S channels:1];
+        
+        if (fabs([lastUpdated timeIntervalSinceNow]) >= 1.0) {
+          int card_height = self.cardY.cvSize.height;
+
+          cvCopy(self.cardY.image, sobelImage.image);
+          cvConvertScale(sobelImage.image, sobelImage16.image);
+          
+          CvRect relevant_rect = cvRect(0,
+                                        (int)(card_height / 2),
+                                        (int)(self.cardY.cvSize.width),
+                                        (int)(card_height / 2));
+          cvSetImageROI(self.cardY.image, relevant_rect);
+          cvSetImageROI(sobelImage16.image, relevant_rect);
+          
+          llcv_scharr3_dx_abs(self.cardY.image, sobelImage16.image);
+          
+          cvConvertScale(sobelImage16.image, sobelImage16.image, 0.3);
+          
+          cvResetImageROI(self.cardY.image);
+          cvResetImageROI(sobelImage16.image);
+          
+          std::vector<StripeSum> stripe_sums = sorted_stripes(sobelImage16.image,
+                                                              (uint16_t)(card_height / 2),
+                                                              kSmallCharacterHeight,
+                                                              kNumberHeight,
+                                                              10);
+          
+          // Display line-sum indicators along the right margin:
+          {
+            long line_sum[card_height];
+            long min_line_sum = LONG_MAX;
+            long max_line_sum = 0;
+            long line_sum_range;
+            
+            int left_edge = kSmallCharacterWidth * 3;  // there aren't usually any actual characters this far to the left
+            int right_edge = (self.cardY.cvSize.width * 2) / 3;  // beyond here lie logos
+            
+            for (int row = card_height / 2; row < card_height; row++) {
+              cvSetImageROI(sobelImage16.image, cvRect(left_edge, row, right_edge - left_edge, 1));
+              line_sum[row] = (long)cvSum(sobelImage16.image).val[0];
+              min_line_sum = MIN(min_line_sum, line_sum[row]);
+              max_line_sum = MAX(max_line_sum, line_sum[row]);
+            }
+            cvResetImageROI(sobelImage16.image);
+            
+            line_sum_range = max_line_sum - min_line_sum;
+            
+            for (int row = card_height / 2; row < card_height; row++) {
+              CvRect line_sum_rect = cvRect(self.cardY.cvSize.width - 50,
+                                            row,
+                                            50,
+                                            1);
+              double score = line_sum_range > 0.001 ? ((double)(line_sum[row] - min_line_sum)) / line_sum_range : 0.0;
+              double dimmest_display = 50.0;
+              cvRectangleR(sobelImage16.image, line_sum_rect, cvScalar((255.0 - dimmest_display) * score + dimmest_display, 0, 0, 0), CV_FILLED);
+            }
+          }
+          
+          // Display stripe indicators along the left margin:
+          for (size_t index = 0; index < stripe_sums.size(); index++) {
+            StripeSum stripe_sum = stripe_sums[index];
+            CvRect stripe_rect = cvRect((int) (25 * index),
+                                        stripe_sum.base_row,
+                                        50,
+                                        stripe_sum.height);
+            cvRectangleR(sobelImage16.image, stripe_rect, cvScalar(255.0 * pow(0.8, index), 0, 0, 0), CV_FILLED);
+          }
+          
+          cvConvertScale(sobelImage16.image, sobelImage.image);
+          
+          lastUpdated = [NSDate date];
+        }
+      
+        UIImage *cardImage = [sobelImage UIImage];
+        self.debugCardImage = [CardIOCardOverlay cardImage:cardImage withDisplayInfo:self.scanner.cardInfo annotated:NO];
+      }
+#endif
 #endif
       
       if(self.scanner.complete) {
