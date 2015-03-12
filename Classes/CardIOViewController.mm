@@ -457,6 +457,10 @@
 
 - (void)cancel:(id)sender {
   [self.context.scanReport reportEventWithLabel:@"scan_cancel" withScanner:self.cardIOView.scanner];
+  
+  // Hiding the CardIOView causes it to call its stopSession method, thus eliminating a visible stutter.
+  // See https://github.com/card-io/card.io-iOS-SDK/issues/97
+  self.cardIOView.hidden = YES;
 
   [self.navigationController setNavigationBarHidden:NO animated:YES]; // to restore the color of the status bar!
   
