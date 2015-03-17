@@ -496,6 +496,21 @@
 
 - (void)stopSession {
   if (self.running) {
+#if USE_CAMERA
+    [self changeCameraConfiguration:^{
+      // restore default focus range
+      if ([self.camera respondsToSelector:@selector(isAutoFocusRangeRestrictionSupported)]) {
+        if(self.camera.autoFocusRangeRestrictionSupported) {
+          self.camera.autoFocusRangeRestriction = AVCaptureAutoFocusRangeRestrictionNone;
+        }
+      }
+    }
+ #if CARDIO_DEBUG
+                   withErrorMessage:@"CardIO couldn't lock for configuration within stopSession"
+ #endif
+     ];
+#endif
+    
     dispatch_semaphore_wait(self.cameraConfigurationSemaphore, DISPATCH_TIME_FOREVER);
     
 #if USE_CAMERA
