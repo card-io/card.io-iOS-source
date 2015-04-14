@@ -5,6 +5,7 @@
 
 #import "CardIOCreditCardExpiryFormatter.h"
 #import "CardIOCreditCardInfo.h"
+#import "CardIOCreditCardNumber.h"
 
 @implementation CardIOCreditCardExpiryFormatter
 
@@ -16,12 +17,12 @@
   NSInteger year = 0;
   
   if (values.count > 0) {
-    month = [[values[0] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] integerValue];
+    month = [[CardIOCreditCardNumber stringByRemovingNonNumbers:values[0]] integerValue];
   }
   if (values.count > 1) {
-    year = [[values[1] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] integerValue];
+    year = [[CardIOCreditCardNumber stringByRemovingNonNumbers:values[1]] integerValue];
     if (year < 2000) {
-      year += 2000;
+      year = 2000 + (year % 100);
     }
   }
 
