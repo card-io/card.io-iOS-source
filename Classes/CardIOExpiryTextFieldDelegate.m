@@ -94,7 +94,8 @@
   
   NSString *numericNewText = [CardIOCreditCardNumber stringByRemovingNonNumbers:newText];
   NSString *updatedText = [textField.text stringByReplacingCharactersInRange:range withString:numericNewText];
-  if(updatedText.length > 9) {
+  if(updatedText.length > 7) {
+    // 7 characters: "MM_/_YY"
     [CardIOConfigurableTextFieldDelegate vibrate];
     return NO;
   }
@@ -104,7 +105,7 @@
   NSString *monthStr = [updatedNumberText substringToIndex:MIN(2, updatedNumberText.length)];
   if(monthStr.length > 0) {
     NSInteger month = [monthStr integerValue];
-    if(month < 0 || 12 < month) {
+    if(month < 0 || month > 12) {
       [CardIOConfigurableTextFieldDelegate vibrate];
       return NO;
     }
