@@ -58,13 +58,11 @@ The score will be an integer in the range 0 to 32767.
 
 *Original image:*
 
-![Original image](./full-original.png)
-![Original image, close-up](./close-original.png)
+![Original image](./images/a-original.png)
 
 *Sobel image:*
 
-![Sobel image](./full-Scharr-x.png)
-![Sobel image, close-up](./close-Scharr-x.png)
+![Sobel image](./images/b-sobel.png)
   
 #### B. Calculate the total score for each `row`.
 
@@ -74,6 +72,10 @@ Yes, 2/3.
 
 Credit card logos often contain vertical elements that will receive high pixel scores. Fortunately for us, such logos are usually located at the right side of the card. For most cards we've seen so far, by ignoring the pixels within the right 1/3 of the card we avoid logos but still include expiration dates (and customer names, should we ever get to those).
 
+*On the right third of this image, the brightness of each row indicates that row's total score.*
+
+![Rows](./images/c-rows.png)
+
 
 #### C. Calculate the total score for each `stripe`.
 
@@ -81,13 +83,13 @@ A "stripe" is a group of N contiguous rows, where N is the height of a standard 
 
 There is a stripe for each y-coordinate of the card image below the card number (until you bump into the bottom of the card).
 
-*In this image, the brightness of each row indicates its total score.*
-
-![stripes image](./full-stripes.png)
-
 #### D. Determine the 3 non-overlapping stripes with the highest total scores.
 
 Usually the 2 highest-scoring stripes will represent the expiry and the customer's name. But some cards have additional distractions.
+
+*The position of the solid white rectangles indicate the ranking of the stripes.*
+
+![Stripes](./images/d-stripes.png)
 
   
 #### E. Within each of these 3 stripes, look for candidate groups of characters as described next.
@@ -106,11 +108,23 @@ There is a possible character-rect for each x-coordinate of the stripe (until yo
   
 #### ii. Determine the highest-scoring, non-overlapping character-rects.
 
+*Character-rects*
+
+![Character-rects 1](./images/e-1-char_rects.png)
+![Character-rects 2](./images/e-2-char_rects.png)
+![Character-rects 3](./images/e-3-char_rects.png)
+
 #### iii. Examine this list of character-rects, and identify `groups`.
 
 A "group" is a set of character-rects where the x-axis distance between each character-rect and the next is less than the width of a standard expiry character.
 
 Each group includes as many character-rects as possible. E.g., if there are seven character-rects that meet the distance requirement, but their neighboring character-rects to the left and right are excessively distant, then all seven will be identified as belonging to a single group.
+
+*Groups*
+
+![Groups 1](./images/f-1-groups.png)
+![Groups 2](./images/f-2-groups.png)
+![Groups 3](./images/f-3-groups.png)
 
 #### iv. For each group, tidy up the character-rects as described next.
 
@@ -131,9 +145,21 @@ We determine the best regular spacing of character-rects, and also the best marg
 
 I.e., we determine the spacing/margins which minimize the ratio of the former to the latter.
 
+*Regridded groups*
+
+![Regridded 1](./images/g-1-regrid.png)
+![Regridded 2](./images/g-2-regrid.png)
+![Regridded 3](./images/g-3-regrid.png)
+
 #### b. "Optimize" the group.
 
 Shift each character-rect a couple of pixels in all four directions, to determine the position that yields the highest total score for the character-rect.
+
+*Optimized groups*
+
+![Optimized 1](./images/h-1-optimize.png)
+![Optimized 2](./images/h-2-optimize.png)
+![Optimized 3](./images/h-3-optimize.png)
 
 #### c. Look for a slash character, in a reasonable position.
 
@@ -145,6 +171,7 @@ Therefore, the only groups accepted at this stage are those consisting of five c
 
 If a group contains more than 5 character-rects, then we break that group into 5-character-rect subgroups, and retain only those subgroups that have a central slash.
 
-*Final results:*
+*Final result:*
 
-![Final image, close-up](./close-final.png)
+![Final image](./images/i-slash.png)
+![Final image, magnified](./images/i-slash-magnified.png)
