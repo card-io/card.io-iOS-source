@@ -110,8 +110,8 @@ There is a possible character-rect for each x-coordinate of the stripe (until yo
 
 *Character-rects*
 
-![Character-rects 1](./images/e-1-char_rects.png)
 ![Character-rects 2](./images/e-2-char_rects.png)
+![Character-rects 1](./images/e-1-char_rects.png)
 ![Character-rects 3](./images/e-3-char_rects.png)
 
 #### iii. Examine this list of character-rects, and identify `groups`.
@@ -122,8 +122,8 @@ Each group includes as many character-rects as possible. E.g., if there are seve
 
 *Groups*
 
-![Groups 1](./images/f-1-groups.png)
 ![Groups 2](./images/f-2-groups.png)
+![Groups 1](./images/f-1-groups.png)
 ![Groups 3](./images/f-3-groups.png)
 
 #### iv. For each group, tidy up the character-rects as described next.
@@ -147,18 +147,20 @@ I.e., we determine the spacing/margins which minimize the ratio of the former to
 
 *Regridded groups*
 
-![Regridded 1](./images/g-1-regrid.png)
 ![Regridded 2](./images/g-2-regrid.png)
+![Regridded 1](./images/g-1-regrid.png)
 ![Regridded 3](./images/g-3-regrid.png)
 
 #### b. "Optimize" the group.
 
 Shift each character-rect a couple of pixels in all four directions, to determine the position that yields the highest total score for the character-rect.
 
+Given a choice among equal-scoring shifts, we will choose the position with the highest scores for the top and left edges of the character-rect. I.e., we'll "normalize" each character image by shoving its significant pixels to the top-left of its character-rect.
+
 *Optimized groups*
 
-![Optimized 1](./images/h-1-optimize.png)
 ![Optimized 2](./images/h-2-optimize.png)
+![Optimized 1](./images/h-1-optimize.png)
 ![Optimized 3](./images/h-3-optimize.png)
 
 #### c. Look for a slash character, in a reasonable position.
@@ -171,7 +173,7 @@ Therefore, the only groups accepted at this stage are those consisting of five c
 
 If a group contains more than 5 character-rects, then we break that group into 5-character-rect subgroups, and retain only those subgroups that have a central slash.
 
-*Final result:*
+*Final result*
 
 ![Final image](./images/i-slash.png)
 ![Final image, magnified](./images/i-slash-magnified.png)
