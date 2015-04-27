@@ -110,12 +110,13 @@
   } else if(self.image->nChannels == 3) {
     colorSpace = CGColorSpaceCreateDeviceRGB();
   }
+  int depth = self.image->depth & ~IPL_DEPTH_SIGN;
 	NSData *data = [NSData dataWithBytes:self.image->imageData length:self.image->imageSize];
 	CGDataProviderRef provider = CGDataProviderCreateWithCFData((__bridge CFDataRef)data);
 	CGImageRef imageRef = CGImageCreate(self.image->width,
                                       self.image->height,
-                                      self.image->depth,
-                                      self.image->depth * self.image->nChannels,
+                                      depth,
+                                      depth * self.image->nChannels,
                                       self.image->widthStep,
                                       colorSpace,
                                       kCGImageAlphaNone | kCGBitmapByteOrderDefault,
