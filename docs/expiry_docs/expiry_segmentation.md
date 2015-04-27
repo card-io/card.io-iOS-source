@@ -108,6 +108,8 @@ There is a possible character-rect for each x-coordinate of the stripe (until yo
   
 #### ii. Determine the highest-scoring, non-overlapping character-rects.
 
+*Although all calculations continue to be based on the Sobel image, we will use the original image in the following illustrations for easier visualization.*
+
 *Character-rects*
 
 ![Character-rects 2](./images/e-2-char_rects.png)
