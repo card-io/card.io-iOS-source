@@ -1,6 +1,13 @@
 card.io iOS SDK release notes
 =============================
 
+5.0.5 (Tue 5/19/2015)
+
+* Update Chinese translations for "CVV".
+    (https://github.com/paypal/PayPal-iOS-SDK/issues/278)
+
+--
+
 5.0.4 (Tue 4/14/2015)
 
 * Check existing video permissions before presenting camera view.
