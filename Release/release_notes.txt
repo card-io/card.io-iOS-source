@@ -5,6 +5,9 @@ card.io iOS SDK release notes
 
 * Update Chinese translations for "CVV".
     (https://github.com/paypal/PayPal-iOS-SDK/issues/278)
+* Update project and sample apps for Xcode 6.3, but
+    build SDK with Xcode 6.2 this one last time to prevent
+    compatibility issues for clients still using Xcode 6.2.
 
 --
 
