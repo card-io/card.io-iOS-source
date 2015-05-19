@@ -10,7 +10,7 @@ import tempfile
 import textwrap
 
 from fabric.api import env, local, hide
-from fabric.context_managers import lcd, settings
+from fabric.context_managers import lcd, settings, shell_env
 from fabric.contrib.console import confirm
 from fabric.contrib.files import exists
 from fabric.decorators import runs_once
@@ -25,6 +25,7 @@ from string_scripts.confirm_ready_for_release import confirm_ready_for_release a
 
 env.verbose = False
 env.libname = "libCardIO.a"
+env.developer_dir = local("xcode-select -p", capture=True)
 
 # --- Tasks -----------------------------------------------------------------
 
@@ -34,6 +35,18 @@ def verbose(be_verbose=True):
     Makes all following tasks more verbose.
     """
     env.verbose = be_verbose
+
+
+def developer_dir(dir):
+    """
+    Sets DEVELOPER_DIR environment variable to correct Xcode
+    For example, `fab developer_dir:"/Applications/Xcode6.2.app"
+    """
+    if os.path.exists(dir):
+        env.developer_dir = dir
+    else:
+        print(colors.red("{dir} is not a valid path".format(dir=dir), bold=True))
+        sys.exit(1)
 
 
 def _locate(fileset, root=os.curdir):
@@ -142,71 +155,72 @@ def build(outdir=None, device_sdk=None, simulator_sdk=None, **kwargs):
     print(colors.white("Building", bold=True))
     print(colors.white("Using temp dir {temp_dir}".format(**locals())))
     print(colors.white("Using extra Xcode flags: {formatted_xcode_preprocessor_flags}".format(**locals())))
+    print(colors.white("Using developer directory: {}".format(env.developer_dir)))
 
     with lcd(icc_root):
+        with shell_env(DEVELOPER_DIR=env.developer_dir):
+            with settings(hide(*to_hide)):
+                lipo_build_dirs = {}
+                build_config = "Release"
+                arch_build_dirs = {}
+                for arch, sdk in arch_to_sdk:
+                    print(colors.blue("({build_config}) Building {arch}".format(**locals())))
 
-        with settings(hide(*to_hide)):
-            lipo_build_dirs = {}
-            build_config = "Release"
-            arch_build_dirs = {}
-            for arch, sdk in arch_to_sdk:
-                print(colors.blue("({build_config}) Building {arch}".format(**locals())))
+                    base_xcodebuild_command = "xcrun xcodebuild -target CardIO -arch {arch} -sdk {sdk} -configuration {build_config}".format(**locals())
 
-                base_xcodebuild_command = "xcrun xcodebuild -target CardIO -arch {arch} -sdk {sdk} -configuration {build_config}".format(**locals())
+                    clean_cmd =  "{base_xcodebuild_command} clean".format(**locals())
+                    local(clean_cmd)
 
-                clean_cmd =  "{base_xcodebuild_command} clean".format(**locals())
-                local(clean_cmd)
+                    build_dir = os.path.join(temp_dir, build_config, arch)
+                    arch_build_dirs[arch] = build_dir
+                    os.makedirs(build_dir)
+                    parallelize = "" if env.verbose else "-parallelizeTargets"  # don't parallelize verbose builds, it's hard to read the output
+                    build_cmd = "{base_xcodebuild_command} {parallelize} CONFIGURATION_BUILD_DIR={build_dir}  {extra_xcodebuild_settings}".format(**locals())
+                    local(build_cmd)
 
-                build_dir = os.path.join(temp_dir, build_config, arch)
-                arch_build_dirs[arch] = build_dir
-                os.makedirs(build_dir)
-                parallelize = "" if env.verbose else "-parallelizeTargets"  # don't parallelize verbose builds, it's hard to read the output
-                build_cmd = "{base_xcodebuild_command} {parallelize} CONFIGURATION_BUILD_DIR={build_dir}  {extra_xcodebuild_settings}".format(**locals())
-                local(build_cmd)
+                print(colors.blue("({build_config}) Lipoing".format(**locals())))
+                lipo_dir = os.path.join(temp_dir, build_config, "universal")
+                lipo_build_dirs[build_config] = lipo_dir
+                os.makedirs(lipo_dir)
+                arch_build_dirs["universal"] = lipo_dir
+                # in Xcode 4.5 GM, xcrun selects the wrong lipo to use, so circumventing xcrun for now :(
+                lipo_cmd = "`xcode-select -print-path`/Platforms/iPhoneOS.platform/Developer/usr/bin/lipo " \
+                           "           {armv7}/{libname}" \
+                           "           -arch armv7s {armv7s}/{libname}" \
+                           "           -arch arm64 {arm64}/{libname}" \
+                           "           -arch i386 {i386}/{libname}" \
+                           "           -arch x86_64 {x86_64}/{libname}" \
+                           "           -create" \
+                           "           -output {universal}/{libname}".format(libname=env.libname, **arch_build_dirs)
+                local(lipo_cmd)
 
-            print(colors.blue("({build_config}) Lipoing".format(**locals())))
-            lipo_dir = os.path.join(temp_dir, build_config, "universal")
-            lipo_build_dirs[build_config] = lipo_dir
-            os.makedirs(lipo_dir)
-            arch_build_dirs["universal"] = lipo_dir
-            # in Xcode 4.5 GM, xcrun selects the wrong lipo to use, so circumventing xcrun for now :(
-            lipo_cmd = "`xcode-select -print-path`/Platforms/iPhoneOS.platform/Developer/usr/bin/lipo " \
-                       "           {armv7}/{libname}" \
-                       "           -arch armv7s {armv7s}/{libname}" \
-                       "           -arch arm64 {arm64}/{libname}" \
-                       "           -arch i386 {i386}/{libname}" \
-                       "           -arch x86_64 {x86_64}/{libname}" \
-                       "           -create" \
-                       "           -output {universal}/{libname}".format(libname=env.libname, **arch_build_dirs)
-            local(lipo_cmd)
+                print(colors.blue("({build_config}) Stripping debug symbols".format(**locals())))
+                strip_cmd = "xcrun strip -S {universal}/{libname}".format(libname=env.libname, **arch_build_dirs)
+                local(strip_cmd)
 
-            print(colors.blue("({build_config}) Stripping debug symbols".format(**locals())))
-            strip_cmd = "xcrun strip -S {universal}/{libname}".format(libname=env.libname, **arch_build_dirs)
-            local(strip_cmd)
+                out_subdir_suffix = "_".join("{k}-{v}".format(k=k, v=v) for k, v in kwargs.iteritems())
+                if out_subdir_suffix:
+                    out_subdir_suffix = "_" + out_subdir_suffix
+                out_subdir += out_subdir_suffix
+                sdk_dir = os.path.join(outdir, out_subdir)
 
-            out_subdir_suffix = "_".join("{k}-{v}".format(k=k, v=v) for k, v in kwargs.iteritems())
-            if out_subdir_suffix:
-                out_subdir_suffix = "_" + out_subdir_suffix
-            out_subdir += out_subdir_suffix
-            sdk_dir = os.path.join(outdir, out_subdir)
+                print(colors.white("Assembling release SDK in {sdk_dir}".format(sdk_dir=sdk_dir), bold=True))
+                if os.path.isdir(sdk_dir):
+                    shutil.rmtree(sdk_dir)
+                cardio_dir = os.path.join(sdk_dir, "CardIO")
+                os.makedirs(cardio_dir)
 
-            print(colors.white("Assembling release SDK in {sdk_dir}".format(sdk_dir=sdk_dir), bold=True))
-            if os.path.isdir(sdk_dir):
-                shutil.rmtree(sdk_dir)
-            cardio_dir = os.path.join(sdk_dir, "CardIO")
-            os.makedirs(cardio_dir)
+                header_files = glob.glob(os.path.join("CardIO_Public_API", "*.h"))
+                _copy(header_files, cardio_dir)
 
-            header_files = glob.glob(os.path.join("CardIO_Public_API", "*.h"))
-            _copy(header_files, cardio_dir)
+                libfile = os.path.join(lipo_build_dirs["Release"], env.libname)
+                shutil.copy2(libfile, cardio_dir)
 
-            libfile = os.path.join(lipo_build_dirs["Release"], env.libname)
-            shutil.copy2(libfile, cardio_dir)
-
-            release_dir = os.path.join(icc_root, "Release")
-            shutil.copy2(os.path.join(release_dir, "release_notes.txt"), sdk_dir)
-            shutil.copy2(os.path.join(release_dir, "CardIO.podspec"), sdk_dir)
-            shutil.copy2(os.path.join(release_dir, "acknowledgments.md"), sdk_dir)
-            shutil.copy2(os.path.join(release_dir, "LICENSE.md"), sdk_dir)
-            shutil.copy2(os.path.join(release_dir, "README.md"), sdk_dir)
-            shutil.copytree(os.path.join(release_dir, "SampleApp"), os.path.join(sdk_dir, "SampleApp"), ignore=shutil.ignore_patterns(".DS_Store"))
-            shutil.copytree(os.path.join(release_dir, "SampleApp-Swift"), os.path.join(sdk_dir, "SampleApp-Swift"), ignore=shutil.ignore_patterns(".DS_Store"))
+                release_dir = os.path.join(icc_root, "Release")
+                shutil.copy2(os.path.join(release_dir, "release_notes.txt"), sdk_dir)
+                shutil.copy2(os.path.join(release_dir, "CardIO.podspec"), sdk_dir)
+                shutil.copy2(os.path.join(release_dir, "acknowledgments.md"), sdk_dir)
+                shutil.copy2(os.path.join(release_dir, "LICENSE.md"), sdk_dir)
+                shutil.copy2(os.path.join(release_dir, "README.md"), sdk_dir)
+                shutil.copytree(os.path.join(release_dir, "SampleApp"), os.path.join(sdk_dir, "SampleApp"), ignore=shutil.ignore_patterns(".DS_Store"))
+                shutil.copytree(os.path.join(release_dir, "SampleApp-Swift"), os.path.join(sdk_dir, "SampleApp-Swift"), ignore=shutil.ignore_patterns(".DS_Store"))
