@@ -30,8 +30,10 @@
 #if USE_CAMERA
 
 - (void)reportEventWithLabel:(NSString *)reportLabel withScanner:(CardIOCardScanner *)cardScanner {
-  NSDictionary *params = [self scanParams:cardScanner];
-  [self reportEvent:reportLabel data:params];
+  if (cardScanner) {
+    NSDictionary *params = [self scanParams:cardScanner];
+    [self reportEvent:reportLabel data:params];
+  }
 }
 
 - (void)reportEvent:(NSString *)eventName data:(NSDictionary *)data {
