@@ -239,7 +239,47 @@
     return UIInterfaceOrientationMaskAll;
   }
   else {
-    return [super supportedInterfaceOrientations];
+    UIInterfaceOrientationMask pListMask = UIInterfaceOrientationMaskAll;
+    
+    // As far as I can determine, when we call [super supportedInterfaceOrientations],
+    // iOS should already be intersecting that result either with application:supportedInterfaceOrientationsForWindow:
+    // or with the plist values for UISupportedInterfaceOrientations.
+    // I'm reasonably sure that I extensively tested and confirmed all that a year or two ago.
+    // However, today that's definitely not happening. So let's do the work ourselves, just to be safe!
+    // [- Dave Goldman, 7 Jun 2015]
+    
+    UIApplication *application = [UIApplication sharedApplication];
+    if ([application.delegate respondsToSelector:@selector(application:supportedInterfaceOrientationsForWindow:)]) {
+      pListMask = [application.delegate application:application supportedInterfaceOrientationsForWindow:self.view.window];
+    }
+    else {
+      static UIInterfaceOrientationMask cachedPListMask = UIInterfaceOrientationMaskAll;
+      static dispatch_once_t onceToken;
+      dispatch_once(&onceToken, ^{
+        NSArray *supportedOrientations = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"UISupportedInterfaceOrientations"];
+        if ([supportedOrientations count]) {
+          cachedPListMask = 0;
+          for (NSString *orientationString in supportedOrientations) {
+            if ([orientationString isEqualToString:@"UIInterfaceOrientationPortrait"]) {
+              cachedPListMask |= UIInterfaceOrientationMaskPortrait;
+            }
+            else if ([orientationString isEqualToString:@"UIInterfaceOrientationLandscapeLeft"]) {
+              cachedPListMask |= UIInterfaceOrientationMaskLandscapeLeft;
+            }
+            else if ([orientationString isEqualToString:@"UIInterfaceOrientationLandscapeRight"]) {
+              cachedPListMask |= UIInterfaceOrientationMaskLandscapeRight;
+            }
+            else if ([orientationString isEqualToString:@"UIInterfaceOrientationPortraitUpsideDown"]) {
+              cachedPListMask |= UIInterfaceOrientationMaskPortraitUpsideDown;
+            }
+          }
+        }
+      });
+      
+      pListMask = cachedPListMask;
+    }
+    
+    return [super supportedInterfaceOrientations] & pListMask;
   }
 }
 
