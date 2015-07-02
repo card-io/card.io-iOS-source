@@ -75,7 +75,7 @@
     _notificationSize = CGSizeZero;
     _context = aContext;
     _statusBarHidden = statusBarHidden;
-    
+
     // set self.title in -viewDidLoad. the title is localized, which requires
     // access to the i18n context, but that is sometimes non-existent at this stage
     // (the developer sometimes hasn't even had the opportunity to tell us yet!).
@@ -85,7 +85,7 @@
 
 - (void)calculateRelevantViewFrame {
   self.relevantViewFrame = self.view.bounds;
-  
+
   if (!iOS_7_PLUS) {
     // On iOS 7, setting 'edgesForExtendedLayout = UIRectEdgeNone' takes care of the offset
     if (self.navigationController.navigationBar.translucent) {
@@ -151,7 +151,7 @@
   self.collectPostalCode = pvc.collectPostalCode;
 
   self.scrollView = [[UIScrollView alloc] initWithFrame:self.relevantViewFrame];
-  
+
   if(!self.manualEntry) {
     self.cardView = [[UIImageView alloc] initWithImage:self.cardImage];
     self.cardView.bounds = CGRectZeroWithSize(CGSizeMake((CGFloat)ceil(self.floatingCardView.bounds.size.width),
@@ -162,11 +162,11 @@
     self.cardView.layer.masksToBounds = YES;
     self.cardView.layer.borderColor = [UIColor grayColor].CGColor;
     self.cardView.layer.borderWidth = 2.0f;
-    
+
     self.cardView.hidden = YES;
     [self.scrollView addSubview:self.cardView];
   }
-  
+
   self.tableView = [[UITableView alloc] initWithFrame:self.scrollView.bounds style:UITableViewStyleGrouped];
   self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
   self.tableView.scrollEnabled = NO;
@@ -205,7 +205,7 @@
     self.numberTextField.backgroundColor = kColorDefaultCell;
     self.numberTextField.textAlignment = [CardIOLocalizer textAlignmentForLanguageOrLocale:self.context.languageOrLocale];
     self.numberTextField.autocorrectionType = UITextAutocorrectionTypeNo;
-    
+
     // For fancier masking (e.g., by number group rather than by individual digit),
     // put fancier functionality into CardIONumbersTextFieldDelegate instead of setting secureTextEntry.
     self.numberTextField.secureTextEntry = self.context.maskManualEntryDigits;
@@ -337,24 +337,24 @@
   self.tableView.backgroundView = background;
 
   [self.scrollView addSubview:self.tableView];
-  
+
   if (iOS_7_PLUS) {
     self.leftTableBorderForIOS7 = [[UIView alloc] init];
     self.leftTableBorderForIOS7.backgroundColor = [UIColor colorWithWhite:kiOS7TableViewBorderColor alpha:1];
     self.leftTableBorderForIOS7.hidden = YES;
     [self.scrollView addSubview:self.leftTableBorderForIOS7];
-    
+
     self.rightTableBorderForIOS7 = [[UIView alloc] init];
     self.rightTableBorderForIOS7.backgroundColor = [UIColor colorWithWhite:kiOS7TableViewBorderColor alpha:1];
     self.rightTableBorderForIOS7.hidden = YES;
     [self.scrollView addSubview:self.rightTableBorderForIOS7];
   }
-  
+
   if (self.cardView) {
     // Animations look better if the cardView is in front of the tableView
     [self.scrollView bringSubviewToFront:self.cardView];
   }
-  
+
   [self.view addSubview:self.scrollView];
 }
 
@@ -363,9 +363,9 @@
     // Force interface to rotate to match current device orientation, following portrait-only camera view.
     [[NSNotificationCenter defaultCenter] postNotificationName:UIDeviceOrientationDidChangeNotification object:nil];
   }
-  
+
   [super viewWillAppear:animated];
-  
+
   if (self.navigationController.modalPresentationStyle == UIModalPresentationFullScreen && !self.statusBarHidden) {
     [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationFade];
     if (iOS_7_PLUS) {
@@ -417,25 +417,25 @@
   }
 
   [self layoutForCurrentOrientation];
-  
+
   if (self.floatingCardView) {
     if (self.cardView) {
       CGRect  newCardViewFrame = self.cardView.frame; // as set above by [self layoutForCurrentOrientation]
       CGRect  cardFrameInView = [self.view convertRect:self.floatingCardView.frame fromView:self.floatingCardView.superview];
       self.cardView.frame = cardFrameInView;  // start the animation with the card appearing as in the CardIOTransitionView
-      
+
       self.cardView.hidden = NO;
       self.floatingCardWindow.hidden = YES;
       self.floatingCardView = nil;
       self.floatingCardWindow = nil;
       self.priorKeyWindow = nil;
-      
+
       if ([self.tableView numberOfRowsInSection:0] > 0) {
         self.tableView.alpha = 0;
         self.tableView.hidden = NO;
         [self showTableBorders:NO];
       }
-      
+
       [UIView animateWithDuration:0.4
                        animations:^{
                          self.cardView.frame = newCardViewFrame;
@@ -467,7 +467,7 @@
         self.tableView.alpha = 0;
         self.tableView.hidden = NO;
         [self showTableBorders:NO];
-        
+
         [UIView animateWithDuration:0.4
                          animations:^{
                            self.tableView.alpha = 1;
@@ -571,7 +571,7 @@
 
 - (void)layoutForCurrentOrientation {
   self.oldHeight = self.view.bounds.size.height;
-  
+
   [self calculateRelevantViewFrame];
   self.scrollView.frame = self.relevantViewFrame;
 
@@ -579,7 +579,7 @@
     CGRect cardViewFrame = self.cardView.frame;
     CGRect tableViewFrame = self.tableView.frame;
     BOOL showTableView = ([self.tableView numberOfRowsInSection:0] > 0);
-    
+
     if ([self isWideScreenMode]) {
       cardViewFrame.size.width = (CGFloat)floor(MAX(self.scrollView.bounds.size.width, self.scrollView.bounds.size.height) * kLandscapeZoomedInCardImageSizePercent);
       cardViewFrame.size.height = (CGFloat)floor(self.cardImage.size.height * (cardViewFrame.size.width / self.cardImage.size.width));
@@ -597,18 +597,18 @@
       if ([self isWideScreenMode]) {
         cardViewFrame.origin.x = kCardPadding;
         cardViewFrame.origin.y = kCardPadding;
-        
+
         tableViewFrame.size.width = (CGFloat)(self.scrollView.bounds.size.width - cardViewFrame.size.width - 3 * kCardPadding);
         tableViewFrame.size.height = self.scrollView.bounds.size.height;
         tableViewFrame.origin.x = CGRectGetMaxX(self.scrollView.bounds) - tableViewFrame.size.width - kCardPadding;
-        
+
         if (iOS_7_PLUS) {
           NSInteger lastSection = [self.tableView numberOfSections] - 1;
           NSInteger lastRow = [self.tableView numberOfRowsInSection:lastSection] - 1;
           UITableViewCell *firstCell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
           UITableViewCell *lastCell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:lastRow inSection:lastSection]];
           tableViewFrame.origin.y = kCardPadding - firstCell.frame.origin.y;
-          
+
           CGRect leftTableBorderFrame = self.leftTableBorderForIOS7.frame;
           leftTableBorderFrame.origin.x = tableViewFrame.origin.x - 0.5f;
           leftTableBorderFrame.origin.y = tableViewFrame.origin.y + firstCell.frame.origin.y;
@@ -627,7 +627,7 @@
       else {
         cardViewFrame.origin.x = (CGFloat)floor((self.scrollView.bounds.size.width - cardViewFrame.size.width) / 2);
         cardViewFrame.origin.y = (CGFloat)floor(kCardPadding / 2);
-        
+
         tableViewFrame = self.scrollView.bounds;
         tableViewFrame.origin.y = CGRectGetMaxY(cardViewFrame);
 
@@ -643,10 +643,10 @@
       cardViewFrame.origin.y = (CGFloat)floor((self.scrollView.frame.size.height - cardViewFrame.size.height) / 3);
       tableViewFrame = CGRectZero;
     }
-    
+
     self.cardView.frame = cardViewFrame;
     self.tableView.frame = tableViewFrame;
-    
+
     self.scrollView.contentSize = CGSizeMake(self.scrollView.bounds.size.width,
                                              MAX(self.tableView.frame.origin.y + CGRectGetMaxY([self.tableView rectForSection:0]), CGRectGetMaxY(self.cardView.frame)));
   }
@@ -660,20 +660,20 @@
       tableViewFrame.size.height = self.scrollView.bounds.size.height;
       tableViewFrame.origin.x = (CGFloat)floor((self.scrollView.bounds.size.width - tableWidth) / 2);
       tableViewFrame.origin.y = 0;
-      
+
       if (iOS_7_PLUS) {
         NSInteger lastSection = [self.tableView numberOfSections] - 1;
         NSInteger lastRow = [self.tableView numberOfRowsInSection:lastSection] - 1;
         UITableViewCell *firstCell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
         UITableViewCell *lastCell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:lastRow inSection:lastSection]];
-        
+
         CGRect leftTableBorderFrame = self.leftTableBorderForIOS7.frame;
         leftTableBorderFrame.origin.x = tableViewFrame.origin.x - 0.5f;
         leftTableBorderFrame.origin.y = tableViewFrame.origin.y + firstCell.frame.origin.y;
         leftTableBorderFrame.size.height = lastCell.frame.origin.y + lastCell.frame.size.height - firstCell.frame.origin.y;
         leftTableBorderFrame.size.width = 0.5f;
         self.leftTableBorderForIOS7.frame = leftTableBorderFrame;
-        
+
         CGRect rightTableBorderFrame = leftTableBorderFrame;
         rightTableBorderFrame.origin.x = tableViewFrame.origin.x + tableViewFrame.size.width;
         self.rightTableBorderForIOS7.frame = rightTableBorderFrame;
@@ -681,7 +681,7 @@
     }
     else {
       tableViewFrame = self.scrollView.bounds;
-      
+
       if (iOS_7_PLUS) {
         CGRect tableBorderFrame = CGRectMake(0, 0, 0, 0);
         self.leftTableBorderForIOS7.frame = tableBorderFrame;
@@ -690,7 +690,7 @@
     }
 
     self.tableView.frame = tableViewFrame;
-    
+
     self.scrollView.contentSize = CGSizeMake(self.scrollView.bounds.size.width,
                                              self.tableView.frame.origin.y + CGRectGetMaxY([self.tableView rectForSection:0]));
   }
@@ -711,7 +711,7 @@
 
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
   [super didRotateFromInterfaceOrientation:fromInterfaceOrientation];
-  
+
   if (self.view.bounds.size.height != self.oldHeight) {
     [self showTableBorders:NO];
 
@@ -748,12 +748,12 @@
       [field resignFirstResponder];
     }
   }
-  
+
   if (iOS_7_PLUS) {
     // On iOS 7, looks better if we start sliding away the nav bar prior to transitioning to camera-view.
     [self.navigationController setNavigationBarHidden:YES animated:YES];
   }
-  
+
   ((CardIOPaymentViewController *)self.navigationController).currentViewControllerIsDataEntry = NO;
   ((CardIOPaymentViewController *)self.navigationController).initialInterfaceOrientationForViewcontroller = [UIApplication sharedApplication].statusBarOrientation;
   [self.navigationController popToRootViewControllerAnimated:YES];
@@ -768,10 +768,10 @@
   if(self.manualEntry) {
     self.cardInfo.cardNumber = [CardIOCreditCardNumber stringByRemovingNonNumbers:self.numberTextField.text];
   }
-  
+
   self.cardInfo.cvv = self.cvvTextField.text;
   self.cardInfo.postalCode = [self.postalCodeTextField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
-  
+
   CardIOPaymentViewController *pvc = (CardIOPaymentViewController *)self.navigationController;
   [pvc.paymentDelegate userDidProvideCreditCardInfo:self.cardInfo inPaymentViewController:pvc];
 }
@@ -804,9 +804,9 @@
   if (recursionBlock) {
     return;
   }
-  
+
   BOOL fieldIsInFlux = ![self.numberRowTextFieldDelegate cleanupTextField:self.numberTextField];
-  
+
   CardIOCreditCardInfo *cleanedInfo = self.cardInfo;
   [self.numberRowTextFieldDelegate.formatter getObjectValue:&cleanedInfo forString:self.numberTextField.text errorDescription:nil];
   self.cardInfo = cleanedInfo;
@@ -826,10 +826,10 @@
   } else if ([self.cardInfo.cardNumber length] > 0 &&
              ((cardType == CardIOCreditCardTypeUnrecognized && [self.cardInfo.cardNumber length] == 16) ||
               self.cardInfo.cardNumber.length == [CardIOCreditCardNumber numberLengthForCardNumber:self.cardInfo.cardNumber])) {
-    self.numberTextField.textColor = [UIColor redColor];
-  } else {
-    self.numberTextField.textColor = [CardIOTableViewCell defaultDetailTextLabelColorForCellStyle:[CardIOTableViewCell defaultCellStyle]];
-  }
+               self.numberTextField.textColor = [UIColor redColor];
+             } else {
+               self.numberTextField.textColor = [CardIOTableViewCell defaultDetailTextLabelColorForCellStyle:[CardIOTableViewCell defaultCellStyle]];
+             }
 
   [self updateCardLogo];
 
@@ -864,9 +864,9 @@
   if (recursionBlock) {
     return;
   }
-  
+
   BOOL fieldIsInFlux = ![self.expiryTextFieldDelegate cleanupTextField:self.expiryTextField];
-  
+
   CardIOCreditCardInfo *cleanedInfo = self.cardInfo;
   [self.expiryTextFieldDelegate.formatter getObjectValue:&cleanedInfo forString:self.expiryTextField.text errorDescription:nil];
   self.cardInfo = cleanedInfo;
@@ -891,13 +891,13 @@
   self.cardInfo.cvv = self.cvvTextField.text;
 
   [self updateCvvColor];
-  
+
   CardIOCreditCardType cardType = [CardIOCreditCardNumber cardTypeForCardNumber:self.cardInfo.cardNumber];
   if(cardType != CardIOCreditCardTypeUnrecognized && cardType != CardIOCreditCardTypeAmbiguous &&
      [CardIOCVVTextFieldDelegate isValidCVV:self.cardInfo.cvv forNumber:self.cardInfo.cardNumber]) {
     [self advanceToNextEmptyFieldFrom:self.cvvTextField];
   }
-  
+
   [self validate];
 }
 
@@ -914,17 +914,17 @@
 - (void)postalCodeDidChange:(id)sender {
   self.cardInfo.postalCode = [self.postalCodeTextField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
 
-// For globalization, we can't be sure of a valid postalCode length. So for now we'll skip all of this.
-//
-//  if([CardIOPostalCodeTextFieldDelegate isValidPostalCode:self.cardInfo.postalCode]) {
-//    [self advanceToNextEmptyFieldFrom:self.postalCodeTextField];
-//    self.postalCodeTextField.textColor = [CardIOTableViewCell defaultDetailTextLabelColorForCellStyle:[CardIOTableViewCell defaultCellStyle]];
-//  } else if(self.postalCodeTextField.text.length >= 5) {
-//    // probably won't reach this case, since length == 5 is the only validation rule, but we'll leave it here for consitency and for future enhancements.
-//    self.postalCodeTextField.textColor = [UIColor redColor];
-//  } else {
-//    self.postalCodeTextField.textColor = [CardIOTableViewCell defaultDetailTextLabelColorForCellStyle:[CardIOTableViewCell defaultCellStyle]];
-//  }
+  // For globalization, we can't be sure of a valid postalCode length. So for now we'll skip all of this.
+  //
+  //  if([CardIOPostalCodeTextFieldDelegate isValidPostalCode:self.cardInfo.postalCode]) {
+  //    [self advanceToNextEmptyFieldFrom:self.postalCodeTextField];
+  //    self.postalCodeTextField.textColor = [CardIOTableViewCell defaultDetailTextLabelColorForCellStyle:[CardIOTableViewCell defaultCellStyle]];
+  //  } else if(self.postalCodeTextField.text.length >= 5) {
+  //    // probably won't reach this case, since length == 5 is the only validation rule, but we'll leave it here for consitency and for future enhancements.
+  //    self.postalCodeTextField.textColor = [UIColor redColor];
+  //  } else {
+  //    self.postalCodeTextField.textColor = [CardIOTableViewCell defaultDetailTextLabelColorForCellStyle:[CardIOTableViewCell defaultCellStyle]];
+  //  }
 
   [self validate];
 }
