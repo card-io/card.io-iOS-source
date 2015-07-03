@@ -112,13 +112,13 @@ static CardIOLocalizer *sFallbackLocalizer = nil;
     
     NSString* searchString = [NSString stringWithFormat:@"%@|", key];
     NSUInteger searchStringLength = [searchString length];
-    NSRange stringRange = NSMakeRange(0, searchStringLength);
     
     // Find the first key that matches "<keyStr>|"
     NSUInteger index = [self.sortedKeys indexOfObject:searchString
                                         inSortedRange:NSMakeRange(0, [self.sortedKeys count])
                                               options:NSBinarySearchingFirstEqual
                                       usingComparator:^NSComparisonResult(id obj1, id obj2) {
+                                        NSRange stringRange = NSMakeRange(0, [obj1 length]);
                                         return [(NSString*)obj1 compare:(NSString*)obj2
                                                                 options:NSAnchoredSearch
                                                                   range:stringRange];
