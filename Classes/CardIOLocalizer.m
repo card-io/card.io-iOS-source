@@ -90,62 +90,12 @@ static CardIOLocalizer *sFallbackLocalizer = nil;
   return self;
 }
 
-- (NSString *)localizeString:(NSString *)key adaptedForCountry:(NSString *)adaptedForCountry {
+- (NSString *)localizeString:(NSString *)key {
   if ([key length] == 0) {
     return @"";
   }
-  
-  NSString *adaptedKey = key;
-  
-  if ([adaptedForCountry length] == 0) {
-    adaptedForCountry = [[NSLocale currentLocale] objectForKey:NSLocaleCountryCode];
-  }
-  
-  if ([adaptedForCountry length] > 0) {
-    // First look for a key of:
-    //  <key>|<comma-separated country list that contains <adaptedForCountry>>
-    // and then for a key of:
-    //  <key>
-    // (Note: Wallet app also checks for <key>|EU, for any European Union country,
-    //        and for <key>|commercialOnly, for any country that supports only commercial accounts.
-    //        We can add either or both of those here if/when we actually need them.)
-    
-    NSString* searchString = [NSString stringWithFormat:@"%@|", key];
-    NSUInteger searchStringLength = [searchString length];
-    
-    // Find the first key that matches "<keyStr>|"
-    NSUInteger index = [self.sortedKeys indexOfObject:searchString
-                                        inSortedRange:NSMakeRange(0, [self.sortedKeys count])
-                                              options:NSBinarySearchingFirstEqual
-                                      usingComparator:^NSComparisonResult(id obj1, id obj2) {
-                                        NSRange stringRange = NSMakeRange(0, [obj1 length]);
-                                        return [(NSString*)obj1 compare:(NSString*)obj2
-                                                                options:NSAnchoredSearch
-                                                                  range:stringRange];
-                                      }];
-    
-    if (index != NSNotFound) {
-      while (index < [self.sortedKeys count]) {
-        NSString* possibleKeyString = self.sortedKeys[index];
-        
-        // If possibleKeyString doesn't match "<keyStr>|*" (for non-empty "*"), we're done searching.
-        if ([possibleKeyString length] <= searchStringLength || ![possibleKeyString hasPrefix:searchString]) {
-          break;
-        }
-        
-        NSArray* possibleCountries = [[possibleKeyString substringFromIndex:searchStringLength] componentsSeparatedByString:@","];
-        
-        if ([possibleCountries containsObject:adaptedForCountry]) {
-          adaptedKey = possibleKeyString;
-          break;
-        }
-        
-        index++;
-      }
-    }
-  }
-  
-  return [self filterOutCommonErrors:self.stringsDictionary[adaptedKey]];
+	
+  return [self filterOutCommonErrors:self.stringsDictionary[key]];
 }
 
 - (NSString *)filterOutCommonErrors:(NSString *)value {
@@ -264,7 +214,7 @@ static CardIOLocalizer *sFallbackLocalizer = nil;
 
   for(NSString *lang in testTranslations) {
     NSArray *testTranslation = testTranslations[lang];
-    NSString *translation = CardIOLocalizedString(testTranslation[0], lang, nil);
+    NSString *translation = CardIOLocalizedString(testTranslation[0], lang);
     if (![translation isEqualToString:testTranslation[1]]) {
       if(error) {
         *error = [self selfTestErrorWithMessage:[NSString stringWithFormat:@"\n******\nThe correct translation for '%@' in %@ is '%@'; received '%@'\n******\n", testTranslation[0], lang, testTranslation[1], translation]];
@@ -392,8 +342,6 @@ static CardIOLocalizer *sFallbackLocalizer = nil;
 
 NSString *CardIOLocalizedStringWithAlert(NSString *key,
                                          NSString *languageOrLocale,
-                                         NSString *adaptedForCountry,
-                                         NSBundle *bundle,
                                          bool showMissingKeyAlert) {
   // If no language is specified, then start with the device's current language:
   if ([languageOrLocale length] == 0) {
@@ -445,11 +393,9 @@ NSString *CardIOLocalizedStringWithAlert(NSString *key,
     }
   }
   
-  if (bundle == nil) {
-    bundle = [[CardIOBundle sharedInstance] NSBundle];
-  }
-  
-  NSString *string = [[CardIOLocalizer localizerForLanguageOrLocale:languageOrLocale forBundle:bundle] localizeString:key adaptedForCountry:adaptedForCountry];
+  NSBundle *bundle = [[CardIOBundle sharedInstance] NSBundle];
+	
+  NSString *string = [[CardIOLocalizer localizerForLanguageOrLocale:languageOrLocale forBundle:bundle] localizeString:key];
   if ([string length] == 0) {
     if (showMissingKeyAlert) {
       UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Missing Key"
@@ -459,17 +405,16 @@ NSString *CardIOLocalizedStringWithAlert(NSString *key,
                                             otherButtonTitles:nil];
       [alert show];
     }
-    string = [[CardIOLocalizer fallbackLocalizerForBundle:bundle] localizeString:key adaptedForCountry:adaptedForCountry];
+    string = [[CardIOLocalizer fallbackLocalizerForBundle:bundle] localizeString:key];
   }
   return string;
 }
 
 NSString *CardIOLocalizedString(NSString *key,
-                                NSString *languageOrLocale,
-                                NSBundle *bundle) {
+                                NSString *languageOrLocale) {
 #if CARDIO_DEBUG
-  return CardIOLocalizedStringWithAlert(key, languageOrLocale, nil, bundle, true);
+  return CardIOLocalizedStringWithAlert(key, languageOrLocale, true);
 #else
-  return CardIOLocalizedStringWithAlert(key, languageOrLocale, nil, bundle, false);
+  return CardIOLocalizedStringWithAlert(key, languageOrLocale, false);
 #endif
 }

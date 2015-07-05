@@ -26,14 +26,7 @@ extern "C" {
 #endif
   
   NSString *CardIOLocalizedString(NSString *key,
-                                  NSString *languageOrLocale,
-                                  NSBundle *bundle);
-  
-  NSString *CardIOLocalizedStringWithAlert(NSString *key,
-                                           NSString *languageOrLocale,
-                                           NSString *adaptedForCountry,
-                                           NSBundle *bundle,
-                                           bool showMissingKeyAlert);
+                                  NSString *languageOrLocale);
 
 #ifdef __cplusplus
 }

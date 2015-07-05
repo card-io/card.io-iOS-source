@@ -15,19 +15,19 @@
   NSString *result = nil;
   switch(cardType) {
     case CardIOCreditCardTypeAmex:
-      result = CardIOLocalizedString(@"cardtype_americanexpress", languageOrLocale, nil); // American Express
+      result = CardIOLocalizedString(@"cardtype_americanexpress", languageOrLocale); // American Express
       break;
     case CardIOCreditCardTypeJCB:
-      result = CardIOLocalizedString(@"cardtype_jcb", languageOrLocale, nil); // JCB
+      result = CardIOLocalizedString(@"cardtype_jcb", languageOrLocale); // JCB
       break;
     case CardIOCreditCardTypeVisa:
-      result = CardIOLocalizedString(@"cardtype_visa", languageOrLocale, nil); // Visa
+      result = CardIOLocalizedString(@"cardtype_visa", languageOrLocale); // Visa
       break;
     case CardIOCreditCardTypeMastercard:
-      result = CardIOLocalizedString(@"cardtype_mastercard", languageOrLocale, nil); // MasterCard
+      result = CardIOLocalizedString(@"cardtype_mastercard", languageOrLocale); // MasterCard
       break;
     case CardIOCreditCardTypeDiscover:
-      result = CardIOLocalizedString(@"cardtype_discover", languageOrLocale, nil); // Discover
+      result = CardIOLocalizedString(@"cardtype_discover", languageOrLocale); // Discover
       break;
     default:
       result = @"";

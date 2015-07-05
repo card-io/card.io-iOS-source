@@ -109,13 +109,13 @@
 
   [self.view addSubview:self.cardIOView];
 
-  _cancelButton = [self makeButtonWithTitle:CardIOLocalizedString(@"cancel", self.context.languageOrLocale, nil) // Cancel
+  _cancelButton = [self makeButtonWithTitle:CardIOLocalizedString(@"cancel", self.context.languageOrLocale) // Cancel
                                withSelector:@selector(cancel:)];
   _cancelButtonFrameSize = self.cancelButton.frame.size;
   [self.view addSubview:self.cancelButton];
 
   if (!self.context.disableManualEntryButtons) {
-    _manualEntryButton = [self makeButtonWithTitle:CardIOLocalizedString(@"manual_entry", self.context.languageOrLocale, nil) // Enter Manually
+    _manualEntryButton = [self makeButtonWithTitle:CardIOLocalizedString(@"manual_entry", self.context.languageOrLocale) // Enter Manually
                                       withSelector:@selector(manualEntry:)];
     _manualEntryButtonFrameSize = self.manualEntryButton.frame.size;
     [self.view addSubview:self.manualEntryButton];

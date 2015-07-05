@@ -115,7 +115,7 @@
   [self calculateRelevantViewFrame];
 
   CardIOPaymentViewController *pvc = (CardIOPaymentViewController *)self.navigationController;
-  self.title = CardIOLocalizedString(@"entry_title", self.context.languageOrLocale, nil); // Enter card info
+  self.title = CardIOLocalizedString(@"entry_title", self.context.languageOrLocale); // Enter card info
 
   // Need to set up the navItem here, because the OS calls the accessor before all the info needed to build it is available.
 
@@ -125,19 +125,19 @@
   }
 
   if(showCancelButton) {
-    NSString *cancelText = CardIOLocalizedString(@"cancel", self.context.languageOrLocale, nil); // Cancel
+    NSString *cancelText = CardIOLocalizedString(@"cancel", self.context.languageOrLocale); // Cancel
     // show the cancel button if we've gone directly to manual entry.
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:cancelText style:UIBarButtonItemStyleBordered target:self action:@selector(cancel)];
   } else {
     // Show fake "back" button, since real back button takes us back to the animation view, not back to the camera
-    NSString *cameraText = CardIOLocalizedString(@"camera", self.context.languageOrLocale, nil); // Camera
+    NSString *cameraText = CardIOLocalizedString(@"camera", self.context.languageOrLocale); // Camera
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:cameraText style:UIBarButtonItemStyleBordered target:self action:@selector(popToTop)];
   }
 
-  NSString *cardInfoText = CardIOLocalizedString(@"card_info", self.context.languageOrLocale, nil); // Card Info
+  NSString *cardInfoText = CardIOLocalizedString(@"card_info", self.context.languageOrLocale); // Card Info
   self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:cardInfoText style:UIBarButtonItemStyleBordered target:nil action:nil];
 
-  NSString *completionButtonTitle = CardIOLocalizedString(@"done", self.context.languageOrLocale, nil); // Done
+  NSString *completionButtonTitle = CardIOLocalizedString(@"done", self.context.languageOrLocale); // Done
 
   UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithTitle:completionButtonTitle
                                                                  style:UIBarButtonItemStyleDone
@@ -190,7 +190,7 @@
     numberRow.hiddenLabels = YES;
     numberRow.textAlignment = [CardIOLocalizer textAlignmentForLanguageOrLocale:self.context.languageOrLocale];
 
-    NSString* numberText = CardIOLocalizedString(@"entry_number", self.context.languageOrLocale, nil); // Number
+    NSString* numberText = CardIOLocalizedString(@"entry_number", self.context.languageOrLocale); // Number
     [numberRow.labels addObject:numberText];
 
     self.numberTextField = [numberRow.textFields lastObject];
@@ -198,7 +198,7 @@
 
     self.numberRowTextFieldDelegate = [[CardIONumbersTextFieldDelegate alloc] init];
     self.numberTextField.delegate = self.numberRowTextFieldDelegate;
-    self.numberTextField.placeholder = CardIOLocalizedString(@"entry_card_number", self.context.languageOrLocale, nil); // Card Number
+    self.numberTextField.placeholder = CardIOLocalizedString(@"entry_card_number", self.context.languageOrLocale); // Card Number
     self.numberTextField.text = self.cardInfo.cardNumber ? self.cardInfo.cardNumber : @"";
     self.numberTextField.keyboardType = UIKeyboardTypeNumberPad;
     self.numberTextField.clearButtonMode = UITextFieldViewModeNever;
@@ -223,8 +223,8 @@
     BOOL collectBoth = self.collectExpiry && self.collectCVV;
     BOOL bothInOneRow = NO;
     if (collectBoth) {
-      NSString *expiryText = CardIOLocalizedString(@"entry_expires", self.context.languageOrLocale, nil); // Expires
-      NSString* cvvText = CardIOLocalizedString(@"entry_cvv", self.context.languageOrLocale, nil); // CVV
+      NSString *expiryText = CardIOLocalizedString(@"entry_expires", self.context.languageOrLocale); // Expires
+      NSString* cvvText = CardIOLocalizedString(@"entry_cvv", self.context.languageOrLocale); // CVV
       CGFloat fieldWidthForTwoFieldsPerRow = kMinimumDefaultRowWidth / 2;
       bothInOneRow = ([multiFieldRow textFitsInMultiFieldForLabel:@"" forPlaceholder:expiryText forFieldWidth:fieldWidthForTwoFieldsPerRow] &&
                       [multiFieldRow textFitsInMultiFieldForLabel:@"" forPlaceholder:cvvText forFieldWidth:fieldWidthForTwoFieldsPerRow]);
@@ -234,14 +234,14 @@
 
     if(self.collectExpiry) {
       multiFieldRow.numberOfFields++;
-      NSString *expiryText = CardIOLocalizedString(@"entry_expires", self.context.languageOrLocale, nil); // Expires
+      NSString *expiryText = CardIOLocalizedString(@"entry_expires", self.context.languageOrLocale); // Expires
       [multiFieldRow.labels addObject:expiryText];
       self.expiryTextField = [multiFieldRow.textFields lastObject];
       [self.visibleTextFields addObject:self.expiryTextField];
 
       self.expiryTextFieldDelegate = [[CardIOExpiryTextFieldDelegate alloc] init];
       self.expiryTextField.delegate = self.expiryTextFieldDelegate;
-      self.expiryTextField.placeholder = CardIOLocalizedString(@"expires_placeholder", self.context.languageOrLocale, nil); // MM/YY
+      self.expiryTextField.placeholder = CardIOLocalizedString(@"expires_placeholder", self.context.languageOrLocale); // MM/YY
       // Add a space on each side of the slash. (Do this in code rather than in the string, because the L10n process won't preserve the spaces.)
       self.expiryTextField.placeholder = [self.expiryTextField.placeholder stringByReplacingOccurrencesOfString:@"/" withString:@" / "];
       self.expiryTextField.placeholder = [self.expiryTextField.placeholder stringByReplacingOccurrencesOfString:@"  " withString:@" "];
@@ -271,7 +271,7 @@
         multiFieldRow.labelWidth = 0;
       }
 
-      NSString* cvvText = CardIOLocalizedString(@"entry_cvv", self.context.languageOrLocale, nil); // CVV
+      NSString* cvvText = CardIOLocalizedString(@"entry_cvv", self.context.languageOrLocale); // CVV
       [multiFieldRow.labels addObject:cvvText];
       self.cvvTextField = [multiFieldRow.textFields lastObject];
       [self.visibleTextFields addObject:self.cvvTextField];
@@ -299,7 +299,7 @@
     postalCodeRow.hiddenLabels = YES;
     postalCodeRow.textAlignment = [CardIOLocalizer textAlignmentForLanguageOrLocale:self.context.languageOrLocale];
 
-    NSString *postalCodeText = CardIOLocalizedString(@"entry_postal_code", self.context.languageOrLocale, nil); // Postal Code
+    NSString *postalCodeText = CardIOLocalizedString(@"entry_postal_code", self.context.languageOrLocale); // Postal Code
     [postalCodeRow.labels addObject:postalCodeText];
 
     self.postalCodeTextField = [postalCodeRow.textFields lastObject];

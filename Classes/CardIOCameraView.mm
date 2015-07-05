@@ -111,7 +111,7 @@
     NSString *scanInstructions = nil;
     scanInstructions = config.scanInstructions;
     if(!scanInstructions) {
-      scanInstructions = CardIOLocalizedString(@"scan_guide", config.languageOrLocale, nil); // Hold credit card here.\nIt will scan automatically.
+      scanInstructions = CardIOLocalizedString(@"scan_guide", config.languageOrLocale); // Hold credit card here.\nIt will scan automatically.
     }
     _guideLayerLabel = [[UILabel alloc] initWithFrame:CGRectZero];
     self.guideLayerLabel.text = scanInstructions;
@@ -136,7 +136,7 @@
     // Set up the light button
     if([self.videoStream hasTorch] && ![self.videoStream canSetTorchLevel]) {
       _lightButton = [CardIOResource lightButton];
-      self.lightButton.accessibilityLabel = CardIOLocalizedString(@"activate_flash", config.languageOrLocale, nil); // Turn flash on.
+      self.lightButton.accessibilityLabel = CardIOLocalizedString(@"activate_flash", config.languageOrLocale); // Turn flash on.
       [self.lightButton addTarget:self action:@selector(toggleTorch:) forControlEvents:UIControlEventTouchUpInside];
       [self addSubview:self.lightButton];
     }
@@ -147,8 +147,8 @@
     self.logoView.alpha = kLogoAlpha;
     self.logoView.isAccessibilityElement = YES;
     self.logoView.accessibilityLabel = (config.useCardIOLogo
-                                        ? CardIOLocalizedString(@"card_io_logo",config.languageOrLocale, nil) // card.io
-                                        : CardIOLocalizedString(@"paypal_logo", config.languageOrLocale, nil)); // PayPal
+                                        ? CardIOLocalizedString(@"card_io_logo",config.languageOrLocale) // card.io
+                                        : CardIOLocalizedString(@"paypal_logo", config.languageOrLocale)); // PayPal
     [self addSubview:self.logoView];
     
 #if CARDIO_DEBUG
@@ -244,8 +244,8 @@
     BOOL torchIsOn = [self.videoStream torchIsOn];
     [self.lightButton setImage:[CardIOResource boltImageForTorchOn:torchIsOn] forState:UIControlStateNormal];
     self.lightButton.accessibilityLabel = torchIsOn ?
-            CardIOLocalizedString(@"deactivate_flash", self.config.languageOrLocale, nil) : // Turn flash off.
-            CardIOLocalizedString(@"activate_flash", self.config.languageOrLocale, nil); // Turn flash on.
+            CardIOLocalizedString(@"deactivate_flash", self.config.languageOrLocale) : // Turn flash off.
+            CardIOLocalizedString(@"activate_flash", self.config.languageOrLocale); // Turn flash on.
   }
 }
 
