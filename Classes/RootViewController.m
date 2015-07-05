@@ -112,7 +112,7 @@
   }
 #endif
 
-  
+
   CardIOView *cardIOView;
 #if TEST_HIDEABLE_CARDIOVIEW
   cardIOView = self.hideableCardIOView;
@@ -121,11 +121,11 @@
   self.adHocCardIOView.delegate = self;
   cardIOView = self.adHocCardIOView;
 #endif
-  
+
   cardIOView.scanExpiry = self.expirySwitch.on;
   cardIOView.useCardIOLogo = self.useCardIOLogoSwitch.on;
-//  cardIOView.allowFreelyRotatingCardGuide = NO;
-  
+  //  cardIOView.allowFreelyRotatingCardGuide = NO;
+
   cardIOView.languageOrLocale = self.language;
 
 #if TEST_HIDEABLE_CARDIOVIEW
@@ -148,7 +148,7 @@
 
 - (IBAction)languageChangeAction:(id)sender {
   NSArray *choices = @[@"ar", @"da", @"de", @"en", @"en_AU", @"en_GB", @"es", @"es_MX", @"fr", @"he", @"is", @"it", @"ja", @"ko", @"ms", @"nb", @"nl", @"pl", @"pt", @"pt_BR", @"ru", @"sv", @"th", @"tr", @"zh-Hans", @"zh-Hant", @"zh-Hant_TW"];
-  
+
   iccChoicesSelectViewController *vc = [[iccChoicesSelectViewController alloc] initWithTitle:@"Language" choices:choices currentSelection:self.language completion:^(NSString *selection) {
     if (selection) {
       self.language = selection;
@@ -156,7 +156,7 @@
     }
     [self dismissViewControllerAnimated:YES completion:nil];
   }];
-  
+
   UINavigationController* nc = [[UINavigationController alloc] initWithRootViewController:vc];
   [self presentViewController:nc animated:YES completion:nil];
 }
@@ -175,7 +175,7 @@
 
 - (void)displayI18nCardIOPaymentViewController {
   NSString *language = self.i18nLanguages[self.i18nLanguageIndex];
-  
+
   self.i18nCardIOPaymentViewController = [[CardIOPaymentViewController alloc] initWithPaymentDelegate:self scanningEnabled:(self.i18nPhase == 0)];
   self.i18nCardIOPaymentViewController.collectExpiry = YES;
   self.i18nCardIOPaymentViewController.collectCVV = YES;
@@ -183,11 +183,11 @@
   self.i18nCardIOPaymentViewController.disableManualEntryButtons = NO;
   self.i18nCardIOPaymentViewController.useCardIOLogo = NO;
   self.i18nCardIOPaymentViewController.languageOrLocale = language;
-  
+
   UIView *coverView = [[UIView alloc] initWithFrame:self.i18nCardIOPaymentViewController.view.bounds];
   coverView.backgroundColor = [UIColor clearColor];
   coverView.userInteractionEnabled = YES;
-  
+
   UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, coverView.frame.size.height / 5, coverView.frame.size.width, 44)];
   label.text = language;
   label.textAlignment = NSTextAlignmentCenter;
@@ -195,18 +195,18 @@
   label.font = [UIFont fontWithName:@"Helvetica" size:32];
   label.backgroundColor = [UIColor clearColor];
   [coverView addSubview:label];
-  
+
   UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(displayNextI18nScreen)];
   [coverView addGestureRecognizer:tapRecognizer];
-  
+
   UISwipeGestureRecognizer *tapLeftRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(displayNextI18nScreen)];
   tapLeftRecognizer.direction = UISwipeGestureRecognizerDirectionLeft;
   [coverView addGestureRecognizer:tapLeftRecognizer];
-  
+
   UISwipeGestureRecognizer *tapRightRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(displayPreviousI18nScreen)];
   tapRightRecognizer.direction = UISwipeGestureRecognizerDirectionRight;
   [coverView addGestureRecognizer:tapRightRecognizer];
-  
+
   [self presentViewController:self.i18nCardIOPaymentViewController animated:NO completion:nil];
   [self.i18nCardIOPaymentViewController.view addSubview:coverView];
 
@@ -239,7 +239,7 @@
   else {
     self.i18nLanguageIndex = 0;
     self.i18nPhase++;
-  
+
     if (self.i18nPhase < 2) {
       [self displayI18nCardIOPaymentViewController];
     }
@@ -306,7 +306,7 @@
     NSString *storePath = [applicationDocumentsDir stringByAppendingPathComponent:filename];
     NSLog(@"*** Writing file: '%@' ***", storePath);
     [data writeToFile:storePath atomically:YES];
-    
+
     if (self.i18nLanguageIndex + 1 < [self.i18nLanguages count] || self.i18nPhase < 2) {
       [self displayNextI18nScreen];
     }
@@ -346,13 +346,13 @@
   [super viewDidLoad];
 
   self.hideableCardIOView.delegate = self;
-  
+
   self.originalOutcomeLabelWidth = self.outcomeLabel.frame.size.width;
 
 #if TEST_GENERATED_MODELS
   [TestGeneratedModels selfCheck];
 #endif
-  
+
   [CardIOUtilities preload];
 }
 
@@ -382,12 +382,12 @@
 
 - (void)setOutcomeText:(NSString *)text image:(UIImage *)image {
   self.outcomeLabel.text = text;
-  
+
   CGRect frame = self.outcomeLabel.frame;
   frame.size.width = self.originalOutcomeLabelWidth;
   self.outcomeLabel.frame = frame;
   [self.outcomeLabel sizeToFit];
-  
+
   self.cardImageView.image = image;
 }
 
@@ -402,9 +402,9 @@
 - (void)userDidProvideCreditCardInfo:(CardIOCreditCardInfo *)info inPaymentViewController:(CardIOPaymentViewController *)paymentViewController {
   CardIOLog(@"Received userDidProvideCreditCardInfo:inPaymentViewController:");
   NSMutableString *resultStr = [NSMutableString stringWithCapacity:100];
-  
+
   [resultStr appendFormat:@"Number (%@): %@\n", info.scanned ? @"scanned" : @"manual", [info redactedCardNumber]];
-  
+
   NSString *cardType = [CardIOCreditCardInfo displayStringForCardType:info.cardType usingLanguageOrLocale:nil];
   [resultStr appendFormat:@"%@\n", [cardType length] ? cardType : @"Unrecognized card type"];
 
@@ -434,14 +434,14 @@
   if (cardInfo) {
     NSMutableString *resultStr = [NSMutableString stringWithCapacity:100];
     [resultStr appendFormat:@"Number (%@): %@\n", @"scanned", [cardInfo redactedCardNumber]];
-    
+
     NSString *cardType = [CardIOCreditCardInfo displayStringForCardType:cardInfo.cardType usingLanguageOrLocale:nil];
     [resultStr appendFormat:@"%@\n", [cardType length] ? cardType : @"Unrecognized card type"];
 
     if(self.expirySwitch.on) {
       [resultStr appendFormat:@"Expiry: %02lu/%02lu\n", (unsigned long)cardInfo.expiryMonth, (unsigned long)cardInfo.expiryYear];
     }
-    
+
 #if CARDIO_DEBUG
     [self setOutcomeText:resultStr image:cardInfo.cardImage];
 #else
@@ -451,7 +451,7 @@
   else {
     [self setOutcomeText:@"Cancelled" image:nil];
   }
-  
+
 #if TEST_HIDEABLE_CARDIOVIEW
   self.hideableCardIOView.hidden = YES;
 #else
