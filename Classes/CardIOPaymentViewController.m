@@ -77,7 +77,7 @@
 
   if((self = [super initWithRootViewController:viewController])) {
     _context = context;
-    _context.scannedImageDuration = 0.1;
+    _context.scannedImageDuration = (CGFloat) 0.1f;
     _currentViewControllerIsDataEntry = [viewController isKindOfClass:[CardIODataEntryViewController class]];
     _initialInterfaceOrientationForViewcontroller = [UIApplication sharedApplication].statusBarOrientation;
 #if USE_CAMERA || SIMULATE_CAMERA
