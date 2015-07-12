@@ -310,30 +310,36 @@
   // - When setting each button's frame, it's simplest to do that without any rotational transform applied to the button.
   //   So immediately prior to setting the frame, we set `button.transform = CGAffineTransformIdentity`.
   // - Later in this method we set a new transform for each button.
-  // - When this method is called within a animateWithDuration:animations: block, I would have thought everything would be
-  //   cool. It shouldn't matter that the transform has been set to TransformIdentity for a few CPU cycles.
-  // - However, for reasons I fail to understand, we must restore the previous transform before setting the new transform;
-  //   if we don't restore it, then the onscreen button visibly flips to its TransformIdentity rotation before subsequently
-  //   animating to its new transform.
-  CGAffineTransform previousTransform;
+  // - We call [CATransaction setDisableActions:YES] to suppress the visible animation to the
+  //   CGAffineTransformIdentity position; for reasons we haven't explored, this is only desirable for the
+  //   InterfaceToDeviceOrientationRotatedClockwise and InterfaceToDeviceOrientationRotatedCounterclockwise rotations.
+  //   (Thanks to https://github.com/card-io/card.io-iOS-source/issues/30 for the [CATransaction setDisableActions:YES] suggestion.)
 
-  previousTransform = self.cancelButton.transform;
+  InterfaceToDeviceOrientationDelta delta = orientationDelta([UIApplication sharedApplication].statusBarOrientation, self.deviceOrientation);
+  BOOL disableTransactionActions = (delta == InterfaceToDeviceOrientationRotatedClockwise ||
+                                    delta == InterfaceToDeviceOrientationRotatedCounterclockwise);
+  
+  if (disableTransactionActions) {
+    [CATransaction begin];
+    [CATransaction setDisableActions:YES];
+  }
+
   self.cancelButton.transform = CGAffineTransformIdentity;
   self.cancelButton.frame = CGRectWithXYAndSize(cameraPreviewFrame.origin.x + 5.0f,
                                                 CGRectGetMaxY(cameraPreviewFrame) - self.cancelButtonFrameSize.height - 5.0f,
                                                 self.cancelButtonFrameSize);
-  self.cancelButton.transform = previousTransform;
 
   if (self.manualEntryButton) {
-    previousTransform = self.manualEntryButton.transform;
     self.manualEntryButton.transform = CGAffineTransformIdentity;
     self.manualEntryButton.frame = CGRectWithXYAndSize(CGRectGetMaxX(cameraPreviewFrame) - self.manualEntryButtonFrameSize.width - 5.0f,
                                                        CGRectGetMaxY(cameraPreviewFrame) - self.manualEntryButtonFrameSize.height - 5.0f,
                                                        self.manualEntryButtonFrameSize);
-    self.manualEntryButton.transform = previousTransform;
   }
 
-  InterfaceToDeviceOrientationDelta delta = orientationDelta([UIApplication sharedApplication].statusBarOrientation, self.deviceOrientation);
+  if (disableTransactionActions) {
+    [CATransaction commit];
+  }
+
   CGAffineTransform r;
   CGFloat rotation = -rotationForOrientationDelta(delta); // undo the orientation delta
   r = CGAffineTransformMakeRotation(rotation);
