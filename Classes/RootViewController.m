@@ -127,6 +127,7 @@
   cardIOView.scanExpiry = self.expirySwitch.on;
   cardIOView.useCardIOLogo = self.useCardIOLogoSwitch.on;
   //  cardIOView.allowFreelyRotatingCardGuide = NO;
+  cardIOView.scannedImageDuration = [self.scannedImageDurationField.text floatValue];
 
   cardIOView.languageOrLocale = self.language;
 
