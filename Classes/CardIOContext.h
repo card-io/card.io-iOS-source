@@ -28,7 +28,6 @@
 @property(nonatomic, assign, readwrite) BOOL suppressScannedCardImage;
 @property(nonatomic, assign, readwrite) BOOL maskManualEntryDigits;
 
-
 #if CARDIO_DEBUG
 @property(nonatomic, assign, readwrite) BOOL doABTesting;
 #endif
@@ -38,6 +37,7 @@
 @property(nonatomic, copy, readwrite)   NSString *languageOrLocale;
 @property(nonatomic, assign, readwrite) BOOL useCardIOLogo;
 @property(nonatomic, retain, readwrite) UIColor *guideColor;
+@property(nonatomic, assign, readwrite) CGFloat scannedImageDuration;
 @property(nonatomic, assign, readwrite) BOOL allowFreelyRotatingCardGuide;
 
 @property(nonatomic, copy, readwrite)   NSString *scanInstructions;

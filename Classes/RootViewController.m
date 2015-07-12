@@ -36,6 +36,7 @@
 @property(nonatomic, strong, readwrite) IBOutlet UISwitch *useCardIOLogoSwitch;
 @property(nonatomic, strong, readwrite) IBOutlet UISwitch *doABTestingSwitch;
 @property(nonatomic, strong, readwrite) IBOutlet UISegmentedControl *modalPresentationStyleSegment;
+@property(nonatomic, strong, readwrite) IBOutlet UITextField *scannedImageDurationField;
 @property(nonatomic, strong, readwrite) IBOutlet CardIOView *hideableCardIOView;
 
 @property(nonatomic, strong, readwrite) IBOutlet UIButton *languageButton;
@@ -81,6 +82,7 @@
   paymentVC.disableManualEntryButtons = self.disableManualEntrySwitch.on;
   paymentVC.useCardIOLogo = self.useCardIOLogoSwitch.on;
   paymentVC.allowFreelyRotatingCardGuide = NO;
+  paymentVC.scannedImageDuration = [self.scannedImageDurationField.text floatValue];
 #if CARDIO_DEBUG
   paymentVC.doABTesting = self.doABTestingSwitch.on;
 #endif

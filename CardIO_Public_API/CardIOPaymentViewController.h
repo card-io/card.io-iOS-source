@@ -76,6 +76,13 @@
 /// Defaults to NO.
 @property(nonatomic, assign, readwrite) BOOL suppressScannedCardImage;
 
+/// After a successful scan, card.io will display an image of the card with
+/// the computed card number superimposed. This property controls how long (in seconds)
+/// that image will be displayed.
+/// Set this to 0.0 to suppress the display entirely.
+/// Defaults to 0.1.
+@property(nonatomic, assign, readwrite) CGFloat scannedImageDuration;
+
 /// Mask the card number digits as they are manually entered by the user. Defaults to NO.
 @property(nonatomic, assign, readwrite) BOOL maskManualEntryDigits;
 

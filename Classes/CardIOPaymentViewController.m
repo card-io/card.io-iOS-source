@@ -77,6 +77,7 @@
 
   if((self = [super initWithRootViewController:viewController])) {
     _context = context;
+    _context.scannedImageDuration = 0.1;
     _currentViewControllerIsDataEntry = [viewController isKindOfClass:[CardIODataEntryViewController class]];
     _initialInterfaceOrientationForViewcontroller = [UIApplication sharedApplication].statusBarOrientation;
 #if USE_CAMERA || SIMULATE_CAMERA
@@ -389,6 +390,7 @@ CONTEXT_PASSTHROUGH_READWRITE(UIColor *, guideColor, GuideColor)
 CONTEXT_PASSTHROUGH_READWRITE(BOOL, suppressScanConfirmation, SuppressScanConfirmation)
 CONTEXT_PASSTHROUGH_READWRITE(BOOL, suppressScannedCardImage, SuppressScannedCardImage)
 CONTEXT_PASSTHROUGH_READWRITE(BOOL, maskManualEntryDigits, MaskManualEntryDigits)
+CONTEXT_PASSTHROUGH_READWRITE(CGFloat, scannedImageDuration, ScannedImageDuration)
 CONTEXT_PASSTHROUGH_READWRITE(BOOL, allowFreelyRotatingCardGuide, AllowFreelyRotatingCardGuide)
 
 CONTEXT_PASSTHROUGH_GETTER(CardIOAnalytics *, scanReport)

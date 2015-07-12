@@ -98,7 +98,7 @@
   self.cardIOView.useCardIOLogo = self.context.useCardIOLogo;
   self.cardIOView.hideCardIOLogo = self.context.hideCardIOLogo;
   self.cardIOView.guideColor = self.context.guideColor;
-  self.cardIOView.scannedImageDuration = ((CGFloat) 0.1f);
+  self.cardIOView.scannedImageDuration = self.context.scannedImageDuration;
   self.cardIOView.allowFreelyRotatingCardGuide = self.context.allowFreelyRotatingCardGuide;
 
   self.cardIOView.scanInstructions = self.context.scanInstructions;
