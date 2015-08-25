@@ -120,6 +120,10 @@
 		3ED8A878197DBDAE00069761 /* CardIOUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED8A874197DBD5F00069761 /* CardIOUtilities.m */; };
 		3EE558981A5B4BC60094929A /* TestGeneratedModels.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3ED9F6DF1A23CDD800BD07F8 /* TestGeneratedModels.mm */; };
 		55CD7FA818EF777F00BB381A /* iccChoicesSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55CD7FA718EF777F00BB381A /* iccChoicesSelectViewController.m */; };
+		92A471EF1B89C1D000C0E61B /* CardIODetectionMode.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3E587F8A18C7E165000C1D3A /* CardIODetectionMode.h */; };
+		92A471F01B89C1D000C0E61B /* CardIOView.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3E583C2117BB03C900CB326A /* CardIOView.h */; };
+		92A471F11B89C1D000C0E61B /* CardIOViewDelegate.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3E4D865A17BC50AB0057505D /* CardIOViewDelegate.h */; };
+		92A471F21B89C1D000C0E61B /* CardIOUtilities.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3ED8A876197DBDA900069761 /* CardIOUtilities.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -139,6 +143,10 @@
 			dstPath = "include/${PRODUCT_NAME}";
 			dstSubfolderSpec = 16;
 			files = (
+				92A471EF1B89C1D000C0E61B /* CardIODetectionMode.h in CopyFiles */,
+				92A471F01B89C1D000C0E61B /* CardIOView.h in CopyFiles */,
+				92A471F11B89C1D000C0E61B /* CardIOViewDelegate.h in CopyFiles */,
+				92A471F21B89C1D000C0E61B /* CardIOUtilities.h in CopyFiles */,
 				3E9F4C41181F03F300F33B48 /* CardIO.h in CopyFiles */,
 				3E9F4C42181F03F300F33B48 /* CardIOCreditCardInfo.h in CopyFiles */,
 				3E9F4C43181F03F300F33B48 /* CardIOPaymentViewController.h in CopyFiles */,
@@ -2112,7 +2120,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DSTROOT = /tmp/CardIO.dst;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SupportFiles/CardIO-Prefix.pch";
@@ -2175,7 +2183,7 @@
 				DSTROOT = /tmp/CardIO.dst;
 				EXPORTED_SYMBOLS_FILE = SupportFiles/CardIO_exported_symbols.txt;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SupportFiles/CardIO-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "CARDIO_DEBUG=0";
@@ -2224,7 +2232,7 @@
 				DSTROOT = /tmp/CardIO.dst;
 				EXPORTED_SYMBOLS_FILE = SupportFiles/CardIO_exported_symbols.txt;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SupportFiles/CardIO-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "CARDIO_DEBUG=0";
