@@ -1947,6 +1947,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 92263D751B83ACBB003FE678 /* Build configuration list for PBXNativeTarget "CardIO" */;
 			buildPhases = (
+				929AD77D1B8C771200F6D18E /* Get version from git tag */,
 				92263D6B1B83ACBB003FE678 /* Sources */,
 				92263D6C1B83ACBB003FE678 /* Frameworks */,
 				92263D6D1B83ACBB003FE678 /* Headers */,
@@ -2108,6 +2109,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/bash;
 			shellScript = "export PATH=/usr/local/bin:$PATH\n\nif [ -f .baler_envx ]; then\n  source .baler_env 2 > /dev/null\nelif which bale > /dev/null; then\n echo \"Using default bale\"\nelse\n  echo \"baler is missing, so skipping the baler step\"\n  exit 0;\nfi\n\necho \"Baling bundle with `which bale`\"\nbale assets/ Classes/ --overwrite-delay 0 -z -c CardIOBundle || (echo 'Failed to generate bundle via baler!' ; exit 1)";
+		};
+		929AD77D1B8C771200F6D18E /* Get version from git tag */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Get version from git tag";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ -z \"$ICC_VERSION\" ]\nthen\nICC_VERSION=`git describe --match=iOS_[0-9]*\\.[0-9]* --tags --always --dirty | sed \"s/iOS_//\" | sed \"s/-.*//\"`\nfi\necho \"Using version: $ICC_VERSION\"\n\nsed s/icc-version-undefined/$ICC_VERSION/g <Classes/CardIOIccVersion.h.template >Classes/CardIOIccVersion.h";
 		};
 /* End PBXShellScriptBuildPhase section */
 
