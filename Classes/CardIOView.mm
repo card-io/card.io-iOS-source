@@ -261,7 +261,7 @@ NSString * const CardIOScanningOrientationAnimationDuration = @"CardIOScanningOr
     if (deviceOrientation == UIDeviceOrientationFaceUp || deviceOrientation == UIDeviceOrientationFaceDown) {
       deviceOrientation = (UIDeviceOrientation) vc.initialInterfaceOrientationForViewcontroller;
     }
-    InterfaceToDeviceOrientationDelta delta = orientationDelta(UIDeviceOrientationPortrait, deviceOrientation);
+    InterfaceToDeviceOrientationDelta delta = orientationDelta(UIInterfaceOrientationPortrait, deviceOrientation);
     CGFloat rotation = -rotationForOrientationDelta(delta); // undo the orientation delta
     r = CGAffineTransformMakeRotation(rotation);
   }

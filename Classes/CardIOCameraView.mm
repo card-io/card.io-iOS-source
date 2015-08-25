@@ -540,13 +540,13 @@
     return UIInterfaceOrientationPortrait;
   }
   else {
-    UIInterfaceOrientation defaultOrientation = UIDeviceOrientationUnknown;
+    UIInterfaceOrientation defaultOrientation = UIInterfaceOrientationUnknown;
     UIInterfaceOrientationMask supportedOverlayOrientationsMask = [self supportedOverlayOrientationsMask];
-    for (UIInterfaceOrientationMask orientation = UIInterfaceOrientationPortrait;
+    for (NSInteger orientation = UIInterfaceOrientationPortrait;
          orientation <= UIInterfaceOrientationLandscapeRight;
          orientation++) {
       if ((supportedOverlayOrientationsMask & (1 << orientation)) != 0) {
-        defaultOrientation = orientation;
+        defaultOrientation = (UIInterfaceOrientation)orientation;
         break;
       }
     }
