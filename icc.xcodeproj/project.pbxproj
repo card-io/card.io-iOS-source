@@ -211,6 +211,8 @@
 		92263E2E1B83B99B003FE678 /* modelm_befe75da.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 03ABD1CE15794234004BE637 /* modelm_befe75da.hpp */; };
 		92263E2F1B83B9B0003FE678 /* geometry.h in Headers */ = {isa = PBXBuildFile; fileRef = 0381A82D139982AF0088C26E /* geometry.h */; };
 		92263E301B83B9B5003FE678 /* mz_ios.h in Headers */ = {isa = PBXBuildFile; fileRef = 849799A6159E5EF400527FF5 /* mz_ios.h */; };
+		929AD7811B8CA8FD00F6D18E /* CardIODetectionMode.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E587F8A18C7E165000C1D3A /* CardIODetectionMode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		929AD7821B8CA8FD00F6D18E /* CardIOUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ED8A876197DBDA900069761 /* CardIOUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1844,6 +1846,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				929AD7811B8CA8FD00F6D18E /* CardIODetectionMode.h in Headers */,
+				929AD7821B8CA8FD00F6D18E /* CardIOUtilities.h in Headers */,
 				92263DCE1B83AD65003FE678 /* CardIO.h in Headers */,
 				92263E301B83B9B5003FE678 /* mz_ios.h in Headers */,
 				92263DD21B83AD7B003FE678 /* CardIOPaymentViewController.h in Headers */,
