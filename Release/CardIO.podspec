@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name             = 'CardIO'
-  spec.version          = '5.1.0'
+  spec.version          = '5.1.1'
   spec.license          = { type: 'MIT', file: 'LICENSE.md' }
   spec.homepage         = 'https://www.card.io'
   spec.authors          = { 'CardIO' => 'support@paypal.com' }
@@ -11,8 +11,7 @@ Pod::Spec.new do |spec|
   spec.ios.deployment_target = '6.1'
   spec.requires_arc     = true
   spec.source_files     = 'CardIO/*.h'
-  spec.preserve_path    = 'CardIO/*.a'
   spec.frameworks       = 'AVFoundation', 'AudioToolbox', 'CoreMedia', 'CoreVideo', 'MobileCoreServices', 'OpenGLES', 'QuartzCore', 'Security', 'UIKit'
-  spec.libraries        = 'CardIO', 'c++'
-  spec.xcconfig         = { 'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/CardIO/CardIO"' }
+  spec.libraries        = 'c++'
+  spec.vendored_libraries = 'CardIO/libCardIO.a'
 end
