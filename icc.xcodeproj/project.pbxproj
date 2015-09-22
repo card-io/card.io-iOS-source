@@ -2153,14 +2153,17 @@
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = "";
-				"OTHER_CFLAGS[arch=arm64]" = "";
+				"OTHER_CFLAGS[arch=*]" = "-fembed-bitcode";
+				"OTHER_CFLAGS[arch=arm64]" = "-fembed-bitcode";
 				"OTHER_CFLAGS[arch=armv7]" = (
 					"-mfloat-abi=softfp",
 					"-mfpu=neon",
+					"-fembed-bitcode",
 				);
 				"OTHER_CFLAGS[sdk=iphoneos*][arch=armv7s]" = (
 					"-mfloat-abi=softfp",
 					"-mfpu=neon",
+					"-fembed-bitcode",
 				);
 				OTHER_LDFLAGS = (
 					"$(SRCROOT)/opencv_device/lib/libopencv_core.a",
@@ -2203,14 +2206,17 @@
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = "";
-				"OTHER_CFLAGS[arch=arm64]" = "";
+				"OTHER_CFLAGS[arch=*]" = "-fembed-bitcode";
+				"OTHER_CFLAGS[arch=arm64]" = "-fembed-bitcode";
 				"OTHER_CFLAGS[arch=armv7s]" = (
 					"-mfloat-abi=softfp",
 					"-mfpu=neon",
+					"-fembed-bitcode",
 				);
 				"OTHER_CFLAGS[sdk=iphoneos*][arch=armv7]" = (
 					"-mfloat-abi=softfp",
 					"-mfpu=neon",
+					"-fembed-bitcode",
 				);
 				OTHER_LDFLAGS = "";
 				PRELINK_LIBS = "$(SRCROOT)/opencv_device/lib/libopencv_core.a $(SRCROOT)/opencv_device/lib/libopencv_imgproc.a";
@@ -2251,15 +2257,17 @@
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = "";
+				"OTHER_CFLAGS[arch=*]" = "-fembed-bitcode";
 				"OTHER_CFLAGS[arch=armv7]" = (
 					"-mfloat-abi=softfp",
 					"-mfpu=neon",
+					"-fembed-bitcode",
 				);
 				"OTHER_CFLAGS[arch=armv7s]" = (
 					"-mfloat-abi=softfp",
 					"-mfpu=neon",
+					"-fembed-bitcode",
 				);
-				"OTHER_CFLAGS[sdk=iphoneos*][arch=arm64]" = "";
 				OTHER_LDFLAGS = "";
 				PRELINK_LIBS = "$(SRCROOT)/opencv_device/lib/libopencv_core.a $(SRCROOT)/opencv_device/lib/libopencv_imgproc.a";
 				PRODUCT_NAME = CardIO;
