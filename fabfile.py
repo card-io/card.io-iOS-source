@@ -166,7 +166,7 @@ def build(outdir=None, device_sdk=None, simulator_sdk=None, **kwargs):
                 for arch, sdk in arch_to_sdk:
                     print(colors.blue("({build_config}) Building {arch}".format(**locals())))
 
-                    base_xcodebuild_command = "xcrun xcodebuild -target CardIO -arch {arch} -sdk {sdk} -configuration {build_config}".format(**locals())
+                    base_xcodebuild_command = "xcrun xcodebuild OTHER_CFLAGS='-fembed-bitcode' -target CardIO -arch {arch} -sdk {sdk} -configuration {build_config}".format(**locals())
 
                     clean_cmd =  "{base_xcodebuild_command} clean".format(**locals())
                     local(clean_cmd)
