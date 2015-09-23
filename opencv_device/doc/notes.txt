@@ -1,5 +1,23 @@
 We usually only build OpenCV when we have to. Each time is a new adventure, so instead of an engineering solution, here are some notes about what it took to get it to build last time.
 
+Sep 24, 2014, Bryant - Xcode 7 GM, deployment target iOS 6.0
+------------------------------------------------------------
+Cloned https://github.com/jonmarimba/OpenCV-iOS to https://github.com/bluk/OpenCV-iOS/tree/bitcode
+
+For the OpenCV-iOS project:
+- Changed Deployment Target to iOS 6.0
+- Changed ARCHS build setting from $(ARCHS_STANDARD_INCL_64_BIT) to "arm64 armv7 armv7s"
+- Add "-fembed-bitcode" to generate Bitcode for library. FYI, Xcode <= 6.4 will not work with Bitcode.
+- Explicitly use libc++ from LLVM instead of GNU (needs to match card.io)
+- Enabled Testability due to recommended Settings (this should not have an effect on the built libraries)
+
+Picked target "opencv_core", did a Release/Profiling build.
+Picked target "opencv_imgproc", did a Release/Profiling build.
+
+Used Organizer window to find build products.
+
+Copied static libs libopencv_core.a and libopencv_imgproc.a to icc/opencv-device/lib.
+
 
 Sep 11, 2014, Dave -- Xcode 6 GM, deployment target iOS 6.0
 -----------------------------------------------------------
