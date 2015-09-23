@@ -2219,7 +2219,14 @@
 					"-mfpu=neon",
 					"-fembed-bitcode",
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"$(SRCROOT)/opencv_device/lib/libopencv_core.a",
+					"$(SRCROOT)/opencv_device/lib/libopencv_imgproc.a",
+					"-ObjC",
+					"-objc_abi_version",
+					2,
+				);
+				OTHER_LIBTOOLFLAGS = "$(SRCROOT)/opencv_device/lib/libopencv_core.a $(SRCROOT)/opencv_device/lib/libopencv_imgproc.a";
 				PRELINK_LIBS = "$(SRCROOT)/opencv_device/lib/libopencv_core.a $(SRCROOT)/opencv_device/lib/libopencv_imgproc.a";
 				PRODUCT_NAME = CardIO;
 				SKIP_INSTALL = YES;
@@ -2269,7 +2276,14 @@
 					"-mfpu=neon",
 					"-fembed-bitcode",
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"$(SRCROOT)/opencv_device/lib/libopencv_core.a",
+					"$(SRCROOT)/opencv_device/lib/libopencv_imgproc.a",
+					"-ObjC",
+					"-objc_abi_version",
+					2,
+				);
+				OTHER_LIBTOOLFLAGS = "$(SRCROOT)/opencv_device/lib/libopencv_core.a $(SRCROOT)/opencv_device/lib/libopencv_imgproc.a";
 				PRELINK_LIBS = "$(SRCROOT)/opencv_device/lib/libopencv_core.a $(SRCROOT)/opencv_device/lib/libopencv_imgproc.a";
 				PRODUCT_NAME = CardIO;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
