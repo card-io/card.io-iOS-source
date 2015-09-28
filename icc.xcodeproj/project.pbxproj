@@ -1772,7 +1772,7 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastUpgradeCheck = 0700;
 				TargetAttributes = {
 					3E9F4C4A181F07B700F33B48 = {
 						DevelopmentTeam = V8KL7848Q4;
@@ -2011,6 +2011,7 @@
 					"-framework",
 					UIKit,
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yourcompany.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = UnitTest;
 				WRAPPER_EXTENSION = octest;
 			};
@@ -2039,6 +2040,7 @@
 					"-framework",
 					UIKit,
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yourcompany.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = UnitTest;
 				WRAPPER_EXTENSION = octest;
 				ZERO_LINK = NO;
@@ -2067,6 +2069,7 @@
 					"-framework",
 					UIKit,
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yourcompany.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = UnitTest;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = octest;
@@ -2076,11 +2079,6 @@
 		03DBA30D121B5A56008A1618 /* AdHoc */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					arm64,
-					armv7,
-					armv7s,
-				);
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -2102,7 +2100,7 @@
 				HEADER_SEARCH_PATHS = "$(SRCROOT)/opencv_device/include";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "";
-				OTHER_LDFLAGS = "";
+				OTHER_LDFLAGS = "-ObjC";
 				PRELINK_FLAGS = "-objc_abi_version 2";
 				PRELINK_LIBS = "$(SRCROOT)/opencv_device/lib/libopencv_core.a $(SRCROOT)/opencv_device/lib/libopencv_imgproc.a";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -2155,18 +2153,22 @@
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = "";
-				"OTHER_CFLAGS[arch=arm64]" = "";
+				"OTHER_CFLAGS[arch=*]" = "-fembed-bitcode";
+				"OTHER_CFLAGS[arch=arm64]" = "-fembed-bitcode";
 				"OTHER_CFLAGS[arch=armv7]" = (
 					"-mfloat-abi=softfp",
 					"-mfpu=neon",
+					"-fembed-bitcode",
 				);
 				"OTHER_CFLAGS[sdk=iphoneos*][arch=armv7s]" = (
 					"-mfloat-abi=softfp",
 					"-mfpu=neon",
+					"-fembed-bitcode",
 				);
 				OTHER_LDFLAGS = (
 					"$(SRCROOT)/opencv_device/lib/libopencv_core.a",
 					"$(SRCROOT)/opencv_device/lib/libopencv_imgproc.a",
+					"-ObjC",
 				);
 				PRODUCT_NAME = CardIO;
 				SKIP_INSTALL = YES;
@@ -2192,7 +2194,7 @@
 					"USE_CAMERA=0",
 				);
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				GENERATE_MASTER_OBJECT_FILE = YES;
+				GENERATE_MASTER_OBJECT_FILE = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/opencv_device/include",
 					"$(SRCROOT)/dmz",
@@ -2205,16 +2207,26 @@
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = "";
-				"OTHER_CFLAGS[arch=arm64]" = "";
+				"OTHER_CFLAGS[arch=*]" = "-fembed-bitcode";
+				"OTHER_CFLAGS[arch=arm64]" = "-fembed-bitcode";
 				"OTHER_CFLAGS[arch=armv7s]" = (
 					"-mfloat-abi=softfp",
 					"-mfpu=neon",
+					"-fembed-bitcode",
 				);
 				"OTHER_CFLAGS[sdk=iphoneos*][arch=armv7]" = (
 					"-mfloat-abi=softfp",
 					"-mfpu=neon",
+					"-fembed-bitcode",
 				);
-				OTHER_LDFLAGS = "";
+				OTHER_LDFLAGS = (
+					"$(SRCROOT)/opencv_device/lib/libopencv_core.a",
+					"$(SRCROOT)/opencv_device/lib/libopencv_imgproc.a",
+					"-ObjC",
+					"-objc_abi_version",
+					2,
+				);
+				OTHER_LIBTOOLFLAGS = "$(SRCROOT)/opencv_device/lib/libopencv_core.a $(SRCROOT)/opencv_device/lib/libopencv_imgproc.a";
 				PRELINK_LIBS = "$(SRCROOT)/opencv_device/lib/libopencv_core.a $(SRCROOT)/opencv_device/lib/libopencv_imgproc.a";
 				PRODUCT_NAME = CardIO;
 				SKIP_INSTALL = YES;
@@ -2241,7 +2253,7 @@
 					"USE_CAMERA=0",
 				);
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				GENERATE_MASTER_OBJECT_FILE = YES;
+				GENERATE_MASTER_OBJECT_FILE = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/opencv_device/include",
 					"$(SRCROOT)/dmz",
@@ -2253,16 +2265,25 @@
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = "";
+				"OTHER_CFLAGS[arch=*]" = "-fembed-bitcode";
 				"OTHER_CFLAGS[arch=armv7]" = (
 					"-mfloat-abi=softfp",
 					"-mfpu=neon",
+					"-fembed-bitcode",
 				);
 				"OTHER_CFLAGS[arch=armv7s]" = (
 					"-mfloat-abi=softfp",
 					"-mfpu=neon",
+					"-fembed-bitcode",
 				);
-				"OTHER_CFLAGS[sdk=iphoneos*][arch=arm64]" = "";
-				OTHER_LDFLAGS = "";
+				OTHER_LDFLAGS = (
+					"$(SRCROOT)/opencv_device/lib/libopencv_core.a",
+					"$(SRCROOT)/opencv_device/lib/libopencv_imgproc.a",
+					"-ObjC",
+					"-objc_abi_version",
+					2,
+				);
+				OTHER_LIBTOOLFLAGS = "$(SRCROOT)/opencv_device/lib/libopencv_core.a $(SRCROOT)/opencv_device/lib/libopencv_imgproc.a";
 				PRELINK_LIBS = "$(SRCROOT)/opencv_device/lib/libopencv_core.a $(SRCROOT)/opencv_device/lib/libopencv_imgproc.a";
 				PRODUCT_NAME = CardIO;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -2282,6 +2303,7 @@
 				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_BITCODE = YES;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -2320,6 +2342,7 @@
 					"-lc++",
 					"-lstdc++",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lumberlabs.demo;
 				PRODUCT_NAME = icc;
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=*]" = "";
@@ -2339,6 +2362,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				ENABLE_BITCODE = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = SupportFiles/icc_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = "";
@@ -2362,6 +2386,7 @@
 					"-lc++",
 					"-lstdc++",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lumberlabs.demo;
 				PRODUCT_NAME = icc;
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -2382,6 +2407,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				ENABLE_BITCODE = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = SupportFiles/icc_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = "";
@@ -2400,6 +2426,7 @@
 					"-lc++",
 					"-lstdc++",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lumberlabs.demo;
 				PRODUCT_NAME = icc;
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -2411,11 +2438,6 @@
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					arm64,
-					armv7,
-					armv7s,
-				);
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -2428,6 +2450,7 @@
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = "";
@@ -2441,6 +2464,7 @@
 				OTHER_LDFLAGS = (
 					"$(SRCROOT)/opencv_device/lib/libopencv_core.a",
 					"$(SRCROOT)/opencv_device/lib/libopencv_imgproc.a",
+					"-ObjC",
 				);
 				OTHER_LIBTOOLFLAGS = "$(SRCROOT)/opencv_device/lib/libopencv_core.a $(SRCROOT)/opencv_device/lib/libopencv_imgproc.a";
 				PRELINK_FLAGS = "";
@@ -2454,11 +2478,6 @@
 		C01FCF5008A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					arm64,
-					armv7,
-					armv7s,
-				);
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -2479,7 +2498,7 @@
 				HEADER_SEARCH_PATHS = "$(SRCROOT)/opencv_device/include";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "";
-				OTHER_LDFLAGS = "";
+				OTHER_LDFLAGS = "-ObjC";
 				PRELINK_FLAGS = "-objc_abi_version 2";
 				PRELINK_LIBS = "$(SRCROOT)/opencv_device/lib/libopencv_core.a $(SRCROOT)/opencv_device/lib/libopencv_imgproc.a";
 				RUN_CLANG_STATIC_ANALYZER = YES;

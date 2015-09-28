@@ -166,7 +166,7 @@ def build(outdir=None, device_sdk=None, simulator_sdk=None, **kwargs):
                 for arch, sdk in arch_to_sdk:
                     print(colors.blue("({build_config}) Building {arch}".format(**locals())))
 
-                    base_xcodebuild_command = "xcrun xcodebuild -target CardIO -arch {arch} -sdk {sdk} -configuration {build_config}".format(**locals())
+                    base_xcodebuild_command = "xcrun xcodebuild OTHER_CFLAGS='-fembed-bitcode' -target CardIO -arch {arch} -sdk {sdk} -configuration {build_config}".format(**locals())
 
                     clean_cmd =  "{base_xcodebuild_command} clean".format(**locals())
                     local(clean_cmd)
@@ -184,7 +184,7 @@ def build(outdir=None, device_sdk=None, simulator_sdk=None, **kwargs):
                 os.makedirs(lipo_dir)
                 arch_build_dirs["universal"] = lipo_dir
                 # in Xcode 4.5 GM, xcrun selects the wrong lipo to use, so circumventing xcrun for now :(
-                lipo_cmd = "`xcode-select -print-path`/Platforms/iPhoneOS.platform/Developer/usr/bin/lipo " \
+                lipo_cmd = "`xcode-select -print-path`/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo " \
                            "           {armv7}/{libname}" \
                            "           -arch armv7s {armv7s}/{libname}" \
                            "           -arch arm64 {arm64}/{libname}" \
