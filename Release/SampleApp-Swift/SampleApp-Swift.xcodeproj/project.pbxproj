@@ -150,6 +150,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D534F1E01A324F64003C3AB4 /* Build configuration list for PBXNativeTarget "SampleApp-Swift" */;
 			buildPhases = (
+				A5DFB2B31BBC985E00AA810C /* Unzip libCardIO.a.zip */,
 				D534F1BD1A324F63003C3AB4 /* Sources */,
 				D534F1BE1A324F63003C3AB4 /* Frameworks */,
 				D534F1BF1A324F63003C3AB4 /* Resources */,
@@ -239,6 +240,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A5DFB2B31BBC985E00AA810C /* Unzip libCardIO.a.zip */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Unzip libCardIO.a.zip";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "[ -f ../CardIO/libCardIO.a ] && rm ../CardIO/libCardIO.a\nunzip -d ../CardIO/ ../CardIO/libCardIO.a.zip";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D534F1BD1A324F63003C3AB4 /* Sources */ = {

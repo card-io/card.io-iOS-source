@@ -168,6 +168,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0A2C90541564175A000727BC /* Build configuration list for PBXNativeTarget "ScanExample" */;
 			buildPhases = (
+				A5DFB2B41BBC994400AA810C /* Unzip libCardIO.a.zip */,
 				0A2C902F1564175A000727BC /* Sources */,
 				0A2C90301564175A000727BC /* Frameworks */,
 				0A2C90311564175A000727BC /* Resources */,
@@ -220,6 +221,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A5DFB2B41BBC994400AA810C /* Unzip libCardIO.a.zip */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Unzip libCardIO.a.zip";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "[ -f ../CardIO/libCardIO.a ] && rm ../CardIO/libCardIO.a\nunzip -d ../CardIO/ ../CardIO/libCardIO.a.zip";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0A2C902F1564175A000727BC /* Sources */ = {
