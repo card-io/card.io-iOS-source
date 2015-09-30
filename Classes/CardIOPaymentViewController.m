@@ -202,7 +202,7 @@
   }
 }
 
-- (NSUInteger)supportedInterfaceOrientations {
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
   if (self.currentViewControllerIsDataEntry) {
     return [super supportedInterfaceOrientations];
   }
