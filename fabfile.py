@@ -214,7 +214,12 @@ def build(outdir=None, device_sdk=None, simulator_sdk=None, **kwargs):
                 _copy(header_files, cardio_dir)
 
                 libfile = os.path.join(lipo_build_dirs["Release"], env.libname)
-                shutil.copy2(libfile, cardio_dir)
+
+                shutil.copy2("{libfile}".format(libfile=libfile), ".")
+                zip_cmd = "zip {libname}.zip {libname}".format(libname=env.libname)
+                local(zip_cmd)
+                os.remove("{libname}".format(libname=env.libname))
+                shutil.move("{libname}.zip".format(libname=env.libname), cardio_dir)
 
                 release_dir = os.path.join(icc_root, "Release")
                 shutil.copy2(os.path.join(release_dir, "release_notes.txt"), sdk_dir)
