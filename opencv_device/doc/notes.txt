@@ -1,5 +1,16 @@
 We usually only build OpenCV when we have to. Each time is a new adventure, so instead of an engineering solution, here are some notes about what it took to get it to build last time.
 
+Oct 19, 2014, Bryant - Xcode 7 GM, deployment target iOS 6.0
+------------------------------------------------------------
+Cloned https://github.com/jonmarimba/OpenCV-iOS to https://github.com/bluk/OpenCV-iOS/tree/bitcode
+
+For the OpenCV-iOS project:
+- Did same stuff in September 24, but removed the "-fembed-bitcode" flag. Using the Archive
+  scheme action will produce a Bitcode enabled archive.
+
+Picked target "opencv_imgproc", did an Archive Build. Found the Archive and Show Package Contents.
+Grabbed both libopencv_core.a and libopencv_imgproc and copied to icc/opencv-device/lib.
+
 Sep 24, 2014, Bryant - Xcode 7 GM, deployment target iOS 6.0
 ------------------------------------------------------------
 Cloned https://github.com/jonmarimba/OpenCV-iOS to https://github.com/bluk/OpenCV-iOS/tree/bitcode
