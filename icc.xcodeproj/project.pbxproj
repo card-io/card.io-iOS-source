@@ -2121,7 +2121,6 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DSTROOT = /tmp/CardIO.dst;
-				ENABLE_BITCODE = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_CPP_EXCEPTIONS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -2147,7 +2146,6 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				GENERATE_MASTER_OBJECT_FILE = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/opencv_device/include",
 					"$(SRCROOT)/dmz",
@@ -2185,7 +2183,6 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DSTROOT = /tmp/CardIO.dst;
-				ENABLE_BITCODE = NO;
 				EXPORTED_SYMBOLS_FILE = SupportFiles/CardIO_exported_symbols.txt;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_CPP_EXCEPTIONS = YES;
@@ -2197,7 +2194,6 @@
 					"USE_CAMERA=0",
 				);
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				GENERATE_MASTER_OBJECT_FILE = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/opencv_device/include",
 					"$(SRCROOT)/dmz",
@@ -2218,7 +2214,6 @@
 					"-mfloat-abi=softfp",
 					"-mfpu=neon",
 				);
-				PRELINK_LIBS = "$(SRCROOT)/opencv_device/lib/libopencv_core.a $(SRCROOT)/opencv_device/lib/libopencv_imgproc.a";
 				PRODUCT_NAME = CardIO;
 				SKIP_INSTALL = YES;
 			};
@@ -2238,7 +2233,6 @@
 				CODE_SIGN_ENTITLEMENTS = SupportFiles/AdHocEntitlements.plist;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DSTROOT = /tmp/CardIO.dst;
-				ENABLE_BITCODE = NO;
 				EXPORTED_SYMBOLS_FILE = SupportFiles/CardIO_exported_symbols.txt;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_CPP_EXCEPTIONS = YES;
@@ -2250,7 +2244,6 @@
 					"USE_CAMERA=0",
 				);
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				GENERATE_MASTER_OBJECT_FILE = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/opencv_device/include",
 					"$(SRCROOT)/dmz",
@@ -2289,7 +2282,6 @@
 				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				ENABLE_BITCODE = YES;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -2348,7 +2340,6 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
-				ENABLE_BITCODE = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = SupportFiles/icc_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = "";
@@ -2393,7 +2384,6 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
-				ENABLE_BITCODE = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = SupportFiles/icc_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = "";
@@ -2484,7 +2474,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "";
 				PRELINK_FLAGS = "-objc_abi_version 2";
-				PRELINK_LIBS = "$(SRCROOT)/opencv_device/lib/libopencv_core.a $(SRCROOT)/opencv_device/lib/libopencv_imgproc.a";
+				PRELINK_LIBS = "";
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				SDKROOT = iphoneos;
 			};
