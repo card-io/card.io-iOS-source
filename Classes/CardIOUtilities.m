@@ -5,11 +5,12 @@
 
 #import "CardIOUtilities.h"
 #import "CardIODevice.h"
-#import "CardIOGPUGaussianBlurFilter.h"
 #import "CardIOIccVersion.h"
 #import "CardIOLocalizer.h"
 #import "CardIOMacros.h"
 #import "CardIOView.h"
+
+#import "UIImage+ImageEffects.h"
 
 #import <AVFoundation/AVFoundation.h>
 
@@ -122,9 +123,9 @@ static ScanAvailabilityStatus cachedScanAvailabilityStatus = ScanAvailabilityUnk
   UIImage *viewImage = UIGraphicsGetImageFromCurrentImageContext();
   UIGraphicsEndImageContext();
   
-  CardIOGPUGaussianBlurFilter *filter = [[CardIOGPUGaussianBlurFilter alloc] initWithSize:keyWindow.bounds.size];
-  blurredScreenImageView.image = [filter processUIImage:viewImage toSize:keyWindow.bounds.size];
-  
+  UIColor *tintColor = [UIColor colorWithWhite:0.5f alpha:0.3f];
+  blurredScreenImageView.image = [viewImage applyBlurWithRadius:10 tintColor:tintColor saturationDeltaFactor:1.8f maskImage:nil];
+	
   return blurredScreenImageView;
 }
 
