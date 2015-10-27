@@ -50,7 +50,6 @@
 		3E9F4C08181F03F300F33B48 /* CardIOBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF9307716557ED7000936BA /* CardIOBundle.m */; };
 		3E9F4C09181F03F300F33B48 /* CardIOContext.m in Sources */ = {isa = PBXBuildFile; fileRef = B5EC97ED168BA44F00C9A30C /* CardIOContext.m */; };
 		3E9F4C0A181F03F300F33B48 /* CardIOAnimation.mm in Sources */ = {isa = PBXBuildFile; fileRef = B5EDB90F168E05370055E716 /* CardIOAnimation.mm */; };
-		3E9F4C0B181F03F300F33B48 /* CardIOGPUGaussianBlurFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA7E520170BA6FC00BAE3F3 /* CardIOGPUGaussianBlurFilter.m */; };
 		3E9F4C0C181F03F300F33B48 /* CardIOLocalizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA7E535170F8F8600BAE3F3 /* CardIOLocalizer.m */; };
 		3E9F4C0D181F03F300F33B48 /* CardIOPostalCodeTextFieldDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED37A1117A89BA500A09325 /* CardIOPostalCodeTextFieldDelegate.m */; };
 		3E9F4C0E181F03F300F33B48 /* CardIOConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E583C2617BB062100CB326A /* CardIOConfig.m */; };
@@ -79,7 +78,6 @@
 		3E9F4C38181F03F300F33B48 /* CardIOBundle.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DF9307616557ED7000936BA /* CardIOBundle.h */; };
 		3E9F4C39181F03F300F33B48 /* CardIOContext.h in Headers */ = {isa = PBXBuildFile; fileRef = B5EC97EC168BA44F00C9A30C /* CardIOContext.h */; };
 		3E9F4C3A181F03F300F33B48 /* CardIOAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = B5EDB90E168E05370055E716 /* CardIOAnimation.h */; };
-		3E9F4C3B181F03F300F33B48 /* CardIOGPUGaussianBlurFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 3EA7E51F170BA6E700BAE3F3 /* CardIOGPUGaussianBlurFilter.h */; };
 		3E9F4C3C181F03F300F33B48 /* CardIOView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E583C2117BB03C900CB326A /* CardIOView.h */; };
 		3E9F4C3D181F03F300F33B48 /* CardIOConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E583C2517BB062100CB326A /* CardIOConfig.h */; };
 		3E9F4C3E181F03F300F33B48 /* CardIOViewDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E4D865A17BC50AB0057505D /* CardIOViewDelegate.h */; };
@@ -117,6 +115,9 @@
 		3EB636AC1846CCA400F0527B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EB636AA1846C6A900F0527B /* AVFoundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		3ECDD2881885FAA000361A0F /* NSObject+CardioCategoryTest.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ECDD2861885FAA000361A0F /* NSObject+CardioCategoryTest.h */; };
 		3ECDD2891885FAA000361A0F /* NSObject+CardioCategoryTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ECDD2871885FAA000361A0F /* NSObject+CardioCategoryTest.m */; };
+		3ED00DA31BD8D60900FD2DB4 /* UIImage+ImageEffects.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ED00DA11BD8D60900FD2DB4 /* UIImage+ImageEffects.h */; };
+		3ED00DA41BD8D60900FD2DB4 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED00DA21BD8D60900FD2DB4 /* UIImage+ImageEffects.m */; };
+		3ED00DA81BD8D78200FD2DB4 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ED00DA71BD8D78200FD2DB4 /* Accelerate.framework */; };
 		3ED8A878197DBDAE00069761 /* CardIOUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED8A874197DBD5F00069761 /* CardIOUtilities.m */; };
 		3EE558981A5B4BC60094929A /* TestGeneratedModels.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3ED9F6DF1A23CDD800BD07F8 /* TestGeneratedModels.mm */; };
 		55CD7FA818EF777F00BB381A /* iccChoicesSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55CD7FA718EF777F00BB381A /* iccChoicesSelectViewController.m */; };
@@ -567,14 +568,16 @@
 		3EA0739F16E6C26C00CA6E7F /* simulated_camera_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = simulated_camera_0.png; sourceTree = "<group>"; };
 		3EA073A116E7DD3500CA6E7F /* dmz_olm.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = dmz_olm.cpp; sourceTree = "<group>"; };
 		3EA073A216E7DD3500CA6E7F /* dmz_olm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = dmz_olm.h; sourceTree = "<group>"; };
-		3EA7E51F170BA6E700BAE3F3 /* CardIOGPUGaussianBlurFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIOGPUGaussianBlurFilter.h; sourceTree = "<group>"; };
-		3EA7E520170BA6FC00BAE3F3 /* CardIOGPUGaussianBlurFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardIOGPUGaussianBlurFilter.m; sourceTree = "<group>"; };
 		3EA7E534170F8F8600BAE3F3 /* CardIOLocalizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CardIOLocalizer.h; path = Classes/CardIOLocalizer.h; sourceTree = "<group>"; };
 		3EA7E535170F8F8600BAE3F3 /* CardIOLocalizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CardIOLocalizer.m; path = Classes/CardIOLocalizer.m; sourceTree = "<group>"; };
 		3EB636AA1846C6A900F0527B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		3ECC052A1952437F00092A30 /* CardIO.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; name = CardIO.podspec; path = Release/CardIO.podspec; sourceTree = "<group>"; };
 		3ECDD2861885FAA000361A0F /* NSObject+CardioCategoryTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+CardioCategoryTest.h"; path = "Classes/NSObject+CardioCategoryTest.h"; sourceTree = "<group>"; };
 		3ECDD2871885FAA000361A0F /* NSObject+CardioCategoryTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+CardioCategoryTest.m"; path = "Classes/NSObject+CardioCategoryTest.m"; sourceTree = "<group>"; };
+		3ED00DA11BD8D60900FD2DB4 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+ImageEffects.h"; path = "Classes/UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		3ED00DA21BD8D60900FD2DB4 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+ImageEffects.m"; path = "Classes/UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		3ED00DA51BD8D75E00FD2DB4 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		3ED00DA71BD8D78200FD2DB4 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		3ED37A1017A89BA500A09325 /* CardIOPostalCodeTextFieldDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CardIOPostalCodeTextFieldDelegate.h; path = Classes/CardIOPostalCodeTextFieldDelegate.h; sourceTree = "<group>"; };
 		3ED37A1117A89BA500A09325 /* CardIOPostalCodeTextFieldDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CardIOPostalCodeTextFieldDelegate.m; path = Classes/CardIOPostalCodeTextFieldDelegate.m; sourceTree = "<group>"; };
 		3ED8A874197DBD5F00069761 /* CardIOUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CardIOUtilities.m; path = Classes/CardIOUtilities.m; sourceTree = "<group>"; };
@@ -661,6 +664,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3ED00DA81BD8D78200FD2DB4 /* Accelerate.framework in Frameworks */,
 				3E9618E019C8EBBD0023CDBB /* AudioToolbox.framework in Frameworks */,
 				3EB636AC1846CCA400F0527B /* AVFoundation.framework in Frameworks */,
 				3E9618E219C8EBC50023CDBB /* CoreMedia.framework in Frameworks */,
@@ -763,6 +767,8 @@
 				3ED8A874197DBD5F00069761 /* CardIOUtilities.m */,
 				3ECDD2861885FAA000361A0F /* NSObject+CardioCategoryTest.h */,
 				3ECDD2871885FAA000361A0F /* NSObject+CardioCategoryTest.m */,
+				3ED00DA11BD8D60900FD2DB4 /* UIImage+ImageEffects.h */,
+				3ED00DA21BD8D60900FD2DB4 /* UIImage+ImageEffects.m */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -1554,6 +1560,8 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3ED00DA71BD8D78200FD2DB4 /* Accelerate.framework */,
+				3ED00DA51BD8D75E00FD2DB4 /* CoreVideo.framework */,
 				3E9618DF19C8EBBD0023CDBB /* AudioToolbox.framework */,
 				3EB636AA1846C6A900F0527B /* AVFoundation.framework */,
 				3E9618E119C8EBC50023CDBB /* CoreMedia.framework */,
@@ -1635,8 +1643,6 @@
 			children = (
 				8497998B159E5E3C00527FF5 /* CardIOGPUFilter.h */,
 				8497998C159E5E3C00527FF5 /* CardIOGPUFilter.m */,
-				3EA7E51F170BA6E700BAE3F3 /* CardIOGPUGaussianBlurFilter.h */,
-				3EA7E520170BA6FC00BAE3F3 /* CardIOGPUGaussianBlurFilter.m */,
 				8497998D159E5E3C00527FF5 /* CardIOGPURenderer.h */,
 				8497998E159E5E3C00527FF5 /* CardIOGPURenderer.mm */,
 				8497998F159E5E3C00527FF5 /* CardIOGPUShaders.h */,
@@ -1674,6 +1680,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E9F4C1D181F03F300F33B48 /* geometry.h in Headers */,
+				3ED00DA31BD8D60900FD2DB4 /* UIImage+ImageEffects.h in Headers */,
 				3E9F4C1E181F03F300F33B48 /* CardIOMultipleFieldTableViewCell.h in Headers */,
 				3E9F4C1F181F03F300F33B48 /* CardIOCreditCardNumberFormatter.h in Headers */,
 				3E9F4C20181F03F300F33B48 /* CardIOCreditCardExpiryFormatter.h in Headers */,
@@ -1698,7 +1705,6 @@
 				3E9F4C39181F03F300F33B48 /* CardIOContext.h in Headers */,
 				3E9F4C3A181F03F300F33B48 /* CardIOAnimation.h in Headers */,
 				3E0133E1198AD433009E579A /* CardIO-Prefix.pch in Headers */,
-				3E9F4C3B181F03F300F33B48 /* CardIOGPUGaussianBlurFilter.h in Headers */,
 				3E9F4C3C181F03F300F33B48 /* CardIOView.h in Headers */,
 				3E9F4C3D181F03F300F33B48 /* CardIOConfig.h in Headers */,
 				3E9F4C3E181F03F300F33B48 /* CardIOViewDelegate.h in Headers */,
@@ -1921,6 +1927,7 @@
 				3E9F4BDF181F03F300F33B48 /* CardIOPaymentViewController.m in Sources */,
 				3E9F4BE0181F03F300F33B48 /* CardIOVideoFrame.mm in Sources */,
 				3E9F4BE1181F03F300F33B48 /* CardIOGuideLayer.mm in Sources */,
+				3ED00DA41BD8D60900FD2DB4 /* UIImage+ImageEffects.m in Sources */,
 				3E9F4BE2181F03F300F33B48 /* CardIOIplImage.mm in Sources */,
 				3E9F4BE3181F03F300F33B48 /* CardIOShutterView.m in Sources */,
 				3E9F4BE5181F03F300F33B48 /* CardIOViewController.mm in Sources */,
@@ -1955,7 +1962,6 @@
 				3E9F4C08181F03F300F33B48 /* CardIOBundle.m in Sources */,
 				3E9F4C09181F03F300F33B48 /* CardIOContext.m in Sources */,
 				3E9F4C0A181F03F300F33B48 /* CardIOAnimation.mm in Sources */,
-				3E9F4C0B181F03F300F33B48 /* CardIOGPUGaussianBlurFilter.m in Sources */,
 				3E9F4C0C181F03F300F33B48 /* CardIOLocalizer.m in Sources */,
 				3E9F4C0D181F03F300F33B48 /* CardIOPostalCodeTextFieldDelegate.m in Sources */,
 				3E9F4C0E181F03F300F33B48 /* CardIOConfig.m in Sources */,
