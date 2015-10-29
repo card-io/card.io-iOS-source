@@ -390,13 +390,13 @@
     return UIInterfaceOrientationPortrait;
   }
   else {
-    UIInterfaceOrientation defaultOrientation = UIDeviceOrientationUnknown;
+    UIInterfaceOrientation defaultOrientation = UIInterfaceOrientationUnknown;
     UIInterfaceOrientationMask supportedOverlayOrientationsMask = [self supportedOverlayOrientationsMask];
-    for (UIInterfaceOrientationMask orientation = UIInterfaceOrientationPortrait;
+    for (NSInteger orientation = UIInterfaceOrientationMaskPortrait;
          orientation <= UIInterfaceOrientationLandscapeRight;
          orientation++) {
       if ((supportedOverlayOrientationsMask & (1 << orientation)) != 0) {
-        defaultOrientation = orientation;
+        defaultOrientation = (UIInterfaceOrientation)orientation;
         break;
       }
     }
@@ -416,7 +416,7 @@
 }
 
 - (UIStatusBarStyle) preferredStatusBarStyle {
-  return /*UIStatusBarStyleLightContent*/1;
+  return UIStatusBarStyleLightContent;
 }
 
 #pragma mark - Handle button taps
@@ -429,7 +429,7 @@
   CardIODataEntryViewController *manualEntryViewController = [[CardIODataEntryViewController alloc] initWithContext:self.context withStatusBarHidden:self.statusBarWasOriginallyHidden];
   manualEntryViewController.manualEntry = YES;
   root.currentViewControllerIsDataEntry = YES;
-  root.initialInterfaceOrientationForViewcontroller = (UIDeviceOrientation)self.deviceOrientation;
+  root.initialInterfaceOrientationForViewcontroller = (UIInterfaceOrientation)self.deviceOrientation;
 
   if (iOS_8_PLUS) {
     // The presentViewController:/dismissViewControllerAnimated: kludge was necessary for
@@ -539,7 +539,7 @@
 
     CardIOPaymentViewController *root = (CardIOPaymentViewController *)self.navigationController;
     root.currentViewControllerIsDataEntry = YES;
-    root.initialInterfaceOrientationForViewcontroller = (UIDeviceOrientation)self.deviceOrientation;
+    root.initialInterfaceOrientationForViewcontroller = (UIInterfaceOrientation)self.deviceOrientation;
 
     if (iOS_8_PLUS) {
       // The presentViewController:/dismissViewControllerAnimated: kludge was necessary for
