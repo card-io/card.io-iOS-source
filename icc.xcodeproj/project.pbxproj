@@ -214,6 +214,10 @@
 		92263E301B83B9B5003FE678 /* mz_ios.h in Headers */ = {isa = PBXBuildFile; fileRef = 849799A6159E5EF400527FF5 /* mz_ios.h */; };
 		929AD7811B8CA8FD00F6D18E /* CardIODetectionMode.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E587F8A18C7E165000C1D3A /* CardIODetectionMode.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		929AD7821B8CA8FD00F6D18E /* CardIOUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ED8A876197DBDA900069761 /* CardIOUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A50A54C11BE2FEEC00B669FB /* CardIO_Framework_Adhoc.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = A50A54BD1BE2FEEC00B669FB /* CardIO_Framework_Adhoc.xcconfig */; };
+		A50A54C21BE2FEEC00B669FB /* CardIO_Framework_Debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = A50A54BE1BE2FEEC00B669FB /* CardIO_Framework_Debug.xcconfig */; };
+		A50A54C31BE2FEEC00B669FB /* CardIO_Framework_Release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = A50A54BF1BE2FEEC00B669FB /* CardIO_Framework_Release.xcconfig */; };
+		A50A54C41BE2FEEC00B669FB /* CardIO_Framework.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = A50A54C01BE2FEEC00B669FB /* CardIO_Framework.xcconfig */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -737,6 +741,10 @@
 		A50A54BA1BE2F7A800B669FB /* UnitTest_Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = UnitTest_Debug.xcconfig; path = build_configs/UnitTest_Debug.xcconfig; sourceTree = "<group>"; };
 		A50A54BB1BE2F7A800B669FB /* UnitTest_Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = UnitTest_Release.xcconfig; path = build_configs/UnitTest_Release.xcconfig; sourceTree = "<group>"; };
 		A50A54BC1BE2F7A800B669FB /* UnitTest.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = UnitTest.xcconfig; path = build_configs/UnitTest.xcconfig; sourceTree = "<group>"; };
+		A50A54BD1BE2FEEC00B669FB /* CardIO_Framework_Adhoc.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = CardIO_Framework_Adhoc.xcconfig; path = build_configs/CardIO_Framework_Adhoc.xcconfig; sourceTree = "<group>"; };
+		A50A54BE1BE2FEEC00B669FB /* CardIO_Framework_Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = CardIO_Framework_Debug.xcconfig; path = build_configs/CardIO_Framework_Debug.xcconfig; sourceTree = "<group>"; };
+		A50A54BF1BE2FEEC00B669FB /* CardIO_Framework_Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = CardIO_Framework_Release.xcconfig; path = build_configs/CardIO_Framework_Release.xcconfig; sourceTree = "<group>"; };
+		A50A54C01BE2FEEC00B669FB /* CardIO_Framework.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = CardIO_Framework.xcconfig; path = build_configs/CardIO_Framework.xcconfig; sourceTree = "<group>"; };
 		B55FAACD1610F3B20042B9FB /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		B55FAACE1610F3B20042B9FB /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		B55FAACF1610F3B20042B9FB /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
@@ -1804,22 +1812,26 @@
 		A50A54AC1BE2F79600B669FB /* Build Configurations */ = {
 			isa = PBXGroup;
 			children = (
+				A50A54B71BE2F7A800B669FB /* Project.xcconfig */,
 				A50A54AD1BE2F7A800B669FB /* AdHoc.xcconfig */,
+				A50A54B21BE2F7A800B669FB /* Debug.xcconfig */,
+				A50A54B81BE2F7A800B669FB /* Release.xcconfig */,
+				A50A54C01BE2FEEC00B669FB /* CardIO_Framework.xcconfig */,
+				A50A54BD1BE2FEEC00B669FB /* CardIO_Framework_Adhoc.xcconfig */,
+				A50A54BE1BE2FEEC00B669FB /* CardIO_Framework_Debug.xcconfig */,
+				A50A54BF1BE2FEEC00B669FB /* CardIO_Framework_Release.xcconfig */,
+				A50A54B11BE2F7A800B669FB /* CardIO_Static_Library.xcconfig */,
 				A50A54AE1BE2F7A800B669FB /* CardIO_Static_Library_AdHoc.xcconfig */,
 				A50A54AF1BE2F7A800B669FB /* CardIO_Static_Library_Debug.xcconfig */,
 				A50A54B01BE2F7A800B669FB /* CardIO_Static_Library_Release.xcconfig */,
-				A50A54B11BE2F7A800B669FB /* CardIO_Static_Library.xcconfig */,
-				A50A54B21BE2F7A800B669FB /* Debug.xcconfig */,
+				A50A54B61BE2F7A800B669FB /* icc.xcconfig */,
 				A50A54B31BE2F7A800B669FB /* icc_AdHoc.xcconfig */,
 				A50A54B41BE2F7A800B669FB /* icc_Debug.xcconfig */,
 				A50A54B51BE2F7A800B669FB /* icc_Release.xcconfig */,
-				A50A54B61BE2F7A800B669FB /* icc.xcconfig */,
-				A50A54B71BE2F7A800B669FB /* Project.xcconfig */,
-				A50A54B81BE2F7A800B669FB /* Release.xcconfig */,
+				A50A54BC1BE2F7A800B669FB /* UnitTest.xcconfig */,
 				A50A54B91BE2F7A800B669FB /* UnitTest_AdHoc.xcconfig */,
 				A50A54BA1BE2F7A800B669FB /* UnitTest_Debug.xcconfig */,
 				A50A54BB1BE2F7A800B669FB /* UnitTest_Release.xcconfig */,
-				A50A54BC1BE2F7A800B669FB /* UnitTest.xcconfig */,
 			);
 			name = "Build Configurations";
 			sourceTree = "<group>";
@@ -2066,6 +2078,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E9F4C4E181F07B700F33B48 /* MainWindow.xib in Resources */,
+				A50A54C21BE2FEEC00B669FB /* CardIO_Framework_Debug.xcconfig in Resources */,
 				3E9F4C50181F07B700F33B48 /* RootViewController.xib in Resources */,
 				3E9F4C51181F07B700F33B48 /* green_button@2x.png in Resources */,
 				3E9F4C52181F07B700F33B48 /* green_button.png in Resources */,
@@ -2073,6 +2086,7 @@
 				3E0133E4198AD6C5009E579A /* AdHocEntitlements.plist in Resources */,
 				3E9F4C54181F07B700F33B48 /* red_button.png in Resources */,
 				3E9F4C55181F07B700F33B48 /* yellow_button.png in Resources */,
+				A50A54C41BE2FEEC00B669FB /* CardIO_Framework.xcconfig in Resources */,
 				3E9618E819C8F6C70023CDBB /* MainWindow~iPad.xib in Resources */,
 				3E9F4C56181F07B700F33B48 /* yellow_button@2x.png in Resources */,
 				3E9F4C57181F07B700F33B48 /* yak_icon@2x.png in Resources */,
@@ -2081,6 +2095,7 @@
 				3E9F4C5C181F07B700F33B48 /* card_io_logo_black.png in Resources */,
 				3E9F4C5D181F07B700F33B48 /* RootViewController~ipad.xib in Resources */,
 				3E9F4C5F181F07B700F33B48 /* Default-568h@2x.png in Resources */,
+				A50A54C31BE2FEEC00B669FB /* CardIO_Framework_Release.xcconfig in Resources */,
 				3E9F4C60181F07B700F33B48 /* Default.png in Resources */,
 				3E9F4C61181F07B700F33B48 /* Default@2x.png in Resources */,
 				3E9F4C62181F07B700F33B48 /* simulated_camera_0.png in Resources */,
@@ -2088,6 +2103,7 @@
 				3E9F4C64181F07B700F33B48 /* card_io_logo_black@2x.png in Resources */,
 				3E9F4C65181F07B700F33B48 /* simulated_camera_2.png in Resources */,
 				3E9F4C66181F07B700F33B48 /* simulated_camera_3.png in Resources */,
+				A50A54C11BE2FEEC00B669FB /* CardIO_Framework_Adhoc.xcconfig in Resources */,
 				3E9F4C67181F07B700F33B48 /* simulated_camera_4.png in Resources */,
 				3E9F4C68181F07B700F33B48 /* simulated_camera_5.png in Resources */,
 			);
@@ -2383,208 +2399,22 @@
 		};
 		92263D761B83ACBB003FE678 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A50A54BE1BE2FEEC00B669FB /* CardIO_Framework_Debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = NO;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = NO;
-				COPY_PHASE_STRIP = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_BITCODE = NO;
-				ENABLE_NS_ASSERTIONS = YES;
-				ENABLE_STRICT_OBJC_MSGSEND = NO;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_NO_COMMON_BLOCKS = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SupportFiles/CardIO-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"CARDIO_DEBUG=1",
-					"DMZ_DEBUG=1",
-					"DEBUG=1",
-				);
-				"GCC_PREPROCESSOR_DEFINITIONS[sdk=iphoneos*]" = (
-					"CARDIO_DEBUG=1",
-					"DMZ_DEBUG=1",
-					"DEBUG=1",
-					"TEST_GENERATED_MODELS=1",
-				);
-				"GCC_PREPROCESSOR_DEFINITIONS[sdk=iphonesimulator*]" = (
-					"CARDIO_DEBUG=1",
-					"DMZ_DEBUG=1",
-					"DEBUG=1",
-					"USE_CAMERA=0",
-					"SIMULATE_CAMERA=1",
-				);
-				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = NO;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = NO;
-				GCC_WARN_UNINITIALIZED_AUTOS = NO;
-				GCC_WARN_UNUSED_FUNCTION = NO;
-				HEADER_SEARCH_PATHS = (
-					"$(SRCROOT)/opencv_device/include",
-					"$(SRCROOT)/dmz",
-				);
-				INFOPLIST_FILE = Classes/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_CPLUSPLUSFLAGS = (
-					"$(OTHER_CFLAGS)",
-					"-Wno-c++11-narrowing",
-				);
-				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = com.lumberlabs.CardIO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = 1;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
 		92263D771B83ACBB003FE678 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A50A54BF1BE2FEEC00B669FB /* CardIO_Framework_Release.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = NO;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = NO;
-				COPY_PHASE_STRIP = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_BITCODE = NO;
-				ENABLE_NS_ASSERTIONS = YES;
-				ENABLE_STRICT_OBJC_MSGSEND = NO;
-				EXPORTED_SYMBOLS_FILE = SupportFiles/CardIO_exported_symbols.txt;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_NO_COMMON_BLOCKS = NO;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SupportFiles/CardIO-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = "CARDIO_DEBUG=0";
-				"GCC_PREPROCESSOR_DEFINITIONS[sdk=iphonesimulator*]" = (
-					"CARDIO_DEBUG=0",
-					"USE_CAMERA=0",
-				);
-				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = NO;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = NO;
-				GCC_WARN_UNINITIALIZED_AUTOS = NO;
-				GCC_WARN_UNUSED_FUNCTION = NO;
-				GENERATE_MASTER_OBJECT_FILE = YES;
-				HEADER_SEARCH_PATHS = (
-					"$(SRCROOT)/opencv_device/include",
-					"$(SRCROOT)/dmz",
-				);
-				INFOPLIST_FILE = Classes/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				"OTHER_CFLAGS[sdk=*]" = (
-					"-mfloat-abi=softfp",
-					"-mfpu=neon",
-				);
-				OTHER_CPLUSPLUSFLAGS = (
-					"$(OTHER_CFLAGS)",
-					"-Wno-c++11-narrowing",
-				);
-				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = com.lumberlabs.CardIO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				RUN_CLANG_STATIC_ANALYZER = NO;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 1;
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
 		92263D781B83ACBB003FE678 /* AdHoc */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A50A54BD1BE2FEEC00B669FB /* CardIO_Framework_Adhoc.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = NO;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = NO;
-				COPY_PHASE_STRIP = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_BITCODE = NO;
-				ENABLE_NS_ASSERTIONS = YES;
-				ENABLE_STRICT_OBJC_MSGSEND = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_NO_COMMON_BLOCKS = NO;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SupportFiles/CardIO-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = "CARDIO_DEBUG=0";
-				"GCC_PREPROCESSOR_DEFINITIONS[sdk=iphonesimulator*]" = (
-					"CARDIO_DEBUG=0",
-					"USE_CAMERA=0",
-				);
-				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = NO;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = NO;
-				GCC_WARN_UNINITIALIZED_AUTOS = NO;
-				GCC_WARN_UNUSED_FUNCTION = NO;
-				GENERATE_MASTER_OBJECT_FILE = YES;
-				HEADER_SEARCH_PATHS = (
-					"$(SRCROOT)/opencv_device/include",
-					"$(SRCROOT)/dmz",
-				);
-				INFOPLIST_FILE = Classes/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_CPLUSPLUSFLAGS = (
-					"$(OTHER_CFLAGS)",
-					"-Wno-c++11-narrowing",
-				);
-				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = com.lumberlabs.CardIO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 1;
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = AdHoc;
 		};
