@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A553B6E51BE32273006DF551"
+               BlueprintIdentifier = "3E9F4C4A181F07B700F33B48"
                BuildableName = "icc.app"
-               BlueprintName = "icc"
+               BlueprintName = "icc-static"
                ReferencedContainer = "container:icc.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,9 +32,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A553B6E51BE32273006DF551"
+            BlueprintIdentifier = "3E9F4C4A181F07B700F33B48"
             BuildableName = "icc.app"
-            BlueprintName = "icc"
+            BlueprintName = "icc-static"
             ReferencedContainer = "container:icc.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -55,9 +55,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A553B6E51BE32273006DF551"
+            BlueprintIdentifier = "3E9F4C4A181F07B700F33B48"
             BuildableName = "icc.app"
-            BlueprintName = "icc"
+            BlueprintName = "icc-static"
             ReferencedContainer = "container:icc.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -74,9 +74,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A553B6E51BE32273006DF551"
+            BlueprintIdentifier = "3E9F4C4A181F07B700F33B48"
             BuildableName = "icc.app"
-            BlueprintName = "icc"
+            BlueprintName = "icc-static"
             ReferencedContainer = "container:icc.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

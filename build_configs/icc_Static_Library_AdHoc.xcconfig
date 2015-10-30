@@ -1,0 +1,16 @@
+//
+//  icc_Static_Library_AdHoc.xcconfig
+//  icc
+//
+//
+
+#include "icc_Static_Library.xcconfig"
+
+VALIDATE_PRODUCT = YES
+
+CODE_SIGN_ENTITLEMENTS = SupportFiles/AdHocEntitlements.plist
+
+COPY_PHASE_STRIP = YES
+
+GCC_PREPROCESSOR_DEFINITIONS =
+GCC_PREPROCESSOR_DEFINITIONS[sdk=iphoneos*] = USE_CAMERA=1

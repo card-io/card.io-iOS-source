@@ -1,5 +1,5 @@
 //
-//  icc.xcconfig
+//  icc_Static_Library.xcconfig
 //  icc
 //
 //
@@ -7,12 +7,14 @@
 CODE_SIGN_IDENTITY = iPhone Developer
 PROVISIONING_PROFILE =
 TARGETED_DEVICE_FAMILY = 1,2
+OTHER_LDFLAGS = $(inherited) -ObjC -lc++ -lstdc++
 INFOPLIST_FILE = SupportFiles/icc-Info.plist
 PRODUCT_BUNDLE_IDENTIFIER = com.lumberlabs.demo
-PRODUCT_NAME = icc
+PRODUCT_NAME = $(TARGET_NAME)
 ALWAYS_SEARCH_USER_PATHS = NO
 LIBRARY_SEARCH_PATHS = $(inherited) "$(SRCROOT)/Classes"
 
+IPHONEOS_DEPLOYMENT_TARGET = 6.0
 GCC_DYNAMIC_NO_PIC = NO
 
 GCC_PRECOMPILE_PREFIX_HEADER = YES
@@ -26,11 +28,3 @@ CLANG_ENABLE_OBJC_ARC = YES
 // Settings Added For Framework
 LD_RUNPATH_SEARCH_PATHS = $(inherited) @executable_path/Frameworks
 
-// Do not link to OpenCV libraries; CardIO.framework should have everything
-OTHER_LIBTOOLFLAGS =
-OTHER_LDFLAGS = -ObjC -lc++ -lstdc++
-INFOPLIST_FILE = icc-Framework-Info.plist
-PRODUCT_NAME = $(TARGET_NAME)
-
-// Requirement for embedded frameworks
-IPHONEOS_DEPLOYMENT_TARGET = 8.0

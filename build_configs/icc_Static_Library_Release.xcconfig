@@ -1,0 +1,16 @@
+//
+//  icc_Static_Library_Release.xcconfig
+//  icc
+//
+//
+
+#include "icc_Static_Library.xcconfig"
+
+VALIDATE_PRODUCT = YES
+
+COPY_PHASE_STRIP = YES
+
+GCC_PREPROCESSOR_DEFINITIONS[sdk=iphoneos*] = SHOW_ALL_DEMO_BUTTONS=1 CARDIO_DEBUG=0 USE_CAMERA=1
+
+OTHER_LIBTOOLFLAGS = $(inherited) $(SRCROOT)/opencv_device/lib/libopencv_core.a $(SRCROOT)/opencv_device/lib/libopencv_imgproc.a
+OTHER_LDFLAGS = $(inherited) $(SRCROOT)/opencv_device/lib/libopencv_core.a $(SRCROOT)/opencv_device/lib/libopencv_imgproc.a

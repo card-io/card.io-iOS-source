@@ -228,6 +228,43 @@
 		A50A54D21BE30A2800B669FB /* CardIODetectionMode.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E587F8A18C7E165000C1D3A /* CardIODetectionMode.h */; };
 		A50A54D31BE30A4200B669FB /* CardIOUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ED8A876197DBDA900069761 /* CardIOUtilities.h */; };
 		A50A54D41BE30AB300B669FB /* UIImage+ImageEffects.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ED00DA11BD8D60900FD2DB4 /* UIImage+ImageEffects.h */; };
+		A553B6E91BE32273006DF551 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
+		A553B6EA1BE32273006DF551 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 036DD69E126654ED00EB719A /* RootViewController.xib */; };
+		A553B6EB1BE32273006DF551 /* green_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 036DD6C31266574A00EB719A /* green_button@2x.png */; };
+		A553B6EC1BE32273006DF551 /* green_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 036DD6C41266574A00EB719A /* green_button.png */; };
+		A553B6ED1BE32273006DF551 /* red_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 036DD6C51266574A00EB719A /* red_button@2x.png */; };
+		A553B6EE1BE32273006DF551 /* AdHocEntitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3E0133E3198AD6C5009E579A /* AdHocEntitlements.plist */; };
+		A553B6EF1BE32273006DF551 /* red_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 036DD6C61266574A00EB719A /* red_button.png */; };
+		A553B6F01BE32273006DF551 /* yellow_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 03CA8C5D130E1660006042CE /* yellow_button.png */; };
+		A553B6F11BE32273006DF551 /* MainWindow~iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E9618E719C8F6C70023CDBB /* MainWindow~iPad.xib */; };
+		A553B6F21BE32273006DF551 /* yellow_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 03CA8C5E130E1660006042CE /* yellow_button@2x.png */; };
+		A553B6F31BE32273006DF551 /* yak_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0387A5C81346D97200CE3230 /* yak_icon@2x.png */; };
+		A553B6F41BE32273006DF551 /* yak_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0387A5C91346D97200CE3230 /* yak_icon.png */; };
+		A553B6F51BE32273006DF551 /* yak_icon~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 032E420C134FA49400830810 /* yak_icon~ipad.png */; };
+		A553B6F61BE32273006DF551 /* card_io_logo_black.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DE7CA2517BD94F300D54383 /* card_io_logo_black.png */; };
+		A553B6F71BE32273006DF551 /* RootViewController~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55DAEBCD17C8258B0041A4E6 /* RootViewController~ipad.xib */; };
+		A553B6F81BE32273006DF551 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B55FAACD1610F3B20042B9FB /* Default-568h@2x.png */; };
+		A553B6F91BE32273006DF551 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = B55FAACE1610F3B20042B9FB /* Default.png */; };
+		A553B6FA1BE32273006DF551 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B55FAACF1610F3B20042B9FB /* Default@2x.png */; };
+		A553B6FB1BE32273006DF551 /* simulated_camera_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EA0739F16E6C26C00CA6E7F /* simulated_camera_0.png */; };
+		A553B6FC1BE32273006DF551 /* simulated_camera_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5528BBBE16F7B1CA005D5011 /* simulated_camera_1.png */; };
+		A553B6FD1BE32273006DF551 /* card_io_logo_black@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DE7CA2617BD94F300D54383 /* card_io_logo_black@2x.png */; };
+		A553B6FE1BE32273006DF551 /* simulated_camera_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5528BBBF16F7B1CA005D5011 /* simulated_camera_2.png */; };
+		A553B6FF1BE32273006DF551 /* simulated_camera_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 5528BBC016F7B1CA005D5011 /* simulated_camera_3.png */; };
+		A553B7001BE32273006DF551 /* simulated_camera_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 5528BBC416F7DC14005D5011 /* simulated_camera_4.png */; };
+		A553B7011BE32273006DF551 /* simulated_camera_5.png in Resources */ = {isa = PBXBuildFile; fileRef = 5528BBC516F7DC14005D5011 /* simulated_camera_5.png */; };
+		A553B7031BE32273006DF551 /* iccAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* iccAppDelegate.m */; };
+		A553B7041BE32273006DF551 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 036DD69D126654ED00EB719A /* RootViewController.m */; };
+		A553B7051BE32273006DF551 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E0133E6198AD75C009E579A /* main.m */; };
+		A553B7061BE32273006DF551 /* iccChoicesSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55CD7FA718EF777F00BB381A /* iccChoicesSelectViewController.m */; };
+		A553B7071BE32273006DF551 /* TestGeneratedModels.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3ED9F6DF1A23CDD800BD07F8 /* TestGeneratedModels.mm */; };
+		A553B7091BE32273006DF551 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ED00DA71BD8D78200FD2DB4 /* Accelerate.framework */; };
+		A553B70A1BE32273006DF551 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E9618DF19C8EBBD0023CDBB /* AudioToolbox.framework */; };
+		A553B70B1BE32273006DF551 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EB636AA1846C6A900F0527B /* AVFoundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		A553B70C1BE32273006DF551 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E9618E119C8EBC50023CDBB /* CoreMedia.framework */; };
+		A553B70D1BE32273006DF551 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E9618E319C8EBCB0023CDBB /* MobileCoreServices.framework */; };
+		A553B7161BE322A1006DF551 /* CardIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92263D701B83ACBB003FE678 /* CardIO.framework */; };
+		A553B7171BE322A1006DF551 /* CardIO.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 92263D701B83ACBB003FE678 /* CardIO.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -237,6 +274,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 3E9F4BD9181F03F300F33B48;
 			remoteInfo = "CardIO 64-bit";
+		};
+		A553B7181BE322A1006DF551 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 92263D6F1B83ACBB003FE678;
+			remoteInfo = CardIO;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -260,6 +304,17 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A553B70F1BE32273006DF551 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A553B7171BE322A1006DF551 /* CardIO.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -673,7 +728,7 @@
 		3E9618E319C8EBCB0023CDBB /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		3E9618E719C8F6C70023CDBB /* MainWindow~iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = "MainWindow~iPad.xib"; path = "Resources/MainWindow~iPad.xib"; sourceTree = "<group>"; };
 		3E9F4C49181F03F300F33B48 /* libCardIO.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCardIO.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		3E9F4C7F181F07B700F33B48 /* icc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = icc.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E9F4C7F181F07B700F33B48 /* icc-static.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "icc-static.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EA0739F16E6C26C00CA6E7F /* simulated_camera_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = simulated_camera_0.png; sourceTree = "<group>"; };
 		3EA073A116E7DD3500CA6E7F /* dmz_olm.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = dmz_olm.cpp; sourceTree = "<group>"; };
 		3EA073A216E7DD3500CA6E7F /* dmz_olm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = dmz_olm.h; sourceTree = "<group>"; };
@@ -755,6 +810,12 @@
 		A50A54BE1BE2FEEC00B669FB /* CardIO_Framework_Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = CardIO_Framework_Debug.xcconfig; path = build_configs/CardIO_Framework_Debug.xcconfig; sourceTree = "<group>"; };
 		A50A54BF1BE2FEEC00B669FB /* CardIO_Framework_Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = CardIO_Framework_Release.xcconfig; path = build_configs/CardIO_Framework_Release.xcconfig; sourceTree = "<group>"; };
 		A50A54C01BE2FEEC00B669FB /* CardIO_Framework.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = CardIO_Framework.xcconfig; path = build_configs/CardIO_Framework.xcconfig; sourceTree = "<group>"; };
+		A553B7141BE32273006DF551 /* icc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = icc.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A553B7151BE32274006DF551 /* icc-Framework-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "icc-Framework-Info.plist"; path = "/Users/brluk/Code/card.io-iOS-source/icc-Framework-Info.plist"; sourceTree = "<absolute>"; };
+		A553B71A1BE32664006DF551 /* icc_Static_Library_AdHoc.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = icc_Static_Library_AdHoc.xcconfig; path = build_configs/icc_Static_Library_AdHoc.xcconfig; sourceTree = "<group>"; };
+		A553B71B1BE32664006DF551 /* icc_Static_Library_Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = icc_Static_Library_Debug.xcconfig; path = build_configs/icc_Static_Library_Debug.xcconfig; sourceTree = "<group>"; };
+		A553B71C1BE32664006DF551 /* icc_Static_Library_Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = icc_Static_Library_Release.xcconfig; path = build_configs/icc_Static_Library_Release.xcconfig; sourceTree = "<group>"; };
+		A553B71D1BE32664006DF551 /* icc_Static_Library.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = icc_Static_Library.xcconfig; path = build_configs/icc_Static_Library.xcconfig; sourceTree = "<group>"; };
 		B55FAACD1610F3B20042B9FB /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		B55FAACE1610F3B20042B9FB /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		B55FAACF1610F3B20042B9FB /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
@@ -837,6 +898,19 @@
 				92122C391B8C393D004D705E /* CoreMedia.framework in Frameworks */,
 				92122C361B8C38E9004D705E /* UIKit.framework in Frameworks */,
 				92122C301B8C3865004D705E /* OpenGLES.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A553B7081BE32273006DF551 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A553B7091BE32273006DF551 /* Accelerate.framework in Frameworks */,
+				A553B70A1BE32273006DF551 /* AudioToolbox.framework in Frameworks */,
+				A553B70B1BE32273006DF551 /* AVFoundation.framework in Frameworks */,
+				A553B70C1BE32273006DF551 /* CoreMedia.framework in Frameworks */,
+				A553B7161BE322A1006DF551 /* CardIO.framework in Frameworks */,
+				A553B70D1BE32273006DF551 /* MobileCoreServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1177,6 +1251,7 @@
 			children = (
 				3E0133E2198AD485009E579A /* icc_Prefix.pch */,
 				3E0133D8198AD2F3009E579A /* icc-Info.plist */,
+				A553B7151BE32274006DF551 /* icc-Framework-Info.plist */,
 				3E0133E3198AD6C5009E579A /* AdHocEntitlements.plist */,
 				B55FAACE1610F3B20042B9FB /* Default.png */,
 				B55FAACF1610F3B20042B9FB /* Default@2x.png */,
@@ -1704,8 +1779,9 @@
 			children = (
 				03306CF81284952B00683F48 /* UnitTest.octest */,
 				3E9F4C49181F03F300F33B48 /* libCardIO.a */,
-				3E9F4C7F181F07B700F33B48 /* icc.app */,
+				3E9F4C7F181F07B700F33B48 /* icc-static.app */,
 				92263D701B83ACBB003FE678 /* CardIO.framework */,
+				A553B7141BE32273006DF551 /* icc.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1713,12 +1789,12 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
-				A50A54AC1BE2F79600B669FB /* Build Configurations */,
 				030735D6134148FE00663C26 /* Public API */,
 				0305C57D1345258200A315B7 /* Core */,
 				080E96DDFE201D6D7F000001 /* Scan */,
 				0305C57A1345251700A315B7 /* Demo app */,
 				0305C57B1345254000A315B7 /* Unit tests */,
+				A50A54AC1BE2F79600B669FB /* Build Configurations */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 				034BED661354DAFA00ECEBF6 /* Non-Xcode */,
@@ -1850,6 +1926,10 @@
 				A50A54B31BE2F7A800B669FB /* icc_AdHoc.xcconfig */,
 				A50A54B41BE2F7A800B669FB /* icc_Debug.xcconfig */,
 				A50A54B51BE2F7A800B669FB /* icc_Release.xcconfig */,
+				A553B71A1BE32664006DF551 /* icc_Static_Library_AdHoc.xcconfig */,
+				A553B71B1BE32664006DF551 /* icc_Static_Library_Debug.xcconfig */,
+				A553B71C1BE32664006DF551 /* icc_Static_Library_Release.xcconfig */,
+				A553B71D1BE32664006DF551 /* icc_Static_Library.xcconfig */,
 				A50A54BC1BE2F7A800B669FB /* UnitTest.xcconfig */,
 				A50A54B91BE2F7A800B669FB /* UnitTest_AdHoc.xcconfig */,
 				A50A54BA1BE2F7A800B669FB /* UnitTest_Debug.xcconfig */,
@@ -2008,9 +2088,9 @@
 			productReference = 3E9F4C49181F03F300F33B48 /* libCardIO.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		3E9F4C4A181F07B700F33B48 /* icc */ = {
+		3E9F4C4A181F07B700F33B48 /* icc-static */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3E9F4C7B181F07B700F33B48 /* Build configuration list for PBXNativeTarget "icc" */;
+			buildConfigurationList = 3E9F4C7B181F07B700F33B48 /* Build configuration list for PBXNativeTarget "icc-static" */;
 			buildPhases = (
 				3E9F4C4D181F07B700F33B48 /* Resources */,
 				3E9F4C69181F07B700F33B48 /* Sources */,
@@ -2022,9 +2102,9 @@
 			dependencies = (
 				3E9F4C83181F0CD200F33B48 /* PBXTargetDependency */,
 			);
-			name = icc;
+			name = "icc-static";
 			productName = icc;
-			productReference = 3E9F4C7F181F07B700F33B48 /* icc.app */;
+			productReference = 3E9F4C7F181F07B700F33B48 /* icc-static.app */;
 			productType = "com.apple.product-type.application";
 		};
 		92263D6F1B83ACBB003FE678 /* CardIO */ = {
@@ -2045,6 +2125,25 @@
 			productName = CardIO;
 			productReference = 92263D701B83ACBB003FE678 /* CardIO.framework */;
 			productType = "com.apple.product-type.framework";
+		};
+		A553B6E51BE32273006DF551 /* icc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A553B7101BE32273006DF551 /* Build configuration list for PBXNativeTarget "icc" */;
+			buildPhases = (
+				A553B6E81BE32273006DF551 /* Resources */,
+				A553B7021BE32273006DF551 /* Sources */,
+				A553B7081BE32273006DF551 /* Frameworks */,
+				A553B70F1BE32273006DF551 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A553B7191BE322A1006DF551 /* PBXTargetDependency */,
+			);
+			name = icc;
+			productName = icc;
+			productReference = A553B7141BE32273006DF551 /* icc.app */;
+			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
@@ -2081,10 +2180,11 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3E9F4C4A181F07B700F33B48 /* icc */,
+				A553B6E51BE32273006DF551 /* icc */,
+				92263D6F1B83ACBB003FE678 /* CardIO */,
+				3E9F4C4A181F07B700F33B48 /* icc-static */,
 				3E9F4BD9181F03F300F33B48 /* CardIO-static */,
 				03306CF71284952B00683F48 /* UnitTest */,
-				92263D6F1B83ACBB003FE678 /* CardIO */,
 			);
 		};
 /* End PBXProject section */
@@ -2133,6 +2233,38 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A553B6E81BE32273006DF551 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A553B6E91BE32273006DF551 /* MainWindow.xib in Resources */,
+				A553B6EA1BE32273006DF551 /* RootViewController.xib in Resources */,
+				A553B6EB1BE32273006DF551 /* green_button@2x.png in Resources */,
+				A553B6EC1BE32273006DF551 /* green_button.png in Resources */,
+				A553B6ED1BE32273006DF551 /* red_button@2x.png in Resources */,
+				A553B6EE1BE32273006DF551 /* AdHocEntitlements.plist in Resources */,
+				A553B6EF1BE32273006DF551 /* red_button.png in Resources */,
+				A553B6F01BE32273006DF551 /* yellow_button.png in Resources */,
+				A553B6F11BE32273006DF551 /* MainWindow~iPad.xib in Resources */,
+				A553B6F21BE32273006DF551 /* yellow_button@2x.png in Resources */,
+				A553B6F31BE32273006DF551 /* yak_icon@2x.png in Resources */,
+				A553B6F41BE32273006DF551 /* yak_icon.png in Resources */,
+				A553B6F51BE32273006DF551 /* yak_icon~ipad.png in Resources */,
+				A553B6F61BE32273006DF551 /* card_io_logo_black.png in Resources */,
+				A553B6F71BE32273006DF551 /* RootViewController~ipad.xib in Resources */,
+				A553B6F81BE32273006DF551 /* Default-568h@2x.png in Resources */,
+				A553B6F91BE32273006DF551 /* Default.png in Resources */,
+				A553B6FA1BE32273006DF551 /* Default@2x.png in Resources */,
+				A553B6FB1BE32273006DF551 /* simulated_camera_0.png in Resources */,
+				A553B6FC1BE32273006DF551 /* simulated_camera_1.png in Resources */,
+				A553B6FD1BE32273006DF551 /* card_io_logo_black@2x.png in Resources */,
+				A553B6FE1BE32273006DF551 /* simulated_camera_2.png in Resources */,
+				A553B6FF1BE32273006DF551 /* simulated_camera_3.png in Resources */,
+				A553B7001BE32273006DF551 /* simulated_camera_4.png in Resources */,
+				A553B7011BE32273006DF551 /* simulated_camera_5.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2332,6 +2464,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A553B7021BE32273006DF551 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A553B7031BE32273006DF551 /* iccAppDelegate.m in Sources */,
+				A553B7041BE32273006DF551 /* RootViewController.m in Sources */,
+				A553B7051BE32273006DF551 /* main.m in Sources */,
+				A553B7061BE32273006DF551 /* iccChoicesSelectViewController.m in Sources */,
+				A553B7071BE32273006DF551 /* TestGeneratedModels.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -2339,6 +2483,11 @@
 			isa = PBXTargetDependency;
 			target = 3E9F4BD9181F03F300F33B48 /* CardIO-static */;
 			targetProxy = 3E9F4C82181F0CD200F33B48 /* PBXContainerItemProxy */;
+		};
+		A553B7191BE322A1006DF551 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 92263D6F1B83ACBB003FE678 /* CardIO */;
+			targetProxy = A553B7181BE322A1006DF551 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -2395,21 +2544,21 @@
 		};
 		3E9F4C7C181F07B700F33B48 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A50A54B41BE2F7A800B669FB /* icc_Debug.xcconfig */;
+			baseConfigurationReference = A553B71B1BE32664006DF551 /* icc_Static_Library_Debug.xcconfig */;
 			buildSettings = {
 			};
 			name = Debug;
 		};
 		3E9F4C7D181F07B700F33B48 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A50A54B51BE2F7A800B669FB /* icc_Release.xcconfig */;
+			baseConfigurationReference = A553B71C1BE32664006DF551 /* icc_Static_Library_Release.xcconfig */;
 			buildSettings = {
 			};
 			name = Release;
 		};
 		3E9F4C7E181F07B700F33B48 /* AdHoc */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A50A54B31BE2F7A800B669FB /* icc_AdHoc.xcconfig */;
+			baseConfigurationReference = A553B71C1BE32664006DF551 /* icc_Static_Library_Release.xcconfig */;
 			buildSettings = {
 			};
 			name = AdHoc;
@@ -2431,6 +2580,27 @@
 		92263D781B83ACBB003FE678 /* AdHoc */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A50A54BD1BE2FEEC00B669FB /* CardIO_Framework_Adhoc.xcconfig */;
+			buildSettings = {
+			};
+			name = AdHoc;
+		};
+		A553B7111BE32273006DF551 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A50A54B41BE2F7A800B669FB /* icc_Debug.xcconfig */;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		A553B7121BE32273006DF551 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A50A54B51BE2F7A800B669FB /* icc_Release.xcconfig */;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		A553B7131BE32273006DF551 /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A50A54B31BE2F7A800B669FB /* icc_AdHoc.xcconfig */;
 			buildSettings = {
 			};
 			name = AdHoc;
@@ -2474,7 +2644,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3E9F4C7B181F07B700F33B48 /* Build configuration list for PBXNativeTarget "icc" */ = {
+		3E9F4C7B181F07B700F33B48 /* Build configuration list for PBXNativeTarget "icc-static" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3E9F4C7C181F07B700F33B48 /* Debug */,
@@ -2490,6 +2660,16 @@
 				92263D761B83ACBB003FE678 /* Debug */,
 				92263D771B83ACBB003FE678 /* Release */,
 				92263D781B83ACBB003FE678 /* AdHoc */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A553B7101BE32273006DF551 /* Build configuration list for PBXNativeTarget "icc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A553B7111BE32273006DF551 /* Debug */,
+				A553B7121BE32273006DF551 /* Release */,
+				A553B7131BE32273006DF551 /* AdHoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
