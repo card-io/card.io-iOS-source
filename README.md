@@ -20,6 +20,17 @@ Using **card.io**
 
 If you merely wish to incorporate **card.io** within your iOS app, simply download the latest official release from https://github.com/card-io/card.io-iOS-SDK. That repository includes complete integration instructions and sample code.
 
+### If you use [CocoaPods](https://cocoapods.org), then add this line to your podfile:
+
+```ruby
+pod 'CardIO'
+```
+
+### If you use [Carthage](https://github.com/Carthage/Carthage), then add this line to your Cartfile:
+
+```
+github "card-io/card.io-iOS-source"
+```
 
 Dev setup
 ---------
