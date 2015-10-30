@@ -24,3 +24,7 @@ CLANG_CXX_LIBRARY = libc++
 CLANG_ENABLE_MODULES = YES
 CLANG_MODULES_AUTOLINK = YES
 CLANG_ENABLE_OBJC_ARC = YES
+
+// Settings Added For Framework
+LD_RUNPATH_SEARCH_PATHS = $(inherited) @executable_path/Frameworks
+
