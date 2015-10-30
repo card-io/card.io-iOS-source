@@ -1,0 +1,15 @@
+//
+//  Release - CardIO Static Library.xcconfig
+//  icc
+//
+//
+
+#include "CardIO_Static_Library.xcconfig"
+
+EXPORTED_SYMBOLS_FILE = SupportFiles/CardIO_exported_symbols.txt
+
+OTHER_CFLAGS[arch=armv7s] = -mfloat-abi=softfp -mfpu=neon
+OTHER_CFLAGS[sdk=iphoneos*][arch=armv7] = -mfloat-abi=softfp -mfpu=neon
+
+GCC_PREPROCESSOR_DEFINITIONS = CARDIO_DEBUG=0
+GCC_PREPROCESSOR_DEFINITIONS[sdk=iphonesimulator*] = CARDIO_DEBUG=0 USE_CAMERA=0

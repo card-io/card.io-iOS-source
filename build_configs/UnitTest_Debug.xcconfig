@@ -1,0 +1,11 @@
+//
+//  UnitTest_Debug.xcconfig
+//  icc
+//
+//
+
+#include "UnitTest.xcconfig"
+
+COPY_PHASE_STRIP = NO
+GCC_DYNAMIC_NO_PIC = NO
+GCC_OPTIMIZATION_LEVEL = 0

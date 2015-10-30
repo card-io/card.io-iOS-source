@@ -1,0 +1,11 @@
+//
+//  UnitTest_AdHoc.xcconfig
+//  icc
+//
+//
+
+#include "UnitTest.xcconfig"
+
+CODE_SIGN_ENTITLEMENTS = SupportFiles/AdHocEntitlements.plist
+
+PROVISIONING_PROFILE[sdk=iphoneos*] =

@@ -1,0 +1,38 @@
+//
+//  CardIO Static Library.xcconfig
+//  icc
+//
+//
+
+ARCHS = arm64 armv7 armv7s
+ONLY_ACTIVE_ARCH = NO
+
+
+GCC_VERSION = com.apple.compilers.llvm.clang.1_0
+
+CODE_SIGN_IDENTITY[sdk=iphoneos*] =
+
+DSTROOT = /tmp/CardIO.dst
+SKIP_INSTALL = YES
+
+KEEP_PRIVATE_EXTERNS = NO
+
+PRODUCT_NAME = CardIO
+
+ALWAYS_SEARCH_USER_PATHS = NO
+
+HEADER_SEARCH_PATHS = $(SRCROOT)/opencv_device/include $(SRCROOT)/dmz
+
+LIBRARY_SEARCH_PATHS = $(inherited) "$(SRCROOT)/Classes"
+
+// GCC_SYMBOLS_PRIVATE_EXTERN = NO
+
+GCC_C_LANGUAGE_STANDARD = gnu99
+GCC_PRECOMPILE_PREFIX_HEADER = YES
+GCC_PREFIX_HEADER = SupportFiles/CardIO-Prefix.pch
+
+CLANG_CXX_LIBRARY = libc++
+
+GCC_ENABLE_CPP_EXCEPTIONS = YES
+
+CLANG_ENABLE_OBJC_ARC = YES

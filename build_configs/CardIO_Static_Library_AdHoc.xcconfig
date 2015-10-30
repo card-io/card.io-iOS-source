@@ -1,0 +1,21 @@
+//
+//  CardIO Static Library - AdHoc.xcconfig
+//  icc
+//
+//
+
+#include "CardIO_Static_Library.xcconfig"
+
+CODE_SIGN_ENTITLEMENTS = SupportFiles/AdHocEntitlements.plist
+
+PROVISIONING_PROFILE[sdk=iphoneos*] =
+
+EXPORTED_SYMBOLS_FILE = SupportFiles/CardIO_exported_symbols.txt
+
+PRELINK_LIBS = $(SRCROOT)/opencv_device/lib/libopencv_core.a $(SRCROOT)/opencv_device/lib/libopencv_imgproc.a
+
+OTHER_CFLAGS[arch=armv7s] = -mfloat-abi=softfp -mfpu=neon
+OTHER_CFLAGS[arch=armv7] = -mfloat-abi=softfp -mfpu=neon
+
+GCC_PREPROCESSOR_DEFINITIONS = CARDIO_DEBUG=0
+GCC_PREPROCESSOR_DEFINITIONS[sdk=iphonesimulator*] = CARDIO_DEBUG=0 USE_CAMERA=0

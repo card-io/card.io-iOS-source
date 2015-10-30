@@ -1,0 +1,9 @@
+//
+//  UnitTest_Release.xcconfig
+//  icc
+//
+//
+
+#include "UnitTest.xcconfig"
+
+ZERO_LINK = NO

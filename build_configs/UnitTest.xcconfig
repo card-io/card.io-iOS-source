@@ -1,0 +1,24 @@
+//
+//  UnitTest.xcconfig
+//  icc
+//
+//
+
+GCC_VERSION = com.apple.compilers.llvm.clang.1_0
+DEBUG_INFORMATION_FORMAT = dwarf-with-dsym
+
+CODE_SIGN_IDENTITY[sdk=iphoneos*] =
+
+OTHER_LDFLAGS = -framework Foundation -framework SenTestingKit -framework UIKit
+
+INFOPLIST_FILE = UnitTest-Info.plist
+PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.${PRODUCT_NAME:rfc1034identifier}
+PRODUCT_NAME = UnitTest
+WRAPPER_EXTENSION = octest
+
+ALWAYS_SEARCH_USER_PATHS = NO
+FRAMEWORK_SEARCH_PATHS = "$(SDKROOT)/Developer/Library/Frameworks" "$(DEVELOPER_LIBRARY_DIR)/Frameworks"
+
+GCC_ENABLE_OBJC_EXCEPTIONS = YES
+
+GCC_THUMB_SUPPORT = NO

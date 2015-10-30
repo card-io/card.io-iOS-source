@@ -1,0 +1,14 @@
+//
+//  Debug.xcconfig
+//  icc
+//
+//
+
+#include "Project.xcconfig"
+
+ONLY_ACTIVE_ARCH = YES
+
+ENABLE_TESTABILITY = YES
+
+OTHER_LIBTOOLFLAGS = $(SRCROOT)/opencv_device/lib/libopencv_core.a $(SRCROOT)/opencv_device/lib/libopencv_imgproc.a
+OTHER_LDFLAGS = $(SRCROOT)/opencv_device/lib/libopencv_core.a $(SRCROOT)/opencv_device/lib/libopencv_imgproc.a

@@ -1,0 +1,19 @@
+//
+//  Debug - CardIO Static Library.xcconfig
+//  icc
+//
+//
+
+#include "CardIO_Static_Library.xcconfig"
+
+GCC_OPTIMIZATION_LEVEL = 0
+
+OTHER_CFLAGS[arch=armv7] = -mfloat-abi=softfp -mfpu=neon
+OTHER_CFLAGS[sdk=iphoneos*][arch=armv7s] = -mfloat-abi=softfp -mfpu=neon
+
+GCC_SYMBOLS_PRIVATE_EXTERN = NO
+
+
+GCC_PREPROCESSOR_DEFINITIONS = CARDIO_DEBUG=1 DMZ_DEBUG=1 DEBUG=1
+GCC_PREPROCESSOR_DEFINITIONS[sdk=iphonesimulator*] = CARDIO_DEBUG=1 USE_CAMERA=0 DMZ_DEBUG=1 DEBUG=1 SIMULATE_CAMERA=1
+GCC_PREPROCESSOR_DEFINITIONS[sdk=iphoneos*] = CARDIO_DEBUG=1 DMZ_DEBUG=1 DEBUG=1 TEST_GENERATED_MODELS=1

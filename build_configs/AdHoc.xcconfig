@@ -1,0 +1,13 @@
+//
+//  AdHoc.xcconfig
+//  icc
+//
+//
+
+#include "Project.xcconfig"
+
+CODE_SIGN_ENTITLEMENTS = SupportFiles/AdHocEntitlements.plist
+
+PRELINK_LIBS = $(SRCROOT)/opencv_device/lib/libopencv_core.a $(SRCROOT)/opencv_device/lib/libopencv_imgproc.a
+
+PRELINK_FLAGS = -objc_abi_version 2

@@ -1,0 +1,11 @@
+//
+//  Release.xcconfig
+//  icc
+//
+//
+
+#include "Project.xcconfig"
+
+ONLY_ACTIVE_ARCH = NO
+
+PRELINK_FLAGS = -objc_abi_version 2

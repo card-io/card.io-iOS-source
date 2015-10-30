@@ -1,0 +1,13 @@
+//
+//  icc_Release.xcconfig
+//  icc
+//
+//
+
+#include "icc.xcconfig"
+
+VALIDATE_PRODUCT = YES
+
+COPY_PHASE_STRIP = YES
+
+GCC_PREPROCESSOR_DEFINITIONS[sdk=iphoneos*] = SHOW_ALL_DEMO_BUTTONS=1 CARDIO_DEBUG=0 USE_CAMERA=1
