@@ -23,3 +23,6 @@ GENERATE_MASTER_OBJECT_FILE = YES
 
 RUN_CLANG_STATIC_ANALYZER = NO
 MTL_ENABLE_DEBUG_INFO = NO
+
+OTHER_LIBTOOLFLAGS = $(inherited) $(SRCROOT)/opencv_device/lib/libopencv_core.a $(SRCROOT)/opencv_device/lib/libopencv_imgproc.a
+OTHER_LDFLAGS = $(inherited) $(SRCROOT)/opencv_device/lib/libopencv_core.a $(SRCROOT)/opencv_device/lib/libopencv_imgproc.a
