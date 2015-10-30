@@ -164,7 +164,7 @@ def build(outdir=None, device_sdk=None, simulator_sdk=None, **kwargs):
 
                 # Build the Archive release
                 print(colors.blue("({build_config}) Building Archive (arm* architectures specified in build config)".format(**locals())))
-                base_xcodebuild_command = "xcrun xcodebuild -scheme CardIO -target CardIO -configuration {build_config} archive".format(**locals())
+                base_xcodebuild_command = "xcrun xcodebuild -scheme \"CardIO Static Library\" -target CardIO-static -configuration {build_config} archive".format(**locals())
                 build_dir = os.path.join(temp_dir, build_config, "Archive")
                 arch_build_dirs["archive"] = build_dir
                 os.makedirs(build_dir)
@@ -175,7 +175,7 @@ def build(outdir=None, device_sdk=None, simulator_sdk=None, **kwargs):
                 for arch, sdk in arch_to_sdk:
                     print(colors.blue("({build_config}) Building {arch}".format(**locals())))
 
-                    base_xcodebuild_command = "xcrun xcodebuild OTHER_CFLAGS='-fembed-bitcode' -target CardIO -arch {arch} -sdk {sdk} -configuration {build_config}".format(**locals())
+                    base_xcodebuild_command = "xcrun xcodebuild OTHER_CFLAGS='-fembed-bitcode' -target CardIO-static -arch {arch} -sdk {sdk} -configuration {build_config}".format(**locals())
 
                     clean_cmd =  "{base_xcodebuild_command} clean".format(**locals())
                     local(clean_cmd)
