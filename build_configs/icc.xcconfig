@@ -7,7 +7,7 @@
 CODE_SIGN_IDENTITY = iPhone Developer
 PROVISIONING_PROFILE =
 TARGETED_DEVICE_FAMILY = 1,2
-OTHER_LDFLAGS = -ObjC -lc++ -lstdc++
+OTHER_LDFLAGS = $(inherited) -ObjC -lc++ -lstdc++
 INFOPLIST_FILE = SupportFiles/icc-Info.plist
 PRODUCT_BUNDLE_IDENTIFIER = com.lumberlabs.demo
 PRODUCT_NAME = icc
