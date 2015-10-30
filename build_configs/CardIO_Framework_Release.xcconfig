@@ -6,7 +6,8 @@
 
 #include "CardIO_Framework.xcconfig"
 
-EXPORTED_SYMBOLS_FILE = SupportFiles/CardIO_exported_symbols.txt
+// Cannot use EXPORTED_SYMBOLS_FILE with Bitcode enablement (related to 22897234 in Xcode 7.1 release notes?)
+// EXPORTED_SYMBOLS_FILE = SupportFiles/CardIO_exported_symbols.txt
 
 OTHER_CFLAGS[arch=armv7s] = -mfloat-abi=softfp -mfpu=neon
 OTHER_CFLAGS[sdk=iphoneos*][arch=armv7] = -mfloat-abi=softfp -mfpu=neon
