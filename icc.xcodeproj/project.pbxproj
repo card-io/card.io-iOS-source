@@ -166,8 +166,8 @@
 		92263DEF1B83AE04003FE678 /* CardIOResource.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C86E57136650ED006B23F9 /* CardIOResource.h */; };
 		92263DF01B83AE10003FE678 /* CardIOGPUFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 8497998B159E5E3C00527FF5 /* CardIOGPUFilter.h */; };
 		92263DF11B83AE10003FE678 /* CardIOGPUFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8497998C159E5E3C00527FF5 /* CardIOGPUFilter.m */; };
-		92263DF21B83AE10003FE678 /* CardIOGPUGaussianBlurFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 3EA7E51F170BA6E700BAE3F3 /* CardIOGPUGaussianBlurFilter.h */; };
-		92263DF31B83AE10003FE678 /* CardIOGPUGaussianBlurFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA7E520170BA6FC00BAE3F3 /* CardIOGPUGaussianBlurFilter.m */; };
+		92263DF21B83AE10003FE678 /* (null) in Headers */ = {isa = PBXBuildFile; };
+		92263DF31B83AE10003FE678 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		92263DF41B83AE10003FE678 /* CardIOGPURenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 8497998D159E5E3C00527FF5 /* CardIOGPURenderer.h */; };
 		92263DF51B83AE10003FE678 /* CardIOGPURenderer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8497998E159E5E3C00527FF5 /* CardIOGPURenderer.mm */; };
 		92263DF61B83AE10003FE678 /* CardIOGPUShaders.h in Headers */ = {isa = PBXBuildFile; fileRef = 8497998F159E5E3C00527FF5 /* CardIOGPUShaders.h */; };
@@ -671,7 +671,6 @@
 		3ECDD2871885FAA000361A0F /* NSObject+CardioCategoryTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+CardioCategoryTest.m"; path = "Classes/NSObject+CardioCategoryTest.m"; sourceTree = "<group>"; };
 		3ED00DA11BD8D60900FD2DB4 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+ImageEffects.h"; path = "Classes/UIImage+ImageEffects.h"; sourceTree = "<group>"; };
 		3ED00DA21BD8D60900FD2DB4 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+ImageEffects.m"; path = "Classes/UIImage+ImageEffects.m"; sourceTree = "<group>"; };
-		3ED00DA51BD8D75E00FD2DB4 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		3ED00DA71BD8D78200FD2DB4 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		3ED37A1017A89BA500A09325 /* CardIOPostalCodeTextFieldDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CardIOPostalCodeTextFieldDelegate.h; path = Classes/CardIOPostalCodeTextFieldDelegate.h; sourceTree = "<group>"; };
 		3ED37A1117A89BA500A09325 /* CardIOPostalCodeTextFieldDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CardIOPostalCodeTextFieldDelegate.m; path = Classes/CardIOPostalCodeTextFieldDelegate.m; sourceTree = "<group>"; };
@@ -722,6 +721,22 @@
 		92122C421B8C39D0004D705E /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		92263D701B83ACBB003FE678 /* CardIO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CardIO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		92263E311B84283D003FE678 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A50A54AD1BE2F7A800B669FB /* AdHoc.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = AdHoc.xcconfig; path = build_configs/AdHoc.xcconfig; sourceTree = "<group>"; };
+		A50A54AE1BE2F7A800B669FB /* CardIO_Static_Library_AdHoc.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = CardIO_Static_Library_AdHoc.xcconfig; path = build_configs/CardIO_Static_Library_AdHoc.xcconfig; sourceTree = "<group>"; };
+		A50A54AF1BE2F7A800B669FB /* CardIO_Static_Library_Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = CardIO_Static_Library_Debug.xcconfig; path = build_configs/CardIO_Static_Library_Debug.xcconfig; sourceTree = "<group>"; };
+		A50A54B01BE2F7A800B669FB /* CardIO_Static_Library_Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = CardIO_Static_Library_Release.xcconfig; path = build_configs/CardIO_Static_Library_Release.xcconfig; sourceTree = "<group>"; };
+		A50A54B11BE2F7A800B669FB /* CardIO_Static_Library.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = CardIO_Static_Library.xcconfig; path = build_configs/CardIO_Static_Library.xcconfig; sourceTree = "<group>"; };
+		A50A54B21BE2F7A800B669FB /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Debug.xcconfig; path = build_configs/Debug.xcconfig; sourceTree = "<group>"; };
+		A50A54B31BE2F7A800B669FB /* icc_AdHoc.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = icc_AdHoc.xcconfig; path = build_configs/icc_AdHoc.xcconfig; sourceTree = "<group>"; };
+		A50A54B41BE2F7A800B669FB /* icc_Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = icc_Debug.xcconfig; path = build_configs/icc_Debug.xcconfig; sourceTree = "<group>"; };
+		A50A54B51BE2F7A800B669FB /* icc_Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = icc_Release.xcconfig; path = build_configs/icc_Release.xcconfig; sourceTree = "<group>"; };
+		A50A54B61BE2F7A800B669FB /* icc.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = icc.xcconfig; path = build_configs/icc.xcconfig; sourceTree = "<group>"; };
+		A50A54B71BE2F7A800B669FB /* Project.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Project.xcconfig; path = build_configs/Project.xcconfig; sourceTree = "<group>"; };
+		A50A54B81BE2F7A800B669FB /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Release.xcconfig; path = build_configs/Release.xcconfig; sourceTree = "<group>"; };
+		A50A54B91BE2F7A800B669FB /* UnitTest_AdHoc.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = UnitTest_AdHoc.xcconfig; path = build_configs/UnitTest_AdHoc.xcconfig; sourceTree = "<group>"; };
+		A50A54BA1BE2F7A800B669FB /* UnitTest_Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = UnitTest_Debug.xcconfig; path = build_configs/UnitTest_Debug.xcconfig; sourceTree = "<group>"; };
+		A50A54BB1BE2F7A800B669FB /* UnitTest_Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = UnitTest_Release.xcconfig; path = build_configs/UnitTest_Release.xcconfig; sourceTree = "<group>"; };
+		A50A54BC1BE2F7A800B669FB /* UnitTest.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = UnitTest.xcconfig; path = build_configs/UnitTest.xcconfig; sourceTree = "<group>"; };
 		B55FAACD1610F3B20042B9FB /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		B55FAACE1610F3B20042B9FB /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		B55FAACF1610F3B20042B9FB /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
@@ -1668,6 +1683,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				A50A54AC1BE2F79600B669FB /* Build Configurations */,
 				030735D6134148FE00663C26 /* Public API */,
 				0305C57D1345258200A315B7 /* Core */,
 				080E96DDFE201D6D7F000001 /* Scan */,
@@ -1694,7 +1710,7 @@
 				92122C2F1B8C3865004D705E /* OpenGLES.framework */,
 				92122C2C1B8C3791004D705E /* GLKit.framework */,
 				92263E311B84283D003FE678 /* UIKit.framework */,
-                3ED00DA71BD8D78200FD2DB4 /* Accelerate.framework */,
+				3ED00DA71BD8D78200FD2DB4 /* Accelerate.framework */,
 				3E9618DF19C8EBBD0023CDBB /* AudioToolbox.framework */,
 				3EB636AA1846C6A900F0527B /* AVFoundation.framework */,
 				3E9618E119C8EBC50023CDBB /* CoreMedia.framework */,
@@ -1785,6 +1801,29 @@
 			name = CardIOGPU;
 			sourceTree = "<group>";
 		};
+		A50A54AC1BE2F79600B669FB /* Build Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				A50A54AD1BE2F7A800B669FB /* AdHoc.xcconfig */,
+				A50A54AE1BE2F7A800B669FB /* CardIO_Static_Library_AdHoc.xcconfig */,
+				A50A54AF1BE2F7A800B669FB /* CardIO_Static_Library_Debug.xcconfig */,
+				A50A54B01BE2F7A800B669FB /* CardIO_Static_Library_Release.xcconfig */,
+				A50A54B11BE2F7A800B669FB /* CardIO_Static_Library.xcconfig */,
+				A50A54B21BE2F7A800B669FB /* Debug.xcconfig */,
+				A50A54B31BE2F7A800B669FB /* icc_AdHoc.xcconfig */,
+				A50A54B41BE2F7A800B669FB /* icc_Debug.xcconfig */,
+				A50A54B51BE2F7A800B669FB /* icc_Release.xcconfig */,
+				A50A54B61BE2F7A800B669FB /* icc.xcconfig */,
+				A50A54B71BE2F7A800B669FB /* Project.xcconfig */,
+				A50A54B81BE2F7A800B669FB /* Release.xcconfig */,
+				A50A54B91BE2F7A800B669FB /* UnitTest_AdHoc.xcconfig */,
+				A50A54BA1BE2F7A800B669FB /* UnitTest_Debug.xcconfig */,
+				A50A54BB1BE2F7A800B669FB /* UnitTest_Release.xcconfig */,
+				A50A54BC1BE2F7A800B669FB /* UnitTest.xcconfig */,
+			);
+			name = "Build Configurations";
+			sourceTree = "<group>";
+		};
 		B53B413616D6B61500560A6B /* Bundled resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -1866,7 +1905,7 @@
 				92263E231B83B6C1003FE678 /* hough.h in Headers */,
 				92263E241B83B6E0003FE678 /* sobel.h in Headers */,
 				92263E251B83B6E3003FE678 /* stats.h in Headers */,
-				92263DF21B83AE10003FE678 /* CardIOGPUGaussianBlurFilter.h in Headers */,
+				92263DF21B83AE10003FE678 /* (null) in Headers */,
 				92263DE11B83ADD4003FE678 /* CardIOAnimation.h in Headers */,
 				92263E2F1B83B9B0003FE678 /* geometry.h in Headers */,
 				92263E0C1B83AE1F003FE678 /* CardIOTransitionView.h in Headers */,
@@ -2229,7 +2268,7 @@
 				92263E1D1B83AF1A003FE678 /* CardIOCreditCardExpiryFormatter.m in Sources */,
 				92263DE51B83ADE7003FE678 /* CardIOUtilities.m in Sources */,
 				92263DFC1B83AE19003FE678 /* CardIOCardScanner.mm in Sources */,
-				92263DF31B83AE10003FE678 /* CardIOGPUGaussianBlurFilter.m in Sources */,
+				92263DF31B83AE10003FE678 /* (null) in Sources */,
 				92263DF81B83AE10003FE678 /* CardIOGPUTransformFilter.m in Sources */,
 				92263DF11B83AE10003FE678 /* CardIOGPUFilter.m in Sources */,
 				92263DFE1B83AE19003FE678 /* CardIOConfig.m in Sources */,
@@ -2270,442 +2309,75 @@
 /* Begin XCBuildConfiguration section */
 		03306CFA1284952B00683F48 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A50A54BA1BE2F7A800B669FB /* UnitTest_Debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				COPY_PHASE_STRIP = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_THUMB_SUPPORT = NO;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				INFOPLIST_FILE = "UnitTest-Info.plist";
-				OTHER_LDFLAGS = (
-					"-framework",
-					Foundation,
-					"-framework",
-					SenTestingKit,
-					"-framework",
-					UIKit,
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.yourcompany.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = UnitTest;
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
 		03306CFB1284952B00683F48 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A50A54BB1BE2F7A800B669FB /* UnitTest_Release.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				COPY_PHASE_STRIP = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_THUMB_SUPPORT = NO;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				INFOPLIST_FILE = "UnitTest-Info.plist";
-				OTHER_LDFLAGS = (
-					"-framework",
-					Foundation,
-					"-framework",
-					SenTestingKit,
-					"-framework",
-					UIKit,
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.yourcompany.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = UnitTest;
-				WRAPPER_EXTENSION = octest;
-				ZERO_LINK = NO;
 			};
 			name = Release;
 		};
 		03306CFC1284952B00683F48 /* AdHoc */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A50A54B91BE2F7A800B669FB /* UnitTest_AdHoc.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_ENTITLEMENTS = SupportFiles/AdHocEntitlements.plist;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_THUMB_SUPPORT = NO;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				INFOPLIST_FILE = "UnitTest-Info.plist";
-				OTHER_LDFLAGS = (
-					"-framework",
-					Foundation,
-					"-framework",
-					SenTestingKit,
-					"-framework",
-					UIKit,
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.yourcompany.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = UnitTest;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = AdHoc;
 		};
 		03DBA30D121B5A56008A1618 /* AdHoc */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A50A54AD1BE2F7A800B669FB /* AdHoc.xcconfig */;
 			buildSettings = {
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = NO;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_MODULES_AUTOLINK = NO;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = NO;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
-				CODE_SIGN_ENTITLEMENTS = SupportFiles/AdHocEntitlements.plist;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				GCC_C_LANGUAGE_STANDARD = c99;
-				GCC_THUMB_SUPPORT = NO;
-				GCC_VERSION = "";
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/opencv_device/include";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "";
-				PRELINK_FLAGS = "-objc_abi_version 2";
-				PRELINK_LIBS = "$(SRCROOT)/opencv_device/lib/libopencv_core.a $(SRCROOT)/opencv_device/lib/libopencv_imgproc.a";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
-				RUN_CLANG_STATIC_ANALYZER = YES;
-				SDKROOT = iphoneos;
 			};
 			name = AdHoc;
 		};
 		3E9F4C46181F03F300F33B48 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A50A54AF1BE2F7A800B669FB /* CardIO_Static_Library_Debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					arm64,
-					armv7,
-					armv7s,
-				);
-                CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_OBJC_ARC = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				DSTROOT = /tmp/CardIO.dst;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_ENABLE_CPP_EXCEPTIONS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SupportFiles/CardIO-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"CARDIO_DEBUG=1",
-					"DMZ_DEBUG=1",
-					"DEBUG=1",
-				);
-				"GCC_PREPROCESSOR_DEFINITIONS[sdk=iphoneos*]" = (
-					"CARDIO_DEBUG=1",
-					"DMZ_DEBUG=1",
-					"DEBUG=1",
-					"TEST_GENERATED_MODELS=1",
-				);
-				"GCC_PREPROCESSOR_DEFINITIONS[sdk=iphonesimulator*]" = (
-					"CARDIO_DEBUG=1",
-					"USE_CAMERA=0",
-					"DMZ_DEBUG=1",
-					"DEBUG=1",
-					"SIMULATE_CAMERA=1",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				HEADER_SEARCH_PATHS = (
-					"$(SRCROOT)/opencv_device/include",
-					"$(SRCROOT)/dmz",
-				);
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/Classes\"",
-				);
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_CFLAGS = "";
-				"OTHER_CFLAGS[arch=armv7]" = (
-					"-mfloat-abi=softfp",
-					"-mfpu=neon",
-				);
-				"OTHER_CFLAGS[sdk=iphoneos*][arch=armv7s]" = (
-					"-mfloat-abi=softfp",
-					"-mfpu=neon",
-				);
-				OTHER_LDFLAGS = (
-					"$(SRCROOT)/opencv_device/lib/libopencv_core.a",
-					"$(SRCROOT)/opencv_device/lib/libopencv_imgproc.a",
-				);
-				PRODUCT_NAME = CardIO;
-				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
 		3E9F4C47181F03F300F33B48 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A50A54B01BE2F7A800B669FB /* CardIO_Static_Library_Release.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					arm64,
-					armv7,
-					armv7s,
-				);
-                CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_OBJC_ARC = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				DSTROOT = /tmp/CardIO.dst;
-				EXPORTED_SYMBOLS_FILE = SupportFiles/CardIO_exported_symbols.txt;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_ENABLE_CPP_EXCEPTIONS = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SupportFiles/CardIO-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = "CARDIO_DEBUG=0";
-				"GCC_PREPROCESSOR_DEFINITIONS[sdk=iphonesimulator*]" = (
-					"CARDIO_DEBUG=0",
-					"USE_CAMERA=0",
-				);
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				GENERATE_MASTER_OBJECT_FILE = YES;
-				HEADER_SEARCH_PATHS = (
-					"$(SRCROOT)/opencv_device/include",
-					"$(SRCROOT)/dmz",
-				);
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				KEEP_PRIVATE_EXTERNS = NO;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/Classes\"",
-				);
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_CFLAGS = "";
-				"OTHER_CFLAGS[arch=arm64]" = "";
-				"OTHER_CFLAGS[arch=armv7s]" = (
-					"-mfloat-abi=softfp",
-					"-mfpu=neon",
-				);
-				"OTHER_CFLAGS[sdk=iphoneos*][arch=armv7]" = (
-					"-mfloat-abi=softfp",
-					"-mfpu=neon",
-				);
-				OTHER_LDFLAGS = "";
-				PRELINK_LIBS = "$(SRCROOT)/opencv_device/lib/libopencv_core.a $(SRCROOT)/opencv_device/lib/libopencv_imgproc.a";
-				PRODUCT_NAME = CardIO;
-				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
 		3E9F4C48181F03F300F33B48 /* AdHoc */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A50A54AE1BE2F7A800B669FB /* CardIO_Static_Library_AdHoc.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					arm64,
-					armv7,
-					armv7s,
-				);
-                CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_ENTITLEMENTS = SupportFiles/AdHocEntitlements.plist;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				DSTROOT = /tmp/CardIO.dst;
-				EXPORTED_SYMBOLS_FILE = SupportFiles/CardIO_exported_symbols.txt;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_ENABLE_CPP_EXCEPTIONS = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SupportFiles/CardIO-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = "CARDIO_DEBUG=0";
-				"GCC_PREPROCESSOR_DEFINITIONS[sdk=iphonesimulator*]" = (
-					"CARDIO_DEBUG=0",
-					"USE_CAMERA=0",
-				);
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				GENERATE_MASTER_OBJECT_FILE = YES;
-				HEADER_SEARCH_PATHS = (
-					"$(SRCROOT)/opencv_device/include",
-					"$(SRCROOT)/dmz",
-				);
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/Classes\"",
-				);
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_CFLAGS = "";
-				"OTHER_CFLAGS[arch=armv7]" = (
-					"-mfloat-abi=softfp",
-					"-mfpu=neon",
-				);
-				"OTHER_CFLAGS[arch=armv7s]" = (
-					"-mfloat-abi=softfp",
-					"-mfpu=neon",
-				);
-				"OTHER_CFLAGS[sdk=iphoneos*][arch=arm64]" = "";
-				OTHER_LDFLAGS = "";
-				PRELINK_LIBS = "$(SRCROOT)/opencv_device/lib/libopencv_core.a $(SRCROOT)/opencv_device/lib/libopencv_imgproc.a";
-				PRODUCT_NAME = CardIO;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
-				SKIP_INSTALL = YES;
 			};
 			name = AdHoc;
 		};
 		3E9F4C7C181F07B700F33B48 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A50A54B41BE2F7A800B669FB /* icc_Debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_MODULES_AUTOLINK = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = SupportFiles/icc_Prefix.pch;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"CARDIO_DEBUG=1",
-					"USE_CAMERA=0",
-					"DMZ_DEBUG=1",
-					"TEST_GENERATED_MODELS=1",
-				);
-				"GCC_PREPROCESSOR_DEFINITIONS[sdk=iphoneos*]" = (
-					"CARDIO_DEBUG=1",
-					"USE_CAMERA=1",
-					"DMZ_DEBUG=1",
-					"DEBUG=1",
-					"TEST_GENERATED_MODELS=1",
-				);
-				"GCC_PREPROCESSOR_DEFINITIONS[sdk=iphonesimulator*]" = (
-					"CARDIO_DEBUG=1",
-					"USE_CAMERA=0",
-					"DMZ_DEBUG=1",
-					"SIMULATE_CAMERA=1",
-					"DEBUG=1",
-				);
-				GCC_VERSION = "";
-				INFOPLIST_FILE = "SupportFiles/icc-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/Classes\"",
-				);
-				OTHER_CFLAGS = "";
-				"OTHER_CFLAGS[sdk=iphoneos*][arch=*]" = "";
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-lc++",
-					"-lstdc++",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.lumberlabs.demo;
-				PRODUCT_NAME = icc;
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=*]" = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		3E9F4C7D181F07B700F33B48 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A50A54B51BE2F7A800B669FB /* icc_Release.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_MODULES_AUTOLINK = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = SupportFiles/icc_Prefix.pch;
-				GCC_PREPROCESSOR_DEFINITIONS = "";
-				"GCC_PREPROCESSOR_DEFINITIONS[sdk=iphoneos*]" = (
-					"SHOW_ALL_DEMO_BUTTONS=1",
-					"CARDIO_DEBUG=0",
-					"USE_CAMERA=1",
-				);
-				GCC_VERSION = "";
-				INFOPLIST_FILE = "SupportFiles/icc-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/Classes\"",
-				);
-				ONLY_ACTIVE_ARCH = YES;
-				OTHER_CFLAGS = "";
-				"OTHER_CFLAGS[sdk=iphoneos*][arch=*]" = "";
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-lc++",
-					"-lstdc++",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.lumberlabs.demo;
-				PRODUCT_NAME = icc;
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		3E9F4C7E181F07B700F33B48 /* AdHoc */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A50A54B31BE2F7A800B669FB /* icc_AdHoc.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_MODULES_AUTOLINK = YES;
-				CODE_SIGN_ENTITLEMENTS = SupportFiles/AdHocEntitlements.plist;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = SupportFiles/icc_Prefix.pch;
-				GCC_PREPROCESSOR_DEFINITIONS = "";
-				"GCC_PREPROCESSOR_DEFINITIONS[sdk=iphoneos*]" = "USE_CAMERA=1";
-				GCC_VERSION = "";
-				INFOPLIST_FILE = "SupportFiles/icc-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/Classes\"",
-				);
-				OTHER_CFLAGS = "";
-				"OTHER_CFLAGS[sdk=iphoneos*][arch=*]" = "";
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-lc++",
-					"-lstdc++",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.lumberlabs.demo;
-				PRODUCT_NAME = icc;
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 			};
 			name = AdHoc;
 		};
@@ -2918,70 +2590,17 @@
 		};
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A50A54B21BE2F7A800B669FB /* Debug.xcconfig */;
 			buildSettings = {
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = NO;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_MODULES_AUTOLINK = NO;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = NO;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = c99;
-				GCC_THUMB_SUPPORT = NO;
-				GCC_VERSION = "";
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/opencv_device/include";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = "";
-				OTHER_LDFLAGS = (
-					"$(SRCROOT)/opencv_device/lib/libopencv_core.a",
-					"$(SRCROOT)/opencv_device/lib/libopencv_imgproc.a",
-				);
-				OTHER_LIBTOOLFLAGS = "$(SRCROOT)/opencv_device/lib/libopencv_core.a $(SRCROOT)/opencv_device/lib/libopencv_imgproc.a";
-				PRELINK_FLAGS = "";
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
-				RUN_CLANG_STATIC_ANALYZER = YES;
-				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
 		C01FCF5008A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A50A54B81BE2F7A800B669FB /* Release.xcconfig */;
 			buildSettings = {
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = NO;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_MODULES_AUTOLINK = NO;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = NO;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				GCC_C_LANGUAGE_STANDARD = c99;
-				GCC_THUMB_SUPPORT = NO;
-				GCC_VERSION = "";
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/opencv_device/include";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "";
-				PRELINK_FLAGS = "-objc_abi_version 2";
-				PRELINK_LIBS = "";
-				RUN_CLANG_STATIC_ANALYZER = YES;
-				SDKROOT = iphoneos;
 			};
 			name = Release;
 		};
