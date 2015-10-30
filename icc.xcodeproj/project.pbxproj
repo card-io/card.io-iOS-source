@@ -212,10 +212,6 @@
 		92263E301B83B9B5003FE678 /* mz_ios.h in Headers */ = {isa = PBXBuildFile; fileRef = 849799A6159E5EF400527FF5 /* mz_ios.h */; };
 		929AD7811B8CA8FD00F6D18E /* CardIODetectionMode.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E587F8A18C7E165000C1D3A /* CardIODetectionMode.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		929AD7821B8CA8FD00F6D18E /* CardIOUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ED8A876197DBDA900069761 /* CardIOUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A50A54C11BE2FEEC00B669FB /* CardIO_Framework_Adhoc.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = A50A54BD1BE2FEEC00B669FB /* CardIO_Framework_Adhoc.xcconfig */; };
-		A50A54C21BE2FEEC00B669FB /* CardIO_Framework_Debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = A50A54BE1BE2FEEC00B669FB /* CardIO_Framework_Debug.xcconfig */; };
-		A50A54C31BE2FEEC00B669FB /* CardIO_Framework_Release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = A50A54BF1BE2FEEC00B669FB /* CardIO_Framework_Release.xcconfig */; };
-		A50A54C41BE2FEEC00B669FB /* CardIO_Framework.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = A50A54C01BE2FEEC00B669FB /* CardIO_Framework.xcconfig */; };
 		A50A54C51BE306DB00B669FB /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED00DA21BD8D60900FD2DB4 /* UIImage+ImageEffects.m */; };
 		A50A54C61BE3094500B669FB /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ED00DA71BD8D78200FD2DB4 /* Accelerate.framework */; };
 		A50A54C71BE3095000B669FB /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ED00DA71BD8D78200FD2DB4 /* Accelerate.framework */; };
@@ -2056,7 +2052,7 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0710;
 				TargetAttributes = {
 					3E9F4C4A181F07B700F33B48 = {
 						DevelopmentTeam = V8KL7848Q4;
@@ -2106,7 +2102,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E9F4C4E181F07B700F33B48 /* MainWindow.xib in Resources */,
-				A50A54C21BE2FEEC00B669FB /* CardIO_Framework_Debug.xcconfig in Resources */,
 				3E9F4C50181F07B700F33B48 /* RootViewController.xib in Resources */,
 				3E9F4C51181F07B700F33B48 /* green_button@2x.png in Resources */,
 				3E9F4C52181F07B700F33B48 /* green_button.png in Resources */,
@@ -2114,7 +2109,6 @@
 				3E0133E4198AD6C5009E579A /* AdHocEntitlements.plist in Resources */,
 				3E9F4C54181F07B700F33B48 /* red_button.png in Resources */,
 				3E9F4C55181F07B700F33B48 /* yellow_button.png in Resources */,
-				A50A54C41BE2FEEC00B669FB /* CardIO_Framework.xcconfig in Resources */,
 				3E9618E819C8F6C70023CDBB /* MainWindow~iPad.xib in Resources */,
 				3E9F4C56181F07B700F33B48 /* yellow_button@2x.png in Resources */,
 				3E9F4C57181F07B700F33B48 /* yak_icon@2x.png in Resources */,
@@ -2123,7 +2117,6 @@
 				3E9F4C5C181F07B700F33B48 /* card_io_logo_black.png in Resources */,
 				3E9F4C5D181F07B700F33B48 /* RootViewController~ipad.xib in Resources */,
 				3E9F4C5F181F07B700F33B48 /* Default-568h@2x.png in Resources */,
-				A50A54C31BE2FEEC00B669FB /* CardIO_Framework_Release.xcconfig in Resources */,
 				3E9F4C60181F07B700F33B48 /* Default.png in Resources */,
 				3E9F4C61181F07B700F33B48 /* Default@2x.png in Resources */,
 				3E9F4C62181F07B700F33B48 /* simulated_camera_0.png in Resources */,
@@ -2131,7 +2124,6 @@
 				3E9F4C64181F07B700F33B48 /* card_io_logo_black@2x.png in Resources */,
 				3E9F4C65181F07B700F33B48 /* simulated_camera_2.png in Resources */,
 				3E9F4C66181F07B700F33B48 /* simulated_camera_3.png in Resources */,
-				A50A54C11BE2FEEC00B669FB /* CardIO_Framework_Adhoc.xcconfig in Resources */,
 				3E9F4C67181F07B700F33B48 /* simulated_camera_4.png in Resources */,
 				3E9F4C68181F07B700F33B48 /* simulated_camera_5.png in Resources */,
 			);
