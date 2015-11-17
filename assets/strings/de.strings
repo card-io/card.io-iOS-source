@@ -11,6 +11,7 @@
 "entry_number" = "Nummer";
 "entry_title" = "Kreditkarte";
 "entry_postal_code" = "PLZ";
+"entry_cardholder_name" = "Name des Karteninhabers";
 "expires_placeholder" = "MM/JJ";
 "manual_entry" = "Manuell eingeben";
 "ok" = "OK";

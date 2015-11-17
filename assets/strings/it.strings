@@ -11,6 +11,7 @@
 "entry_number" = "Numero";
 "entry_title" = "Carta";
 "entry_postal_code" = "Codice postale";
+"entry_cardholder_name" = "Nome del Titolare";
 "expires_placeholder" = "MM/AA";
 "manual_entry" = "Digita i dati";
 "ok" = "OK";

@@ -11,6 +11,7 @@
 "entry_number" = "Номер";
 "entry_title" = "Карта";
 "entry_postal_code" = "Индекс";
+"entry_cardholder_name" = "Имя владельца карты";
 "expires_placeholder" = "ММ/ГГ";
 "manual_entry" = "Ввести вручную";
 "ok" = "ОК";

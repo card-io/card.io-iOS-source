@@ -120,6 +120,8 @@
 		3ED00DA81BD8D78200FD2DB4 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ED00DA71BD8D78200FD2DB4 /* Accelerate.framework */; };
 		3ED8A878197DBDAE00069761 /* CardIOUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED8A874197DBD5F00069761 /* CardIOUtilities.m */; };
 		3EE558981A5B4BC60094929A /* TestGeneratedModels.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3ED9F6DF1A23CDD800BD07F8 /* TestGeneratedModels.mm */; };
+		4358E6F91BFBBCBB007E07C3 /* CardIOCardholderNameTextFieldDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4358E6F71BFBB35E007E07C3 /* CardIOCardholderNameTextFieldDelegate.m */; };
+		4358E6FA1BFBBCCC007E07C3 /* CardIOCardholderNameTextFieldDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 4358E6F61BFBB35E007E07C3 /* CardIOCardholderNameTextFieldDelegate.h */; };
 		55CD7FA818EF777F00BB381A /* iccChoicesSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55CD7FA718EF777F00BB381A /* iccChoicesSelectViewController.m */; };
 		92122C301B8C3865004D705E /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92122C2F1B8C3865004D705E /* OpenGLES.framework */; };
 		92122C361B8C38E9004D705E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92263E311B84283D003FE678 /* UIKit.framework */; };
@@ -754,6 +756,8 @@
 		3ED9F6E21A23CF3200BD07F8 /* expiry_seg.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; lineEnding = 0; path = expiry_seg.cpp; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
 		3ED9F6E31A23CF3200BD07F8 /* expiry_seg.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = expiry_seg.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		3ED9F6E41A23CF3200BD07F8 /* expiry_types.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = expiry_types.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		4358E6F61BFBB35E007E07C3 /* CardIOCardholderNameTextFieldDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIOCardholderNameTextFieldDelegate.h; sourceTree = "<group>"; };
+		4358E6F71BFBB35E007E07C3 /* CardIOCardholderNameTextFieldDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardIOCardholderNameTextFieldDelegate.m; sourceTree = "<group>"; };
 		5528BBBE16F7B1CA005D5011 /* simulated_camera_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = simulated_camera_1.png; sourceTree = "<group>"; };
 		5528BBBF16F7B1CA005D5011 /* simulated_camera_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = simulated_camera_2.png; sourceTree = "<group>"; };
 		5528BBC016F7B1CA005D5011 /* simulated_camera_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = simulated_camera_3.png; sourceTree = "<group>"; };
@@ -1107,6 +1111,8 @@
 				0307360C1343C0F300663C26 /* CardIONumbersTextFieldDelegate.m */,
 				3ED37A1017A89BA500A09325 /* CardIOPostalCodeTextFieldDelegate.h */,
 				3ED37A1117A89BA500A09325 /* CardIOPostalCodeTextFieldDelegate.m */,
+				4358E6F61BFBB35E007E07C3 /* CardIOCardholderNameTextFieldDelegate.h */,
+				4358E6F71BFBB35E007E07C3 /* CardIOCardholderNameTextFieldDelegate.m */,
 			);
 			name = "Text field";
 			sourceTree = "<group>";
@@ -2014,6 +2020,7 @@
 				92263DCF1B83AD6B003FE678 /* CardIOCreditCardInfo.h in Headers */,
 				92263DD31B83AD89003FE678 /* CardIOPaymentViewControllerDelegate.h in Headers */,
 				92263DD11B83AD78003FE678 /* CardIOViewDelegate.h in Headers */,
+				4358E6FA1BFBBCCC007E07C3 /* CardIOCardholderNameTextFieldDelegate.h in Headers */,
 				A50A54D41BE30AB300B669FB /* UIImage+ImageEffects.h in Headers */,
 				92263DD01B83AD73003FE678 /* CardIOView.h in Headers */,
 				92263DEC1B83AE03003FE678 /* CardIOResource.h in Headers */,
@@ -2417,6 +2424,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4358E6F91BFBBCBB007E07C3 /* CardIOCardholderNameTextFieldDelegate.m in Sources */,
 				92263E2B1B83B916003FE678 /* CardIOTableViewCell.m in Sources */,
 				92263DDF1B83ADC0003FE678 /* CardIOPaymentViewController.m in Sources */,
 				92263E021B83AE19003FE678 /* CardIOVideoFrame.mm in Sources */,

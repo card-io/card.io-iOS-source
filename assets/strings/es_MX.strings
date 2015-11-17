@@ -11,6 +11,7 @@
 "entry_number" = "Número";
 "entry_title" = "Tarjeta";
 "entry_postal_code" = "Código postal";
+"entry_cardholder_name" = "Nombre del Tarjetahabiente";
 "expires_placeholder" = "MM/AA";
 "manual_entry" = "Ingresar manualmente";
 "ok" = "Aceptar";

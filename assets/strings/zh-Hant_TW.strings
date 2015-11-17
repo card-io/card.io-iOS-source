@@ -11,6 +11,7 @@
 "entry_number" = "號碼";
 "entry_title" = "信用卡";
 "entry_postal_code" = "郵遞區號";
+"entry_cardholder_name" = "持卡人姓名";
 "expires_placeholder" = "月 / 年";
 "manual_entry" = "手動輸入";
 "ok" = "確定";
