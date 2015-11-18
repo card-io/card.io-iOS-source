@@ -122,6 +122,7 @@
 		3EE558981A5B4BC60094929A /* TestGeneratedModels.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3ED9F6DF1A23CDD800BD07F8 /* TestGeneratedModels.mm */; };
 		4358E6F91BFBBCBB007E07C3 /* CardIOCardholderNameTextFieldDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4358E6F71BFBB35E007E07C3 /* CardIOCardholderNameTextFieldDelegate.m */; };
 		4358E6FA1BFBBCCC007E07C3 /* CardIOCardholderNameTextFieldDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 4358E6F61BFBB35E007E07C3 /* CardIOCardholderNameTextFieldDelegate.h */; };
+		438FDD141BFD1BF3007DC6CB /* CardIOCardholderNameTextFieldDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4358E6F71BFBB35E007E07C3 /* CardIOCardholderNameTextFieldDelegate.m */; };
 		55CD7FA818EF777F00BB381A /* iccChoicesSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55CD7FA718EF777F00BB381A /* iccChoicesSelectViewController.m */; };
 		92122C301B8C3865004D705E /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92122C2F1B8C3865004D705E /* OpenGLES.framework */; };
 		92122C361B8C38E9004D705E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92263E311B84283D003FE678 /* UIKit.framework */; };
@@ -2361,6 +2362,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				438FDD141BFD1BF3007DC6CB /* CardIOCardholderNameTextFieldDelegate.m in Sources */,
 				3E9F4BDE181F03F300F33B48 /* CardIOTableViewCell.m in Sources */,
 				3E9F4BDF181F03F300F33B48 /* CardIOPaymentViewController.m in Sources */,
 				3E9F4BE0181F03F300F33B48 /* CardIOVideoFrame.mm in Sources */,
