@@ -343,6 +343,7 @@
 		self.cardholderNameTextField.text = @"";
 		self.cardholderNameTextField.textAlignment = [CardIOLocalizer textAlignmentForLanguageOrLocale:self.context.languageOrLocale];
 		self.cardholderNameTextField.autocorrectionType = UITextAutocorrectionTypeNo;
+		self.cardholderNameTextField.autocapitalizationType = UITextAutocapitalizationTypeWords;
 		
 		[rows addObject:cardholderNameRow];
 	}
