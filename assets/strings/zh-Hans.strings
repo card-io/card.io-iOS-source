@@ -11,6 +11,7 @@
 "entry_number" = "号码";
 "entry_title" = "卡";
 "entry_postal_code" = "邮政编码";
+"entry_cardholder_name" = "持卡人姓名";
 "expires_placeholder" = "MM/YY";
 "manual_entry" = "手动输入";
 "ok" = "确定";

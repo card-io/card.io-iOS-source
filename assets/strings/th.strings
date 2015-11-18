@@ -11,6 +11,7 @@
 "entry_number" = "หมายเลข";
 "entry_title" = "บัตร";
 "entry_postal_code" = "รหัสไปรษณีย์";
+"entry_cardholder_name" = "ชื่อผู้ถือบัตร";
 "expires_placeholder" = "ดด/ปป";
 "manual_entry" = "ป้อนข้อมูลเอง";
 "ok" = "ตกลง";

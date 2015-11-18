@@ -11,6 +11,7 @@
 "entry_number" = "Nummer";
 "entry_title" = "Kort";
 "entry_postal_code" = "Postnummer";
+"entry_cardholder_name" = "Kortinnehavarens Namn";
 "expires_placeholder" = "MM/ÅÅ";
 "manual_entry" = "Ange manuellt";
 "ok" = "OK";
