@@ -141,19 +141,19 @@
         [collect appendString:@"/"];
       }
       [collect appendString:@"collectCVV"];
-		}
-		if (self.collectPostalCode) {
-			if ([collect length]) {
-				[collect appendString:@"/"];
-			}
-			[collect appendString:@"collectPostalCode"];
-		}
-		if (self.collectCardholderName) {
-			if ([collect length]) {
-				[collect appendString:@"/"];
-			}
-			[collect appendString:@"collectCardholderName"];
-		}
+    }
+    if (self.collectPostalCode) {
+      if ([collect length]) {
+        [collect appendString:@"/"];
+      }
+      [collect appendString:@"collectPostalCode"];
+    }
+    if (self.collectCardholderName) {
+      if ([collect length]) {
+        [collect appendString:@"/"];
+      }
+      [collect appendString:@"collectCardholderName"];
+    }
     NSLog(@"Warning: suppressScanConfirmation blocks %@.", collect);
   }
 }
@@ -348,9 +348,9 @@
           ,DESCRIBE_BOOL(suppressScannedCardImage)
           ,DESCRIBE_BOOL(maskManualEntryDigits)
           ,DESCRIBE_BOOL(collectExpiry)
-					,DESCRIBE_BOOL(collectCVV)
-					,DESCRIBE_BOOL(collectPostalCode)
-					,DESCRIBE_BOOL(collectCardholderName)
+          ,DESCRIBE_BOOL(collectCVV)
+          ,DESCRIBE_BOOL(collectPostalCode)
+          ,DESCRIBE_BOOL(collectCardholderName)
           ,DESCRIBE_BOOL(scanExpiry)
           ,DESCRIBE_BOOL(useCardIOLogo)
           ,DESCRIBE_BOOL(disableManualEntryButtons)

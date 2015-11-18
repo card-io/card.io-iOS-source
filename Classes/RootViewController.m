@@ -78,9 +78,9 @@
 - (IBAction)scan {
   CardIOPaymentViewController *paymentVC = [[CardIOPaymentViewController alloc] initWithPaymentDelegate:self scanningEnabled:!self.manualSwitch.on];
   paymentVC.collectExpiry = self.expirySwitch.on;
-	paymentVC.collectCVV = self.cvvSwitch.on;
-	paymentVC.collectPostalCode = self.zipSwitch.on;
-	paymentVC.collectCardholderName = self.nameSwitch.on;
+  paymentVC.collectCVV = self.cvvSwitch.on;
+  paymentVC.collectPostalCode = self.zipSwitch.on;
+  paymentVC.collectCardholderName = self.nameSwitch.on;
   paymentVC.disableManualEntryButtons = self.disableManualEntrySwitch.on;
   paymentVC.useCardIOLogo = self.useCardIOLogoSwitch.on;
   paymentVC.allowFreelyRotatingCardGuide = NO;
@@ -183,9 +183,9 @@
 
   self.i18nCardIOPaymentViewController = [[CardIOPaymentViewController alloc] initWithPaymentDelegate:self scanningEnabled:(self.i18nPhase == 0)];
   self.i18nCardIOPaymentViewController.collectExpiry = YES;
-	self.i18nCardIOPaymentViewController.collectCVV = YES;
-	self.i18nCardIOPaymentViewController.collectPostalCode = YES;
-	self.i18nCardIOPaymentViewController.collectCardholderName = YES;
+  self.i18nCardIOPaymentViewController.collectCVV = YES;
+  self.i18nCardIOPaymentViewController.collectPostalCode = YES;
+  self.i18nCardIOPaymentViewController.collectCardholderName = YES;
   self.i18nCardIOPaymentViewController.disableManualEntryButtons = NO;
   self.i18nCardIOPaymentViewController.useCardIOLogo = NO;
   self.i18nCardIOPaymentViewController.languageOrLocale = language;
@@ -419,13 +419,13 @@
   }
   if(self.cvvSwitch.on) {
     [resultStr appendFormat:@"CVV: %@\n", info.cvv];
-	}
-	if(self.zipSwitch.on) {
-		[resultStr appendFormat:@"Postal Code: %@\n", info.postalCode];
-	}
-	if(self.nameSwitch.on) {
-		[resultStr appendFormat:@"Cardholder Name: %@\n", info.cardholderName];
-	}
+  }
+  if(self.zipSwitch.on) {
+    [resultStr appendFormat:@"Postal Code: %@\n", info.postalCode];
+  }
+  if(self.nameSwitch.on) {
+    [resultStr appendFormat:@"Cardholder Name: %@\n", info.cardholderName];
+  }
 
 #if CARDIO_DEBUG
   [self setOutcomeText:resultStr image:info.cardImage];
