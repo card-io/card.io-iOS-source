@@ -8,17 +8,17 @@
 @implementation CardIOCardholderNameTextFieldDelegate
 
 -(id) init {
-	if ((self = [super init])) {
-		// Globalization: alphanumeric, space, hyphen are all definitely okay;
-		// there's no compelling reason for us to get fussy here.
-		self.numbersOnly = NO;
-		self.maxLength = 175;  // PayPal REST APIs accept max of 175 chars for cardholder name
-	}
-	return self;
+  if ((self = [super init])) {
+    // Globalization: alphanumeric, space, hyphen are all definitely okay;
+    // there's no compelling reason for us to get fussy here.
+    self.numbersOnly = NO;
+    self.maxLength = 175;  // PayPal REST APIs accept max of 175 chars for cardholder name
+  }
+  return self;
 }
 
 +(BOOL)isValidCardholderName:(NSString*)cardholderName {
-	return [cardholderName length] > 0;
+  return [cardholderName length] > 0;
 }
 
 @end
