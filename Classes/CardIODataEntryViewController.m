@@ -338,7 +338,7 @@
     self.cardholderNameTextField.placeholder = cardholderNameText;
     self.cardholderNameTextField.delegate = self.cardholderNameRowTextFieldDelegate;
     self.cardholderNameTextField.text = self.cardInfo.cardholderName;
-    self.cardholderNameTextField.keyboardType = UIKeyboardTypeNumbersAndPunctuation;
+    self.cardholderNameTextField.keyboardType = UIKeyboardTypeDefault;
     self.cardholderNameTextField.clearButtonMode = UITextFieldViewModeNever;
     self.cardholderNameTextField.text = @"";
     self.cardholderNameTextField.textAlignment = [CardIOLocalizer textAlignmentForLanguageOrLocale:self.context.languageOrLocale];
