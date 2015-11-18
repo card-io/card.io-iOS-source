@@ -972,7 +972,6 @@
   self.cardInfo.cardholderName = self.cardholderNameTextField.text;
 
   if([CardIOCardholderNameTextFieldDelegate isValidCardholderName:self.cardInfo.cardholderName]) {
-    [self advanceToNextEmptyFieldFrom:self.cardholderNameTextField];
     self.cardholderNameTextField.textColor = [CardIOTableViewCell defaultDetailTextLabelColorForCellStyle:[CardIOTableViewCell defaultCellStyle]];
   } else if(self.cardholderNameTextField.text.length >= 175) {
     // probably won't reach this case, since length == 175 is the only validation rule, but we'll leave it here for consitency and for future enhancements.
