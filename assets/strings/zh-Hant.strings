@@ -6,13 +6,13 @@
 "deactivate_flash" = "關閉閃光燈。";
 "done" = "完成";
 "entry_card_number" = "卡號";
-"entry_cvv" = "信用卡安全碼";
+"entry_cvv" = "CVV";
 "entry_expires" = "到期日";
 "entry_number" = "號碼";
 "entry_title" = "信用卡";
 "entry_postal_code" = "郵遞區號";
-"entry_cardholder_name" = "持卡人姓名";
-"expires_placeholder" = "月／年";
+"entry_cardholder_name" = "持卡人名稱";
+"expires_placeholder" = "月 / 年";
 "manual_entry" = "手動輸入";
 "ok" = "確定";
 "paypal_logo" = "PayPal";

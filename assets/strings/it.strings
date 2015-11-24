@@ -4,14 +4,14 @@
 "card_info" = "Dati carta";
 "card_io_logo" = "card.io";
 "deactivate_flash" = "Disattiva il flash.";
-"done" = "Fine";
+"done" = "OK";
 "entry_card_number" = "Numero di carta";
 "entry_cvv" = "CVV";
 "entry_expires" = "Scadenza";
 "entry_number" = "Numero";
 "entry_title" = "Carta";
-"entry_postal_code" = "Codice postale";
-"entry_cardholder_name" = "Nome del Titolare";
+"entry_postal_code" = "CAP";
+"entry_cardholder_name" = "Titolare della carta";
 "expires_placeholder" = "MM/AA";
 "manual_entry" = "Digita i dati";
 "ok" = "OK";
@@ -20,8 +20,8 @@
 
 "cardtype_americanexpress" = "American Express";
 "cardtype_cartaaura" = "Carta Aura";
-"cardtype_carteaurore" = "Carta Aurore";
-"cardtype_cartaprepagatapaypal" = "Carta Prepagata PayPal";
+"cardtype_carteaurore" = "Carta Aura";
+"cardtype_cartaprepagatapaypal" = "Prepagata PayPal";
 "cardtype_cartebleue" = "Carte Bancaire";
 "cardtype_cofinoga" = "Cofinoga";
 "cardtype_delta" = "Delta";

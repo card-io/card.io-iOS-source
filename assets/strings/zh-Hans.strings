@@ -6,8 +6,8 @@
 "deactivate_flash" = "关闭闪光灯。";
 "done" = "完成";
 "entry_card_number" = "卡号";
-"entry_cvv" = "信用卡安全码";
-"entry_expires" = "失效日期：";
+"entry_cvv" = "CVV";
+"entry_expires" = "有效期限：";
 "entry_number" = "号码";
 "entry_title" = "卡";
 "entry_postal_code" = "邮政编码";
