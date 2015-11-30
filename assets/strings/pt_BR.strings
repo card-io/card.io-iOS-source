@@ -1,9 +1,9 @@
-"activate_flash" = "Ativar flash.";
+"activate_flash" = "Ligar flash.";
 "camera" = "Câmera";
 "cancel" = "Cancelar";
 "card_info" = "Informações do cartão";
 "card_io_logo" = "card.io";
-"deactivate_flash" = "Desativar flash.";
+"deactivate_flash" = "Desligar flash.";
 "done" = "Concluído";
 "entry_card_number" = "Número do Cartão";
 "entry_cvv" = "CVV";
@@ -11,7 +11,7 @@
 "entry_number" = "Número";
 "entry_title" = "Cartão";
 "entry_postal_code" = "CEP";
-"entry_cardholder_name" = "Nome do Titular";
+"entry_cardholder_name" = "Nome do titular do cartão";
 "expires_placeholder" = "MM/AA";
 "manual_entry" = "Inserir manualmente";
 "ok" = "OK";

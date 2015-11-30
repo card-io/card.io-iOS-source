@@ -11,7 +11,7 @@
 "entry_number" = "Numara";
 "entry_title" = "Kart";
 "entry_postal_code" = "Posta Kodu";
-"entry_cardholder_name" = "Kart Sahibinin Adı";
+"entry_cardholder_name" = "Kart sahibinin adı";
 "expires_placeholder" = "AA/YY";
 "manual_entry" = "Manuel Girin";
 "ok" = "Tamam";
