@@ -1,21 +1,22 @@
 "activate_flash" = "Включить вспышку.";
 "camera" = "Камера";
 "cancel" = "Отмена";
-"card_info" = "Информация о карте";
+"card_info" = "Данные карты";
 "card_io_logo" = "card.io";
 "deactivate_flash" = "Выключить вспышку.";
 "done" = "Готово";
 "entry_card_number" = "Номер карты";
 "entry_cvv" = "Код безопасности";
-"entry_expires" = "Действительна до";
+"entry_expires" = "Действ. до";
 "entry_number" = "Номер";
 "entry_title" = "Карта";
 "entry_postal_code" = "Индекс";
+"entry_cardholder_name" = "Имя и фамилия владельца";
 "expires_placeholder" = "ММ/ГГ";
-"manual_entry" = "Ввести вручную";
+"manual_entry" = "Ввести данные вручную";
 "ok" = "ОК";
 "paypal_logo" = "PayPal";
-"scan_guide" = "Держите карту внутри рамки.\nОна будет считана\nавтоматически.";
+"scan_guide" = "Держите карту внутри рамки.\nОна будет считана автоматически.";
 
 "cardtype_americanexpress" = "American Express";
 "cardtype_cartaaura" = "Carta Aura";

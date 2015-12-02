@@ -11,6 +11,7 @@
 "entry_number" = "번호";
 "entry_title" = "카드";
 "entry_postal_code" = "우편번호";
+"entry_cardholder_name" = "카드 소유자 이름";
 "expires_placeholder" = "MM / YY";
 "manual_entry" = "직접 입력";
 "ok" = "확인";

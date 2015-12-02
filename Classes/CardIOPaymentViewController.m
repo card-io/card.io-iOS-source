@@ -131,7 +131,7 @@
   }
   
   // Write console message for confused developers who have given us confusing directives
-  if (self.suppressScanConfirmation && (self.collectExpiry || self.collectCVV || self.collectPostalCode)) {
+  if (self.suppressScanConfirmation && (self.collectExpiry || self.collectCVV || self.collectPostalCode || self.collectCardholderName)) {
     NSMutableString *collect = [NSMutableString string];
     if (self.collectExpiry) {
       [collect appendString:@"collectExpiry"];
@@ -147,6 +147,12 @@
         [collect appendString:@"/"];
       }
       [collect appendString:@"collectPostalCode"];
+    }
+    if (self.collectCardholderName) {
+      if ([collect length]) {
+        [collect appendString:@"/"];
+      }
+      [collect appendString:@"collectCardholderName"];
     }
     NSLog(@"Warning: suppressScanConfirmation blocks %@.", collect);
   }
@@ -334,7 +340,7 @@
 #define DESCRIBE_BOOL(property) (self.property ? "; " #property : "")
 
 - (NSString *)description {
-  return [NSString stringWithFormat:@"{delegate: %@; %s%s%s%s%s%s%s%s%s%s%s%s%s%s}"
+  return [NSString stringWithFormat:@"{delegate: %@; %s%s%s%s%s%s%s%s%s%s%s%s%s%s%s}"
           ,self.paymentDelegate
           ,DESCRIBE_BOOL(keepStatusBarStyle)
           ,DESCRIBE_BOOL(disableBlurWhenBackgrounding)
@@ -344,6 +350,7 @@
           ,DESCRIBE_BOOL(collectExpiry)
           ,DESCRIBE_BOOL(collectCVV)
           ,DESCRIBE_BOOL(collectPostalCode)
+          ,DESCRIBE_BOOL(collectCardholderName)
           ,DESCRIBE_BOOL(scanExpiry)
           ,DESCRIBE_BOOL(useCardIOLogo)
           ,DESCRIBE_BOOL(disableManualEntryButtons)
@@ -381,6 +388,7 @@ CONTEXT_PASSTHROUGH_READWRITE(UIColor *, navigationBarTintColor, NavigationBarTi
 CONTEXT_PASSTHROUGH_READWRITE(BOOL, disableBlurWhenBackgrounding, DisableBlurWhenBackgrounding)
 CONTEXT_PASSTHROUGH_READWRITE(BOOL, collectCVV, CollectCVV)
 CONTEXT_PASSTHROUGH_READWRITE(BOOL, collectPostalCode, CollectPostalCode)
+CONTEXT_PASSTHROUGH_READWRITE(BOOL, collectCardholderName, CollectCardholderName)
 CONTEXT_PASSTHROUGH_READWRITE(BOOL, collectExpiry, CollectExpiry)
 CONTEXT_PASSTHROUGH_READWRITE(BOOL, scanExpiry, ScanExpiry)
 CONTEXT_PASSTHROUGH_READWRITE(BOOL, useCardIOLogo, UseCardIOLogo)

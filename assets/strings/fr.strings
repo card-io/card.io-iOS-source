@@ -11,6 +11,7 @@
 "entry_number" = "Numéro";
 "entry_title" = "Carte";
 "entry_postal_code" = "Code postal";
+"entry_cardholder_name" = "Nom du titulaire de la carte";
 "expires_placeholder" = "MM/AA";
 "manual_entry" = "Saisir manuellement";
 "ok" = "OK";
@@ -21,7 +22,7 @@
 "cardtype_cartaaura" = "Carta Aura";
 "cardtype_carteaurore" = "Carte Aurore";
 "cardtype_cartaprepagatapaypal" = "Carta Prepagata PayPal";
-"cardtype_cartebleue" = "Carte bancaire";
+"cardtype_cartebleue" = "Carte Bancaire";
 "cardtype_cofinoga" = "Cofinoga";
 "cardtype_delta" = "Delta";
 "cardtype_discover" = "Discover";

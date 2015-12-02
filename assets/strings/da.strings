@@ -6,11 +6,12 @@
 "deactivate_flash" = "Slå blitzen fra.";
 "done" = "Udført";
 "entry_card_number" = "Kortnummer";
-"entry_cvv" = "CVV";
-"entry_expires" = "Udløber";
+"entry_cvv" = "Kontrolcifre";
+"entry_expires" = "Udløbsdato";
 "entry_number" = "Nummer";
 "entry_title" = "Kort";
 "entry_postal_code" = "Postnummer";
+"entry_cardholder_name" = "Kortindehaverens navn";
 "expires_placeholder" = "MM/ÅÅ";
 "manual_entry" = "Indtast manuelt";
 "ok" = "OK";

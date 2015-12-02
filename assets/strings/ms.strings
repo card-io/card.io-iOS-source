@@ -11,6 +11,7 @@
 "entry_number" = "Nombor";
 "entry_title" = "Kad";
 "entry_postal_code" = "Poskod";
+"entry_cardholder_name" = "Nama Pemegang Kad";
 "expires_placeholder" = "BB/TT";
 "manual_entry" = "Masukkan Secara Manual";
 "ok" = "OK";

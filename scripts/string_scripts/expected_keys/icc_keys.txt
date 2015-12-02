@@ -11,6 +11,7 @@ entry_expires
 entry_number
 entry_title
 entry_postal_code
+entry_cardholder_name
 expires_placeholder
 manual_entry
 ok

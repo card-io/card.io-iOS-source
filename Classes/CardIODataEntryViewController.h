@@ -27,10 +27,12 @@
 @property(nonatomic, assign, readwrite) BOOL collectExpiry;
 @property(nonatomic, assign, readwrite) BOOL collectCVV;
 @property(nonatomic, assign, readwrite) BOOL collectPostalCode;
+@property(nonatomic, assign, readwrite) BOOL collectCardholderName;
 @property(nonatomic, strong, readwrite) UITextField *expiryTextField;
 @property(nonatomic, strong, readwrite) UITextField *numberTextField;
 @property(nonatomic, strong, readwrite) UITextField *cvvTextField;
 @property(nonatomic, strong, readwrite) UITextField *postalCodeTextField;
+@property(nonatomic, strong, readwrite) UITextField *cardholderNameTextField;
 
 + (BOOL)cardExpiryIsValid:(CardIOCreditCardInfo *)info;
 

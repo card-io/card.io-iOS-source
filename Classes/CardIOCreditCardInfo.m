@@ -77,13 +77,14 @@
 }
 
 - (NSString *)description {
-  return [NSString stringWithFormat:@"{%@ %@; expiry: %lu/%lu%@%@}",
+  return [NSString stringWithFormat:@"{%@ %@; expiry: %lu/%lu%@%@%@}",
           [[self class] displayStringForCardType:self.cardType usingLanguageOrLocale:@"en"],
           [self redactedCardNumber],
           (unsigned long)self.expiryMonth,
           (unsigned long)self.expiryYear,
           ([self.cvv length] ? [NSString stringWithFormat:@"; cvv: %@", self.cvv] : @""),
-          ([self.postalCode length] ? [NSString stringWithFormat:@"; postal code: %@", self.postalCode] : @"")];
+          ([self.postalCode length] ? [NSString stringWithFormat:@"; postal code: %@", self.postalCode] : @""),
+          ([self.cardholderName length] ? [NSString stringWithFormat:@"; cardholder name: %@", self.cardholderName] : @"")];
 }
 
 - (CardIOCreditCardType)cardType {
@@ -97,6 +98,7 @@
   theCopy.expiryYear = self.expiryYear;
   theCopy.cvv = self.cvv;
   theCopy.postalCode = self.postalCode;
+  theCopy.cardholderName = self.cardholderName;
   theCopy.scanned = self.scanned;
   theCopy.cardImage = [self.cardImage copy];
   return theCopy;

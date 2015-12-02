@@ -11,6 +11,7 @@
 "entry_number" = "Numer";
 "entry_title" = "Karta";
 "entry_postal_code" = "Kod pocztowy";
+"entry_cardholder_name" = "Imię i nazwisko posiadacza karty";
 "expires_placeholder" = "MM/RR";
 "manual_entry" = "Wprowadź ręcznie";
 "ok" = "OK";
