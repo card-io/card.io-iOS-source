@@ -99,6 +99,6 @@ Contributors
 
 **card.io** was created by [Josh Bleecher Snyder](https://github.com/josharian/).
 
-Subsequent help has come from [Brent Fitzgerald](https://github.com/burnto/), [Tom Whipple](https://github.com/tomwhipple), [Dave Goldman](https://github.com/dgoldman-ebay), and [Roman Punskyy](https://github.com/romk1n).
+Subsequent help has come from [Brent Fitzgerald](https://github.com/burnto/), [Tom Whipple](https://github.com/tomwhipple), [Dave Goldman](https://github.com/dgoldman-ebay), [Roman Punskyy](https://github.com/romk1n), [Mark Rogers](https://github.com/mgroger2), and [Martin Rybak](https://github.com/martinrybak).
 
 And from **you**! Pull requests and new issues are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for details.
