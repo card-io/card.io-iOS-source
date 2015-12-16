@@ -129,6 +129,9 @@
 /// Set to YES if you need to collect the billing postal code. Defaults to NO.
 @property(nonatomic, assign, readwrite) BOOL collectPostalCode;
 
+/// Set to YES if the postal code should only collect numeric input. Defaults to NO.
+@property(nonatomic, assign, readwrite) BOOL restrictPostalCodeToNumericOnly;
+
 /// Set to YES if you need to collect the cardholder name. Defaults to NO.
 @property(nonatomic, assign, readwrite) BOOL collectCardholderName;
 

@@ -151,6 +151,7 @@
   self.collectExpiry = pvc.collectExpiry;
   self.collectCVV = pvc.collectCVV;
   self.collectPostalCode = pvc.collectPostalCode;
+  self.restrictPostalCodeToNumericOnly = pvc.restrictPostalCodeToNumericOnly;
   self.collectCardholderName = pvc.collectCardholderName;
 
   self.scrollView = [[UIScrollView alloc] initWithFrame:self.relevantViewFrame];
@@ -312,7 +313,12 @@
     self.postalCodeTextField.placeholder = postalCodeText;
     self.postalCodeTextField.delegate = self.postalCodeRowTextFieldDelegate;
     self.postalCodeTextField.text = self.cardInfo.postalCode;
-    self.postalCodeTextField.keyboardType = UIKeyboardTypeNumbersAndPunctuation;
+    if (self.restrictPostalCodeToNumericOnly) {
+      self.postalCodeTextField.keyboardType = UIKeyboardTypeNumberPad;
+      self.postalCodeRowTextFieldDelegate.numbersOnly = YES;
+    } else {
+      self.postalCodeTextField.keyboardType = UIKeyboardTypeNumbersAndPunctuation;
+    }
     self.postalCodeTextField.clearButtonMode = UITextFieldViewModeNever;
     self.postalCodeTextField.text = @"";
     self.postalCodeTextField.textAlignment = [CardIOLocalizer textAlignmentForLanguageOrLocale:self.context.languageOrLocale];
