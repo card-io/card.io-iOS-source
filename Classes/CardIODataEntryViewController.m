@@ -131,15 +131,24 @@
     style = UIBarButtonItemStylePlain;
   }
 
+  NSMutableArray<UIBarButtonItem *> *leftBarButtonItems = [NSMutableArray arrayWithCapacity:2];
+
   if(showCancelButton) {
     NSString *cancelText = CardIOLocalizedString(@"cancel", self.context.languageOrLocale); // Cancel
     // show the cancel button if we've gone directly to manual entry.
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:cancelText style:style target:self action:@selector(cancel)];
+    UIBarButtonItem *cancelItem = [[UIBarButtonItem alloc] initWithTitle:cancelText style:style target:self action:@selector(cancel)];
+    [leftBarButtonItems addObject:cancelItem];
+
+    UIBarButtonItem *cameraItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCamera target:self action:@selector(switchToScan)];
+    [leftBarButtonItems addObject:cameraItem];
   } else {
     // Show fake "back" button, since real back button takes us back to the animation view, not back to the camera
     NSString *cameraText = CardIOLocalizedString(@"camera", self.context.languageOrLocale); // Camera
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:cameraText style:style target:self action:@selector(popToTop)];
+    UIBarButtonItem *cameraItem = [[UIBarButtonItem alloc] initWithTitle:cameraText style:style target:self action:@selector(popToTop)];
+    [leftBarButtonItems addObject:cameraItem];
   }
+
+  self.navigationItem.leftBarButtonItems = leftBarButtonItems;
 
   NSString *cardInfoText = CardIOLocalizedString(@"card_info", self.context.languageOrLocale); // Card Info
   self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:cardInfoText style:style target:nil action:nil];
@@ -781,6 +790,14 @@
 }
 
 #pragma mark -
+
+- (void)switchToScan {
+  CardIOPaymentViewController *root = (CardIOPaymentViewController *)self.navigationController;
+  UIViewController *vc = [CardIOPaymentViewController viewControllerWithScanningEnabled:YES withContext:self.context];
+  root.viewControllers = @[vc, self];
+  root.currentViewControllerIsDataEntry = YES;
+  [self popToTop];
+}
 
 - (void)popToTop {
   if (iOS_7_PLUS) {

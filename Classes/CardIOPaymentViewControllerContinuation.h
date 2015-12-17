@@ -12,6 +12,7 @@
 
 + (CardIOPaymentViewController *)cardIOPaymentViewControllerForResponder:(UIResponder *)responder;
 - (UIInterfaceOrientationMask)supportedOverlayOrientationsMask;
++ (UIViewController *)viewControllerWithScanningEnabled:(BOOL)scanningEnabled withContext:(CardIOContext *)aContext;
 
 @property(nonatomic, assign, readwrite) BOOL currentViewControllerIsDataEntry;
 @property(nonatomic, assign, readwrite) UIInterfaceOrientation initialInterfaceOrientationForViewcontroller;
