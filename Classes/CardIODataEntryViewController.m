@@ -1013,7 +1013,7 @@
 
   // we are under the assumption of a normal US calendar
   NSString *calenderIdent = nil;
-  if (iOS_7_PLUS) {
+  if (iOS_8_PLUS) {
     calenderIdent = NSCalendarIdentifierGregorian;
   } else {
     calenderIdent = NSGregorianCalendar;
