@@ -126,18 +126,23 @@
     showCancelButton = YES;
   }
 
+  UIBarButtonItemStyle style = UIBarButtonItemStyleBordered;
+  if (iOS_8_PLUS) {
+    style = UIBarButtonItemStylePlain;
+  }
+
   if(showCancelButton) {
     NSString *cancelText = CardIOLocalizedString(@"cancel", self.context.languageOrLocale); // Cancel
     // show the cancel button if we've gone directly to manual entry.
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:cancelText style:UIBarButtonItemStyleBordered target:self action:@selector(cancel)];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:cancelText style:style target:self action:@selector(cancel)];
   } else {
     // Show fake "back" button, since real back button takes us back to the animation view, not back to the camera
     NSString *cameraText = CardIOLocalizedString(@"camera", self.context.languageOrLocale); // Camera
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:cameraText style:UIBarButtonItemStyleBordered target:self action:@selector(popToTop)];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:cameraText style:style target:self action:@selector(popToTop)];
   }
 
   NSString *cardInfoText = CardIOLocalizedString(@"card_info", self.context.languageOrLocale); // Card Info
-  self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:cardInfoText style:UIBarButtonItemStyleBordered target:nil action:nil];
+  self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:cardInfoText style:style target:nil action:nil];
 
   NSString *completionButtonTitle = CardIOLocalizedString(@"done", self.context.languageOrLocale); // Done
 
@@ -1007,7 +1012,13 @@
   }
 
   // we are under the assumption of a normal US calendar
-  NSCalendar *cal = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+  NSString *calenderIdent = nil;
+  if (iOS_7_PLUS) {
+    calenderIdent = NSCalendarIdentifierGregorian;
+  } else {
+    calenderIdent = NSGregorianCalendar;
+  }
+  NSCalendar *cal = [[NSCalendar alloc] initWithCalendarIdentifier:calenderIdent];
 
   NSDateComponents *expiryComponents = [[NSDateComponents alloc] init];
   [expiryComponents setMonth:info.expiryMonth + 1]; // +1 to account for cards expiring "this month"
