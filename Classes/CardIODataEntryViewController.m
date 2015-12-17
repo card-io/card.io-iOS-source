@@ -795,7 +795,7 @@
   CardIOPaymentViewController *root = (CardIOPaymentViewController *)self.navigationController;
   UIViewController *vc = [CardIOPaymentViewController viewControllerWithScanningEnabled:YES withContext:self.context];
   root.viewControllers = @[vc, self];
-  root.currentViewControllerIsDataEntry = YES;
+  root.currentViewControllerIsDataEntry = NO;
   [self popToTop];
 }
 
