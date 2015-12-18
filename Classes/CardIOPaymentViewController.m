@@ -340,7 +340,7 @@
 #define DESCRIBE_BOOL(property) (self.property ? "; " #property : "")
 
 - (NSString *)description {
-  return [NSString stringWithFormat:@"{delegate: %@; %s%s%s%s%s%s%s%s%s%s%s%s%s%s%s}"
+  return [NSString stringWithFormat:@"{delegate: %@; %s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s}"
           ,self.paymentDelegate
           ,DESCRIBE_BOOL(keepStatusBarStyle)
           ,DESCRIBE_BOOL(disableBlurWhenBackgrounding)
@@ -351,6 +351,7 @@
           ,DESCRIBE_BOOL(collectCVV)
           ,DESCRIBE_BOOL(collectPostalCode)
           ,DESCRIBE_BOOL(collectCardholderName)
+          ,DESCRIBE_BOOL(restrictPostalCodeToNumericOnly)
           ,DESCRIBE_BOOL(scanExpiry)
           ,DESCRIBE_BOOL(useCardIOLogo)
           ,DESCRIBE_BOOL(disableManualEntryButtons)
@@ -388,6 +389,7 @@ CONTEXT_PASSTHROUGH_READWRITE(UIColor *, navigationBarTintColor, NavigationBarTi
 CONTEXT_PASSTHROUGH_READWRITE(BOOL, disableBlurWhenBackgrounding, DisableBlurWhenBackgrounding)
 CONTEXT_PASSTHROUGH_READWRITE(BOOL, collectCVV, CollectCVV)
 CONTEXT_PASSTHROUGH_READWRITE(BOOL, collectPostalCode, CollectPostalCode)
+CONTEXT_PASSTHROUGH_READWRITE(BOOL, restrictPostalCodeToNumericOnly, RestrictPostalCodeToNumericOnly)
 CONTEXT_PASSTHROUGH_READWRITE(BOOL, collectCardholderName, CollectCardholderName)
 CONTEXT_PASSTHROUGH_READWRITE(BOOL, collectExpiry, CollectExpiry)
 CONTEXT_PASSTHROUGH_READWRITE(BOOL, scanExpiry, ScanExpiry)

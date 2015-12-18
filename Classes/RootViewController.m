@@ -26,6 +26,7 @@
 @property(nonatomic, strong, readwrite) IBOutlet UISwitch *expirySwitch;
 @property(nonatomic, strong, readwrite) IBOutlet UISwitch *cvvSwitch;
 @property(nonatomic, strong, readwrite) IBOutlet UISwitch *zipSwitch;
+@property(nonatomic, strong, readwrite) IBOutlet UISwitch *zipOnlyNumericSwitch;
 @property(nonatomic, strong, readwrite) IBOutlet UISwitch *nameSwitch;
 @property(nonatomic, strong, readwrite) IBOutlet UILabel *outcomeLabel;
 @property(nonatomic, strong, readwrite) IBOutlet UIImageView *cardImageView;
@@ -80,6 +81,7 @@
   paymentVC.collectExpiry = self.expirySwitch.on;
   paymentVC.collectCVV = self.cvvSwitch.on;
   paymentVC.collectPostalCode = self.zipSwitch.on;
+  paymentVC.restrictPostalCodeToNumericOnly = self.zipOnlyNumericSwitch.on;
   paymentVC.collectCardholderName = self.nameSwitch.on;
   paymentVC.disableManualEntryButtons = self.disableManualEntrySwitch.on;
   paymentVC.useCardIOLogo = self.useCardIOLogoSwitch.on;
@@ -422,6 +424,9 @@
   }
   if(self.zipSwitch.on) {
     [resultStr appendFormat:@"Postal Code: %@\n", info.postalCode];
+  }
+  if(self.zipOnlyNumericSwitch.on) {
+    [resultStr appendFormat:@"Postal Code Only Numeric: %@\n", info.postalCode];
   }
   if(self.nameSwitch.on) {
     [resultStr appendFormat:@"Cardholder Name: %@\n", info.cardholderName];

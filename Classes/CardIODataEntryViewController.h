@@ -27,6 +27,7 @@
 @property(nonatomic, assign, readwrite) BOOL collectExpiry;
 @property(nonatomic, assign, readwrite) BOOL collectCVV;
 @property(nonatomic, assign, readwrite) BOOL collectPostalCode;
+@property(nonatomic, assign, readwrite) BOOL restrictPostalCodeToNumericOnly;
 @property(nonatomic, assign, readwrite) BOOL collectCardholderName;
 @property(nonatomic, strong, readwrite) UITextField *expiryTextField;
 @property(nonatomic, strong, readwrite) UITextField *numberTextField;
