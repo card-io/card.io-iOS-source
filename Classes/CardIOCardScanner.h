@@ -7,6 +7,8 @@
 
 #if USE_CAMERA || SIMULATE_CAMERA
 
+#import <Foundation/Foundation.h>
+
 #import "scan.h"
 
 @class CardIOIplImage;

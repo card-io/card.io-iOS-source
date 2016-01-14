@@ -3,6 +3,13 @@
 //  See the file "LICENSE.md" for the full license governing this code.
 //
 
+#import <UIKit/UIKit.h>
+#import <CoreGraphics/CoreGraphics.h>
+#import <OpenGLES/EAGL.h>
+#import <OpenGLES/gltypes.h>
+
+typedef struct _IplImage IplImage;
+
 @interface CardIOGPURenderer : NSObject {
   // Handles
   GLuint _programHandle;

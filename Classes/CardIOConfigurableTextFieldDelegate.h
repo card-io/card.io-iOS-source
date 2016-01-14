@@ -3,7 +3,7 @@
 //  See the file "LICENSE.md" for the full license governing this code.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 
 @interface CardIOConfigurableTextFieldDelegate : NSObject<UITextFieldDelegate> {

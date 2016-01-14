@@ -5,6 +5,8 @@
 
 #if USE_CAMERA || SIMULATE_CAMERA
 
+#import <QuartzCore/QuartzCore.h>
+
 #import "CardIOAnimation.h"
 
 void SuppressCAAnimation(BareBlock block) {

@@ -5,7 +5,7 @@
 
 #if USE_CAMERA || SIMULATE_CAMERA
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import <CoreMedia/CoreMedia.h>
 #import "dmz.h"
 #import "CardIODetectionMode.h"

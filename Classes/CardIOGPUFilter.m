@@ -5,6 +5,9 @@
 
 #import "CardIOGPUFilter.h"
 
+#include "opencv2/core/types_c.h"
+
+
 @implementation CardIOGPUFilter
 
 #pragma mark Utility classmethods
