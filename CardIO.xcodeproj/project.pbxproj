@@ -96,98 +96,98 @@
 		};
 		A29803081C4697AC0058E762 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = A298FC3F1C45104F0058E762 /* OpenCV-iOS.xcodeproj */;
+			containerPortal = A298FC3F1C45104F0058E762 /* opencv.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = A298FF751C46603E0058E762;
 			remoteInfo = jpeg;
 		};
 		A298FC501C4510500058E762 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = A298FC3F1C45104F0058E762 /* OpenCV-iOS.xcodeproj */;
+			containerPortal = A298FC3F1C45104F0058E762 /* opencv.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = ABC82531135E7B1000F4D611;
 			remoteInfo = opencv_calib3d;
 		};
 		A298FC521C4510500058E762 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = A298FC3F1C45104F0058E762 /* OpenCV-iOS.xcodeproj */;
+			containerPortal = A298FC3F1C45104F0058E762 /* opencv.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = ABC823A2135E767D00F4D611;
 			remoteInfo = opencv_core;
 		};
 		A298FC541C4510500058E762 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = A298FC3F1C45104F0058E762 /* OpenCV-iOS.xcodeproj */;
+			containerPortal = A298FC3F1C45104F0058E762 /* opencv.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = ABC824DE135E794900F4D611;
 			remoteInfo = opencv_features2d;
 		};
 		A298FC561C4510500058E762 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = A298FC3F1C45104F0058E762 /* OpenCV-iOS.xcodeproj */;
+			containerPortal = A298FC3F1C45104F0058E762 /* opencv.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = ABC8248C135E789300F4D611;
 			remoteInfo = opencv_flann;
 		};
 		A298FC581C4510500058E762 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = A298FC3F1C45104F0058E762 /* OpenCV-iOS.xcodeproj */;
+			containerPortal = A298FC3F1C45104F0058E762 /* opencv.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = ABC82617135E7F8B00F4D611;
 			remoteInfo = opencv_ts;
 		};
 		A298FC5A1C4510500058E762 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = A298FC3F1C45104F0058E762 /* OpenCV-iOS.xcodeproj */;
+			containerPortal = A298FC3F1C45104F0058E762 /* opencv.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = ABC82404135E77A600F4D611;
 			remoteInfo = opencv_imgproc;
 		};
 		A298FC5C1C4510500058E762 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = A298FC3F1C45104F0058E762 /* OpenCV-iOS.xcodeproj */;
+			containerPortal = A298FC3F1C45104F0058E762 /* opencv.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = ABC8267D135E818000F4D611;
 			remoteInfo = opencv_ml;
 		};
 		A298FC5E1C4510500058E762 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = A298FC3F1C45104F0058E762 /* OpenCV-iOS.xcodeproj */;
+			containerPortal = A298FC3F1C45104F0058E762 /* opencv.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = ABC82646135E80B400F4D611;
 			remoteInfo = opencv_video;
 		};
 		A298FC601C4510500058E762 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = A298FC3F1C45104F0058E762 /* OpenCV-iOS.xcodeproj */;
+			containerPortal = A298FC3F1C45104F0058E762 /* opencv.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = ABC81FED135E743800F4D611;
 			remoteInfo = zlib;
 		};
 		A298FC661C4510500058E762 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = A298FC3F1C45104F0058E762 /* OpenCV-iOS.xcodeproj */;
+			containerPortal = A298FC3F1C45104F0058E762 /* opencv.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = A2289E7D1C42A8A90050320B;
 			remoteInfo = opencv_highgui;
 		};
 		A298FC681C4510500058E762 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = A298FC3F1C45104F0058E762 /* OpenCV-iOS.xcodeproj */;
+			containerPortal = A298FC3F1C45104F0058E762 /* opencv.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = A22F3BA61C43C690000A1289;
 			remoteInfo = opencv_objdetect;
 		};
 		A298FC6B1C4510CB0058E762 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = A298FC3F1C45104F0058E762 /* OpenCV-iOS.xcodeproj */;
+			containerPortal = A298FC3F1C45104F0058E762 /* opencv.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = A298FD321C46280C0058E762;
 			remoteInfo = opencv_core;
 		};
 		A298FC7B1C4510D20058E762 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = A298FC3F1C45104F0058E762 /* OpenCV-iOS.xcodeproj */;
+			containerPortal = A298FC3F1C45104F0058E762 /* opencv.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = A298FE6A1C462BD70058E762;
 			remoteInfo = opencv_imgproc;
@@ -208,7 +208,7 @@
 
 /* Begin PBXFileReference section */
 		A283707D1C489AE300B77EA3 /* dmz_all.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dmz_all.cpp; sourceTree = "<group>"; };
-		A298F91A1C44F1160058E762 /* libksCardIO.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libksCardIO.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A298F91A1C44F1160058E762 /* libCardIO.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCardIO.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A298F9271C44F20A0058E762 /* CardIOAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIOAnalytics.h; sourceTree = "<group>"; };
 		A298F9281C44F20A0058E762 /* CardIOAnalytics.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CardIOAnalytics.mm; sourceTree = "<group>"; };
 		A298F9291C44F20A0058E762 /* CardIOAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIOAnimation.h; sourceTree = "<group>"; };
@@ -676,7 +676,7 @@
 		A298FBE31C450CA70058E762 /* CardIOUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIOUtilities.h; sourceTree = "<group>"; };
 		A298FBE41C450CA70058E762 /* CardIOView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIOView.h; sourceTree = "<group>"; };
 		A298FBE51C450CA70058E762 /* CardIOViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIOViewDelegate.h; sourceTree = "<group>"; };
-		A298FC3F1C45104F0058E762 /* OpenCV-iOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "OpenCV-iOS.xcodeproj"; path = "../OpenCV-iOS/OpenCV-iOS/OpenCV-iOS.xcodeproj"; sourceTree = "<group>"; };
+		A298FC3F1C45104F0058E762 /* opencv.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "opencv.xcodeproj"; path = "../OpenCV-iOS/ios/opencv.xcodeproj"; sourceTree = "<group>"; };
 		A298FC801C45174E0058E762 /* card_io_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card_io_logo.png; sourceTree = "<group>"; };
 		A298FC811C45174E0058E762 /* card_io_logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "card_io_logo@2x.png"; sourceTree = "<group>"; };
 		A298FC821C45174E0058E762 /* card_io_logo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "card_io_logo@3x.png"; sourceTree = "<group>"; };
@@ -743,7 +743,7 @@
 		A298F9111C44F1160058E762 = {
 			isa = PBXGroup;
 			children = (
-				A298FC3F1C45104F0058E762 /* OpenCV-iOS.xcodeproj */,
+				A298FC3F1C45104F0058E762 /* opencv.xcodeproj */,
 				A298FC7F1C45174E0058E762 /* assets */,
 				A298FBDD1C450CA70058E762 /* CardIO_Public_API */,
 				A298F9C81C4504FE0058E762 /* global */,
@@ -756,7 +756,7 @@
 		A298F91B1C44F1160058E762 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A298F91A1C44F1160058E762 /* libksCardIO.a */,
+				A298F91A1C44F1160058E762 /* libCardIO.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1703,9 +1703,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A298F9191C44F1160058E762 /* ksCardIO */ = {
+		A298F9191C44F1160058E762 /* CardIO */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A298F9231C44F1160058E762 /* Build configuration list for PBXNativeTarget "ksCardIO" */;
+			buildConfigurationList = A298F9231C44F1160058E762 /* Build configuration list for PBXNativeTarget "CardIO" */;
 			buildPhases = (
 				A298F9161C44F1160058E762 /* Sources */,
 				A298F9171C44F1160058E762 /* Frameworks */,
@@ -1717,9 +1717,9 @@
 				A298FC7C1C4510D20058E762 /* PBXTargetDependency */,
 				A298FC6C1C4510CB0058E762 /* PBXTargetDependency */,
 			);
-			name = ksCardIO;
-			productName = ksCardIO;
-			productReference = A298F91A1C44F1160058E762 /* libksCardIO.a */;
+			name = CardIO;
+			productName = CardIO;
+			productReference = A298F91A1C44F1160058E762 /* libCardIO.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -1736,7 +1736,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A298F9151C44F1160058E762 /* Build configuration list for PBXProject "ksCardIO" */;
+			buildConfigurationList = A298F9151C44F1160058E762 /* Build configuration list for PBXProject "CardIO" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -1749,12 +1749,12 @@
 			projectReferences = (
 				{
 					ProductGroup = A298FC401C45104F0058E762 /* Products */;
-					ProjectRef = A298FC3F1C45104F0058E762 /* OpenCV-iOS.xcodeproj */;
+					ProjectRef = A298FC3F1C45104F0058E762 /* opencv.xcodeproj */;
 				},
 			);
 			projectRoot = "";
 			targets = (
-				A298F9191C44F1160058E762 /* ksCardIO */,
+				A298F9191C44F1160058E762 /* CardIO */,
 			);
 		};
 /* End PBXProject section */
@@ -2153,7 +2153,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A298F9151C44F1160058E762 /* Build configuration list for PBXProject "ksCardIO" */ = {
+		A298F9151C44F1160058E762 /* Build configuration list for PBXProject "CardIO" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A298F9211C44F1160058E762 /* Debug */,
@@ -2162,7 +2162,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A298F9231C44F1160058E762 /* Build configuration list for PBXNativeTarget "ksCardIO" */ = {
+		A298F9231C44F1160058E762 /* Build configuration list for PBXNativeTarget "CardIO" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A298F9241C44F1160058E762 /* Debug */,
