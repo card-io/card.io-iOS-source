@@ -52,10 +52,16 @@
 - (id)initWithSampleBuffer:(CMSampleBufferRef)sampleBuffer interfaceOrientation:(UIInterfaceOrientation)currentOrientation {
   if((self = [super init])) {
     _buffer = sampleBuffer;
+    CFRetain(_buffer);
+
     _orientation = currentOrientation; // not using setters/getters, for performance
     _dmz = NULL;  // use NULL b/c non-object pointer
   }
   return self;
+}
+
+- (void)dealloc {
+  CFRelease(_buffer);
 }
 
 #if USE_CAMERA

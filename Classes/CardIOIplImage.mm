@@ -13,6 +13,7 @@
 @interface CardIOIplImage ()
 
 @property(nonatomic, assign, readwrite) IplImage *image;
+@property(nonatomic, assign, readwrite) CVImageBufferRef imageBuffer;
 
 @end
 
@@ -26,8 +27,10 @@
 }
 
 + (CardIOIplImage *)imageFromYCbCrBuffer:(CVImageBufferRef)imageBuffer plane:(size_t)plane {
+  CVPixelBufferLockBaseAddress(imageBuffer, 0);
   char *planeBaseAddress = (char *)CVPixelBufferGetBaseAddressOfPlane(imageBuffer, plane);
-  
+  // CVPixelBufferUnlocked in dealloc of CardIOIplImage to ensure lock of memory
+
   size_t width = CVPixelBufferGetWidthOfPlane(imageBuffer, plane);
   size_t height = CVPixelBufferGetHeightOfPlane(imageBuffer, plane);
   size_t bytesPerRow = CVPixelBufferGetBytesPerRowOfPlane(imageBuffer, plane);
@@ -37,7 +40,7 @@
   colocatedImage->imageData = planeBaseAddress;
   colocatedImage->widthStep = (int)bytesPerRow;
   
-  return [self imageWithIplImage:colocatedImage];
+  return [[self alloc] initWithIplImage:colocatedImage imageBuffer:imageBuffer];
 }
 
 + (CardIOIplImage *)imageWithIplImage:(IplImage *)anImage {
@@ -45,8 +48,17 @@
 }
 
 - (id)initWithIplImage:(IplImage *)anImage {
+  return [self initWithIplImage:anImage imageBuffer:NULL];
+}
+
+- (id)initWithIplImage:(IplImage *)anImage imageBuffer:(CVImageBufferRef)imageBuffer {
   if((self = [super init])) {
     self.image = anImage;
+
+    self.imageBuffer = imageBuffer;
+    if (imageBuffer != NULL) {
+      CFRetain(imageBuffer);
+    }
   }
   return self;
 }
@@ -78,6 +90,10 @@
 
 - (void)dealloc {
   cvReleaseImage(&image);
+  if(_imageBuffer != nil) {
+    CVPixelBufferUnlockBaseAddress(_imageBuffer, 0);
+    CFRelease(_imageBuffer);
+  }
 }
 
 - (IplImage *)image {
