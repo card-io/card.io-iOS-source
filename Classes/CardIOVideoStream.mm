@@ -144,7 +144,11 @@
 @property(nonatomic, assign, readwrite) BOOL wasRunningBeforeBeingBackgrounded;
 @property(nonatomic, assign, readwrite) BOOL didEndGeneratingDeviceOrientationNotifications;
 @property(assign, readwrite) UIInterfaceOrientation interfaceOrientation; // intentionally atomic -- video frames are processed on a different thread
+#if SIMULATE_CAMERA
+@property(nonatomic, strong, readwrite) CALayer *previewLayer;
+#else
 @property(nonatomic, strong, readwrite) AVCaptureVideoPreviewLayer *previewLayer;
+#endif
 @property(nonatomic, strong, readwrite) AVCaptureSession *captureSession;
 @property(nonatomic, strong, readwrite) AVCaptureDevice *camera;
 @property(nonatomic, strong, readwrite) AVCaptureDeviceInput *cameraInput;
