@@ -498,7 +498,7 @@ card.io iOS SDK release notes
 
 ---
 
-3.0 (Tue 8/21/2012)
+3.0.0 (Tue 8/21/2012)
 
 * Card scanning can now be done without network access.
 * The SDK now requires the OpenGLES framework.
@@ -512,7 +512,7 @@ card.io iOS SDK release notes
 
 ---
 
-2.3 (Tue 6/26/2012)
+2.3.0 (Tue 6/26/2012)
 
 * Add JCB support.
 * Add scanned property to CardIOCreditCardInfo.
@@ -522,14 +522,14 @@ card.io iOS SDK release notes
 
 -------------
 
-2.2 (Mon 3/26/2012)
+2.2.0 (Mon 3/26/2012)
 
 * Add disableManualEntryButtons and supporting methods to CardIOPaymentViewController.
 * Remove calls to UIDevice's uniqueIdentifier.
 
 -------------
 
-2.1 (Tue 2/7/2012)
+2.1.0 (Tue 2/7/2012)
 
 * Drop support for 3.x. The minimum iOS version supported is now 4.0.
 * The SDK now requires the Security framework.
@@ -539,7 +539,7 @@ card.io iOS SDK release notes
 
 -------------
 
-2.0 (Thu 1/19/2012)
+2.0.0 (Thu 1/19/2012)
 
 * Added payment processing capabilities. See CardIO.h for a list of header files, and https://www.card.io/integrate/ios for integration instructions and sample code.
 * Removed deprecated CardIOPaymentViewControllerDelegate methods.
@@ -549,7 +549,7 @@ card.io iOS SDK release notes
 
 -------------
 
-1.2 (Thu 8/24/2011)
+1.2.0 (Thu 8/24/2011)
 
 * Easier integration: Instead of requiring files to be Objective-C++ (.mm), you can just use the linker flag -lstdc++ (add it to "Other Linker Flags").
 * Added -redactedCardNumber to CardIOCreditCardInfo class.
@@ -566,7 +566,7 @@ card.io iOS SDK release notes
 
 -------------
 
-1.1 (Wed 7/27/2011)
+1.1.0 (Wed 7/27/2011)
 
 * Added CardIOCreditCardInfo class. This is a data class that encapsulates the properties of a card: number, expiration, cvv, card type, etc.
 * CardIOPaymentViewControllerDelegate now vends CardIOCreditCardInfo instances.
@@ -577,6 +577,6 @@ card.io iOS SDK release notes
 
 -------------
 
-1.0 (Tue 5/17/2011)
+1.0.0 (Tue 5/17/2011)
 
 * First release.

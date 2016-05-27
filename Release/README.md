@@ -338,3 +338,11 @@ Include a method to cancel card scanning:
 * For your users' security, [obscure your app's cached screenshots](https://viaforensics.com/resources/reports/best-practices-ios-android-secure-mobile-development/ios-avoid-cached-application-snapshots/).  
 **Note:** By default, a `CardIOPaymentViewController` automatically blurs its own screens when the app is backgrounded. A `CardIOView` does not do any automatic blurring.
 * The first time that you create either a `CardIOPaymentViewController` or a `CardIOView`, the card.io SDK must load resources, which can result in a noticeable delay. To avoid this delay you may optionally call `[CardIOUtilities preload]` in advance, so that this resource loading occurs in advance on a background thread.
+
+##Contributors
+Pull requests and new issues are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for details.
+
+## License
+Code released under [MIT LICENSE](LICENSE)  
+
+
