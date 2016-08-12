@@ -43,7 +43,7 @@
 
 @property(nonatomic, strong, readwrite) CardIOConfig *config;
 @property(nonatomic, assign, readonly) BOOL running;
-@property(nonatomic, weak, readwrite) id<CardIOVideoStreamDelegate> delegate;
+@property(nonatomic, weak, readwrite) UIResponder<CardIOVideoStreamDelegate> *delegate;
 #if SIMULATE_CAMERA
 @property(nonatomic, strong, readonly) CALayer *previewLayer;
 #else
