@@ -1,0 +1,582 @@
+card.io iOS SDK release notes
+=============================
+
+5.3.2 (Mon 04/11/2016)
+
+* Fix memory management issues with CMSampleBufferRef causing crash
+  ( https://github.com/card-io/card.io-iOS-SDK/issues/194 )
+
+5.3.1 (Tue 01/26/2016)
+
+* Prevent an issue with crashes when an invalid IplImage is used for
+  scanning causing an exception to be thrown later in cvGetSize().
+  ( https://github.com/card-io/card.io-iOS-source/pull/57 )
+
+5.3.0 (Mon 12/21/2015)
+
+* Add cardholder name for manual text input. Thanks to Mark Rogers and
+  Martin Rybak for the contribution.
+  ( https://github.com/card-io/card.io-iOS-source/pull/45 )
+* Add option for only numeric input for postal code.
+  ( https://github.com/card-io/card.io-iOS-source/pull/51 )
+
+5.2.2 (Tue 11/03/2015)
+
+* You will need to link the `Accelerate` framework to your application.
+* Fix issue where an app would hang on card-scanning screen
+    ( https://github.com/card-io/card.io-iOS-SDK/issues/153 )
+    If an app was displaying the card-scanning screen and was sent to the
+    background, when the app was brought back to the foreground, the
+    app would possibly hang on certain hardware, mainly iPhone 5S.
+* Add Carthage support
+    ( https://github.com/card-io/card.io-iOS-source/pull/36
+      https://github.com/card-io/card.io-iOS-source/issues/32 )
+    Initial support for Carthage. In a Cartfile, you can add
+    `github "card-io/card.io-iOS-source"`
+    to get Carthage to build a dynamic framework for inclusion in your
+    projects.
+* Fix warning while running in simulator for 5.2.1
+    ( https://github.com/card-io/card.io-iOS-SDK/issues/154 )
+    Add the x86_64 and i386 slices to the OpenCV libraries to prevent warnings.
+    This was also necesary for clean builds for Carthage.
+
+5.2.1 (Mon 10/19/2015)
+
+* Split CardIO and OpenCV libraries
+    (https://github.com/card-io/card.io-iOS-SDK/issues/147
+     https://github.com/card-io/card.io-iOS-source/issues/41)
+    The library is built with Xcode 7.0 with Bitcode enabled for all 3
+    libraries. The libraries are now split into 3 static libraries:
+    `libCardIO.a`, `libopencv_core.a`, and `libopencv_imgproc.a`.
+    This split was done to reduce the individual file size to make it
+    more managable for GitHub repositories which limit individual files to
+    100 MB.
+
+    Note that when an application is "Bitcode compiled" and distributed
+    by the App Store, the app size should not be signficantly increased
+    compared to before Bitcode enablement.
+
+    You must use Xcode 7 since previous versions of Xcode are not fully
+    compatible with Bitcode enabled libraries.
+
+--
+
+5.2.0 (Wed 9/30/2015)
+
+* Enable Bitcode
+    (https://github.com/card-io/card.io-iOS-SDK/issues/119)
+    The library is now built with Xcode 7.0. It has Bitcode enabled which
+    does significantly increase the static library. However, when an app
+    is compiled and distributed by the App Store, the app size should not
+    significantly increase compared to before Bitcode enablement. You must also
+    use Xcode 7 since previous versions of Xcode are not fully compatible
+    with Bitcode enabled libraries.
+
+--
+
+5.1.1 (Wed 8/26/2015)
+
+* Update CocoaPods podspec to use `vendored_libraries`.
+    (https://github.com/card-io/card.io-iOS-SDK/pull/126)
+
+--
+
+5.1.0 (Sun 7/12/2015)
+
+* Update project and sample apps for Xcode 6.4.
+* Expose `scannedImageDuration` in CardIOPaymentViewController.
+    (https://github.com/card-io/card.io-iOS-source/pull/29)
+* Better respect UISupportedInterfaceOrientation from the app plist.
+    (https://github.com/card-io/card.io-iOS-SDK/issues/117)
+* Fix iOS 9 crash by removing some obsolete localization code.
+    (https://github.com/card-io/card.io-iOS-SDK/issues/120)
+
+--
+
+5.0.6 (Thu 5/21/2015)
+
+* Prevent crash when user simultaneously taps `Cancel` and `Enter Manually` buttons.
+    (https://github.com/card-io/card.io-iOS-SDK/issues/112)
+
+--
+
+5.0.5 (Tue 5/19/2015)
+
+* Update Chinese translations for "CVV".
+    (https://github.com/paypal/PayPal-iOS-SDK/issues/278)
+* Update project and sample apps for Xcode 6.3, but
+    build SDK with Xcode 6.2 this one last time to prevent
+    compatibility issues for clients still using Xcode 6.2.
+
+--
+
+5.0.4 (Tue 4/14/2015)
+
+* Check existing video permissions before presenting camera view.
+    (https://github.com/card-io/card.io-iOS-SDK/issues/99)
+* Restrict expiry year manual input to 2 digits in all cases.
+    (https://github.com/card-io/card.io-iOS-SDK/issues/104)
+
+--
+
+5.0.3 (Tue 3/17/2015)
+
+* On scan cancelation, eliminate a visual stutter.
+    (https://github.com/card-io/card.io-iOS-SDK/issues/97)
+* On scan completion, reset camera focus range to nonrestricted.
+    (https://github.com/card-io/card.io-iOS-source/issues/17)
+
+--
+
+5.0.2 (Mon 2/23/2015)
+
+* Re-enable expiry-scanning for 32-bit devices (e.g., iPhone 4S).
+
+--
+
+5.0.1 (Tue 2/10/2015)
+
+* Simplify expiry-scanning code to improve accuracy and also decrease library size a bit.
+* For now, disable expiry-scanning for 32-bit devices (e.g., iPhone 4S).
+  - This is because of an apparent compiler bug for which we haven't yet found a workaround.
+
+--
+
+5.0.0 (Tue 1/20/2015)
+
+* Add automatic expiry-scanning.
+  You can disable this feature via the new `scanExpiry` property of either CardIOView or CardIOPaymentViewController.
+  Note: Expiry scans will not infrequently fail to obtain the correct expiry date.
+        We are continuing to work to improve expiry-scanning accuracy.
+* Remove various deprecated properties.
+
+--
+
+4.0.2 (Tue 1/13/2015)
+
+* Fix an iOS 8 display issue involving right-to-left languages. (https://github.com/card-io/card.io-iOS-SDK/issues/90)
+* In the manual-input screen combine Expiry and CVV into a single row, for more languages than before.
+
+--
+
+4.0.1 (Mon 1/5/2015)
+
+* Fix a potential rare crash. (see https://github.com/paypal/PayPal-iOS-SDK/issues/220 for a similar case)
+
+--
+
+4.0.0 (Mon 12/1/2014)
+
+* Build from the new open-source edition of card.io: https://github.com/card-io/card.io-iOS-source
+* New class: CardIOUtilities
+  - libraryVersion         (formerly a method of CardIOPaymentViewController)
+  - canReadCardWithCamera  (formerly a method of CardIOPaymentViewController)
+  - preload                (formerly a method of CardIOView and of CardIOPaymentViewController)
+  - blurredScreenImageView (new method)
+* New property on CardIOCreditCardInfo:
+  - cardImage
+* New properties on CardIOView and CardIOPaymentViewController:
+  - scanInstructions
+  - hideCardIOLogo
+  - scanOverlayView
+  - detectionMode
+* New notification:
+  - CardIOScanningOrientationDidChangeNotification
+
+--
+
+3.10.1 (Wed 11/5/2014)
+
+* Restore App Token as a deprecated property, so that existing card.io integrations will continue to build without modification.
+
+--
+
+3.10.0 (Thu 10/2/2014)
+
+* Eliminate App Token. Developers no longer need to sign up on the card.io site before using card.io.
+* Add Icelandic (is) to our supported localizations. (Thank you, Martin Kaplan!)
+
+--
+
+3.9.0 (Tue 9/23/2014)
+
+* Add new optional method `preload` to noticeably speed up the creation of your first CardIOView or CardIOPaymentViewController.
+
+--
+
+3.8.7 (Tue 9/16/2014)
+
+* Fix a crash that could occur if a user has restricted your app's camera access.
+
+--
+
+3.8.6 (Fri 9/12/2014)
+
+* Solve (hopefully!) a build problem for Xcode 5 users. (see https://github.com/card-io/card.io-iOS-SDK/issues/66)
+
+--
+
+3.8.5 (Thu 9/11/2014)
+
+* Add armv7s slice (work around an Xcode 6 bug).
+
+--
+
+3.8.4 (Wed 9/10/2014)
+
+* Build with Xcode 6 GM seed.
+* Update a few localized strings. (including: https://github.com/card-io/card.io-iOS-SDK/issues/65)
+
+--
+
+3.8.3 (Tue 7/8/2014)
+
+* Fix a very rare problem involving the app caches directory getting cleared. (see https://github.com/paypal/PayPal-iOS-SDK/issues/163)
+
+--
+
+3.8.2 (Thu 7/3/2014)
+
+* Fix some localization issues. (see https://github.com/paypal/PayPal-iOS-SDK/issues/164)
+
+--
+
+3.8.1 (Thu 6/19/2014)
+
+* Fix an iOS 8 (beta 2) crash.
+
+--
+
+3.8.0 (Wed 6/11/2014)
+
+* Accept Diners Club and China UnionPay card numbers as valid Discover card numbers.
+* Allow manual entry of card numbers with unrecognized prefixes, as long as the card number passes the Luhn checksum test.
+* Make zh-Hant_HK the default dialect for zh-Hant (Traditional Chinese). (zh-Hant_TW remains available, as well.)
+
+--
+
+3.7.1 (Mon 5/19/2014)
+
+* Improve handling of Traditional Chinese. (github issue #47)
+
+--
+
+3.7.0 (Wed 4/30/2014)
+
+* Add new maskManualEntryDigits property to CardIOPaymentViewController.
+* Update PayPal logo.
+
+--
+
+3.6.5 (Mon 4/21/2014)
+
+* Add Thai (th) to our supported localizations.
+
+--
+
+3.6.4 (Tue 4/1/2014)
+
+* When the data-entry screen appears, automatically enter text-editing mode. (github issue #41)
+
+--
+
+3.6.3 (Mon 3/10/2014)
+
+* Repair the disableManualEntryButtons property. (github issue #38)
+
+--
+
+3.6.2 (Fri 3/7/2014)
+
+* Fix an orientation glitch when no camera is available.
+
+--
+
+3.6.1 (Thu 3/6/2014)
+
+* Fix a compiler issue caused by a change in header file import ordering.
+
+--
+
+3.6.0 (Thu 3/6/2014)
+
+* New appearance of the "Cancel" and "Enter Manually" buttons in camera view, including automatic button rotation to match device orientation.
+* New property, allowFreelyRotatingCardGuide, for both CardIOPaymentViewController and CardIOView; provides the option to constrain camera-view UI rotation to follow standard iOS behavior.
+* The manual entry screen now includes a landscape orientation.
+
+--
+
+3.5.0 (Wed 2/26/2014)
+
+* Add suppressScannedCardImage property to CardIOPaymentViewController (github issue #33)
+
+--
+
+3.4.4 (Tue 1/14/2014)
+
+* Fix two very rare bugs:
+  - Card-scan succeeds, but then reports a nil card number;
+  - Card-scan completes while the camera focus is being adjusted -> crash.
+
+--
+
+3.4.3 (Thu 12/12/2013)
+
+* Restore use of CardIOView, which was accidentally broken in release 3.4.1.
+
+--
+
+3.4.2 (Wed 12/11/2013)
+
+* Enable linking against iOS 6 SDK, for apps not yet targeted at iOS 7.
+* Add Arabic (ar) and Malay (ms) to our supported localizations.
+* Fix a memory leak when a user rapidly and repeatedly starts camera sessions.
+
+--
+
+3.4.1 (Thu 12/05/2013)
+
+* Respect the setting for UIViewControllerBasedStatusBarAppearance in your app's Info.plist
+* Enable copy/paste for the manual-entry fields.
+* Improve the handling of right-to-left languages (e.g., Hebrew).
+
+--
+
+3.4.0 (Tue 11/12/2013)
+
+* Now 64-bit compatible.
+
+--
+
+3.3.0 (Tue 9/24/2013)
+
+* Introduce CardIOView for highly customizable, scan-only integration.
+* Fix a few small bugs.
+
+--
+
+3.2.4 (Mon 9/16/2013)
+
+* Build with Xcode 5 GM seed.
+* Modify header comments to support Xcode 5 Quick Help.
+* Fix a few small bugs.
+
+--
+
+3.2.3 (Thu 8/29/2013)
+
+* Ready for iOS 7 (please let us know if you discover any issues!)
+* Additional customizability in CardIOPaymentViewController:
+  - guideColor
+  - suppressScanConfirmation
+* The former first-time/how-to alert is no more.
+* Add human-readable version number to the string returned by +libraryVersion.
+* Correct a Russian localization issue (github issue #13).
+
+--
+
+3.2.2 (Thu 8/8/2013)
+
+* Change all uses of ZIP to postalCode.
+* Fix a bug with translucent navigation bar (github issue #8).
+* Fix a bug with MKMapKit (github issue #10).
+* Add card.io version number to all header files (github issue #1).
+
+--
+
+3.2.1 (Mon 7/29/2013)
+
+* Fix a rotation issue for apps which constrain their Supported Interface Orientations.
+* Add ko, pt_BR, and es_MX to our supported localizations.
+
+--
+
+3.2.0 (Thu 5/30/2013)
+
+* Update the required C++ Standard Library from libstdc++ to libc++
+  - NOTE: this will probably require a corresponding change to your app's
+          "Other Linker Flags", from "-lstdc++" to "-lc++".
+          (If you still need libstdc++ for a component other than card.io,
+           you should be able to specify BOTH "-lstdc++" AND "-lc++".)
+
+---
+
+3.1.1 (Wed 5/15/2013)
+
+* Fix torch-related crash on certain devices (particularly including some models of iPod Touch)
+
+---
+
+3.1.0 (Tue 5/14/2013)
+
+* Add translations of all strings into ~20 languages, in addition to American English.
+  - Translation choice is controlled by a new "languageOrLocale" property of CardIOPaymentViewController.
+  - The translations that a few developers had previously created for their own apps will no longer be used by the SDK.
+  - NOTE: Default language, if not set by your app, will now be based upon the device's current language setting.
+* Automatic control of the camera torch (for devices which support it).
+
+---
+
+3.0.11 (Fri 4/5/2013)
+
+* Add work-around for a linker bug that affected some simulator builds.
+
+---
+
+3.0.10 (Thu 4/4/2013)
+
+* Improve performance when card is lying on a flat surface.
+* Blur screen when app is backgrounded, for security purposes.
+* Eliminate some rare crashes caused by backgrounding the app during a scan.
+
+---
+
+3.0.9 (Fri 3/22/2013)
+
+* CardIOCreditCardTypeUnknown has been deprecated and will be removed in a future release.
+  Use CardIOCreditCardTypeUnrecognized or CardIOCreditCardTypeAmbiguous instead.
+* Improved autofocus behavior.
+* Fix final iPad rotation bugs. (Really!)
+
+---
+
+3.0.8 (Tue 3/5/2013)
+
+* Add +logoForCardType: to CardIOCreditCardInfo.
+* Fix yet more iPad rotation bugs. (Sigh.)
+
+---
+
+3.0.7 (Thu 2/21/2013)
+
+* Add useCardIOLogo property to CardIOPaymentViewController.
+* Fix iPad rotation support for landscape-only iPad apps.
+* Improve credit card number validation.
+
+---
+
+3.0.6 (Mon 2/11/2013)
+
+* Add keepStatusBarStyle, navigationBarStyle, and navigationBarTintColor properties to CardIOPaymentViewController.
+* Minor accessibility improvements.
+* Fix crash when used with MapKit due to OpenGL interactions.
+
+---
+
+3.0.5 (Tue 1/29/2013)
+
+* Fix simulator-only linker failure.
+
+---
+
+3.0.4 (Tue 1/22/2013)
+
+* Now requires iOS 5+.
+* Improve iPad rotation support.
+
+---
+
+3.0.3 (Mon 12/3/2012)
+
+* Fix iOS 6 rotation bug.
+* Improve UI for iPhone 5 and iPad.
+* Reduce network chatter.
+* Switch to PayPal logo.
+
+---
+
+3.0.2 (Mon 9/17/2012)
+
+* Add armv7s support. Remove armv6 support.
+
+---
+
+3.0.1 (Wed 8/29/2012)
+
+* Fix Simulator build issues.
+* Minor bug fixes.
+
+---
+
+3.0.0 (Tue 8/21/2012)
+
+* Card scanning can now be done without network access.
+* The SDK now requires the OpenGLES framework.
+* The SDK no longer requires the SystemConfiguration framework.
+* Minor UI updates.
+* Expiry is not scanned in this version.
+* Scan availability notifications have been removed; scan availability no longer changes (a device either supports
+  scanning or not), so notifications are unnecessary. In particular, CardIOPaymentViewController's
+  +beginGeneratingScanAvailabilityNotifications, +endGeneratingScanAvailabilityNotifications,
+  CardIOCardScanningDidBecomeAvailable, and CardIOCardScanningDidBecomeUnavailable have been removed.
+
+---
+
+2.3.0 (Tue 6/26/2012)
+
+* Add JCB support.
+* Add scanned property to CardIOCreditCardInfo.
+* Replace CardIOPaymentViewController's -initWithPaymentDelegate:forceManualEntry: with -initWithPaymentDelegate:scanningEnabled:. As before, this method should only be used for testing purposes. Note that the semantics for forceManualEntry: and scanningEnabled: are flipped (if you were using YES, now use NO).
+* Remove support for payment processing (now scan only).
+* The MessageUI framework is no longer used.
+
+-------------
+
+2.2.0 (Mon 3/26/2012)
+
+* Add disableManualEntryButtons and supporting methods to CardIOPaymentViewController.
+* Remove calls to UIDevice's uniqueIdentifier.
+
+-------------
+
+2.1.0 (Tue 2/7/2012)
+
+* Drop support for 3.x. The minimum iOS version supported is now 4.0.
+* The SDK now requires the Security framework.
+* Minor UI and usability improvements.
+* Bug fixes.
+* Enhanced fraud detection and security.
+
+-------------
+
+2.0.0 (Thu 1/19/2012)
+
+* Added payment processing capabilities. See CardIO.h for a list of header files, and https://www.card.io/integrate/ios for integration instructions and sample code.
+* Removed deprecated CardIOPaymentViewControllerDelegate methods.
+* CardIOCreditCardInfo now implements NSCopying and uses copy properties.
+* CardIOPaymentViewController can now be used in a form sheet on the iPad.
+* UI improvements and bug fixes.
+
+-------------
+
+1.2.0 (Thu 8/24/2011)
+
+* Easier integration: Instead of requiring files to be Objective-C++ (.mm), you can just use the linker flag -lstdc++ (add it to "Other Linker Flags").
+* Added -redactedCardNumber to CardIOCreditCardInfo class.
+* Improved card detection.
+* Fixed minor memory leak.
+* Minor data entry bug fixes.
+
+-------------
+
+1.1.1 (Wed 8/3/2011)
+
+* Bug fix: Returned card number no longer contains spaces.
+* Several manual entry bug fixes.
+
+-------------
+
+1.1.0 (Wed 7/27/2011)
+
+* Added CardIOCreditCardInfo class. This is a data class that encapsulates the properties of a card: number, expiration, cvv, card type, etc.
+* CardIOPaymentViewControllerDelegate now vends CardIOCreditCardInfo instances.
+* Deprecated userDidProvideCreditCardNumber:expiryMonth:expiryYear:cvv:inPaymentViewController: in favor of userDidProvideCreditCardInfo:inPaymentViewController:.
+* Added ability to optionally collect any/all of expiry, cvv, and zip code. (Previously, expiry was always collected and cvv was optional.)
+* Improved capture frame rate.
+* Usability improvements to manual entry.
+
+-------------
+
+1.0.0 (Tue 5/17/2011)
+
+* First release.

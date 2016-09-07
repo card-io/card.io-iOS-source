@@ -227,10 +227,10 @@ def build(outdir=None, device_sdk=None, simulator_sdk=None, **kwargs):
                 shutil.copy2(libfile, cardio_dir)
 
                 release_dir = os.path.join(icc_root, "Release")
-                shutil.copy2(os.path.join(release_dir, "release_notes.txt"), sdk_dir)
+                shutil.copy2(os.path.join(release_dir, "CHANGELOG.md"), sdk_dir)
                 shutil.copy2(os.path.join(release_dir, "CardIO.podspec"), sdk_dir)
                 shutil.copy2(os.path.join(release_dir, "acknowledgments.md"), sdk_dir)
-                shutil.copy2(os.path.join(release_dir, "LICENSE.md"), sdk_dir)
+                shutil.copy2(os.path.join(release_dir, "LICENSE"), sdk_dir)
                 shutil.copy2(os.path.join(release_dir, "README.md"), sdk_dir)
                 shutil.copytree(os.path.join(release_dir, "SampleApp"), os.path.join(sdk_dir, "SampleApp"), ignore=shutil.ignore_patterns(".DS_Store"))
                 shutil.copytree(os.path.join(release_dir, "SampleApp-Swift"), os.path.join(sdk_dir, "SampleApp-Swift"), ignore=shutil.ignore_patterns(".DS_Store"))

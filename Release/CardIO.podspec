@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
   spec.name             = 'CardIO'
   spec.version          = '5.3.2'
-  spec.license          = { type: 'MIT', file: 'LICENSE.md' }
+  spec.license          = { type: 'MIT', file: 'LICENSE' }
   spec.homepage         = 'https://www.card.io'
   spec.authors          = { 'CardIO' => 'support@paypal.com' }
   spec.summary          = 'Credit card scanning for mobile apps'
