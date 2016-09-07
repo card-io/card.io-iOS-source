@@ -92,9 +92,7 @@ end
 
 def update_cordova_plugin_release_notes(new_version)
   current_changelog = @current_release.changelog.dup
-  add_content_to_file("CHANGELOG.md", "===================================", "TODO\n")
-  add_content_to_file("CHANGELOG.md", "TODO", "-----\n")
-  add_content_to_file("CHANGELOG.md", "-----", (current_changelog.gsub! /^\*/,'* iOS:')+"\n\n")
+  add_content_to_file("CHANGELOG.md", "===================================", "TODO\n-----\n" + (current_changelog.gsub! /^\*/,'* iOS:')+"\n\n")
 end
 
 def build_app()
