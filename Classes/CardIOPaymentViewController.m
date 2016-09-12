@@ -133,9 +133,6 @@
   // Write console message for confused developers who have given us confusing directives
   if (self.suppressScanConfirmation && (self.collectExpiry || self.collectCVV || self.collectPostalCode || self.collectCardholderName)) {
     NSMutableString *collect = [NSMutableString string];
-    if (self.collectExpiry) {
-      [collect appendString:@"collectExpiry"];
-    }
     if (self.collectCVV) {
       if ([collect length]) {
         [collect appendString:@"/"];
