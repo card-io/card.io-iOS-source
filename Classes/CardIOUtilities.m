@@ -19,6 +19,10 @@
 #pragma mark - Library version, for bug reporting etc.
 
 + (NSString *)libraryVersion {
+  return [self cardIOLibraryVersion];
+}
+
++ (NSString *)cardIOLibraryVersion {
   NSString *dateString = [[[NSString stringWithUTF8String:__DATE__] stringByReplacingOccurrencesOfString:@" " withString:@"."] stringByReplacingOccurrencesOfString:@".." withString:@"."];
   NSString *timeHash = [NSString stringWithUTF8String:__TIME__];
   NSMutableString *libraryVersion = [NSMutableString stringWithFormat:@"%@-%@", dateString, timeHash];
@@ -108,8 +112,12 @@ static ScanAvailabilityStatus cachedScanAvailabilityStatus = ScanAvailabilityUnk
 
 #pragma mark - Preload resources for faster launch of card.io
 
-+ (void)preload {
++ (void)preloadCardIO {
   [CardIOLocalizer preload];
+}
+
++ (void)preload {
+  [self preloadCardIO];
 }
 
 #pragma mark - Screen obfuscation on backgrounding

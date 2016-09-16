@@ -409,7 +409,7 @@
     }
   }
 
-  if (!self.context.keepStatusBarStyle) {
+  if (!self.context.keepStatusBarStyleForCardIO) {
     if (iOS_7_PLUS) {
       [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;
     }

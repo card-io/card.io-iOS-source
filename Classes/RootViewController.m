@@ -361,7 +361,7 @@
   [TestGeneratedModels selfCheck];
 #endif
 
-  [CardIOUtilities preload];
+  [CardIOUtilities preloadCardIO];
 }
 
 - (UIStatusBarStyle) preferredStatusBarStyle {

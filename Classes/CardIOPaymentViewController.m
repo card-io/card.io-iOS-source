@@ -111,17 +111,17 @@
     self.shouldStoreStatusBarStyle = NO; // only store the very first time
   }
   
-  self.navigationBar.barStyle = self.context.navigationBarStyle;
+  self.navigationBar.barStyle = self.context.navigationBarStyleForCardIO;
   if (iOS_7_PLUS) {
-    self.navigationBar.barTintColor = self.context.navigationBarTintColor;
+    self.navigationBar.barTintColor = self.context.navigationBarTintColorForCardIO;
   }
   else {
-    self.navigationBar.tintColor = self.context.navigationBarTintColor;
+    self.navigationBar.tintColor = self.context.navigationBarTintColorForCardIO;
   }
 
   [super viewWillAppear:animated];
 
-  if (self.modalPresentationStyle == UIModalPresentationFullScreen && !self.context.keepStatusBarStyle) {
+  if (self.modalPresentationStyle == UIModalPresentationFullScreen && !self.context.keepStatusBarStyleForCardIO) {
     if (iOS_7_PLUS) {
       [theApp setStatusBarStyle:UIStatusBarStyleDefault animated:animated];
     }
@@ -184,6 +184,30 @@
 
 - (void)dealloc {
   [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+- (void)setKeepStatusBarStyle:(BOOL)keepStatusBarStyle {
+  self.keepStatusBarStyleForCardIO = keepStatusBarStyle;
+}
+
+- (BOOL)keepStatusBarStyle {
+  return self.keepStatusBarStyleForCardIO;
+}
+
+- (void)setNavigationBarStyle:(UIBarStyle)navigationBarStyle {
+  self.navigationBarStyleForCardIO = navigationBarStyle;
+}
+
+- (UIBarStyle)navigationBarStyle {
+  return self.navigationBarStyleForCardIO;
+}
+
+- (void)setNavigationBarTintColor:(UIColor *)navigationBarTintColor {
+  self.navigationBarTintColorForCardIO = navigationBarTintColor;
+}
+
+- (UIColor *)navigationBarTintColor {
+  return self.navigationBarTintColorForCardIO;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation {
@@ -339,7 +363,7 @@
 - (NSString *)description {
   return [NSString stringWithFormat:@"{delegate: %@; %s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s}"
           ,self.paymentDelegate
-          ,DESCRIBE_BOOL(keepStatusBarStyle)
+          ,DESCRIBE_BOOL(keepStatusBarStyleForCardIO)
           ,DESCRIBE_BOOL(disableBlurWhenBackgrounding)
           ,DESCRIBE_BOOL(suppressScanConfirmation)
           ,DESCRIBE_BOOL(suppressScannedCardImage)
@@ -380,9 +404,9 @@ CONTEXT_PASSTHROUGH_SETTER(t, prop_lc, prop_uc)
 
 
 CONTEXT_PASSTHROUGH_READWRITE(NSString *, languageOrLocale, LanguageOrLocale)
-CONTEXT_PASSTHROUGH_READWRITE(BOOL, keepStatusBarStyle, KeepStatusBarStyle)
-CONTEXT_PASSTHROUGH_READWRITE(UIBarStyle, navigationBarStyle, NavigationBarStyle)
-CONTEXT_PASSTHROUGH_READWRITE(UIColor *, navigationBarTintColor, NavigationBarTintColor)
+CONTEXT_PASSTHROUGH_READWRITE(BOOL, keepStatusBarStyleForCardIO, KeepStatusBarStyleForCardIO)
+CONTEXT_PASSTHROUGH_READWRITE(UIBarStyle, navigationBarStyleForCardIO, NavigationBarStyleForCardIO)
+CONTEXT_PASSTHROUGH_READWRITE(UIColor *, navigationBarTintColorForCardIO, NavigationBarTintColorForCardIO)
 CONTEXT_PASSTHROUGH_READWRITE(BOOL, disableBlurWhenBackgrounding, DisableBlurWhenBackgrounding)
 CONTEXT_PASSTHROUGH_READWRITE(BOOL, collectCVV, CollectCVV)
 CONTEXT_PASSTHROUGH_READWRITE(BOOL, collectPostalCode, CollectPostalCode)

@@ -19,7 +19,7 @@
   self.window.rootViewController = [[RootViewController alloc] initWithNibName:nil bundle:nil];
   [self.window addSubview:self.window.rootViewController.view];
   [self.window makeKeyAndVisible];
-  CardIOLog(@"Client version is %@.", [CardIOUtilities libraryVersion]);
+  CardIOLog(@"Client version is %@.", [CardIOUtilities cardIOLibraryVersion]);
 	return YES;
 }
 
