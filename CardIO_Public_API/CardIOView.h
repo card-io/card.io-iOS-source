@@ -121,3 +121,4 @@ extern NSString * const CardIOScanningOrientationAnimationDuration;
 @property(nonatomic, assign, readonly) CGRect cameraPreviewFrame;
 
 @end
+

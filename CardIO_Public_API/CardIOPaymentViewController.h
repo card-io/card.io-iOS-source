@@ -196,3 +196,4 @@ extern NSString * const CardIOScanningOrientationAnimationDuration;
 @property(nonatomic, retain, readwrite) UIColor *navigationBarTintColorForCardIO;
 
 @end
+
