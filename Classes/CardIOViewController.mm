@@ -73,7 +73,10 @@
       self.edgesForExtendedLayout = UIRectEdgeNone;
     }
     else {
+      #pragma clang diagnostic push
+      #pragma clang diagnostic ignored "-Wdeprecated-declarations"
       self.wantsFullScreenLayout = YES;
+      #pragma clang diagnostic pop
     }
     _statusBarWasOriginallyHidden = [UIApplication sharedApplication].statusBarHidden;
   }
@@ -281,7 +284,7 @@
     }
     else {
       UIInterfaceOrientation orientation = [self defaultSupportedOverlayOrientation];
-      if (orientation != UIDeviceOrientationUnknown) {
+      if (orientation != UIInterfaceOrientationUnknown) {
         newDeviceOrientation = (UIDeviceOrientation)orientation;
       }
     }
