@@ -232,5 +232,6 @@ def build(outdir=None, device_sdk=None, simulator_sdk=None, **kwargs):
                 shutil.copy2(os.path.join(release_dir, "acknowledgments.md"), sdk_dir)
                 shutil.copy2(os.path.join(release_dir, "LICENSE.md"), sdk_dir)
                 shutil.copy2(os.path.join(release_dir, "README.md"), sdk_dir)
+                shutil.copy2(os.path.join(release_dir, "CardIO/CardIO.m"), os.path.join(sdk_dir, "CardIO"))
                 shutil.copytree(os.path.join(release_dir, "SampleApp"), os.path.join(sdk_dir, "SampleApp"), ignore=shutil.ignore_patterns(".DS_Store"))
                 shutil.copytree(os.path.join(release_dir, "SampleApp-Swift"), os.path.join(sdk_dir, "SampleApp-Swift"), ignore=shutil.ignore_patterns(".DS_Store"))
