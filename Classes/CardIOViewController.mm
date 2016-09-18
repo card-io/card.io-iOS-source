@@ -504,7 +504,7 @@
     dataEntryViewController.manualEntry = self.context.suppressScannedCardImage;
 
     CGPoint newCenter = [self.view convertPoint:cardIOView.transitionView.cardView.center fromView:cardIOView.transitionView];
-    newCenter.y -= NavigationBarHeightForOrientation([[UIApplication sharedApplication] statusBarOrientation]);
+    newCenter.y -= NavigationBarHeightForOrientation(self.interfaceOrientation);
 
     dataEntryViewController.cardImageCenter = newCenter; // easier to pass this in than to recalculate it!
     dataEntryViewController.cardImageSize = CGSizeApplyAffineTransform(cardIOView.transitionView.cardView.bounds.size, cardIOView.transitionView.cardView.transform);
@@ -529,7 +529,7 @@
     floatingCardView.layer.masksToBounds = YES;
     floatingCardView.layer.borderColor = [UIColor grayColor].CGColor;
     floatingCardView.layer.borderWidth = 2.0f;
-    floatingCardView.transform = CGAffineTransformMakeRotation(orientationToRotation([[UIApplication sharedApplication] statusBarOrientation]));
+    floatingCardView.transform = CGAffineTransformMakeRotation(orientationToRotation(self.interfaceOrientation));
     floatingCardView.hidden = cardIOView.transitionView.hidden;
 
     [floatingCardWindow addSubview:floatingCardView];

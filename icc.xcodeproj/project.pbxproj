@@ -215,6 +215,12 @@
 		92263E301B83B9B5003FE678 /* mz_ios.h in Headers */ = {isa = PBXBuildFile; fileRef = 849799A6159E5EF400527FF5 /* mz_ios.h */; };
 		929AD7811B8CA8FD00F6D18E /* CardIODetectionMode.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E587F8A18C7E165000C1D3A /* CardIODetectionMode.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		929AD7821B8CA8FD00F6D18E /* CardIOUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ED8A876197DBDA900069761 /* CardIOUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9F7554391D5C152B004A7296 /* ocre.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F7554371D5C152B004A7296 /* ocre.cpp */; };
+		9F75543A1D5C152B004A7296 /* ocre.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F7554381D5C152B004A7296 /* ocre.h */; };
+		9F75543C1D5C15AB004A7296 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 9F75543B1D5C15AB004A7296 /* tessdata */; };
+		9F75543D1D5C15AB004A7296 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 9F75543B1D5C15AB004A7296 /* tessdata */; };
+		9F7554401D5C16D1004A7296 /* liblept.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F75543E1D5C16D1004A7296 /* liblept.a */; };
+		9F7554411D5C16D1004A7296 /* libtesseract_all.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F75543F1D5C16D1004A7296 /* libtesseract_all.a */; };
 		A50A54C51BE306DB00B669FB /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED00DA21BD8D60900FD2DB4 /* UIImage+ImageEffects.m */; };
 		A50A54C61BE3094500B669FB /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ED00DA71BD8D78200FD2DB4 /* Accelerate.framework */; };
 		A50A54C71BE3095000B669FB /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ED00DA71BD8D78200FD2DB4 /* Accelerate.framework */; };
@@ -795,6 +801,11 @@
 		92122C421B8C39D0004D705E /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		92263D701B83ACBB003FE678 /* CardIO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CardIO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		92263E311B84283D003FE678 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		9F7554371D5C152B004A7296 /* ocre.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ocre.cpp; sourceTree = "<group>"; };
+		9F7554381D5C152B004A7296 /* ocre.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ocre.h; sourceTree = "<group>"; };
+		9F75543B1D5C15AB004A7296 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = SOURCE_ROOT; };
+		9F75543E1D5C16D1004A7296 /* liblept.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblept.a; path = tess_lib/liblept.a; sourceTree = "<group>"; };
+		9F75543F1D5C16D1004A7296 /* libtesseract_all.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libtesseract_all.a; path = tess_lib/libtesseract_all.a; sourceTree = "<group>"; };
 		A50A54AD1BE2F7A800B669FB /* AdHoc.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = AdHoc.xcconfig; path = build_configs/AdHoc.xcconfig; sourceTree = "<group>"; };
 		A50A54AE1BE2F7A800B669FB /* CardIO_Static_Library_AdHoc.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = CardIO_Static_Library_AdHoc.xcconfig; path = build_configs/CardIO_Static_Library_AdHoc.xcconfig; sourceTree = "<group>"; };
 		A50A54AF1BE2F7A800B669FB /* CardIO_Static_Library_Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = CardIO_Static_Library_Debug.xcconfig; path = build_configs/CardIO_Static_Library_Debug.xcconfig; sourceTree = "<group>"; };
@@ -892,6 +903,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F7554401D5C16D1004A7296 /* liblept.a in Frameworks */,
+				9F7554411D5C16D1004A7296 /* libtesseract_all.a in Frameworks */,
 				A50A54C61BE3094500B669FB /* Accelerate.framework in Frameworks */,
 				92122C431B8C39D0004D705E /* CoreVideo.framework in Frameworks */,
 				92122C411B8C3986004D705E /* CoreGraphics.framework in Frameworks */,
@@ -1121,6 +1134,9 @@
 		0346CEDE157D87F500F99613 /* scan */ = {
 			isa = PBXGroup;
 			children = (
+				9F75543B1D5C15AB004A7296 /* tessdata */,
+				9F7554371D5C152B004A7296 /* ocre.cpp */,
+				9F7554381D5C152B004A7296 /* ocre.h */,
 				3ED9F6E11A23CF3200BD07F8 /* expiry_categorize.h */,
 				3ED9F6E01A23CF3200BD07F8 /* expiry_categorize.cpp */,
 				3ED9F6E31A23CF3200BD07F8 /* expiry_seg.h */,
@@ -1814,6 +1830,8 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9F75543E1D5C16D1004A7296 /* liblept.a */,
+				9F75543F1D5C16D1004A7296 /* libtesseract_all.a */,
 				92122C421B8C39D0004D705E /* CoreVideo.framework */,
 				92122C3F1B8C3976004D705E /* Security.framework */,
 				92122C3C1B8C395F004D705E /* QuartzCore.framework */,
@@ -2013,6 +2031,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F75543A1D5C152B004A7296 /* ocre.h in Headers */,
 				929AD7811B8CA8FD00F6D18E /* CardIODetectionMode.h in Headers */,
 				929AD7821B8CA8FD00F6D18E /* CardIOUtilities.h in Headers */,
 				92263DCE1B83AD65003FE678 /* CardIO.h in Headers */,
@@ -2241,6 +2260,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F75543D1D5C15AB004A7296 /* tessdata in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2263,6 +2283,7 @@
 				A553B6F51BE32273006DF551 /* yak_icon~ipad.png in Resources */,
 				A553B6F61BE32273006DF551 /* card_io_logo_black.png in Resources */,
 				A553B6F71BE32273006DF551 /* RootViewController~ipad.xib in Resources */,
+				9F75543C1D5C15AB004A7296 /* tessdata in Resources */,
 				A553B6F81BE32273006DF551 /* Default-568h@2x.png in Resources */,
 				A553B6F91BE32273006DF551 /* Default.png in Resources */,
 				A553B6FA1BE32273006DF551 /* Default@2x.png in Resources */,
@@ -2440,6 +2461,7 @@
 				92263DDD1B83ADC0003FE678 /* CardIODataEntryViewController.m in Sources */,
 				92263DFA1B83AE19003FE678 /* CardIOCardOverlay.m in Sources */,
 				92263DDA1B83ADA3003FE678 /* CardIOCreditCardNumber.mm in Sources */,
+				9F7554391D5C152B004A7296 /* ocre.cpp in Sources */,
 				92263E151B83AF13003FE678 /* CardIOCVVTextFieldDelegate.m in Sources */,
 				92263E191B83AF13003FE678 /* CardIONumbersTextFieldDelegate.m in Sources */,
 				92263E281B83B897003FE678 /* CardIOSectionBasedTableViewDelegate.m in Sources */,
@@ -2577,6 +2599,18 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A50A54BE1BE2FEEC00B669FB /* CardIO_Framework_Debug.xcconfig */;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/opencv_device/include",
+					"$(SRCROOT)/dmz",
+					"\"$(SRCROOT)/tess_include\"",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Classes\"",
+					"\"$(SRCROOT)/tess_lib\"",
+					"$(PROJECT_DIR)/tess_lib",
+				);
+				OTHER_LDFLAGS = "$(inherited)";
 			};
 			name = Debug;
 		};
@@ -2584,6 +2618,18 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A50A54BF1BE2FEEC00B669FB /* CardIO_Framework_Release.xcconfig */;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/opencv_device/include",
+					"$(SRCROOT)/dmz",
+					"\"$(SRCROOT)/tess_include\"",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Classes\"",
+					"\"$(SRCROOT)/tess_lib\"",
+					"$(PROJECT_DIR)/tess_lib",
+				);
+				OTHER_LDFLAGS = "$(inherited)";
 			};
 			name = Release;
 		};
@@ -2591,6 +2637,18 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A50A54BD1BE2FEEC00B669FB /* CardIO_Framework_Adhoc.xcconfig */;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/opencv_device/include",
+					"$(SRCROOT)/dmz",
+					"\"$(SRCROOT)/tess_include\"",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Classes\"",
+					"\"$(SRCROOT)/tess_lib\"",
+					"$(PROJECT_DIR)/tess_lib",
+				);
+				OTHER_LDFLAGS = "$(inherited)";
 			};
 			name = AdHoc;
 		};
@@ -2598,6 +2656,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A50A54B41BE2F7A800B669FB /* icc_Debug.xcconfig */;
 			buildSettings = {
+				ONLY_ACTIVE_ARCH = NO;
 			};
 			name = Debug;
 		};
@@ -2605,6 +2664,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A50A54B51BE2F7A800B669FB /* icc_Release.xcconfig */;
 			buildSettings = {
+				ONLY_ACTIVE_ARCH = NO;
 			};
 			name = Release;
 		};
@@ -2612,6 +2672,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A50A54B31BE2F7A800B669FB /* icc_AdHoc.xcconfig */;
 			buildSettings = {
+				ONLY_ACTIVE_ARCH = NO;
 			};
 			name = AdHoc;
 		};
