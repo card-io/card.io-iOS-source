@@ -12,3 +12,6 @@ icc.xcodeproj/project.xcworkspace/xcuserdata/*
 /Release/SampleApp/ScanExample.xcodeproj/xcuserdata/
 /Release/SampleApp-Swift/SampleApp-Swift.xcodeproj/project.xcworkspace/
 /Release/SampleApp-Swift/SampleApp-Swift.xcodeproj/xcuserdata/
+
+# Carthage
+Carthage/Build
