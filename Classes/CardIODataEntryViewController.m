@@ -1016,7 +1016,7 @@
   }
 
   // we are under the assumption of a normal US calendar
-  NSCalendar *cal = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+  NSCalendar *cal = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
 
   NSDateComponents *expiryComponents = [[NSDateComponents alloc] init];
   [expiryComponents setMonth:info.expiryMonth + 1]; // +1 to account for cards expiring "this month"
