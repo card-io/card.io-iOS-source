@@ -268,6 +268,7 @@
 		A553B70D1BE32273006DF551 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E9618E319C8EBCB0023CDBB /* MobileCoreServices.framework */; };
 		A553B7161BE322A1006DF551 /* CardIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92263D701B83ACBB003FE678 /* CardIO.framework */; };
 		A553B7171BE322A1006DF551 /* CardIO.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 92263D701B83ACBB003FE678 /* CardIO.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F4A16EC21D8846EA001DC8BE /* fi.strings in Resources */ = {isa = PBXBuildFile; fileRef = F4A16EC11D8846EA001DC8BE /* fi.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -847,6 +848,7 @@
 		D1EA4591156B1A560091C829 /* image_util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = image_util.h; sourceTree = "<group>"; };
 		D1F66D66146456880001F15F /* CardIOTransitionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIOTransitionView.h; sourceTree = "<group>"; };
 		D1F66D67146456880001F15F /* CardIOTransitionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardIOTransitionView.m; sourceTree = "<group>"; };
+		F4A16EC11D8846EA001DC8BE /* fi.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = fi.strings; path = assets/strings/fi.strings; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1864,6 +1866,7 @@
 				3E0133EE198ADC7D009E579A /* en.strings */,
 				3E0133EF198ADC7D009E579A /* es_MX.strings */,
 				3E0133F0198ADC7D009E579A /* es.strings */,
+				F4A16EC11D8846EA001DC8BE /* fi.strings */,
 				3E0133F1198ADC7D009E579A /* fr.strings */,
 				3E0133F2198ADC7D009E579A /* he.strings */,
 				3E4F946419DE10020077712A /* is.strings */,
@@ -2263,6 +2266,7 @@
 				A553B6F51BE32273006DF551 /* yak_icon~ipad.png in Resources */,
 				A553B6F61BE32273006DF551 /* card_io_logo_black.png in Resources */,
 				A553B6F71BE32273006DF551 /* RootViewController~ipad.xib in Resources */,
+				F4A16EC21D8846EA001DC8BE /* fi.strings in Resources */,
 				A553B6F81BE32273006DF551 /* Default-568h@2x.png in Resources */,
 				A553B6F91BE32273006DF551 /* Default.png in Resources */,
 				A553B6FA1BE32273006DF551 /* Default@2x.png in Resources */,
