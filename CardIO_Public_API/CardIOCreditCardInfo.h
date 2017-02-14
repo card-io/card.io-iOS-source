@@ -60,6 +60,9 @@ typedef NS_ENUM(NSInteger, CardIOCreditCardType) {
 /// The rectified card image; usually 428x270.
 @property(nonatomic, strong, readwrite) UIImage *cardImage;
 
+/// Holder name zone
+@property(nonatomic, strong, readwrite) UIImage *cardImageHolderName;
+
 /// Derived from cardNumber.
 /// @note CardIOCreditInfo objects returned by either of the delegate methods
 ///       userDidProvideCreditCardInfo:inPaymentViewController:

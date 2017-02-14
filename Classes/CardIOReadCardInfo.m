@@ -37,6 +37,7 @@
                           nameGroupedRects:(NSArray *)nameGroupedRects
 #endif
 {
+
 CardIOReadCardInfo *cardInfo = [[self alloc] init];
 cardInfo.numbers = cardNumber;
 cardInfo.xOffsets = xOffsets;

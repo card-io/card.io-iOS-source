@@ -200,6 +200,13 @@ NSString * const CardIOScanningOrientationAnimationDuration = @"CardIOScanningOr
   }
 }
 
+- (UIImage *)cropHolderNameRegion:(UIImage *)sourceImage holderNameRect:(CGRect)holderNameRect {
+  CGImageRef imageRef = CGImageCreateWithImageInRect([sourceImage CGImage], holderNameRect);
+  UIImage *roiImage = [UIImage imageWithCGImage:imageRef];
+  CGImageRelease(imageRef);
+  return roiImage;
+}
+
 #pragma mark - CardIOVideoStreamDelegate method and related methods
 
 - (void)videoStream:(CardIOVideoStream *)stream didProcessFrame:(CardIOVideoFrame *)processedFrame {
@@ -237,10 +244,10 @@ NSString * const CardIOScanningOrientationAnimationDuration = @"CardIOScanningOr
   cardInfo.expiryMonth = self.readCardInfo.expiryMonth;
   cardInfo.expiryYear = self.readCardInfo.expiryYear;
   cardInfo.scanned = YES;
-
   self.cardImage = [processedFrame imageWithGrayscale:NO];
   cardInfo.cardImage = self.cardImage;
-  
+  cardInfo.cardImageHolderName = [self cropHolderNameRegion:self.cardImage holderNameRect:self.readCardInfo.roiBelowNumbers];
+
   [self.config.scanReport reportEventWithLabel:@"scan_success" withScanner:processedFrame.scanner];
   
   [self successfulScan:cardInfo];

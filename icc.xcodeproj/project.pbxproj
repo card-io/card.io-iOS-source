@@ -2170,6 +2170,9 @@
 					92263D6F1B83ACBB003FE678 = {
 						CreatedOnToolsVersion = 7.0;
 					};
+					A553B6E51BE32273006DF551 = {
+						DevelopmentTeam = ZQACTSK9LV;
+					};
 				};
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "icc" */;
@@ -2602,6 +2605,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A50A54B41BE2F7A800B669FB /* icc_Debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = ZQACTSK9LV;
 			};
 			name = Debug;
 		};
@@ -2609,6 +2613,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A50A54B51BE2F7A800B669FB /* icc_Release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = ZQACTSK9LV;
 			};
 			name = Release;
 		};
@@ -2616,6 +2621,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A50A54B31BE2F7A800B669FB /* icc_AdHoc.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = ZQACTSK9LV;
 			};
 			name = AdHoc;
 		};

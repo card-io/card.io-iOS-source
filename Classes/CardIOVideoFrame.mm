@@ -179,10 +179,9 @@
         self.debugCardImage = [CardIOCardOverlay cardImage:cardImage withDisplayInfo:self.scanner.cardInfo annotated:NO];
       }
 #endif
-      
       if(self.scanner.complete) {
         self.cardInfo = self.scanner.cardInfo;
-        
+        self.cardInfo.roiBelowNumbers = CGRectMake(0, self.scanner.cardInfo.yOffset + kNumberHeight, self.cardY.cvSize.width, self.cardY.cvSize.height - (self.scanner.cardInfo.yOffset + kNumberHeight));
         // if the scanning is complete, we need the transformed cb/cr channels for display
         [self transformCbCrWithFrameOrientation:frameOrientation];
       } else if (!self.flipped && self.scanner.lastFrameWasUpsideDown) {
