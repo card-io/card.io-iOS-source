@@ -18,7 +18,7 @@
                           nameGroupedRects:(NSArray *)nameGroupedRects
 #endif
                         ;
-
+@property(nonatomic, assign) CGRect roiBelowNumbers;
 @property(nonatomic, strong, readonly) NSString *numbers;
 @property(nonatomic, strong, readonly) NSArray *xOffsets;
 @property(nonatomic, assign, readonly) NSUInteger yOffset;
