@@ -269,6 +269,7 @@
 		A553B7161BE322A1006DF551 /* CardIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92263D701B83ACBB003FE678 /* CardIO.framework */; };
 		A553B7171BE322A1006DF551 /* CardIO.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 92263D701B83ACBB003FE678 /* CardIO.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F4A16EC21D8846EA001DC8BE /* fi.strings in Resources */ = {isa = PBXBuildFile; fileRef = F4A16EC11D8846EA001DC8BE /* fi.strings */; };
+		FD604C681FA1DB8B003E0926 /* hu.strings in Resources */ = {isa = PBXBuildFile; fileRef = FD604C671FA1DB8B003E0926 /* hu.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -849,6 +850,7 @@
 		D1F66D66146456880001F15F /* CardIOTransitionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIOTransitionView.h; sourceTree = "<group>"; };
 		D1F66D67146456880001F15F /* CardIOTransitionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardIOTransitionView.m; sourceTree = "<group>"; };
 		F4A16EC11D8846EA001DC8BE /* fi.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = fi.strings; path = assets/strings/fi.strings; sourceTree = SOURCE_ROOT; };
+		FD604C671FA1DB8B003E0926 /* hu.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu.strings; path = assets/strings/hu.strings; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1886,6 +1888,7 @@
 				3E013400198ADC7D009E579A /* zh-Hans.strings */,
 				3E013401198ADC7D009E579A /* zh-Hant_TW.strings */,
 				3E013402198ADC7D009E579A /* zh-Hant.strings */,
+				FD604C671FA1DB8B003E0926 /* hu.strings */,
 			);
 			name = Strings;
 			path = strings/projects/card.io/Strings;
@@ -2256,6 +2259,7 @@
 				A553B6EB1BE32273006DF551 /* green_button@2x.png in Resources */,
 				A553B6EC1BE32273006DF551 /* green_button.png in Resources */,
 				A553B6ED1BE32273006DF551 /* red_button@2x.png in Resources */,
+				FD604C681FA1DB8B003E0926 /* hu.strings in Resources */,
 				A553B6EE1BE32273006DF551 /* AdHocEntitlements.plist in Resources */,
 				A553B6EF1BE32273006DF551 /* red_button.png in Resources */,
 				A553B6F01BE32273006DF551 /* yellow_button.png in Resources */,
