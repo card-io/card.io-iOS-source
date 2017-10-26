@@ -1,0 +1,43 @@
+/* 
+  hu.strings
+  icc
+
+  Created by László Takács on 2017. 10. 26..
+  
+*/
+"activate_flash" = "Vaku bekapcsolása";
+"camera" = "Kamera";
+"cancel" = "Mégse";
+"card_info" = "Bankkártya Információk";
+"card_io_logo" = "card.io";
+"deactivate_flash" = "Vaku kikapcsolása";
+"done" = "Kész";
+"entry_card_number" = "Bankkártyaszám";
+"entry_cvv" = "CVV/CVC";
+"entry_expires" = "Lejárat";
+"entry_number" = "Szám";
+"entry_title" = "Bankkártya";
+"entry_postal_code" = "Irányítószám";
+"entry_cardholder_name" = "Kártya tulajdonos neve";
+"expires_placeholder" = "HH/ÉÉ";
+"manual_entry" = "Kézzel adom meg";
+"ok" = "OK";
+"paypal_logo" = "PayPal";
+"scan_guide" = "Tartsd itt a kártyád.\nAutomatikusan elindul a szkennelés.";
+
+"cardtype_americanexpress" = "American Express";
+"cardtype_cartaaura" = "Carta Aura";
+"cardtype_carteaurore" = "Carte Aurore";
+"cardtype_cartaprepagatapaypal" = "Carta Prepagata PayPal";
+"cardtype_cartebleue" = "Carte Bancaire";
+"cardtype_cofinoga" = "Cofinoga";
+"cardtype_delta" = "Delta";
+"cardtype_discover" = "Discover";
+"cardtype_electron" = "Electron";
+"cardtype_jcb" = "JCB";
+"cardtype_maestro" = "Maestro";
+"cardtype_mastercard" = "MasterCard";
+"cardtype_postepay" = "Postepay";
+"cardtype_4etoiles" = "4 étoiles";
+"cardtype_tarjetaaurora" = "Tarjeta Aurora";
+"cardtype_visa" = "Visa";
