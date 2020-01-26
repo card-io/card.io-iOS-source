@@ -33,3 +33,20 @@
 + (UIImageView *)blurredScreenImageView;
 
 @end
+
+/// Methods with names that do not conflict with Apple's private APIs.
+@interface CardIOUtilities (NonConflictingAPINames)
+
+/// Please send the output of this method with any technical support requests.
+/// @return Human-readable version of this library.
++ (NSString *)cardIOLibraryVersion;
+
+/// The preload method prepares card.io to launch faster. Calling preload is optional but suggested.
+/// On an iPhone 5S, for example, preloading makes card.io launch ~400ms faster.
+/// The best time to call preload is when displaying a view from which card.io might be launched;
+/// e.g., inside your view controller's viewWillAppear: method.
+/// preload works in the background; the call to preload returns immediately.
++ (void)preloadCardIO;
+
+@end
+

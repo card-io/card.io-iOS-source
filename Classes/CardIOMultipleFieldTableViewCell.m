@@ -234,11 +234,27 @@
 
   CGFloat labelFontSize = [CardIOTableViewCell defaultTextLabelFontSizeForCellStyle:self.cellStyle];
   UIFont *labelFont = [CardIOTableViewCell defaultTextLabelFontForCellStyle:self.cellStyle fontSize:labelFontSize];
-  CGFloat measuredLabelWidth = [labelText sizeWithFont:labelFont].width;
+  CGFloat measuredLabelWidth = 0.0;
+  if (iOS_7_PLUS) {
+    measuredLabelWidth = [labelText sizeWithAttributes:@{ NSFontAttributeName: labelFont }].width;
+  } else {
+    #pragma clang diagnostic push
+    #pragma clang diagnostic ignored "-Wdeprecated-declarations"
+    measuredLabelWidth = [labelText sizeWithFont:labelFont].width;
+    #pragma clang diagnostic pop
+  }
 
   CGFloat placeholderFontSize = [CardIOTableViewCell defaultDetailTextLabelFontSizeForCellStyle:self.cellStyle];
   UIFont *placeholderFont = [CardIOTableViewCell defaultDetailTextLabelFontForCellStyle:self.cellStyle fontSize:placeholderFontSize];
-  CGFloat measuredPlaceholderWidth = [placeholderText sizeWithFont:placeholderFont].width;
+  CGFloat measuredPlaceholderWidth = 0.0;
+  if (iOS_7_PLUS) {
+    measuredPlaceholderWidth = [placeholderText sizeWithAttributes:@{ NSFontAttributeName: labelFont }].width;
+  } else {
+    #pragma clang diagnostic push
+    #pragma clang diagnostic ignored "-Wdeprecated-declarations"
+    measuredPlaceholderWidth = [placeholderText sizeWithFont:placeholderFont].width;
+    #pragma clang diagnostic pop
+  }
 
   return (measuredLabelWidth + measuredPlaceholderWidth + 3 * CELLPADDING < fieldWidth);
 }

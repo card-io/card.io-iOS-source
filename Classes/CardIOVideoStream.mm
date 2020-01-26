@@ -144,7 +144,11 @@
 @property(nonatomic, assign, readwrite) BOOL wasRunningBeforeBeingBackgrounded;
 @property(nonatomic, assign, readwrite) BOOL didEndGeneratingDeviceOrientationNotifications;
 @property(assign, readwrite) UIInterfaceOrientation interfaceOrientation; // intentionally atomic -- video frames are processed on a different thread
+#if SIMULATE_CAMERA
+@property(nonatomic, strong, readwrite) CALayer *previewLayer;
+#else
 @property(nonatomic, strong, readwrite) AVCaptureVideoPreviewLayer *previewLayer;
+#endif
 @property(nonatomic, strong, readwrite) AVCaptureSession *captureSession;
 @property(nonatomic, strong, readwrite) AVCaptureDevice *camera;
 @property(nonatomic, strong, readwrite) AVCaptureDeviceInput *cameraInput;
@@ -649,7 +653,9 @@ didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
       [frame.debugCardImage drawInRect:CGRectMake(0, 0, imageSize.width, imageSize.height)];
       CGRect rect = CGRectMake(10, 10, imageSize.width, imageSize.height);
       [[UIColor yellowColor] set];
-      [[NSString stringWithFormat:@"%0.2f", fps] drawInRect:CGRectIntegral(rect) withFont:font];
+      [[NSString stringWithFormat:@"%0.2f", fps] drawInRect:CGRectIntegral(rect) withAttributes:@{
+                                                                                                  NSFontAttributeName: font
+                                                                                                  }];
       frame.debugCardImage = UIGraphicsGetImageFromCurrentImageContext();
       UIGraphicsEndImageContext();
   #endif

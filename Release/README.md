@@ -95,6 +95,7 @@ pod 'CardIO'
 1.  Add [card.io's open source license acknowledgments](acknowledgments.md) to
 [your app's acknowledgments](http://stackoverflow.com/questions/3966116/where-to-put-open-source-credit-information-for-an-iphone-app).
 2.  Refer to the header files for more usage options and information.
+3.  You should add the key [`NSCameraUsageDescription`](https://developer.apple.com/library/prerelease/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW24) to your app's `Info.plist` and set the value to be a string describing why your app needs to use the camera (e.g. "To scan credit cards."). This string will be displayed when the app initially requests permission to access the camera.
 
 ### Sample code
 
@@ -124,7 +125,7 @@ Make an optional call to speed up the subsequent launch of card.io scanning:
 
 - (void)viewWillAppear:(BOOL)animated {
   [super viewWillAppear:animated];
-  [CardIOUtilities preload];
+  [CardIOUtilities preloadCardIO];
 }
 
 ```
@@ -201,7 +202,7 @@ Make an optional call to speed up the subsequent launch of card.io scanning:
 
 - (void)viewWillAppear:(BOOL)animated {
   [super viewWillAppear:animated];
-  [CardIOUtilities preload];
+  [CardIOUtilities preloadCardIO];
 }
 
 ```
@@ -286,7 +287,7 @@ Make an optional call to speed up the subsequent launch of card.io scanning:
 
 - (void)viewWillAppear:(BOOL)animated {
   [super viewWillAppear:animated];
-  [CardIOUtilities preload];
+  [CardIOUtilities preloadCardIO];
 }
 
 ```
@@ -337,4 +338,4 @@ Include a method to cancel card scanning:
 * Processing images can be memory intensive, so make sure to test that your app properly handles memory warnings.
 * For your users' security, [obscure your app's cached screenshots](https://viaforensics.com/resources/reports/best-practices-ios-android-secure-mobile-development/ios-avoid-cached-application-snapshots/).  
 **Note:** By default, a `CardIOPaymentViewController` automatically blurs its own screens when the app is backgrounded. A `CardIOView` does not do any automatic blurring.
-* The first time that you create either a `CardIOPaymentViewController` or a `CardIOView`, the card.io SDK must load resources, which can result in a noticeable delay. To avoid this delay you may optionally call `[CardIOUtilities preload]` in advance, so that this resource loading occurs in advance on a background thread.
+* The first time that you create either a `CardIOPaymentViewController` or a `CardIOView`, the card.io SDK must load resources, which can result in a noticeable delay. To avoid this delay you may optionally call `[CardIOUtilities preloadCardIO]` in advance, so that this resource loading occurs in advance on a background thread.

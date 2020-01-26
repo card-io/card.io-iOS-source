@@ -52,10 +52,16 @@
 - (id)initWithSampleBuffer:(CMSampleBufferRef)sampleBuffer interfaceOrientation:(UIInterfaceOrientation)currentOrientation {
   if((self = [super init])) {
     _buffer = sampleBuffer;
+    CFRetain(_buffer);
+
     _orientation = currentOrientation; // not using setters/getters, for performance
     _dmz = NULL;  // use NULL b/c non-object pointer
   }
   return self;
+}
+
+- (void)dealloc {
+  CFRelease(_buffer);
 }
 
 #if USE_CAMERA
@@ -131,10 +137,13 @@
   if(foundCard) {
     IplImage *foundCardY = NULL;
     dmz_transform_card(self.dmz, self.ySample.image, self.corner_points, frameOrientation, false, &foundCardY);
-    self.cardY = [CardIOIplImage imageWithIplImage:foundCardY];
 
-    BOOL scanCard = YES;
-    scanCard = (self.detectionMode != CardIODetectionModeCardImageOnly);
+    BOOL isValidIplImage = (foundCardY != NULL) && (foundCardY->nSize == sizeof(IplImage));
+    if (isValidIplImage) {
+      self.cardY = [CardIOIplImage imageWithIplImage:foundCardY];
+    }
+
+    BOOL scanCard = isValidIplImage && (self.detectionMode != CardIODetectionModeCardImageOnly);
     if(scanCard) {
       [self.scanner addFrame:self.cardY
                   focusScore:self.focusScore

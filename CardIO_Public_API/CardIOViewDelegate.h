@@ -22,3 +22,4 @@
 - (void)cardIOView:(CardIOView *)cardIOView didScanCard:(CardIOCreditCardInfo *)cardInfo;
 
 @end
+

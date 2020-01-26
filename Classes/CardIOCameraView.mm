@@ -392,7 +392,7 @@
     }
     else {
       UIInterfaceOrientation orientation = [self defaultSupportedOverlayOrientation];
-      if (orientation != UIDeviceOrientationUnknown) {
+      if (orientation != UIInterfaceOrientationUnknown) {
         newDeviceOrientation = (UIDeviceOrientation)orientation;
       }
     }

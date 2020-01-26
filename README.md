@@ -32,6 +32,8 @@ pod 'CardIO'
 github "card-io/card.io-iOS-source"
 ```
 
+You must also have an SSH key setup with GitHub so that the dmz submodule will download properly. See the [documentation here](https://help.github.com/articles/testing-your-ssh-connection/) for directions.
+
 Dev setup
 ---------
 

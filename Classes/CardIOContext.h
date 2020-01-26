@@ -22,9 +22,9 @@
 @property(nonatomic, assign, readwrite) BOOL restrictPostalCodeToNumericOnly;
 @property(nonatomic, assign, readwrite) BOOL collectCardholderName;
 @property(nonatomic, assign, readwrite) BOOL disableManualEntryButtons;
-@property(nonatomic, assign, readwrite) BOOL keepStatusBarStyle;
-@property(nonatomic, assign, readwrite) UIBarStyle navigationBarStyle;
-@property(nonatomic, retain, readwrite) UIColor *navigationBarTintColor;
+@property(nonatomic, assign, readwrite) BOOL keepStatusBarStyleForCardIO;
+@property(nonatomic, assign, readwrite) UIBarStyle navigationBarStyleForCardIO;
+@property(nonatomic, retain, readwrite) UIColor *navigationBarTintColorForCardIO;
 @property(nonatomic, assign, readwrite) BOOL disableBlurWhenBackgrounding;
 @property(nonatomic, assign, readwrite) BOOL suppressScanConfirmation;
 @property(nonatomic, assign, readwrite) BOOL suppressScannedCardImage;

@@ -59,11 +59,21 @@
 
     CGFloat y_offset = (CGFloat)cardInfo.yOffset - kNumberBottomMargin;
     NSUInteger numberLength = [cardInfo.numbers length];
+    NSMutableParagraphStyle *paragraphStyle = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
+    paragraphStyle.lineBreakMode = NSLineBreakByTruncatingTail;
+    paragraphStyle.alignment = NSTextAlignmentCenter;
     for(int i = 0; i < numberLength; i++) {
       CGFloat x_offset = [cardInfo.xOffsets[i] floatValue];
       NSString *number = [cardInfo.numbers substringWithRange:NSMakeRange(i, 1)];
       CGRect numberRect = CGRectMake(x_offset, y_offset - kNumberHeight, kNumberWidth, kNumberHeight);
-      [number drawInRect:numberRect withFont:font lineBreakMode:NSLineBreakByTruncatingTail alignment:NSTextAlignmentCenter];
+      if (iOS_7_PLUS) {
+        [number drawInRect:numberRect withAttributes:@{ NSFontAttributeName: font, NSParagraphStyleAttributeName: paragraphStyle }];
+      } else {
+        #pragma clang diagnostic push
+        #pragma clang diagnostic ignored "-Wdeprecated-declarations"
+        [number drawInRect:numberRect withFont:font lineBreakMode:NSLineBreakByTruncatingTail alignment:NSTextAlignmentCenter];
+        #pragma clang diagnostic pop
+      }
     }
   }
   

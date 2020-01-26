@@ -111,7 +111,7 @@ static CardIOLocalizer *sFallbackLocalizer = nil;
 #if CARDIO_DEBUG
 
 + (NSArray *)allLanguages {
-  return @[@"ar", @"da", @"de", @"en", @"en_AU", @"en_GB", @"es", @"es_MX", @"fr", @"he", @"is", @"it", @"ja", @"ko", @"ms", @"nb", @"nl", @"pl", @"pt", @"pt_BR", @"ru", @"sv", @"th", @"tr", @"zh-Hans", @"zh-Hant", @"zh-Hant_TW"];
+  return @[@"ar", @"da", @"de", @"en", @"en_AU", @"en_GB", @"es", @"es_MX", @"fi", @"fr", @"he", @"is", @"it", @"ja", @"ko", @"ms", @"nb", @"nl", @"pl", @"pt", @"pt_BR", @"ru", @"sv", @"th", @"tr", @"zh-Hans", @"zh-Hant", @"zh-Hant_TW"];
 }
 
 + (NSError *)selfTestErrorWithMessage:(NSString *)errorMessage {

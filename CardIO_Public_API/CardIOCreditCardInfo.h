@@ -80,3 +80,4 @@ typedef NS_ENUM(NSInteger, CardIOCreditCardType) {
 + (UIImage *)logoForCardType:(CardIOCreditCardType)cardType;
 
 @end
+

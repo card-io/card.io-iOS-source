@@ -21,6 +21,8 @@ static inline FrameOrientation frameOrientationWithInterfaceOrientation(UIInterf
     case UIInterfaceOrientationLandscapeRight:
       frameOrientation = FrameOrientationLandscapeRight;
       break;
+    case UIInterfaceOrientationUnknown:
+      break;
   }
   return frameOrientation; 
 }

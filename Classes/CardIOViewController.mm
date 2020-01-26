@@ -73,7 +73,10 @@
       self.edgesForExtendedLayout = UIRectEdgeNone;
     }
     else {
+      #pragma clang diagnostic push
+      #pragma clang diagnostic ignored "-Wdeprecated-declarations"
       self.wantsFullScreenLayout = YES;
+      #pragma clang diagnostic pop
     }
     _statusBarWasOriginallyHidden = [UIApplication sharedApplication].statusBarHidden;
   }
@@ -281,7 +284,7 @@
     }
     else {
       UIInterfaceOrientation orientation = [self defaultSupportedOverlayOrientation];
-      if (orientation != UIDeviceOrientationUnknown) {
+      if (orientation != UIInterfaceOrientationUnknown) {
         newDeviceOrientation = (UIDeviceOrientation)orientation;
       }
     }
@@ -501,7 +504,7 @@
     dataEntryViewController.manualEntry = self.context.suppressScannedCardImage;
 
     CGPoint newCenter = [self.view convertPoint:cardIOView.transitionView.cardView.center fromView:cardIOView.transitionView];
-    newCenter.y -= NavigationBarHeightForOrientation(self.interfaceOrientation);
+    newCenter.y -= NavigationBarHeightForOrientation([[UIApplication sharedApplication] statusBarOrientation]);
 
     dataEntryViewController.cardImageCenter = newCenter; // easier to pass this in than to recalculate it!
     dataEntryViewController.cardImageSize = CGSizeApplyAffineTransform(cardIOView.transitionView.cardView.bounds.size, cardIOView.transitionView.cardView.transform);
@@ -526,7 +529,7 @@
     floatingCardView.layer.masksToBounds = YES;
     floatingCardView.layer.borderColor = [UIColor grayColor].CGColor;
     floatingCardView.layer.borderWidth = 2.0f;
-    floatingCardView.transform = CGAffineTransformMakeRotation(orientationToRotation(self.interfaceOrientation));
+    floatingCardView.transform = CGAffineTransformMakeRotation(orientationToRotation([[UIApplication sharedApplication] statusBarOrientation]));
     floatingCardView.hidden = cardIOView.transitionView.hidden;
 
     [floatingCardWindow addSubview:floatingCardView];

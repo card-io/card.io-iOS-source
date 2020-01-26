@@ -14,3 +14,4 @@ typedef NS_ENUM(NSInteger, CardIODetectionMode) {
 };
 
 #endif
+
