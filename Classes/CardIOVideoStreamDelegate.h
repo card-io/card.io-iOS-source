@@ -3,6 +3,8 @@
 //  See the file "LICENSE.md" for the full license governing this code.
 //
 
+#import <UIKit/UIKit.h>
+
 @class CardIOVideoFrame;
 @class CardIOVideoStream;
 

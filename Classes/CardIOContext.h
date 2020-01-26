@@ -6,7 +6,7 @@
 // This object is a container for information about a particular card.io instantiation. Most of this information
 // is either set by the developer or initialized on first use.
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import "CardIODetectionMode.h"
 
 @class CardIOAnalytics;

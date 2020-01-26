@@ -3,8 +3,10 @@
 //  See the file "LICENSE.md" for the full license governing this code.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import <CoreVideo/CoreVideo.h>
+
+#include "opencv2/core/core_c.h"
 
 #define Y_PLANE 0
 #define CBCR_PLANE 1
